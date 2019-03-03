@@ -1,18 +1,11 @@
 require 'pry'
 
-content = File.read 'instance.html.markdown'
-
-want = content.match(/##\ Argument\ Reference(.*)##\ Attributes\ Reference/m)[1]
-       .strip
+def section_title?(str)
+end
 
 def section_title?(str)
   str.include?('upport') && str.include?('following')
 end
-
-list = want.split(/\n/).reject(&:empty?)
-           .select { |l| l.start_with?('* `', '###') || section_title?(l) }
-
-blocks = list.slice_before { |line| line.include? '###' }
 
 def arg_name(str)
   str[/\S*`/]&.tr('\`', '')
@@ -66,29 +59,44 @@ def guess_type(arg)
   TypeGuess.new(t_bool, t_int, t_text, t_list_text, t_enum)
 end
 
-stuff = blocks.map do |b|
-  if b.first.start_with?('###')
-    block_name = b.first
-    args = b.drop(1)
-  else
-    block_name = 'foo'
-    args = b
-  end
+def parse_file(path)
+  content = File.read path
 
-  resource_arguments =
-    args.map do |l|
-      { name: arg_name(l),
-        optional: optional?(l),
-        description: l,
-        possible_section_title: section_title?(l)
-      }
+  resource_name = content.match(/page_title.*$/)[0].split.last.tr('"', '')
+
+  want = content.match(/##\ Argument\ Reference(.*)##\ Attributes\ Reference/m)[1]
+         .strip
+
+  list = want.split(/\n/).reject(&:empty?)
+             .select { |l| l.start_with?('* `', '###') || section_title?(l) }
+
+  blocks = list.slice_before { |line| line.include? '###' }
+
+  blocks.map do |b|
+    if b.first.start_with?('###')
+      block_name = b.first
+      args = b.drop(1)
+    else
+      block_name = resource_name
+      args = b
     end
 
-  args_with_types = resource_arguments.map { |ra| ra.merge({ type_guess: guess_type(ra) } )}
+    resource_arguments =
+      args.map do |l|
+        { name: arg_name(l),
+          optional: optional?(l),
+          description: l,
+          possible_section_title: section_title?(l)
+        }
+      end
 
-  { md_block_name: block_name,
-    args: args_with_types
-  }
+    args_with_types = resource_arguments.map { |ra| ra.merge({ type_guess: guess_type(ra) } )}
+
+    { md_block_name: block_name,
+      args: args_with_types
+    }
+  end
 end
 
+stuff = parse_file('instance.html.markdown')
 pry.inspect
