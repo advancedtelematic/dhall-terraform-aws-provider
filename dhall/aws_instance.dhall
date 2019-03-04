@@ -19,11 +19,11 @@ let AwsInstanceOptional =
   , security_groups: Optional (List Text)
   , source_dest_check: Optional Bool
   , subnet_id: Optional Text
-  -- , tags: Optional ?? Map(String)
+  , tags: Optional ?? Map(String)
   , tenancy: Optional Text
   , user_data: Optional Text
   , user_data_base64: Optional Text
-  -- , volume_tags: Optional ?? Map(String)
+  , volume_tags: Optional ?? Map(String)
   , vpc_security_group_ids: Optional (List Text)
   }
 

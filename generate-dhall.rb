@@ -108,6 +108,6 @@ end
 
 content_aws_instance = dhall_file_from_resource aws_instance
 
-File.write('./dhall/aws_instance', content_aws_instance)
+File.write('./dhall/aws_instance.dhall', content_aws_instance)
 
 pry.inspect
