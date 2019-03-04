@@ -144,7 +144,7 @@ def dhall_rep_to_string(dr)
   + [ print_type(dr.type_name, dr.fields[:optional], true) \
     + print_type(dr.type_name, dr.fields[:required]) \
     + "let #{classify(dr.type_name)} = #{classify(dr.type_name)}Optional //\\\\ #{classify(dr.type_name)}Required\n"
-    ]
+    ] # TODO add in block back to printing
 end
 
 BlockType = Struct.new(:optional, :list, :unknown, :args)
@@ -185,6 +185,6 @@ dhall_reps_instance = dhall_representation_from_resource aws_instance
 
 dhall_aws_to_str = dhall_rep_to_string(dhall_reps_instance)
 
-#File.write('./dhall/aws_instance.dhall', content_aws_instance)
+File.write('./dhall/aws_instance.dhall', dhall_aws_to_str.join(""))
 
-pry.inspect
+#pry.inspect

@@ -1,6 +1,56 @@
 
+let CreditSpecificationOptional =
+  { cpu_credits: Optional Text }
+
+let CreditSpecificationRequired = {}
+let CreditSpecification = CreditSpecificationOptional //\\ CreditSpecificationRequired
+
+let EbsBlockDeviceOptional =
+  { delete_on_termination: Optional Bool
+  , encrypted: Optional Bool
+  , iops: Optional Natural
+  , snapshot_id: Optional Text
+  , volume_id: Optional Text
+  , volume_size: Optional Natural
+  , volume_type: Optional Text
+  }
+
+let EbsBlockDeviceRequired =
+  { device_name: Text }
+let EbsBlockDevice = EbsBlockDeviceOptional //\\ EbsBlockDeviceRequired
+
+let EphemeralBlockDeviceOptional =
+  { no_device: Optional Bool
+  , virtual_name: Optional Text
+  }
+
+let EphemeralBlockDeviceRequired =
+  { device_name: Text }
+let EphemeralBlockDevice = EphemeralBlockDeviceOptional //\\ EphemeralBlockDeviceRequired
+
+let NetworkInterfaceOptional =
+  { delete_on_termination: Optional Bool }
+
+let NetworkInterfaceRequired =
+  { device_index: Natural
+  , network_interface_id: Text
+  }
+let NetworkInterface = NetworkInterfaceOptional //\\ NetworkInterfaceRequired
+
+let RootBlockDeviceOptional =
+  { delete_on_termination: Optional Bool
+  , iops: Optional Natural
+  , volume_id: Optional Text
+  , volume_size: Optional Natural
+  , volume_type: Optional Text
+  }
+
+let RootBlockDeviceRequired = {}
+let RootBlockDevice = RootBlockDeviceOptional //\\ RootBlockDeviceRequired
+
 let AwsInstanceOptional =
-  { associate_public_ip_address: Optional Bool
+  { arn: Optional Text
+  , associate_public_ip_address: Optional Bool
   , availability_zone: Optional Text
   , cpu_core_count: Optional Natural
   , cpu_threads_per_core: Optional Natural
@@ -10,12 +60,19 @@ let AwsInstanceOptional =
   , host_id: Optional Text
   , iam_instance_profile: Optional Text
   , instance_initiated_shutdown_behavior: Optional Text
+  , instance_state: Optional Text
   , ipv6_address_count: Optional Natural
   , ipv6_addresses: Optional (List Text)
   , key_name: Optional Text
   , monitoring: Optional Bool
+  , network_interface_id: Optional Text
+  , password_data: Optional Text
   , placement_group: Optional Text
+  , primary_network_interface_id: Optional Text
+  , private_dns: Optional Text
   , private_ip: Optional Text
+  , public_dns: Optional Text
+  , public_ip: Optional Text
   , security_groups: Optional (List Text)
   , source_dest_check: Optional Bool
   , subnet_id: Optional Text
@@ -25,23 +82,15 @@ let AwsInstanceOptional =
   , user_data_base64: Optional Text
   , volume_tags: Optional ?? Map(String)
   , vpc_security_group_ids: Optional (List Text)
+  , credit_specification: Optional CreditSpecification
+  , ebs_block_device: Optional (List EbsBlockDevice)
+  , ephemeral_block_device: Optional (List EphemeralBlockDevice)
+  , network_interface: Optional (List NetworkInterface)
+  , root_block_device: Optional RootBlockDevice
   }
 
 let AwsInstanceRequired =
   { ami: Text
-  , arn: Text
-  , instance_state: Text
   , instance_type: Text
-  , network_interface_id: Text
-  , password_data: Text
-  , primary_network_interface_id: Text
-  , private_dns: Text
-  , public_dns: Text
-  , public_ip: Text
   }
-
-in
-  { AwsInstanceOptional = AwsInstanceOptional
-  , AwsInstanceRequired= AwsInstanceRequired
-  , AwsInstance = AwsInstanceOptional //\\ AwsInstanceRequired
-  }
+let AwsInstance = AwsInstanceOptional //\\ AwsInstanceRequired

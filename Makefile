@@ -1,7 +1,7 @@
 build:
 	docker build . -t alexhumphreys/dhall-terraform-aws-provider
 
-run: build
+generate-schema: build
 	docker run --rm -it -v $(CURDIR)/schema:/usr/src/app/schema alexhumphreys/dhall-terraform-aws-provider
 
 generate-dhall: build
