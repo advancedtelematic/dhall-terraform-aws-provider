@@ -42,15 +42,15 @@ def convert_type(attribute)
   when "Bool"
     "Bool"
   when "List(Map(String))"
-    "?? List(Map(String))"
+    "?? List(Map(String))" # TODO
   when "List(String)"
     "(List Text)"
   when "Map(Bool)"
-    "?? Map(Bool)"
+    "?? Map(Bool)" # TODO
   when "Map(Number)"
-    "?? Map(Number)"
+    "?? Map(Number)" # TODO
   when "Map(String)"
-    "?? Map(String)"
+    "?? Map(String)" # TODO
   when "Number"
     "Natural"
   when "Set(String)"
@@ -58,7 +58,7 @@ def convert_type(attribute)
   when "String"
     "Text"
   else
-    "TODO"
+    "TODO" # TODO
   end
 end
 
@@ -70,14 +70,14 @@ def print_optional(attribute)
   end
 end
 
-def field_from_arg(attribute)
-  # "name": "vpc_security_group_ids",
-  # "type": "Set(String)",
-  # "required": false,
-  # "optional": true,
-  # "computed": true,
-  # "sensitive": false
+def fields_from_blocks(blocks)
+  # TODO handle optionals better
+  blocks.map do |b|
+    "#{b.type_name}: #{print_block_type(b.type_name, b.block_type)}"
+  end
+end
 
+def field_from_arg(attribute)
   "#{attribute["name"]}: #{print_optional(attribute)} #{convert_type(attribute)}".squeeze(" ")
 end
 
@@ -170,6 +170,8 @@ def dhall_representation_from_resource(resource)
   else
     bt = nil
   end
+  # TODO handle optionals properly
+  fields[:optional].append(fields_from_blocks(blocks)).flatten!
 
   DhallRepresentation.new(
     fields,
