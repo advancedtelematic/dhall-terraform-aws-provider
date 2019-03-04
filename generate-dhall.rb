@@ -91,12 +91,24 @@ def print_type(name, args, optional=false)
   else
     suffix = "Required"
   end
+  case
+  when args.count == 0
+  %{
+let #{classify(name)}#{suffix} = {}
+}
+  when args.count == 1
+  %{
+let #{classify(name)}#{suffix} =
+  { #{args.first} }
+}
+  when args.count >1
   %{
 let #{classify(name)}#{suffix} =
   { #{args.first}
   , #{args.drop(1).join("\n  , ")}
   }
 }
+  end
 end
 
 def print_in_block(name, args)
@@ -126,13 +138,13 @@ def fields_from_resource(resource)
   { optional: optional, required: required }
 end
 
-
-def resource_as_dhall_string(fields)
-  file_content =
-    print_type(resource["type_name"], fields[:optional], true) \
-    + print_type(resource["type_name"], fields[:required]) \
-    + print_in_block(resource["type_name"], fields)
-  file_content
+def dhall_rep_to_string(dr)
+  # + print_in_block(resource["type_name"], fields)
+  dr.blocks.map { |d| dhall_rep_to_string(d) } \
+  + [ print_type(dr.type_name, dr.fields[:optional], true) \
+    + print_type(dr.type_name, dr.fields[:required]) \
+    + "let #{classify(dr.type_name)} = #{classify(dr.type_name)}Optional //\\\\ #{classify(dr.type_name)}Required\n"
+    ]
 end
 
 BlockType = Struct.new(:optional, :list, :unknown, :args)
@@ -168,6 +180,8 @@ def dhall_representation_from_resource(resource)
 end
 
 dhall_reps_instance = dhall_representation_from_resource aws_instance
+
+dhall_aws_to_str = dhall_rep_to_string(dhall_reps_instance)
 
 #File.write('./dhall/aws_instance.dhall', content_aws_instance)
 
