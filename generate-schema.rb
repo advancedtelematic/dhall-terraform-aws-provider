@@ -9,4 +9,4 @@ resource_args = resources.map do |r|
     .merge({ 'resource_title' => r })
 end
 
-File.write("schema/tf-aws-schema.json", resource_args.to_json)
+File.write("schema/tf-aws-schema.json", JSON.pretty_generate(resource_args))

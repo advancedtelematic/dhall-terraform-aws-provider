@@ -1,0 +1,658 @@
+[
+  {
+    "attributes": [
+      {
+        "name": "ami",
+        "type": "String",
+        "required": true,
+        "optional": false,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "arn",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "associate_public_ip_address",
+        "type": "Bool",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "availability_zone",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "cpu_core_count",
+        "type": "Number",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "cpu_threads_per_core",
+        "type": "Number",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "disable_api_termination",
+        "type": "Bool",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "ebs_optimized",
+        "type": "Bool",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "get_password_data",
+        "type": "Bool",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "host_id",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "iam_instance_profile",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "instance_initiated_shutdown_behavior",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "instance_state",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "instance_type",
+        "type": "String",
+        "required": true,
+        "optional": false,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "ipv6_address_count",
+        "type": "Number",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "ipv6_addresses",
+        "type": "List(String)",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "key_name",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "monitoring",
+        "type": "Bool",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "network_interface_id",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "password_data",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "placement_group",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "primary_network_interface_id",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "private_dns",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "private_ip",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "public_dns",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "public_ip",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "security_groups",
+        "type": "Set(String)",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "source_dest_check",
+        "type": "Bool",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "subnet_id",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "tags",
+        "type": "Map(String)",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "tenancy",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "user_data",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "user_data_base64",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "volume_tags",
+        "type": "Map(String)",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "vpc_security_group_ids",
+        "type": "Set(String)",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      }
+    ],
+    "block_types": [
+      {
+        "type_name": "credit_specification",
+        "attributes": [
+          {
+            "name": "cpu_credits",
+            "type": "String",
+            "required": false,
+            "optional": true,
+            "computed": false,
+            "sensitive": false
+          }
+        ],
+        "block_types": [
+
+        ],
+        "nesting": 2,
+        "min_items": 0,
+        "max_items": 1
+      },
+      {
+        "type_name": "ebs_block_device",
+        "attributes": [
+          {
+            "name": "delete_on_termination",
+            "type": "Bool",
+            "required": false,
+            "optional": true,
+            "computed": false,
+            "sensitive": false
+          },
+          {
+            "name": "device_name",
+            "type": "String",
+            "required": true,
+            "optional": false,
+            "computed": false,
+            "sensitive": false
+          },
+          {
+            "name": "encrypted",
+            "type": "Bool",
+            "required": false,
+            "optional": true,
+            "computed": true,
+            "sensitive": false
+          },
+          {
+            "name": "iops",
+            "type": "Number",
+            "required": false,
+            "optional": true,
+            "computed": true,
+            "sensitive": false
+          },
+          {
+            "name": "snapshot_id",
+            "type": "String",
+            "required": false,
+            "optional": true,
+            "computed": true,
+            "sensitive": false
+          },
+          {
+            "name": "volume_id",
+            "type": "String",
+            "required": false,
+            "optional": false,
+            "computed": true,
+            "sensitive": false
+          },
+          {
+            "name": "volume_size",
+            "type": "Number",
+            "required": false,
+            "optional": true,
+            "computed": true,
+            "sensitive": false
+          },
+          {
+            "name": "volume_type",
+            "type": "String",
+            "required": false,
+            "optional": true,
+            "computed": true,
+            "sensitive": false
+          }
+        ],
+        "block_types": [
+
+        ],
+        "nesting": 3,
+        "min_items": 0,
+        "max_items": 0
+      },
+      {
+        "type_name": "ephemeral_block_device",
+        "attributes": [
+          {
+            "name": "device_name",
+            "type": "String",
+            "required": true,
+            "optional": false,
+            "computed": false,
+            "sensitive": false
+          },
+          {
+            "name": "no_device",
+            "type": "Bool",
+            "required": false,
+            "optional": true,
+            "computed": false,
+            "sensitive": false
+          },
+          {
+            "name": "virtual_name",
+            "type": "String",
+            "required": false,
+            "optional": true,
+            "computed": false,
+            "sensitive": false
+          }
+        ],
+        "block_types": [
+
+        ],
+        "nesting": 3,
+        "min_items": 0,
+        "max_items": 0
+      },
+      {
+        "type_name": "network_interface",
+        "attributes": [
+          {
+            "name": "delete_on_termination",
+            "type": "Bool",
+            "required": false,
+            "optional": true,
+            "computed": false,
+            "sensitive": false
+          },
+          {
+            "name": "device_index",
+            "type": "Number",
+            "required": true,
+            "optional": false,
+            "computed": false,
+            "sensitive": false
+          },
+          {
+            "name": "network_interface_id",
+            "type": "String",
+            "required": true,
+            "optional": false,
+            "computed": false,
+            "sensitive": false
+          }
+        ],
+        "block_types": [
+
+        ],
+        "nesting": 3,
+        "min_items": 0,
+        "max_items": 0
+      },
+      {
+        "type_name": "root_block_device",
+        "attributes": [
+          {
+            "name": "delete_on_termination",
+            "type": "Bool",
+            "required": false,
+            "optional": true,
+            "computed": false,
+            "sensitive": false
+          },
+          {
+            "name": "iops",
+            "type": "Number",
+            "required": false,
+            "optional": true,
+            "computed": true,
+            "sensitive": false
+          },
+          {
+            "name": "volume_id",
+            "type": "String",
+            "required": false,
+            "optional": false,
+            "computed": true,
+            "sensitive": false
+          },
+          {
+            "name": "volume_size",
+            "type": "Number",
+            "required": false,
+            "optional": true,
+            "computed": true,
+            "sensitive": false
+          },
+          {
+            "name": "volume_type",
+            "type": "String",
+            "required": false,
+            "optional": true,
+            "computed": true,
+            "sensitive": false
+          }
+        ],
+        "block_types": [
+
+        ],
+        "nesting": 2,
+        "min_items": 0,
+        "max_items": 1
+      }
+    ],
+    "resource_title": "aws_instance"
+  },
+  {
+    "attributes": [
+      {
+        "name": "arn",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "description",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "family",
+        "type": "String",
+        "required": true,
+        "optional": false,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "name_prefix",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "tags",
+        "type": "Map(String)",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      }
+    ],
+    "block_types": [
+      {
+        "type_name": "parameter",
+        "attributes": [
+          {
+            "name": "apply_method",
+            "type": "String",
+            "required": false,
+            "optional": true,
+            "computed": false,
+            "sensitive": false
+          },
+          {
+            "name": "name",
+            "type": "String",
+            "required": true,
+            "optional": false,
+            "computed": false,
+            "sensitive": false
+          },
+          {
+            "name": "value",
+            "type": "String",
+            "required": true,
+            "optional": false,
+            "computed": false,
+            "sensitive": false
+          }
+        ],
+        "block_types": [
+
+        ],
+        "nesting": 3,
+        "min_items": 0,
+        "max_items": 0
+      }
+    ],
+    "resource_title": "aws_db_parameter_group"
+  },
+  {
+    "attributes": [
+      {
+        "name": "policy_document",
+        "type": "String",
+        "required": true,
+        "optional": false,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "policy_name",
+        "type": "String",
+        "required": true,
+        "optional": false,
+        "computed": false,
+        "sensitive": false
+      }
+    ],
+    "block_types": [
+
+    ],
+    "resource_title": "aws_cloudwatch_log_resource_policy"
+  },
+  {
+    "attributes": [
+      {
+        "name": "cookie_name",
+        "type": "String",
+        "required": true,
+        "optional": false,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "lb_port",
+        "type": "Number",
+        "required": true,
+        "optional": false,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "load_balancer",
+        "type": "String",
+        "required": true,
+        "optional": false,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": true,
+        "optional": false,
+        "computed": false,
+        "sensitive": false
+      }
+    ],
+    "block_types": [
+
+    ],
+    "resource_title": "aws_app_cookie_stickiness_policy"
+  }
+]
