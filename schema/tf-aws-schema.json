@@ -119,7 +119,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_acm_certificate"
+    "type_name": "aws_acm_certificate"
   },
   {
     "attributes": [
@@ -143,7 +143,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_acm_certificate_validation"
+    "type_name": "aws_acm_certificate_validation"
   },
   {
     "attributes": [
@@ -433,7 +433,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_acmpca_certificate_authority"
+    "type_name": "aws_acmpca_certificate_authority"
   },
   {
     "attributes": [
@@ -638,7 +638,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_alb"
+    "type_name": "aws_alb"
   },
   {
     "attributes": [
@@ -995,7 +995,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_alb_listener"
+    "type_name": "aws_alb_listener"
   },
   {
     "attributes": [
@@ -1019,7 +1019,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_alb_listener_certificate"
+    "type_name": "aws_alb_listener_certificate"
   },
   {
     "attributes": [
@@ -1379,7 +1379,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_alb_listener_rule"
+    "type_name": "aws_alb_listener_rule"
   },
   {
     "attributes": [
@@ -1592,7 +1592,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_alb_target_group"
+    "type_name": "aws_alb_target_group"
   },
   {
     "attributes": [
@@ -1632,7 +1632,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_alb_target_group_attachment"
+    "type_name": "aws_alb_target_group_attachment"
   },
   {
     "attributes": [
@@ -1837,7 +1837,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_ami"
+    "type_name": "aws_ami"
   },
   {
     "attributes": [
@@ -2074,7 +2074,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_ami_copy"
+    "type_name": "aws_ami_copy"
   },
   {
     "attributes": [
@@ -2295,7 +2295,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_ami_from_instance"
+    "type_name": "aws_ami_from_instance"
   },
   {
     "attributes": [
@@ -2319,7 +2319,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ami_launch_permission"
+    "type_name": "aws_ami_launch_permission"
   },
   {
     "attributes": [
@@ -2361,7 +2361,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_api_gateway_account"
+    "type_name": "aws_api_gateway_account"
   },
   {
     "attributes": [
@@ -2443,7 +2443,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_api_gateway_api_key"
+    "type_name": "aws_api_gateway_api_key"
   },
   {
     "attributes": [
@@ -2523,7 +2523,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_authorizer"
+    "type_name": "aws_api_gateway_authorizer"
   },
   {
     "attributes": [
@@ -2563,7 +2563,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_base_path_mapping"
+    "type_name": "aws_api_gateway_base_path_mapping"
   },
   {
     "attributes": [
@@ -2603,7 +2603,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_client_certificate"
+    "type_name": "aws_api_gateway_client_certificate"
   },
   {
     "attributes": [
@@ -2675,7 +2675,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_deployment"
+    "type_name": "aws_api_gateway_deployment"
   },
   {
     "attributes": [
@@ -2749,7 +2749,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_api_gateway_documentation_part"
+    "type_name": "aws_api_gateway_documentation_part"
   },
   {
     "attributes": [
@@ -2781,7 +2781,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_documentation_version"
+    "type_name": "aws_api_gateway_documentation_version"
   },
   {
     "attributes": [
@@ -2911,7 +2911,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_api_gateway_domain_name"
+    "type_name": "aws_api_gateway_domain_name"
   },
   {
     "attributes": [
@@ -2959,7 +2959,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_gateway_response"
+    "type_name": "aws_api_gateway_gateway_response"
   },
   {
     "attributes": [
@@ -3103,7 +3103,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_integration"
+    "type_name": "aws_api_gateway_integration"
   },
   {
     "attributes": [
@@ -3183,7 +3183,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_integration_response"
+    "type_name": "aws_api_gateway_integration_response"
   },
   {
     "attributes": [
@@ -3279,7 +3279,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_method"
+    "type_name": "aws_api_gateway_method"
   },
   {
     "attributes": [
@@ -3343,7 +3343,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_method_response"
+    "type_name": "aws_api_gateway_method_response"
   },
   {
     "attributes": [
@@ -3465,7 +3465,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_api_gateway_method_settings"
+    "type_name": "aws_api_gateway_method_settings"
   },
   {
     "attributes": [
@@ -3513,7 +3513,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_model"
+    "type_name": "aws_api_gateway_model"
   },
   {
     "attributes": [
@@ -3553,7 +3553,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_request_validator"
+    "type_name": "aws_api_gateway_request_validator"
   },
   {
     "attributes": [
@@ -3593,7 +3593,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_resource"
+    "type_name": "aws_api_gateway_resource"
   },
   {
     "attributes": [
@@ -3699,7 +3699,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_api_gateway_rest_api"
+    "type_name": "aws_api_gateway_rest_api"
   },
   {
     "attributes": [
@@ -3837,7 +3837,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_api_gateway_stage"
+    "type_name": "aws_api_gateway_stage"
   },
   {
     "attributes": [
@@ -3957,7 +3957,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_api_gateway_usage_plan"
+    "type_name": "aws_api_gateway_usage_plan"
   },
   {
     "attributes": [
@@ -4005,7 +4005,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_usage_plan_key"
+    "type_name": "aws_api_gateway_usage_plan_key"
   },
   {
     "attributes": [
@@ -4037,7 +4037,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_api_gateway_vpc_link"
+    "type_name": "aws_api_gateway_vpc_link"
   },
   {
     "attributes": [
@@ -4077,7 +4077,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_app_cookie_stickiness_policy"
+    "type_name": "aws_app_cookie_stickiness_policy"
   },
   {
     "attributes": [
@@ -4422,7 +4422,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_appautoscaling_policy"
+    "type_name": "aws_appautoscaling_policy"
   },
   {
     "attributes": [
@@ -4520,7 +4520,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_appautoscaling_scheduled_action"
+    "type_name": "aws_appautoscaling_scheduled_action"
   },
   {
     "attributes": [
@@ -4576,7 +4576,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_appautoscaling_target"
+    "type_name": "aws_appautoscaling_target"
   },
   {
     "attributes": [
@@ -4616,7 +4616,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_appmesh_mesh"
+    "type_name": "aws_appmesh_mesh"
   },
   {
     "attributes": [
@@ -4750,7 +4750,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_appmesh_route"
+    "type_name": "aws_appmesh_route"
   },
   {
     "attributes": [
@@ -4950,7 +4950,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_appmesh_virtual_node"
+    "type_name": "aws_appmesh_virtual_node"
   },
   {
     "attributes": [
@@ -5016,7 +5016,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_appmesh_virtual_router"
+    "type_name": "aws_appmesh_virtual_router"
   },
   {
     "attributes": [
@@ -5056,7 +5056,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_appsync_api_key"
+    "type_name": "aws_appsync_api_key"
   },
   {
     "attributes": [
@@ -5211,7 +5211,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_appsync_datasource"
+    "type_name": "aws_appsync_datasource"
   },
   {
     "attributes": [
@@ -5363,7 +5363,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_appsync_graphql_api"
+    "type_name": "aws_appsync_graphql_api"
   },
   {
     "attributes": [
@@ -5421,7 +5421,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_athena_database"
+    "type_name": "aws_athena_database"
   },
   {
     "attributes": [
@@ -5461,7 +5461,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_athena_named_query"
+    "type_name": "aws_athena_named_query"
   },
   {
     "attributes": [
@@ -5493,7 +5493,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_autoscaling_attachment"
+    "type_name": "aws_autoscaling_attachment"
   },
   {
     "attributes": [
@@ -5980,7 +5980,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_autoscaling_group"
+    "type_name": "aws_autoscaling_group"
   },
   {
     "attributes": [
@@ -6052,7 +6052,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_autoscaling_lifecycle_hook"
+    "type_name": "aws_autoscaling_lifecycle_hook"
   },
   {
     "attributes": [
@@ -6084,7 +6084,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_autoscaling_notification"
+    "type_name": "aws_autoscaling_notification"
   },
   {
     "attributes": [
@@ -6336,7 +6336,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_autoscaling_policy"
+    "type_name": "aws_autoscaling_policy"
   },
   {
     "attributes": [
@@ -6416,7 +6416,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_autoscaling_schedule"
+    "type_name": "aws_autoscaling_schedule"
   },
   {
     "attributes": [
@@ -6464,7 +6464,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_backup_vault"
+    "type_name": "aws_backup_vault"
   },
   {
     "attributes": [
@@ -6658,7 +6658,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_batch_compute_environment"
+    "type_name": "aws_batch_compute_environment"
   },
   {
     "attributes": [
@@ -6751,7 +6751,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_batch_job_definition"
+    "type_name": "aws_batch_job_definition"
   },
   {
     "attributes": [
@@ -6799,7 +6799,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_batch_job_queue"
+    "type_name": "aws_batch_job_queue"
   },
   {
     "attributes": [
@@ -6985,7 +6985,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_budgets_budget"
+    "type_name": "aws_budgets_budget"
   },
   {
     "attributes": [
@@ -7057,7 +7057,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloud9_environment_ec2"
+    "type_name": "aws_cloud9_environment_ec2"
   },
   {
     "attributes": [
@@ -7177,7 +7177,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudformation_stack"
+    "type_name": "aws_cloudformation_stack"
   },
   {
     "attributes": [
@@ -8240,7 +8240,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_cloudfront_distribution"
+    "type_name": "aws_cloudfront_distribution"
   },
   {
     "attributes": [
@@ -8296,7 +8296,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudfront_origin_access_identity"
+    "type_name": "aws_cloudfront_origin_access_identity"
   },
   {
     "attributes": [
@@ -8352,7 +8352,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudfront_public_key"
+    "type_name": "aws_cloudfront_public_key"
   },
   {
     "attributes": [
@@ -8474,7 +8474,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_cloudhsm_v2_cluster"
+    "type_name": "aws_cloudhsm_v2_cluster"
   },
   {
     "attributes": [
@@ -8538,7 +8538,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudhsm_v2_hsm"
+    "type_name": "aws_cloudhsm_v2_hsm"
   },
   {
     "attributes": [
@@ -8718,7 +8718,7 @@
         "max_items": 5
       }
     ],
-    "resource_title": "aws_cloudtrail"
+    "type_name": "aws_cloudtrail"
   },
   {
     "attributes": [
@@ -8750,7 +8750,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudwatch_dashboard"
+    "type_name": "aws_cloudwatch_dashboard"
   },
   {
     "attributes": [
@@ -8816,7 +8816,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_cloudwatch_event_permission"
+    "type_name": "aws_cloudwatch_event_permission"
   },
   {
     "attributes": [
@@ -8888,7 +8888,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudwatch_event_rule"
+    "type_name": "aws_cloudwatch_event_rule"
   },
   {
     "attributes": [
@@ -9163,7 +9163,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_cloudwatch_event_target"
+    "type_name": "aws_cloudwatch_event_target"
   },
   {
     "attributes": [
@@ -9203,7 +9203,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudwatch_log_destination"
+    "type_name": "aws_cloudwatch_log_destination"
   },
   {
     "attributes": [
@@ -9227,7 +9227,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudwatch_log_destination_policy"
+    "type_name": "aws_cloudwatch_log_destination_policy"
   },
   {
     "attributes": [
@@ -9283,7 +9283,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudwatch_log_group"
+    "type_name": "aws_cloudwatch_log_group"
   },
   {
     "attributes": [
@@ -9357,7 +9357,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_cloudwatch_log_metric_filter"
+    "type_name": "aws_cloudwatch_log_metric_filter"
   },
   {
     "attributes": [
@@ -9381,7 +9381,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudwatch_log_resource_policy"
+    "type_name": "aws_cloudwatch_log_resource_policy"
   },
   {
     "attributes": [
@@ -9413,7 +9413,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudwatch_log_stream"
+    "type_name": "aws_cloudwatch_log_stream"
   },
   {
     "attributes": [
@@ -9469,7 +9469,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudwatch_log_subscription_filter"
+    "type_name": "aws_cloudwatch_log_subscription_filter"
   },
   {
     "attributes": [
@@ -9737,7 +9737,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_cloudwatch_metric_alarm"
+    "type_name": "aws_cloudwatch_metric_alarm"
   },
   {
     "attributes": [
@@ -10283,7 +10283,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_codebuild_project"
+    "type_name": "aws_codebuild_project"
   },
   {
     "attributes": [
@@ -10331,7 +10331,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_codebuild_webhook"
+    "type_name": "aws_codebuild_webhook"
   },
   {
     "attributes": [
@@ -10395,7 +10395,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_codecommit_repository"
+    "type_name": "aws_codecommit_repository"
   },
   {
     "attributes": [
@@ -10469,7 +10469,7 @@
         "max_items": 10
       }
     ],
-    "resource_title": "aws_codecommit_trigger"
+    "type_name": "aws_codecommit_trigger"
   },
   {
     "attributes": [
@@ -10501,7 +10501,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_codedeploy_app"
+    "type_name": "aws_codedeploy_app"
   },
   {
     "attributes": [
@@ -10631,7 +10631,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_codedeploy_deployment_config"
+    "type_name": "aws_codedeploy_deployment_config"
   },
   {
     "attributes": [
@@ -11146,7 +11146,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_codedeploy_deployment_group"
+    "type_name": "aws_codedeploy_deployment_group"
   },
   {
     "attributes": [
@@ -11339,7 +11339,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_codepipeline"
+    "type_name": "aws_codepipeline"
   },
   {
     "attributes": [
@@ -11440,7 +11440,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_codepipeline_webhook"
+    "type_name": "aws_codepipeline_webhook"
   },
   {
     "attributes": [
@@ -11538,7 +11538,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_cognito_identity_pool"
+    "type_name": "aws_cognito_identity_pool"
   },
   {
     "attributes": [
@@ -11657,7 +11657,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_cognito_identity_pool_roles_attachment"
+    "type_name": "aws_cognito_identity_pool_roles_attachment"
   },
   {
     "attributes": [
@@ -11713,7 +11713,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cognito_identity_provider"
+    "type_name": "aws_cognito_identity_provider"
   },
   {
     "attributes": [
@@ -11779,7 +11779,7 @@
         "max_items": 25
       }
     ],
-    "resource_title": "aws_cognito_resource_server"
+    "type_name": "aws_cognito_resource_server"
   },
   {
     "attributes": [
@@ -11827,7 +11827,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cognito_user_group"
+    "type_name": "aws_cognito_user_group"
   },
   {
     "attributes": [
@@ -12412,7 +12412,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_cognito_user_pool"
+    "type_name": "aws_cognito_user_pool"
   },
   {
     "attributes": [
@@ -12540,7 +12540,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cognito_user_pool_client"
+    "type_name": "aws_cognito_user_pool_client"
   },
   {
     "attributes": [
@@ -12604,7 +12604,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cognito_user_pool_domain"
+    "type_name": "aws_cognito_user_pool_domain"
   },
   {
     "attributes": [
@@ -12636,7 +12636,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_config_aggregate_authorization"
+    "type_name": "aws_config_aggregate_authorization"
   },
   {
     "attributes": [
@@ -12795,7 +12795,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_config_config_rule"
+    "type_name": "aws_config_config_rule"
   },
   {
     "attributes": [
@@ -12888,7 +12888,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_config_configuration_aggregator"
+    "type_name": "aws_config_configuration_aggregator"
   },
   {
     "attributes": [
@@ -12946,7 +12946,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_config_configuration_recorder"
+    "type_name": "aws_config_configuration_recorder"
   },
   {
     "attributes": [
@@ -12970,7 +12970,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_config_configuration_recorder_status"
+    "type_name": "aws_config_configuration_recorder_status"
   },
   {
     "attributes": [
@@ -13028,7 +13028,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_config_delivery_channel"
+    "type_name": "aws_config_delivery_channel"
   },
   {
     "attributes": [
@@ -13108,7 +13108,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cur_report_definition"
+    "type_name": "aws_cur_report_definition"
   },
   {
     "attributes": [
@@ -13148,7 +13148,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_customer_gateway"
+    "type_name": "aws_customer_gateway"
   },
   {
     "attributes": [
@@ -13196,7 +13196,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_datasync_agent"
+    "type_name": "aws_datasync_agent"
   },
   {
     "attributes": [
@@ -13270,7 +13270,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_datasync_location_efs"
+    "type_name": "aws_datasync_location_efs"
   },
   {
     "attributes": [
@@ -13336,7 +13336,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_datasync_location_nfs"
+    "type_name": "aws_datasync_location_nfs"
   },
   {
     "attributes": [
@@ -13402,7 +13402,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_datasync_location_s3"
+    "type_name": "aws_datasync_location_s3"
   },
   {
     "attributes": [
@@ -13540,7 +13540,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_datasync_task"
+    "type_name": "aws_datasync_task"
   },
   {
     "attributes": [
@@ -13737,7 +13737,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_dax_cluster"
+    "type_name": "aws_dax_cluster"
   },
   {
     "attributes": [
@@ -13787,7 +13787,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_dax_parameter_group"
+    "type_name": "aws_dax_parameter_group"
   },
   {
     "attributes": [
@@ -13827,7 +13827,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dax_subnet_group"
+    "type_name": "aws_dax_subnet_group"
   },
   {
     "attributes": [
@@ -13955,7 +13955,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_db_cluster_snapshot"
+    "type_name": "aws_db_cluster_snapshot"
   },
   {
     "attributes": [
@@ -14043,7 +14043,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_db_event_subscription"
+    "type_name": "aws_db_event_subscription"
   },
   {
     "attributes": [
@@ -14517,7 +14517,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_db_instance"
+    "type_name": "aws_db_instance"
   },
   {
     "attributes": [
@@ -14657,7 +14657,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_db_option_group"
+    "type_name": "aws_db_option_group"
   },
   {
     "attributes": [
@@ -14747,7 +14747,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_db_parameter_group"
+    "type_name": "aws_db_parameter_group"
   },
   {
     "attributes": [
@@ -14829,7 +14829,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_db_security_group"
+    "type_name": "aws_db_security_group"
   },
   {
     "attributes": [
@@ -14997,7 +14997,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_db_snapshot"
+    "type_name": "aws_db_snapshot"
   },
   {
     "attributes": [
@@ -15053,7 +15053,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_db_subnet_group"
+    "type_name": "aws_db_subnet_group"
   },
   {
     "attributes": [
@@ -15266,7 +15266,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_default_network_acl"
+    "type_name": "aws_default_network_acl"
   },
   {
     "attributes": [
@@ -15396,7 +15396,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_default_route_table"
+    "type_name": "aws_default_route_table"
   },
   {
     "attributes": [
@@ -15617,7 +15617,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_default_security_group"
+    "type_name": "aws_default_security_group"
   },
   {
     "attributes": [
@@ -15713,7 +15713,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_default_subnet"
+    "type_name": "aws_default_subnet"
   },
   {
     "attributes": [
@@ -15857,7 +15857,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_default_vpc"
+    "type_name": "aws_default_vpc"
   },
   {
     "attributes": [
@@ -15921,7 +15921,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_default_vpc_dhcp_options"
+    "type_name": "aws_default_vpc_dhcp_options"
   },
   {
     "attributes": [
@@ -15945,7 +15945,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_devicefarm_project"
+    "type_name": "aws_devicefarm_project"
   },
   {
     "attributes": [
@@ -15977,7 +15977,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_directory_service_conditional_forwarder"
+    "type_name": "aws_directory_service_conditional_forwarder"
   },
   {
     "attributes": [
@@ -16158,7 +16158,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_directory_service_directory"
+    "type_name": "aws_directory_service_directory"
   },
   {
     "attributes": [
@@ -16303,7 +16303,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_dlm_lifecycle_policy"
+    "type_name": "aws_dlm_lifecycle_policy"
   },
   {
     "attributes": [
@@ -16343,7 +16343,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dms_certificate"
+    "type_name": "aws_dms_certificate"
   },
   {
     "attributes": [
@@ -16596,7 +16596,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_dms_endpoint"
+    "type_name": "aws_dms_endpoint"
   },
   {
     "attributes": [
@@ -16740,7 +16740,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dms_replication_instance"
+    "type_name": "aws_dms_replication_instance"
   },
   {
     "attributes": [
@@ -16796,7 +16796,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dms_replication_subnet_group"
+    "type_name": "aws_dms_replication_subnet_group"
   },
   {
     "attributes": [
@@ -16884,7 +16884,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dms_replication_task"
+    "type_name": "aws_dms_replication_task"
   },
   {
     "attributes": [
@@ -17116,7 +17116,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_docdb_cluster"
+    "type_name": "aws_docdb_cluster"
   },
   {
     "attributes": [
@@ -17300,7 +17300,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_docdb_cluster_instance"
+    "type_name": "aws_docdb_cluster_instance"
   },
   {
     "attributes": [
@@ -17390,7 +17390,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_docdb_cluster_parameter_group"
+    "type_name": "aws_docdb_cluster_parameter_group"
   },
   {
     "attributes": [
@@ -17502,7 +17502,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_docdb_cluster_snapshot"
+    "type_name": "aws_docdb_cluster_snapshot"
   },
   {
     "attributes": [
@@ -17558,7 +17558,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_docdb_subnet_group"
+    "type_name": "aws_docdb_subnet_group"
   },
   {
     "attributes": [
@@ -17622,7 +17622,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_bgp_peer"
+    "type_name": "aws_dx_bgp_peer"
   },
   {
     "attributes": [
@@ -17678,7 +17678,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_connection"
+    "type_name": "aws_dx_connection"
   },
   {
     "attributes": [
@@ -17702,7 +17702,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_connection_association"
+    "type_name": "aws_dx_connection_association"
   },
   {
     "attributes": [
@@ -17726,7 +17726,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_gateway"
+    "type_name": "aws_dx_gateway"
   },
   {
     "attributes": [
@@ -17750,7 +17750,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_gateway_association"
+    "type_name": "aws_dx_gateway_association"
   },
   {
     "attributes": [
@@ -17854,7 +17854,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_hosted_private_virtual_interface"
+    "type_name": "aws_dx_hosted_private_virtual_interface"
   },
   {
     "attributes": [
@@ -17902,7 +17902,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_hosted_private_virtual_interface_accepter"
+    "type_name": "aws_dx_hosted_private_virtual_interface_accepter"
   },
   {
     "attributes": [
@@ -17998,7 +17998,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_hosted_public_virtual_interface"
+    "type_name": "aws_dx_hosted_public_virtual_interface"
   },
   {
     "attributes": [
@@ -18030,7 +18030,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_hosted_public_virtual_interface_accepter"
+    "type_name": "aws_dx_hosted_public_virtual_interface_accepter"
   },
   {
     "attributes": [
@@ -18094,7 +18094,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_lag"
+    "type_name": "aws_dx_lag"
   },
   {
     "attributes": [
@@ -18214,7 +18214,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_private_virtual_interface"
+    "type_name": "aws_dx_private_virtual_interface"
   },
   {
     "attributes": [
@@ -18310,7 +18310,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dx_public_virtual_interface"
+    "type_name": "aws_dx_public_virtual_interface"
   },
   {
     "attributes": [
@@ -18352,7 +18352,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_dynamodb_global_table"
+    "type_name": "aws_dynamodb_global_table"
   },
   {
     "attributes": [
@@ -18657,7 +18657,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_dynamodb_table"
+    "type_name": "aws_dynamodb_table"
   },
   {
     "attributes": [
@@ -18697,7 +18697,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_dynamodb_table_item"
+    "type_name": "aws_dynamodb_table_item"
   },
   {
     "attributes": [
@@ -18777,7 +18777,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ebs_snapshot"
+    "type_name": "aws_ebs_snapshot"
   },
   {
     "attributes": [
@@ -18873,7 +18873,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ebs_snapshot_copy"
+    "type_name": "aws_ebs_snapshot_copy"
   },
   {
     "attributes": [
@@ -18953,7 +18953,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ebs_volume"
+    "type_name": "aws_ebs_volume"
   },
   {
     "attributes": [
@@ -19049,7 +19049,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ec2_capacity_reservation"
+    "type_name": "aws_ec2_capacity_reservation"
   },
   {
     "attributes": [
@@ -19182,7 +19182,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_ec2_client_vpn_endpoint"
+    "type_name": "aws_ec2_client_vpn_endpoint"
   },
   {
     "attributes": [
@@ -19230,7 +19230,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ec2_client_vpn_network_association"
+    "type_name": "aws_ec2_client_vpn_network_association"
   },
   {
     "attributes": [
@@ -19487,7 +19487,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_ec2_fleet"
+    "type_name": "aws_ec2_fleet"
   },
   {
     "attributes": [
@@ -19591,7 +19591,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ec2_transit_gateway"
+    "type_name": "aws_ec2_transit_gateway"
   },
   {
     "attributes": [
@@ -19623,7 +19623,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ec2_transit_gateway_route"
+    "type_name": "aws_ec2_transit_gateway_route"
   },
   {
     "attributes": [
@@ -19663,7 +19663,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ec2_transit_gateway_route_table"
+    "type_name": "aws_ec2_transit_gateway_route_table"
   },
   {
     "attributes": [
@@ -19703,7 +19703,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ec2_transit_gateway_route_table_association"
+    "type_name": "aws_ec2_transit_gateway_route_table_association"
   },
   {
     "attributes": [
@@ -19743,7 +19743,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ec2_transit_gateway_route_table_propagation"
+    "type_name": "aws_ec2_transit_gateway_route_table_propagation"
   },
   {
     "attributes": [
@@ -19823,7 +19823,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ec2_transit_gateway_vpc_attachment"
+    "type_name": "aws_ec2_transit_gateway_vpc_attachment"
   },
   {
     "attributes": [
@@ -19855,7 +19855,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ecr_lifecycle_policy"
+    "type_name": "aws_ecr_lifecycle_policy"
   },
   {
     "attributes": [
@@ -19903,7 +19903,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ecr_repository"
+    "type_name": "aws_ecr_repository"
   },
   {
     "attributes": [
@@ -19935,7 +19935,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ecr_repository_policy"
+    "type_name": "aws_ecr_repository_policy"
   },
   {
     "attributes": [
@@ -19967,7 +19967,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ecs_cluster"
+    "type_name": "aws_ecs_cluster"
   },
   {
     "attributes": [
@@ -20307,7 +20307,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_ecs_service"
+    "type_name": "aws_ecs_service"
   },
   {
     "attributes": [
@@ -20522,7 +20522,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_ecs_task_definition"
+    "type_name": "aws_ecs_task_definition"
   },
   {
     "attributes": [
@@ -20610,7 +20610,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_efs_file_system"
+    "type_name": "aws_efs_file_system"
   },
   {
     "attributes": [
@@ -20674,7 +20674,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_efs_mount_target"
+    "type_name": "aws_efs_mount_target"
   },
   {
     "attributes": [
@@ -20690,7 +20690,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_egress_only_internet_gateway"
+    "type_name": "aws_egress_only_internet_gateway"
   },
   {
     "attributes": [
@@ -20786,7 +20786,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_eip"
+    "type_name": "aws_eip"
   },
   {
     "attributes": [
@@ -20842,7 +20842,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_eip_association"
+    "type_name": "aws_eip_association"
   },
   {
     "attributes": [
@@ -20959,7 +20959,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_eks_cluster"
+    "type_name": "aws_eks_cluster"
   },
   {
     "attributes": [
@@ -21025,7 +21025,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_elastic_beanstalk_application"
+    "type_name": "aws_elastic_beanstalk_application"
   },
   {
     "attributes": [
@@ -21081,7 +21081,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_elastic_beanstalk_application_version"
+    "type_name": "aws_elastic_beanstalk_application_version"
   },
   {
     "attributes": [
@@ -21171,7 +21171,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_elastic_beanstalk_configuration_template"
+    "type_name": "aws_elastic_beanstalk_configuration_template"
   },
   {
     "attributes": [
@@ -21424,7 +21424,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_elastic_beanstalk_environment"
+    "type_name": "aws_elastic_beanstalk_environment"
   },
   {
     "attributes": [
@@ -21674,7 +21674,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_elasticache_cluster"
+    "type_name": "aws_elasticache_cluster"
   },
   {
     "attributes": [
@@ -21732,7 +21732,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_elasticache_parameter_group"
+    "type_name": "aws_elasticache_parameter_group"
   },
   {
     "attributes": [
@@ -21990,7 +21990,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_elasticache_replication_group"
+    "type_name": "aws_elasticache_replication_group"
   },
   {
     "attributes": [
@@ -22022,7 +22022,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_elasticache_security_group"
+    "type_name": "aws_elasticache_security_group"
   },
   {
     "attributes": [
@@ -22054,7 +22054,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_elasticache_subnet_group"
+    "type_name": "aws_elasticache_subnet_group"
   },
   {
     "attributes": [
@@ -22421,7 +22421,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_elasticsearch_domain"
+    "type_name": "aws_elasticsearch_domain"
   },
   {
     "attributes": [
@@ -22445,7 +22445,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_elasticsearch_domain_policy"
+    "type_name": "aws_elasticsearch_domain_policy"
   },
   {
     "attributes": [
@@ -22667,7 +22667,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_elastictranscoder_pipeline"
+    "type_name": "aws_elastictranscoder_pipeline"
   },
   {
     "attributes": [
@@ -23097,7 +23097,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_elastictranscoder_preset"
+    "type_name": "aws_elastictranscoder_preset"
   },
   {
     "attributes": [
@@ -23385,7 +23385,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_elb"
+    "type_name": "aws_elb"
   },
   {
     "attributes": [
@@ -23409,7 +23409,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_elb_attachment"
+    "type_name": "aws_elb_attachment"
   },
   {
     "attributes": [
@@ -23931,7 +23931,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_emr_cluster"
+    "type_name": "aws_emr_cluster"
   },
   {
     "attributes": [
@@ -24037,7 +24037,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_emr_instance_group"
+    "type_name": "aws_emr_instance_group"
   },
   {
     "attributes": [
@@ -24077,7 +24077,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_emr_security_configuration"
+    "type_name": "aws_emr_security_configuration"
   },
   {
     "attributes": [
@@ -24149,7 +24149,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_flow_log"
+    "type_name": "aws_flow_log"
   },
   {
     "attributes": [
@@ -24215,7 +24215,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_gamelift_alias"
+    "type_name": "aws_gamelift_alias"
   },
   {
     "attributes": [
@@ -24281,7 +24281,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_gamelift_build"
+    "type_name": "aws_gamelift_build"
   },
   {
     "attributes": [
@@ -24491,7 +24491,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_gamelift_fleet"
+    "type_name": "aws_gamelift_fleet"
   },
   {
     "attributes": [
@@ -24557,7 +24557,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_gamelift_game_session_queue"
+    "type_name": "aws_gamelift_game_session_queue"
   },
   {
     "attributes": [
@@ -24631,7 +24631,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_glacier_vault"
+    "type_name": "aws_glacier_vault"
   },
   {
     "attributes": [
@@ -24671,7 +24671,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_glacier_vault_lock"
+    "type_name": "aws_glacier_vault_lock"
   },
   {
     "attributes": [
@@ -24764,7 +24764,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_globalaccelerator_accelerator"
+    "type_name": "aws_globalaccelerator_accelerator"
   },
   {
     "attributes": [
@@ -24812,7 +24812,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_glue_catalog_database"
+    "type_name": "aws_glue_catalog_database"
   },
   {
     "attributes": [
@@ -25140,7 +25140,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_glue_catalog_table"
+    "type_name": "aws_glue_catalog_table"
   },
   {
     "attributes": [
@@ -25236,7 +25236,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_glue_classifier"
+    "type_name": "aws_glue_classifier"
   },
   {
     "attributes": [
@@ -25326,7 +25326,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_glue_connection"
+    "type_name": "aws_glue_connection"
   },
   {
     "attributes": [
@@ -25513,7 +25513,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_glue_crawler"
+    "type_name": "aws_glue_crawler"
   },
   {
     "attributes": [
@@ -25638,7 +25638,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_glue_job"
+    "type_name": "aws_glue_job"
   },
   {
     "attributes": [
@@ -25745,7 +25745,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_glue_security_configuration"
+    "type_name": "aws_glue_security_configuration"
   },
   {
     "attributes": [
@@ -25880,7 +25880,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_glue_trigger"
+    "type_name": "aws_glue_trigger"
   },
   {
     "attributes": [
@@ -25912,7 +25912,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_guardduty_detector"
+    "type_name": "aws_guardduty_detector"
   },
   {
     "attributes": [
@@ -25960,7 +25960,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_guardduty_ipset"
+    "type_name": "aws_guardduty_ipset"
   },
   {
     "attributes": [
@@ -26024,7 +26024,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_guardduty_member"
+    "type_name": "aws_guardduty_member"
   },
   {
     "attributes": [
@@ -26072,7 +26072,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_guardduty_threatintelset"
+    "type_name": "aws_guardduty_threatintelset"
   },
   {
     "attributes": [
@@ -26136,7 +26136,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_access_key"
+    "type_name": "aws_iam_access_key"
   },
   {
     "attributes": [
@@ -26152,7 +26152,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_account_alias"
+    "type_name": "aws_iam_account_alias"
   },
   {
     "attributes": [
@@ -26240,7 +26240,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_account_password_policy"
+    "type_name": "aws_iam_account_password_policy"
   },
   {
     "attributes": [
@@ -26280,7 +26280,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_group"
+    "type_name": "aws_iam_group"
   },
   {
     "attributes": [
@@ -26312,7 +26312,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_group_membership"
+    "type_name": "aws_iam_group_membership"
   },
   {
     "attributes": [
@@ -26352,7 +26352,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_group_policy"
+    "type_name": "aws_iam_group_policy"
   },
   {
     "attributes": [
@@ -26376,7 +26376,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_group_policy_attachment"
+    "type_name": "aws_iam_group_policy_attachment"
   },
   {
     "attributes": [
@@ -26448,7 +26448,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_instance_profile"
+    "type_name": "aws_iam_instance_profile"
   },
   {
     "attributes": [
@@ -26488,7 +26488,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_openid_connect_provider"
+    "type_name": "aws_iam_openid_connect_provider"
   },
   {
     "attributes": [
@@ -26544,7 +26544,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_policy"
+    "type_name": "aws_iam_policy"
   },
   {
     "attributes": [
@@ -26592,7 +26592,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_policy_attachment"
+    "type_name": "aws_iam_policy_attachment"
   },
   {
     "attributes": [
@@ -26696,7 +26696,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_role"
+    "type_name": "aws_iam_role"
   },
   {
     "attributes": [
@@ -26736,7 +26736,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_role_policy"
+    "type_name": "aws_iam_role_policy"
   },
   {
     "attributes": [
@@ -26760,7 +26760,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_role_policy_attachment"
+    "type_name": "aws_iam_role_policy_attachment"
   },
   {
     "attributes": [
@@ -26800,7 +26800,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_saml_provider"
+    "type_name": "aws_iam_saml_provider"
   },
   {
     "attributes": [
@@ -26864,7 +26864,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_server_certificate"
+    "type_name": "aws_iam_server_certificate"
   },
   {
     "attributes": [
@@ -26936,7 +26936,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_service_linked_role"
+    "type_name": "aws_iam_service_linked_role"
   },
   {
     "attributes": [
@@ -27000,7 +27000,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_user"
+    "type_name": "aws_iam_user"
   },
   {
     "attributes": [
@@ -27024,7 +27024,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_user_group_membership"
+    "type_name": "aws_iam_user_group_membership"
   },
   {
     "attributes": [
@@ -27080,7 +27080,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_user_login_profile"
+    "type_name": "aws_iam_user_login_profile"
   },
   {
     "attributes": [
@@ -27120,7 +27120,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_user_policy"
+    "type_name": "aws_iam_user_policy"
   },
   {
     "attributes": [
@@ -27144,7 +27144,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_user_policy_attachment"
+    "type_name": "aws_iam_user_policy_attachment"
   },
   {
     "attributes": [
@@ -27200,7 +27200,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iam_user_ssh_key"
+    "type_name": "aws_iam_user_ssh_key"
   },
   {
     "attributes": [
@@ -27232,7 +27232,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_inspector_assessment_target"
+    "type_name": "aws_inspector_assessment_target"
   },
   {
     "attributes": [
@@ -27280,7 +27280,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_inspector_assessment_template"
+    "type_name": "aws_inspector_assessment_template"
   },
   {
     "attributes": [
@@ -27304,7 +27304,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_inspector_resource_group"
+    "type_name": "aws_inspector_resource_group"
   },
   {
     "attributes": [
@@ -27806,7 +27806,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_instance"
+    "type_name": "aws_instance"
   },
   {
     "attributes": [
@@ -27838,7 +27838,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_internet_gateway"
+    "type_name": "aws_internet_gateway"
   },
   {
     "attributes": [
@@ -27870,7 +27870,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iot_certificate"
+    "type_name": "aws_iot_certificate"
   },
   {
     "attributes": [
@@ -27910,7 +27910,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iot_policy"
+    "type_name": "aws_iot_policy"
   },
   {
     "attributes": [
@@ -27934,7 +27934,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iot_policy_attachment"
+    "type_name": "aws_iot_policy_attachment"
   },
   {
     "attributes": [
@@ -27966,7 +27966,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iot_role_alias"
+    "type_name": "aws_iot_role_alias"
   },
   {
     "attributes": [
@@ -28022,7 +28022,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iot_thing"
+    "type_name": "aws_iot_thing"
   },
   {
     "attributes": [
@@ -28046,7 +28046,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_iot_thing_principal_attachment"
+    "type_name": "aws_iot_thing_principal_attachment"
   },
   {
     "attributes": [
@@ -28104,7 +28104,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_iot_thing_type"
+    "type_name": "aws_iot_thing_type"
   },
   {
     "attributes": [
@@ -28616,7 +28616,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_iot_topic_rule"
+    "type_name": "aws_iot_topic_rule"
   },
   {
     "attributes": [
@@ -28656,7 +28656,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_key_pair"
+    "type_name": "aws_key_pair"
   },
   {
     "attributes": [
@@ -29369,7 +29369,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_kinesis_analytics_application"
+    "type_name": "aws_kinesis_analytics_application"
   },
   {
     "attributes": [
@@ -30775,7 +30775,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_kinesis_firehose_delivery_stream"
+    "type_name": "aws_kinesis_firehose_delivery_stream"
   },
   {
     "attributes": [
@@ -30847,7 +30847,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_kinesis_stream"
+    "type_name": "aws_kinesis_stream"
   },
   {
     "attributes": [
@@ -30895,7 +30895,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_kms_alias"
+    "type_name": "aws_kms_alias"
   },
   {
     "attributes": [
@@ -31001,7 +31001,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_kms_grant"
+    "type_name": "aws_kms_grant"
   },
   {
     "attributes": [
@@ -31081,7 +31081,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_kms_key"
+    "type_name": "aws_kms_key"
   },
   {
     "attributes": [
@@ -31155,7 +31155,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_lambda_alias"
+    "type_name": "aws_lambda_alias"
   },
   {
     "attributes": [
@@ -31259,7 +31259,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_lambda_event_source_mapping"
+    "type_name": "aws_lambda_event_source_mapping"
   },
   {
     "attributes": [
@@ -31542,7 +31542,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_lambda_function"
+    "type_name": "aws_lambda_function"
   },
   {
     "attributes": [
@@ -31662,7 +31662,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_lambda_layer_version"
+    "type_name": "aws_lambda_layer_version"
   },
   {
     "attributes": [
@@ -31742,7 +31742,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_lambda_permission"
+    "type_name": "aws_lambda_permission"
   },
   {
     "attributes": [
@@ -32022,7 +32022,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_launch_configuration"
+    "type_name": "aws_launch_configuration"
   },
   {
     "attributes": [
@@ -32676,7 +32676,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_launch_template"
+    "type_name": "aws_launch_template"
   },
   {
     "attributes": [
@@ -32881,7 +32881,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_lb"
+    "type_name": "aws_lb"
   },
   {
     "attributes": [
@@ -32921,7 +32921,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_lb_cookie_stickiness_policy"
+    "type_name": "aws_lb_cookie_stickiness_policy"
   },
   {
     "attributes": [
@@ -33278,7 +33278,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_lb_listener"
+    "type_name": "aws_lb_listener"
   },
   {
     "attributes": [
@@ -33302,7 +33302,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_lb_listener_certificate"
+    "type_name": "aws_lb_listener_certificate"
   },
   {
     "attributes": [
@@ -33662,7 +33662,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_lb_listener_rule"
+    "type_name": "aws_lb_listener_rule"
   },
   {
     "attributes": [
@@ -33720,7 +33720,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_lb_ssl_negotiation_policy"
+    "type_name": "aws_lb_ssl_negotiation_policy"
   },
   {
     "attributes": [
@@ -33933,7 +33933,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_lb_target_group"
+    "type_name": "aws_lb_target_group"
   },
   {
     "attributes": [
@@ -33973,7 +33973,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_lb_target_group_attachment"
+    "type_name": "aws_lb_target_group_attachment"
   },
   {
     "attributes": [
@@ -33997,7 +33997,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_licensemanager_association"
+    "type_name": "aws_licensemanager_association"
   },
   {
     "attributes": [
@@ -34061,7 +34061,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_licensemanager_license_configuration"
+    "type_name": "aws_licensemanager_license_configuration"
   },
   {
     "attributes": [
@@ -34085,7 +34085,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_lightsail_domain"
+    "type_name": "aws_lightsail_domain"
   },
   {
     "attributes": [
@@ -34213,7 +34213,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_lightsail_instance"
+    "type_name": "aws_lightsail_instance"
   },
   {
     "attributes": [
@@ -34293,7 +34293,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_lightsail_key_pair"
+    "type_name": "aws_lightsail_key_pair"
   },
   {
     "attributes": [
@@ -34333,7 +34333,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_lightsail_static_ip"
+    "type_name": "aws_lightsail_static_ip"
   },
   {
     "attributes": [
@@ -34357,7 +34357,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_lightsail_static_ip_attachment"
+    "type_name": "aws_lightsail_static_ip_attachment"
   },
   {
     "attributes": [
@@ -34389,7 +34389,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_load_balancer_backend_server_policy"
+    "type_name": "aws_load_balancer_backend_server_policy"
   },
   {
     "attributes": [
@@ -34421,7 +34421,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_load_balancer_listener_policy"
+    "type_name": "aws_load_balancer_listener_policy"
   },
   {
     "attributes": [
@@ -34479,7 +34479,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_load_balancer_policy"
+    "type_name": "aws_load_balancer_policy"
   },
   {
     "attributes": [
@@ -34495,7 +34495,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_macie_member_account_association"
+    "type_name": "aws_macie_member_account_association"
   },
   {
     "attributes": [
@@ -34553,7 +34553,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_macie_s3_bucket_association"
+    "type_name": "aws_macie_s3_bucket_association"
   },
   {
     "attributes": [
@@ -34585,7 +34585,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_main_route_table_association"
+    "type_name": "aws_main_route_table_association"
   },
   {
     "attributes": [
@@ -34662,7 +34662,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_media_package_channel"
+    "type_name": "aws_media_package_channel"
   },
   {
     "attributes": [
@@ -34694,7 +34694,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_media_store_container"
+    "type_name": "aws_media_store_container"
   },
   {
     "attributes": [
@@ -34718,7 +34718,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_media_store_container_policy"
+    "type_name": "aws_media_store_container_policy"
   },
   {
     "attributes": [
@@ -34988,7 +34988,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_mq_broker"
+    "type_name": "aws_mq_broker"
   },
   {
     "attributes": [
@@ -35060,7 +35060,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_mq_configuration"
+    "type_name": "aws_mq_configuration"
   },
   {
     "attributes": [
@@ -35116,7 +35116,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_nat_gateway"
+    "type_name": "aws_nat_gateway"
   },
   {
     "attributes": [
@@ -35348,7 +35348,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_neptune_cluster"
+    "type_name": "aws_neptune_cluster"
   },
   {
     "attributes": [
@@ -35548,7 +35548,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_neptune_cluster_instance"
+    "type_name": "aws_neptune_cluster_instance"
   },
   {
     "attributes": [
@@ -35638,7 +35638,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_neptune_cluster_parameter_group"
+    "type_name": "aws_neptune_cluster_parameter_group"
   },
   {
     "attributes": [
@@ -35766,7 +35766,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_neptune_cluster_snapshot"
+    "type_name": "aws_neptune_cluster_snapshot"
   },
   {
     "attributes": [
@@ -35854,7 +35854,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_neptune_event_subscription"
+    "type_name": "aws_neptune_event_subscription"
   },
   {
     "attributes": [
@@ -35936,7 +35936,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_neptune_parameter_group"
+    "type_name": "aws_neptune_parameter_group"
   },
   {
     "attributes": [
@@ -35992,7 +35992,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_neptune_subnet_group"
+    "type_name": "aws_neptune_subnet_group"
   },
   {
     "attributes": [
@@ -36205,7 +36205,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_network_acl"
+    "type_name": "aws_network_acl"
   },
   {
     "attributes": [
@@ -36301,7 +36301,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_network_acl_rule"
+    "type_name": "aws_network_acl_rule"
   },
   {
     "attributes": [
@@ -36415,7 +36415,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_network_interface"
+    "type_name": "aws_network_interface"
   },
   {
     "attributes": [
@@ -36463,7 +36463,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_network_interface_attachment"
+    "type_name": "aws_network_interface_attachment"
   },
   {
     "attributes": [
@@ -36487,7 +36487,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_network_interface_sg_attachment"
+    "type_name": "aws_network_interface_sg_attachment"
   },
   {
     "attributes": [
@@ -36735,7 +36735,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_application"
+    "type_name": "aws_opsworks_application"
   },
   {
     "attributes": [
@@ -36961,7 +36961,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_custom_layer"
+    "type_name": "aws_opsworks_custom_layer"
   },
   {
     "attributes": [
@@ -37203,7 +37203,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_ganglia_layer"
+    "type_name": "aws_opsworks_ganglia_layer"
   },
   {
     "attributes": [
@@ -37469,7 +37469,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_haproxy_layer"
+    "type_name": "aws_opsworks_haproxy_layer"
   },
   {
     "attributes": [
@@ -37941,7 +37941,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_instance"
+    "type_name": "aws_opsworks_instance"
   },
   {
     "attributes": [
@@ -38199,7 +38199,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_java_app_layer"
+    "type_name": "aws_opsworks_java_app_layer"
   },
   {
     "attributes": [
@@ -38425,7 +38425,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_memcached_layer"
+    "type_name": "aws_opsworks_memcached_layer"
   },
   {
     "attributes": [
@@ -38659,7 +38659,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_mysql_layer"
+    "type_name": "aws_opsworks_mysql_layer"
   },
   {
     "attributes": [
@@ -38885,7 +38885,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_nodejs_app_layer"
+    "type_name": "aws_opsworks_nodejs_app_layer"
   },
   {
     "attributes": [
@@ -38933,7 +38933,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_opsworks_permission"
+    "type_name": "aws_opsworks_permission"
   },
   {
     "attributes": [
@@ -39151,7 +39151,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_php_app_layer"
+    "type_name": "aws_opsworks_php_app_layer"
   },
   {
     "attributes": [
@@ -39417,7 +39417,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_rails_app_layer"
+    "type_name": "aws_opsworks_rails_app_layer"
   },
   {
     "attributes": [
@@ -39457,7 +39457,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_opsworks_rds_db_instance"
+    "type_name": "aws_opsworks_rds_db_instance"
   },
   {
     "attributes": [
@@ -39707,7 +39707,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_stack"
+    "type_name": "aws_opsworks_stack"
   },
   {
     "attributes": [
@@ -39925,7 +39925,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_opsworks_static_web_layer"
+    "type_name": "aws_opsworks_static_web_layer"
   },
   {
     "attributes": [
@@ -39965,7 +39965,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_opsworks_user_profile"
+    "type_name": "aws_opsworks_user_profile"
   },
   {
     "attributes": [
@@ -40037,7 +40037,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_organizations_account"
+    "type_name": "aws_organizations_account"
   },
   {
     "attributes": [
@@ -40093,7 +40093,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_organizations_organization"
+    "type_name": "aws_organizations_organization"
   },
   {
     "attributes": [
@@ -40141,7 +40141,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_organizations_policy"
+    "type_name": "aws_organizations_policy"
   },
   {
     "attributes": [
@@ -40165,7 +40165,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_organizations_policy_attachment"
+    "type_name": "aws_organizations_policy_attachment"
   },
   {
     "attributes": [
@@ -40205,7 +40205,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_pinpoint_adm_channel"
+    "type_name": "aws_pinpoint_adm_channel"
   },
   {
     "attributes": [
@@ -40285,7 +40285,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_pinpoint_apns_channel"
+    "type_name": "aws_pinpoint_apns_channel"
   },
   {
     "attributes": [
@@ -40365,7 +40365,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_pinpoint_apns_sandbox_channel"
+    "type_name": "aws_pinpoint_apns_sandbox_channel"
   },
   {
     "attributes": [
@@ -40445,7 +40445,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_pinpoint_apns_voip_channel"
+    "type_name": "aws_pinpoint_apns_voip_channel"
   },
   {
     "attributes": [
@@ -40525,7 +40525,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_pinpoint_apns_voip_sandbox_channel"
+    "type_name": "aws_pinpoint_apns_voip_sandbox_channel"
   },
   {
     "attributes": [
@@ -40661,7 +40661,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_pinpoint_app"
+    "type_name": "aws_pinpoint_app"
   },
   {
     "attributes": [
@@ -40701,7 +40701,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_pinpoint_baidu_channel"
+    "type_name": "aws_pinpoint_baidu_channel"
   },
   {
     "attributes": [
@@ -40757,7 +40757,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_pinpoint_email_channel"
+    "type_name": "aws_pinpoint_email_channel"
   },
   {
     "attributes": [
@@ -40789,7 +40789,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_pinpoint_event_stream"
+    "type_name": "aws_pinpoint_event_stream"
   },
   {
     "attributes": [
@@ -40821,7 +40821,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_pinpoint_gcm_channel"
+    "type_name": "aws_pinpoint_gcm_channel"
   },
   {
     "attributes": [
@@ -40877,7 +40877,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_pinpoint_sms_channel"
+    "type_name": "aws_pinpoint_sms_channel"
   },
   {
     "attributes": [
@@ -40901,7 +40901,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_placement_group"
+    "type_name": "aws_placement_group"
   },
   {
     "attributes": [
@@ -40925,7 +40925,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_proxy_protocol_policy"
+    "type_name": "aws_proxy_protocol_policy"
   },
   {
     "attributes": [
@@ -40949,7 +40949,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ram_principal_association"
+    "type_name": "aws_ram_principal_association"
   },
   {
     "attributes": [
@@ -40973,7 +40973,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ram_resource_association"
+    "type_name": "aws_ram_resource_association"
   },
   {
     "attributes": [
@@ -41005,7 +41005,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ram_resource_share"
+    "type_name": "aws_ram_resource_share"
   },
   {
     "attributes": [
@@ -41402,7 +41402,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_rds_cluster"
+    "type_name": "aws_rds_cluster"
   },
   {
     "attributes": [
@@ -41466,7 +41466,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_rds_cluster_endpoint"
+    "type_name": "aws_rds_cluster_endpoint"
   },
   {
     "attributes": [
@@ -41698,7 +41698,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_rds_cluster_instance"
+    "type_name": "aws_rds_cluster_instance"
   },
   {
     "attributes": [
@@ -41788,7 +41788,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_rds_cluster_parameter_group"
+    "type_name": "aws_rds_cluster_parameter_group"
   },
   {
     "attributes": [
@@ -41860,7 +41860,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_rds_global_cluster"
+    "type_name": "aws_rds_global_cluster"
   },
   {
     "attributes": [
@@ -42225,7 +42225,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_redshift_cluster"
+    "type_name": "aws_redshift_cluster"
   },
   {
     "attributes": [
@@ -42313,7 +42313,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_redshift_event_subscription"
+    "type_name": "aws_redshift_event_subscription"
   },
   {
     "attributes": [
@@ -42371,7 +42371,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_redshift_parameter_group"
+    "type_name": "aws_redshift_parameter_group"
   },
   {
     "attributes": [
@@ -42429,7 +42429,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_redshift_security_group"
+    "type_name": "aws_redshift_security_group"
   },
   {
     "attributes": [
@@ -42461,7 +42461,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_redshift_snapshot_copy_grant"
+    "type_name": "aws_redshift_snapshot_copy_grant"
   },
   {
     "attributes": [
@@ -42501,7 +42501,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_redshift_subnet_group"
+    "type_name": "aws_redshift_subnet_group"
   },
   {
     "attributes": [
@@ -42559,7 +42559,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_resourcegroups_group"
+    "type_name": "aws_resourcegroups_group"
   },
   {
     "attributes": [
@@ -42679,7 +42679,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_route"
+    "type_name": "aws_route"
   },
   {
     "attributes": [
@@ -42703,7 +42703,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_route53_delegation_set"
+    "type_name": "aws_route53_delegation_set"
   },
   {
     "attributes": [
@@ -42863,7 +42863,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_route53_health_check"
+    "type_name": "aws_route53_health_check"
   },
   {
     "attributes": [
@@ -42887,7 +42887,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_route53_query_log"
+    "type_name": "aws_route53_query_log"
   },
   {
     "attributes": [
@@ -43101,7 +43101,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_route53_record"
+    "type_name": "aws_route53_record"
   },
   {
     "attributes": [
@@ -43207,7 +43207,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_route53_zone"
+    "type_name": "aws_route53_zone"
   },
   {
     "attributes": [
@@ -43239,7 +43239,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_route53_zone_association"
+    "type_name": "aws_route53_zone_association"
   },
   {
     "attributes": [
@@ -43361,7 +43361,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_route_table"
+    "type_name": "aws_route_table"
   },
   {
     "attributes": [
@@ -43385,7 +43385,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_route_table_association"
+    "type_name": "aws_route_table_association"
   },
   {
     "attributes": [
@@ -43433,7 +43433,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_s3_account_public_access_block"
+    "type_name": "aws_s3_account_public_access_block"
   },
   {
     "attributes": [
@@ -44165,7 +44165,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_s3_bucket"
+    "type_name": "aws_s3_bucket"
   },
   {
     "attributes": [
@@ -44345,7 +44345,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_s3_bucket_inventory"
+    "type_name": "aws_s3_bucket_inventory"
   },
   {
     "attributes": [
@@ -44395,7 +44395,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_s3_bucket_metric"
+    "type_name": "aws_s3_bucket_metric"
   },
   {
     "attributes": [
@@ -44563,7 +44563,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_s3_bucket_notification"
+    "type_name": "aws_s3_bucket_notification"
   },
   {
     "attributes": [
@@ -44715,7 +44715,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_s3_bucket_object"
+    "type_name": "aws_s3_bucket_object"
   },
   {
     "attributes": [
@@ -44739,7 +44739,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_s3_bucket_policy"
+    "type_name": "aws_s3_bucket_policy"
   },
   {
     "attributes": [
@@ -44787,7 +44787,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_s3_bucket_public_access_block"
+    "type_name": "aws_s3_bucket_public_access_block"
   },
   {
     "attributes": [
@@ -44947,7 +44947,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_sagemaker_model"
+    "type_name": "aws_sagemaker_model"
   },
   {
     "attributes": [
@@ -45019,7 +45019,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_sagemaker_notebook_instance"
+    "type_name": "aws_sagemaker_notebook_instance"
   },
   {
     "attributes": [
@@ -45125,7 +45125,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_secretsmanager_secret"
+    "type_name": "aws_secretsmanager_secret"
   },
   {
     "attributes": [
@@ -45181,7 +45181,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_secretsmanager_secret_version"
+    "type_name": "aws_secretsmanager_secret_version"
   },
   {
     "attributes": [
@@ -45418,7 +45418,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_security_group"
+    "type_name": "aws_security_group"
   },
   {
     "attributes": [
@@ -45514,7 +45514,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_security_group_rule"
+    "type_name": "aws_security_group_rule"
   },
   {
     "attributes": [
@@ -45523,7 +45523,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_securityhub_account"
+    "type_name": "aws_securityhub_account"
   },
   {
     "attributes": [
@@ -45547,7 +45547,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_securityhub_product_subscription"
+    "type_name": "aws_securityhub_product_subscription"
   },
   {
     "attributes": [
@@ -45563,7 +45563,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_securityhub_standards_subscription"
+    "type_name": "aws_securityhub_standards_subscription"
   },
   {
     "attributes": [
@@ -45595,7 +45595,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_service_discovery_http_namespace"
+    "type_name": "aws_service_discovery_http_namespace"
   },
   {
     "attributes": [
@@ -45643,7 +45643,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_service_discovery_private_dns_namespace"
+    "type_name": "aws_service_discovery_private_dns_namespace"
   },
   {
     "attributes": [
@@ -45683,7 +45683,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_service_discovery_public_dns_namespace"
+    "type_name": "aws_service_discovery_public_dns_namespace"
   },
   {
     "attributes": [
@@ -45821,7 +45821,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_service_discovery_service"
+    "type_name": "aws_service_discovery_service"
   },
   {
     "attributes": [
@@ -45877,7 +45877,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_servicecatalog_portfolio"
+    "type_name": "aws_servicecatalog_portfolio"
   },
   {
     "attributes": [
@@ -45893,7 +45893,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ses_active_receipt_rule_set"
+    "type_name": "aws_ses_active_receipt_rule_set"
   },
   {
     "attributes": [
@@ -45909,7 +45909,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ses_configuration_set"
+    "type_name": "aws_ses_configuration_set"
   },
   {
     "attributes": [
@@ -45933,7 +45933,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ses_domain_dkim"
+    "type_name": "aws_ses_domain_dkim"
   },
   {
     "attributes": [
@@ -45965,7 +45965,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ses_domain_identity"
+    "type_name": "aws_ses_domain_identity"
   },
   {
     "attributes": [
@@ -45989,7 +45989,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ses_domain_identity_verification"
+    "type_name": "aws_ses_domain_identity_verification"
   },
   {
     "attributes": [
@@ -46021,7 +46021,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ses_domain_mail_from"
+    "type_name": "aws_ses_domain_mail_from"
   },
   {
     "attributes": [
@@ -46141,7 +46141,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_ses_event_destination"
+    "type_name": "aws_ses_event_destination"
   },
   {
     "attributes": [
@@ -46173,7 +46173,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ses_identity_notification_topic"
+    "type_name": "aws_ses_identity_notification_topic"
   },
   {
     "attributes": [
@@ -46205,7 +46205,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ses_receipt_filter"
+    "type_name": "aws_ses_receipt_filter"
   },
   {
     "attributes": [
@@ -46553,7 +46553,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_ses_receipt_rule"
+    "type_name": "aws_ses_receipt_rule"
   },
   {
     "attributes": [
@@ -46569,7 +46569,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ses_receipt_rule_set"
+    "type_name": "aws_ses_receipt_rule_set"
   },
   {
     "attributes": [
@@ -46609,7 +46609,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ses_template"
+    "type_name": "aws_ses_template"
   },
   {
     "attributes": [
@@ -46641,7 +46641,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_sfn_activity"
+    "type_name": "aws_sfn_activity"
   },
   {
     "attributes": [
@@ -46697,7 +46697,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_sfn_state_machine"
+    "type_name": "aws_sfn_state_machine"
   },
   {
     "attributes": [
@@ -46713,7 +46713,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_simpledb_domain"
+    "type_name": "aws_simpledb_domain"
   },
   {
     "attributes": [
@@ -46737,7 +46737,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_snapshot_create_volume_permission"
+    "type_name": "aws_snapshot_create_volume_permission"
   },
   {
     "attributes": [
@@ -46841,7 +46841,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_sns_platform_application"
+    "type_name": "aws_sns_platform_application"
   },
   {
     "attributes": [
@@ -46897,7 +46897,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_sns_sms_preferences"
+    "type_name": "aws_sns_sms_preferences"
   },
   {
     "attributes": [
@@ -47057,7 +47057,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_sns_topic"
+    "type_name": "aws_sns_topic"
   },
   {
     "attributes": [
@@ -47081,7 +47081,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_sns_topic_policy"
+    "type_name": "aws_sns_topic_policy"
   },
   {
     "attributes": [
@@ -47161,7 +47161,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_sns_topic_subscription"
+    "type_name": "aws_sns_topic_subscription"
   },
   {
     "attributes": [
@@ -47185,7 +47185,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_spot_datafeed_subscription"
+    "type_name": "aws_spot_datafeed_subscription"
   },
   {
     "attributes": [
@@ -47611,7 +47611,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_spot_fleet_request"
+    "type_name": "aws_spot_fleet_request"
   },
   {
     "attributes": [
@@ -48201,7 +48201,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_spot_instance_request"
+    "type_name": "aws_spot_instance_request"
   },
   {
     "attributes": [
@@ -48329,7 +48329,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_sqs_queue"
+    "type_name": "aws_sqs_queue"
   },
   {
     "attributes": [
@@ -48353,7 +48353,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_sqs_queue_policy"
+    "type_name": "aws_sqs_queue_policy"
   },
   {
     "attributes": [
@@ -48425,7 +48425,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ssm_activation"
+    "type_name": "aws_ssm_activation"
   },
   {
     "attributes": [
@@ -48542,7 +48542,7 @@
         "max_items": 5
       }
     ],
-    "resource_title": "aws_ssm_association"
+    "type_name": "aws_ssm_association"
   },
   {
     "attributes": [
@@ -48747,7 +48747,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_ssm_document"
+    "type_name": "aws_ssm_document"
   },
   {
     "attributes": [
@@ -48827,7 +48827,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ssm_maintenance_window"
+    "type_name": "aws_ssm_maintenance_window"
   },
   {
     "attributes": [
@@ -48885,7 +48885,7 @@
         "max_items": 5
       }
     ],
-    "resource_title": "aws_ssm_maintenance_window_target"
+    "type_name": "aws_ssm_maintenance_window_target"
   },
   {
     "attributes": [
@@ -49053,7 +49053,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_ssm_maintenance_window_task"
+    "type_name": "aws_ssm_maintenance_window_task"
   },
   {
     "attributes": [
@@ -49133,7 +49133,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ssm_parameter"
+    "type_name": "aws_ssm_parameter"
   },
   {
     "attributes": [
@@ -49276,7 +49276,7 @@
         "max_items": 4
       }
     ],
-    "resource_title": "aws_ssm_patch_baseline"
+    "type_name": "aws_ssm_patch_baseline"
   },
   {
     "attributes": [
@@ -49300,7 +49300,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_ssm_patch_group"
+    "type_name": "aws_ssm_patch_group"
   },
   {
     "attributes": [
@@ -49366,7 +49366,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_ssm_resource_data_sync"
+    "type_name": "aws_ssm_resource_data_sync"
   },
   {
     "attributes": [
@@ -49390,7 +49390,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_storagegateway_cache"
+    "type_name": "aws_storagegateway_cache"
   },
   {
     "attributes": [
@@ -49502,7 +49502,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_storagegateway_cached_iscsi_volume"
+    "type_name": "aws_storagegateway_cached_iscsi_volume"
   },
   {
     "attributes": [
@@ -49624,7 +49624,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_storagegateway_gateway"
+    "type_name": "aws_storagegateway_gateway"
   },
   {
     "attributes": [
@@ -49786,7 +49786,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_storagegateway_nfs_file_share"
+    "type_name": "aws_storagegateway_nfs_file_share"
   },
   {
     "attributes": [
@@ -49914,7 +49914,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_storagegateway_smb_file_share"
+    "type_name": "aws_storagegateway_smb_file_share"
   },
   {
     "attributes": [
@@ -49938,7 +49938,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_storagegateway_upload_buffer"
+    "type_name": "aws_storagegateway_upload_buffer"
   },
   {
     "attributes": [
@@ -49962,7 +49962,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_storagegateway_working_storage"
+    "type_name": "aws_storagegateway_working_storage"
   },
   {
     "attributes": [
@@ -50058,7 +50058,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_subnet"
+    "type_name": "aws_subnet"
   },
   {
     "attributes": [
@@ -50098,7 +50098,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_swf_domain"
+    "type_name": "aws_swf_domain"
   },
   {
     "attributes": [
@@ -50170,7 +50170,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_transfer_server"
+    "type_name": "aws_transfer_server"
   },
   {
     "attributes": [
@@ -50202,7 +50202,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_transfer_ssh_key"
+    "type_name": "aws_transfer_ssh_key"
   },
   {
     "attributes": [
@@ -50266,7 +50266,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_transfer_user"
+    "type_name": "aws_transfer_user"
   },
   {
     "attributes": [
@@ -50314,7 +50314,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_volume_attachment"
+    "type_name": "aws_volume_attachment"
   },
   {
     "attributes": [
@@ -50458,7 +50458,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpc"
+    "type_name": "aws_vpc"
   },
   {
     "attributes": [
@@ -50522,7 +50522,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpc_dhcp_options"
+    "type_name": "aws_vpc_dhcp_options"
   },
   {
     "attributes": [
@@ -50546,7 +50546,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpc_dhcp_options_association"
+    "type_name": "aws_vpc_dhcp_options_association"
   },
   {
     "attributes": [
@@ -50684,7 +50684,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_vpc_endpoint"
+    "type_name": "aws_vpc_endpoint"
   },
   {
     "attributes": [
@@ -50740,7 +50740,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpc_endpoint_connection_notification"
+    "type_name": "aws_vpc_endpoint_connection_notification"
   },
   {
     "attributes": [
@@ -50764,7 +50764,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpc_endpoint_route_table_association"
+    "type_name": "aws_vpc_endpoint_route_table_association"
   },
   {
     "attributes": [
@@ -50844,7 +50844,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpc_endpoint_service"
+    "type_name": "aws_vpc_endpoint_service"
   },
   {
     "attributes": [
@@ -50868,7 +50868,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpc_endpoint_service_allowed_principal"
+    "type_name": "aws_vpc_endpoint_service_allowed_principal"
   },
   {
     "attributes": [
@@ -50892,7 +50892,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpc_endpoint_subnet_association"
+    "type_name": "aws_vpc_endpoint_subnet_association"
   },
   {
     "attributes": [
@@ -50916,7 +50916,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpc_ipv4_cidr_block_association"
+    "type_name": "aws_vpc_ipv4_cidr_block_association"
   },
   {
     "attributes": [
@@ -51049,7 +51049,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_vpc_peering_connection"
+    "type_name": "aws_vpc_peering_connection"
   },
   {
     "attributes": [
@@ -51190,7 +51190,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_vpc_peering_connection_accepter"
+    "type_name": "aws_vpc_peering_connection_accepter"
   },
   {
     "attributes": [
@@ -51275,7 +51275,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_vpc_peering_connection_options"
+    "type_name": "aws_vpc_peering_connection_options"
   },
   {
     "attributes": [
@@ -51536,7 +51536,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_vpn_connection"
+    "type_name": "aws_vpn_connection"
   },
   {
     "attributes": [
@@ -51560,7 +51560,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpn_connection_route"
+    "type_name": "aws_vpn_connection_route"
   },
   {
     "attributes": [
@@ -51600,7 +51600,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpn_gateway"
+    "type_name": "aws_vpn_gateway"
   },
   {
     "attributes": [
@@ -51624,7 +51624,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpn_gateway_attachment"
+    "type_name": "aws_vpn_gateway_attachment"
   },
   {
     "attributes": [
@@ -51648,7 +51648,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_vpn_gateway_route_propagation"
+    "type_name": "aws_vpn_gateway_route_propagation"
   },
   {
     "attributes": [
@@ -51724,7 +51724,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_waf_byte_match_set"
+    "type_name": "aws_waf_byte_match_set"
   },
   {
     "attributes": [
@@ -51766,7 +51766,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_waf_geo_match_set"
+    "type_name": "aws_waf_geo_match_set"
   },
   {
     "attributes": [
@@ -51816,7 +51816,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_waf_ipset"
+    "type_name": "aws_waf_ipset"
   },
   {
     "attributes": [
@@ -51890,7 +51890,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_waf_rate_based_rule"
+    "type_name": "aws_waf_rate_based_rule"
   },
   {
     "attributes": [
@@ -51958,7 +51958,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_waf_regex_match_set"
+    "type_name": "aws_waf_regex_match_set"
   },
   {
     "attributes": [
@@ -51982,7 +51982,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_waf_regex_pattern_set"
+    "type_name": "aws_waf_regex_pattern_set"
   },
   {
     "attributes": [
@@ -52040,7 +52040,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_waf_rule"
+    "type_name": "aws_waf_rule"
   },
   {
     "attributes": [
@@ -52116,7 +52116,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_waf_rule_group"
+    "type_name": "aws_waf_rule_group"
   },
   {
     "attributes": [
@@ -52192,7 +52192,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_waf_size_constraint_set"
+    "type_name": "aws_waf_size_constraint_set"
   },
   {
     "attributes": [
@@ -52252,7 +52252,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_waf_sql_injection_match_set"
+    "type_name": "aws_waf_sql_injection_match_set"
   },
   {
     "attributes": [
@@ -52430,7 +52430,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_waf_web_acl"
+    "type_name": "aws_waf_web_acl"
   },
   {
     "attributes": [
@@ -52490,7 +52490,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_waf_xss_match_set"
+    "type_name": "aws_waf_xss_match_set"
   },
   {
     "attributes": [
@@ -52627,7 +52627,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_wafregional_byte_match_set"
+    "type_name": "aws_wafregional_byte_match_set"
   },
   {
     "attributes": [
@@ -52669,7 +52669,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_wafregional_geo_match_set"
+    "type_name": "aws_wafregional_geo_match_set"
   },
   {
     "attributes": [
@@ -52719,7 +52719,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_wafregional_ipset"
+    "type_name": "aws_wafregional_ipset"
   },
   {
     "attributes": [
@@ -52793,7 +52793,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_wafregional_rate_based_rule"
+    "type_name": "aws_wafregional_rate_based_rule"
   },
   {
     "attributes": [
@@ -52861,7 +52861,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_wafregional_regex_match_set"
+    "type_name": "aws_wafregional_regex_match_set"
   },
   {
     "attributes": [
@@ -52885,7 +52885,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_wafregional_regex_pattern_set"
+    "type_name": "aws_wafregional_regex_pattern_set"
   },
   {
     "attributes": [
@@ -52943,7 +52943,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_wafregional_rule"
+    "type_name": "aws_wafregional_rule"
   },
   {
     "attributes": [
@@ -53019,7 +53019,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_wafregional_rule_group"
+    "type_name": "aws_wafregional_rule_group"
   },
   {
     "attributes": [
@@ -53095,7 +53095,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_wafregional_size_constraint_set"
+    "type_name": "aws_wafregional_size_constraint_set"
   },
   {
     "attributes": [
@@ -53155,7 +53155,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_wafregional_sql_injection_match_set"
+    "type_name": "aws_wafregional_sql_injection_match_set"
   },
   {
     "attributes": [
@@ -53333,7 +53333,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_wafregional_web_acl"
+    "type_name": "aws_wafregional_web_acl"
   },
   {
     "attributes": [
@@ -53357,7 +53357,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_wafregional_web_acl_association"
+    "type_name": "aws_wafregional_web_acl_association"
   },
   {
     "attributes": [
@@ -53417,7 +53417,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_wafregional_xss_match_set"
+    "type_name": "aws_wafregional_xss_match_set"
   },
   {
     "attributes": [
@@ -53558,6 +53558,6 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_worklink_fleet"
+    "type_name": "aws_worklink_fleet"
   }
 ]

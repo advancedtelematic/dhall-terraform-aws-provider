@@ -499,7 +499,7 @@
         "max_items": 1
       }
     ],
-    "resource_title": "aws_instance"
+    "type_name": "aws_instance"
   },
   {
     "attributes": [
@@ -589,7 +589,7 @@
         "max_items": 0
       }
     ],
-    "resource_title": "aws_db_parameter_group"
+    "type_name": "aws_db_parameter_group"
   },
   {
     "attributes": [
@@ -613,7 +613,7 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_cloudwatch_log_resource_policy"
+    "type_name": "aws_cloudwatch_log_resource_policy"
   },
   {
     "attributes": [
@@ -653,6 +653,6 @@
     "block_types": [
 
     ],
-    "resource_title": "aws_app_cookie_stickiness_policy"
+    "type_name": "aws_app_cookie_stickiness_policy"
   }
 ]
