@@ -5,8 +5,6 @@ file = File.read './schema/test-schema.json'
 
 resources = JSON.parse(file)
 
-aws_instance = resources.first
-
 # enum NestingMode {
   # INVALID = 0;
   # SINGLE = 1;
@@ -156,6 +154,7 @@ def dhall_in_block_to_string(dr)
     end
   }.flatten
 
+  # TODO not exporting empty Optionals, possibly correct?
   %{
 in
 { #{str.join("\n, ")}
@@ -202,10 +201,18 @@ def dhall_representation_from_resource(resource)
   )
 end
 
-dhall_reps_instance = dhall_representation_from_resource aws_instance
+resources.map do |r|
+  dr = dhall_representation_from_resource(r)
+  dhall_types_as_string = dhall_rep_to_string(dr).join("")
+  dhall_in_block_as_string = dhall_in_block_to_string(dr)
 
-dhall_aws_to_str = dhall_rep_to_string(dhall_reps_instance)
+  dhall_file_content = dhall_types_as_string + dhall_in_block_as_string
+  File.write("./dhall/#{dr.type_name}.dhall", dhall_file_content)
+end
 
-File.write('./dhall/aws_instance.dhall', dhall_aws_to_str.join("") + dhall_in_block_to_string(dhall_reps_instance))
+#aws_instance = resources.first
+#dhall_reps_instance = dhall_representation_from_resource aws_instance
+#dhall_aws_to_str = dhall_rep_to_string(dhall_reps_instance)
+#File.write('./dhall/aws_instance.dhall', dhall_aws_to_str.join("") + dhall_in_block_to_string(dhall_reps_instance))
 
-pry.inspect
+#pry.inspect
