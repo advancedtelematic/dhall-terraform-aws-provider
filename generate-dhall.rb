@@ -33,7 +33,7 @@ def print_block_type(name, block_type)
   when block_type.list
     "List #{type}"
   else
-    "Unknown #{type} #{block_type.args}"
+    "Unknown #{type} #{block_type.args}" # TODO print warning here
   end
 end
 
@@ -42,15 +42,18 @@ def convert_type(attribute)
   when "Bool"
     "Bool"
   when "List(Map(String))"
-    "?? List(Map(String))" # TODO
+    # https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#tag-and-tags
+    "(List { key : Text, value : Text, propagate_at_launch : Bool })"
   when "List(String)"
     "(List Text)"
   when "Map(Bool)"
-    "?? Map(Bool)" # TODO
+    # https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#request_parameters
+    "(List { mapKey : Text, mapValue : Bool })"
   when "Map(Number)"
-    "?? Map(Number)" # TODO
+    # https://www.terraform.io/docs/providers/aws/r/lambda_alias.html#additional_version_weights
+    "(List { mapKey : Natural, mapValue : Double })"
   when "Map(String)"
-    "?? Map(String)" # TODO
+    "(List { mapKey : Text, mapValue : Text })"
   when "Number"
     "Natural"
   when "Set(String)"
@@ -58,7 +61,7 @@ def convert_type(attribute)
   when "String"
     "Text"
   else
-    "TODO" # TODO
+    "TODO" # TODO unreachable? Maybe warn or exit here
   end
 end
 
@@ -83,6 +86,14 @@ end
 
 def classify(str)
   str.split('_').collect(&:capitalize).join
+end
+
+def optional_title(name)
+  "#{classify(name)}Optional"
+end
+
+def required_title(name)
+  "#{classify(name)}Required"
 end
 
 def print_type(name, args, optional=false)
@@ -111,26 +122,6 @@ let #{classify(name)}#{suffix} =
   end
 end
 
-def print_in_block(name, args)
-  title = classify(name)
-  optional_title = "#{classify(name)}Optional"
-  required_title = "#{classify(name)}Required"
-  if args[:optional].count > 0
-    str = %{
-in
-  { #{optional_title} = #{optional_title}
-  , #{required_title}= #{required_title}
-  , #{title} = #{optional_title} //\\\\ #{required_title}
-  }
-}
-  else
-    str = %{
-in { #{classify(name)} = #{classify(name)} }
-}
-  end
-  str
-end
-
 def fields_from_resource(resource)
   split = resource['attributes'].group_by { |a| a['required'] }
   required = split[true]&.map { |a| field_from_arg(a) } || []
@@ -139,12 +130,37 @@ def fields_from_resource(resource)
 end
 
 def dhall_rep_to_string(dr)
-  # + print_in_block(resource["type_name"], fields)
   dr.blocks.map { |d| dhall_rep_to_string(d) } \
   + [ print_type(dr.type_name, dr.fields[:optional], true) \
     + print_type(dr.type_name, dr.fields[:required]) \
     + "let #{classify(dr.type_name)} = #{classify(dr.type_name)}Optional //\\\\ #{classify(dr.type_name)}Required\n"
-    ] # TODO add in block back to printing
+    ]
+end
+
+def get_all_type_names(dr)
+  names = dr.blocks.map { |b| get_all_type_names(b) }
+  names << { name: dr.type_name, optional: dr.block_type&.optional }
+  names.flatten
+end
+
+def dhall_in_block_to_string(dr)
+  names = get_all_type_names(dr).reverse
+  str = names.map { |n|
+    if n[:optional]
+      [ "#{optional_title(n[:name])} = #{optional_title(n[:name])}",
+        "#{required_title(n[:name])} = #{required_title(n[:name])}",
+        "#{classify(n[:name])} = #{classify(n[:name])}" ]
+    else
+      "#{classify(n[:name])} = #{classify(n[:name])}"
+    end
+  }.flatten
+
+  # TODO missing top level *Required and *Optional exports
+  %{
+in
+{ #{str.join("\n, ")}
+}
+}
 end
 
 BlockType = Struct.new(:optional, :list, :unknown, :args)
@@ -171,6 +187,8 @@ def dhall_representation_from_resource(resource)
     bt = nil
   end
   # TODO handle optionals properly
+  # Need to apped the optional ones to [:optional]
+  # and the required ones to [:required]
   fields[:optional].append(fields_from_blocks(blocks)).flatten!
 
   DhallRepresentation.new(
@@ -185,6 +203,6 @@ dhall_reps_instance = dhall_representation_from_resource aws_instance
 
 dhall_aws_to_str = dhall_rep_to_string(dhall_reps_instance)
 
-File.write('./dhall/aws_instance.dhall', dhall_aws_to_str.join(""))
+File.write('./dhall/aws_instance.dhall', dhall_aws_to_str.join("") + dhall_in_block_to_string(dhall_reps_instance))
 
 #pry.inspect

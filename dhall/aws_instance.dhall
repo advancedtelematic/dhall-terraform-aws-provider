@@ -76,11 +76,11 @@ let AwsInstanceOptional =
   , security_groups: Optional (List Text)
   , source_dest_check: Optional Bool
   , subnet_id: Optional Text
-  , tags: Optional ?? Map(String)
+  , tags: Optional (List { mapKey : Text, mapValue : Text })
   , tenancy: Optional Text
   , user_data: Optional Text
   , user_data_base64: Optional Text
-  , volume_tags: Optional ?? Map(String)
+  , volume_tags: Optional (List { mapKey : Text, mapValue : Text })
   , vpc_security_group_ids: Optional (List Text)
   , credit_specification: Optional CreditSpecification
   , ebs_block_device: Optional (List EbsBlockDevice)
@@ -94,3 +94,22 @@ let AwsInstanceRequired =
   , instance_type: Text
   }
 let AwsInstance = AwsInstanceOptional //\\ AwsInstanceRequired
+
+in
+{ AwsInstance = AwsInstance
+, RootBlockDeviceOptional = RootBlockDeviceOptional
+, RootBlockDeviceRequired = RootBlockDeviceRequired
+, RootBlockDevice = RootBlockDevice
+, NetworkInterfaceOptional = NetworkInterfaceOptional
+, NetworkInterfaceRequired = NetworkInterfaceRequired
+, NetworkInterface = NetworkInterface
+, EphemeralBlockDeviceOptional = EphemeralBlockDeviceOptional
+, EphemeralBlockDeviceRequired = EphemeralBlockDeviceRequired
+, EphemeralBlockDevice = EphemeralBlockDevice
+, EbsBlockDeviceOptional = EbsBlockDeviceOptional
+, EbsBlockDeviceRequired = EbsBlockDeviceRequired
+, EbsBlockDevice = EbsBlockDevice
+, CreditSpecificationOptional = CreditSpecificationOptional
+, CreditSpecificationRequired = CreditSpecificationRequired
+, CreditSpecification = CreditSpecification
+}
