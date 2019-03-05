@@ -1,18 +1,48 @@
 # dhall-terraform-aws-provider
 
-Generate dhall bindings for the terraform aws provider, using [tfschema](https://github.com/minamijoyo/tfschema) to provide the schema.
+Note: Experimental, alhpa code.
 
-Hopefully that will result in some more complete dhall terraform bindings that can be kept up to date, but until then here's some I made earlier: https://github.com/advancedtelematic/ota-staging-cn
+Generate dhall bindings for the terraform aws provider, using [tfschema](https://github.com/minamijoyo/tfschema) to provide the schema.
 
 ## Terraform bindings
 
-In the `/dhall` dir you'll find the terraform types for aws resources. So far it's just `aws_instance`, but you can take a look at the normalized dhall types with the following:
+In the `/dhall` dir you'll find the terraform types for aws resources. Each dhall file exports a records of all the types it makes to create an aws resource. Those resources in made by merging their optional and required fields. Take the `aws_nat_gateway` as an example.
 
-```
-dhall normalize < dhall/aws_instance.dhall
+```bash
+dhall normalize < dhall/aws_nat_gateway.dhall
 ```
 
-## Usage
+```haskell
+{ AwsNatGateway =
+    { allocation_id :
+        Text
+    , network_interface_id :
+        Optional Text
+    , private_ip :
+        Optional Text
+    , public_ip :
+        Optional Text
+    , subnet_id :
+        Text
+    , tags :
+        Optional (List { mapKey : Text, mapValue : Text })
+    }
+, AwsNatGatewayOptional =
+    { network_interface_id :
+        Optional Text
+    , private_ip :
+        Optional Text
+    , public_ip :
+        Optional Text
+    , tags :
+        Optional (List { mapKey : Text, mapValue : Text })
+    }
+, AwsNatGatewayRequired =
+    { allocation_id : Text, subnet_id : Text }
+}
+```
+
+## Using the generators
 
 `make generate-schema` creates the terraform json schema in the `./schema` dir.
 
