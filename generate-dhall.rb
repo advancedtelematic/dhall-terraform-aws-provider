@@ -33,6 +33,7 @@ def print_block_type(name, block_type)
   when block_type.list
     "List #{type}"
   else
+    print "Unknown block type: #{block_type}"
     "Unknown #{type} #{block_type.args}" # TODO print warning here
   end
 end
@@ -61,7 +62,8 @@ def convert_type(attribute)
   when "String"
     "Text"
   else
-    "TODO" # TODO unreachable? Maybe warn or exit here
+    print "Unknown type #{attribute["type"]}"
+    "Unknown type"
   end
 end
 
@@ -174,6 +176,7 @@ def block_type(block)
     BlockType.new(true, true, false, args)
   else
     # TODO add more combinations from ./schema/tf-aws-schema.json
+    print "#{block.type_name}: Unknown combination #{args}"
     BlockType.new(false, false, true, args)
   end
 end
@@ -187,10 +190,11 @@ def dhall_representation_from_resource(resource)
   else
     bt = nil
   end
-  # TODO handle optionals properly
-  # Need to apped the optional ones to [:optional]
-  # and the required ones to [:required]
-  fields[:optional].append(fields_from_blocks(blocks)).flatten!
+  # TODO tidy up
+  nested_blocks = blocks.flatten
+  split_nested_blocks = nested_blocks.group_by { |b| b.block_type.optional }
+  fields[:optional].append(fields_from_blocks(split_nested_blocks[true])).flatten! if split_nested_blocks[true]
+  fields[:required].append(fields_from_blocks(split_nested_blocks[false])).flatten! if split_nested_blocks[false]
 
   DhallRepresentation.new(
     fields,
@@ -206,4 +210,4 @@ dhall_aws_to_str = dhall_rep_to_string(dhall_reps_instance)
 
 File.write('./dhall/aws_instance.dhall', dhall_aws_to_str.join("") + dhall_in_block_to_string(dhall_reps_instance))
 
-#pry.inspect
+pry.inspect
