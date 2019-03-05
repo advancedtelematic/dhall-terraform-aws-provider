@@ -39,7 +39,7 @@ let AwsSsmMaintenanceWindowTaskRequired =
   , task_arn: Text
   , task_type: Text
   , window_id: Text
-  , targets: List List Targets
+  , targets: List Targets
   }
 let AwsSsmMaintenanceWindowTask = AwsSsmMaintenanceWindowTaskOptional //\\ AwsSsmMaintenanceWindowTaskRequired
 

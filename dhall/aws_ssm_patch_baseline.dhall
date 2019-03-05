@@ -14,7 +14,7 @@ let ApprovalRuleOptional =
 
 let ApprovalRuleRequired =
   { approve_after_days: Natural
-  , patch_filter: List List PatchFilter
+  , patch_filter: List PatchFilter
   }
 let ApprovalRule = ApprovalRuleOptional //\\ ApprovalRuleRequired
 

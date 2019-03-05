@@ -87,7 +87,7 @@ let SchemaOptional =
   { record_encoding: Optional Text }
 
 let SchemaRequired =
-  { record_columns: List List RecordColumns
+  { record_columns: List RecordColumns
   , record_format: RecordFormat
   }
 let Schema = SchemaOptional //\\ SchemaRequired
@@ -209,7 +209,7 @@ let SchemaOptional =
   { record_encoding: Optional Text }
 
 let SchemaRequired =
-  { record_columns: List List RecordColumns
+  { record_columns: List RecordColumns
   , record_format: RecordFormat
   }
 let Schema = SchemaOptional //\\ SchemaRequired

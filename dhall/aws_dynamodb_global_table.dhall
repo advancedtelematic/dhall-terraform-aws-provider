@@ -10,7 +10,7 @@ let AwsDynamodbGlobalTableOptional =
 
 let AwsDynamodbGlobalTableRequired =
   { name: Text
-  , replica: List List Replica
+  , replica: List Replica
   }
 let AwsDynamodbGlobalTable = AwsDynamodbGlobalTableOptional //\\ AwsDynamodbGlobalTableRequired
 

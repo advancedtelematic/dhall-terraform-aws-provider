@@ -142,7 +142,7 @@ let ReplicationConfigurationOptional = {}
 
 let ReplicationConfigurationRequired =
   { role: Text
-  , rules: List List Rules
+  , rules: List Rules
   }
 let ReplicationConfiguration = ReplicationConfigurationOptional //\\ ReplicationConfigurationRequired
 

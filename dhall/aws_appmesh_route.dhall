@@ -10,7 +10,7 @@ let WeightedTarget = WeightedTargetOptional //\\ WeightedTargetRequired
 let ActionOptional = {}
 
 let ActionRequired =
-  { weighted_target: List List WeightedTarget }
+  { weighted_target: List WeightedTarget }
 let Action = ActionOptional //\\ ActionRequired
 
 let MatchOptional = {}

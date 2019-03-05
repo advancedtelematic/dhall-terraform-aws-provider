@@ -142,7 +142,7 @@ let AwsCognitoUserPoolOptional =
 
 let AwsCognitoUserPoolRequired =
   { name: Text
-  , schema: List List Schema
+  , schema: List Schema
   }
 let AwsCognitoUserPool = AwsCognitoUserPoolOptional //\\ AwsCognitoUserPoolRequired
 

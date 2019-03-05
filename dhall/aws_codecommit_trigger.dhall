@@ -16,7 +16,7 @@ let AwsCodecommitTriggerOptional =
 
 let AwsCodecommitTriggerRequired =
   { repository_name: Text
-  , trigger: List List Trigger
+  , trigger: List Trigger
   }
 let AwsCodecommitTrigger = AwsCodecommitTriggerOptional //\\ AwsCodecommitTriggerRequired
 

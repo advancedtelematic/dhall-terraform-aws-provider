@@ -24,7 +24,7 @@ let AwsCodepipelineWebhookRequired =
   , target_action: Text
   , target_pipeline: Text
   , authentication_configuration: AuthenticationConfiguration
-  , filter: List List Filter
+  , filter: List Filter
   }
 let AwsCodepipelineWebhook = AwsCodepipelineWebhookOptional //\\ AwsCodepipelineWebhookRequired
 

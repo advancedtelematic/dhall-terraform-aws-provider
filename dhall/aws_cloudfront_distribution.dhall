@@ -253,7 +253,7 @@ let AwsCloudfrontDistributionOptional =
 let AwsCloudfrontDistributionRequired =
   { enabled: Bool
   , default_cache_behavior: DefaultCacheBehavior
-  , origin: List List Origin
+  , origin: List Origin
   , restrictions: Restrictions
   , viewer_certificate: ViewerCertificate
   }

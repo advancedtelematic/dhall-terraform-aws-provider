@@ -31,7 +31,7 @@ let PolicyDetailsOptional = {}
 let PolicyDetailsRequired =
   { resource_types: (List Text)
   , target_tags: (List { mapKey : Text, mapValue : Text })
-  , schedule: List List Schedule
+  , schedule: List Schedule
   }
 let PolicyDetails = PolicyDetailsOptional //\\ PolicyDetailsRequired
 

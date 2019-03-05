@@ -19,7 +19,7 @@ let AwsRoute53ZoneOptional =
 
 let AwsRoute53ZoneRequired =
   { name: Text
-  , vpc: List List Vpc
+  , vpc: List Vpc
   }
 let AwsRoute53Zone = AwsRoute53ZoneOptional //\\ AwsRoute53ZoneRequired
 

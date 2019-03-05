@@ -64,7 +64,7 @@ let AwsMqBrokerRequired =
   , engine_version: Text
   , host_instance_type: Text
   , security_groups: (List Text)
-  , user: List List User
+  , user: List User
   }
 let AwsMqBroker = AwsMqBrokerOptional //\\ AwsMqBrokerRequired
 

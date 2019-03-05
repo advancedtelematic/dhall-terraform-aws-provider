@@ -17,7 +17,7 @@ let AwsDbSecurityGroupOptional =
 
 let AwsDbSecurityGroupRequired =
   { name: Text
-  , ingress: List List Ingress
+  , ingress: List Ingress
   }
 let AwsDbSecurityGroup = AwsDbSecurityGroupOptional //\\ AwsDbSecurityGroupRequired
 

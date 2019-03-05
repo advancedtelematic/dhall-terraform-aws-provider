@@ -21,7 +21,7 @@ let PredicateOptional =
   { logical: Optional Text }
 
 let PredicateRequired =
-  { conditions: List List Conditions }
+  { conditions: List Conditions }
 let Predicate = PredicateOptional //\\ PredicateRequired
 
 let AwsGlueTriggerOptional =
@@ -34,7 +34,7 @@ let AwsGlueTriggerOptional =
 let AwsGlueTriggerRequired =
   { name: Text
   , type: Text
-  , actions: List List Actions
+  , actions: List Actions
   }
 let AwsGlueTrigger = AwsGlueTriggerOptional //\\ AwsGlueTriggerRequired
 

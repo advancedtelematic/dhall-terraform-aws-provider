@@ -78,7 +78,7 @@ let AwsSpotFleetRequestOptional =
 let AwsSpotFleetRequestRequired =
   { iam_fleet_role: Text
   , target_capacity: Natural
-  , launch_specification: List List LaunchSpecification
+  , launch_specification: List LaunchSpecification
   }
 let AwsSpotFleetRequest = AwsSpotFleetRequestOptional //\\ AwsSpotFleetRequestRequired
 

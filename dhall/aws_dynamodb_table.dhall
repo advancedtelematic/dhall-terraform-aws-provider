@@ -72,7 +72,7 @@ let AwsDynamodbTableOptional =
 let AwsDynamodbTableRequired =
   { hash_key: Text
   , name: Text
-  , attribute: List List Attribute
+  , attribute: List Attribute
   }
 let AwsDynamodbTable = AwsDynamodbTableOptional //\\ AwsDynamodbTableRequired
 

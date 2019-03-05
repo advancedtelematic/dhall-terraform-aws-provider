@@ -43,9 +43,9 @@ let AwsGlueCrawlerRequired =
   { database_name: Text
   , name: Text
   , role: Text
-  , dynamodb_target: List List DynamodbTarget
-  , jdbc_target: List List JdbcTarget
-  , s3_target: List List S3Target
+  , dynamodb_target: List DynamodbTarget
+  , jdbc_target: List JdbcTarget
+  , s3_target: List S3Target
   }
 let AwsGlueCrawler = AwsGlueCrawlerOptional //\\ AwsGlueCrawlerRequired
 

@@ -81,8 +81,8 @@ let AwsAlbListenerRuleOptional =
 
 let AwsAlbListenerRuleRequired =
   { listener_arn: Text
-  , action: List List Action
-  , condition: List List Condition
+  , action: List Action
+  , condition: List Condition
   }
 let AwsAlbListenerRule = AwsAlbListenerRuleOptional //\\ AwsAlbListenerRuleRequired
 

@@ -15,7 +15,7 @@ let FieldToMatch = FieldToMatchOptional //\\ FieldToMatchRequired
 let RedactedFieldsOptional = {}
 
 let RedactedFieldsRequired =
-  { field_to_match: List List FieldToMatch }
+  { field_to_match: List FieldToMatch }
 let RedactedFields = RedactedFieldsOptional //\\ RedactedFieldsRequired
 
 let LoggingConfigurationOptional =

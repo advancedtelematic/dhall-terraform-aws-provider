@@ -13,7 +13,7 @@ let AwsRedshiftSecurityGroupOptional =
 
 let AwsRedshiftSecurityGroupRequired =
   { name: Text
-  , ingress: List List Ingress
+  , ingress: List Ingress
   }
 let AwsRedshiftSecurityGroup = AwsRedshiftSecurityGroupOptional //\\ AwsRedshiftSecurityGroupRequired
 

@@ -37,7 +37,7 @@ let StageOptional = {}
 
 let StageRequired =
   { name: Text
-  , action: List List Action
+  , action: List Action
   }
 let Stage = StageOptional //\\ StageRequired
 
@@ -48,7 +48,7 @@ let AwsCodepipelineRequired =
   { name: Text
   , role_arn: Text
   , artifact_store: ArtifactStore
-  , stage: List List Stage
+  , stage: List Stage
   }
 let AwsCodepipeline = AwsCodepipelineOptional //\\ AwsCodepipelineRequired
 

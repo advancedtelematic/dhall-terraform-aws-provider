@@ -122,7 +122,7 @@ let TargetGroupPairInfoOptional =
 
 let TargetGroupPairInfoRequired =
   { prod_traffic_route: ProdTrafficRoute
-  , target_group: List List TargetGroup
+  , target_group: List TargetGroup
   }
 let TargetGroupPairInfo = TargetGroupPairInfoOptional //\\ TargetGroupPairInfoRequired
 

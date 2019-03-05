@@ -13,7 +13,7 @@ let AwsSsmMaintenanceWindowTargetOptional =
 let AwsSsmMaintenanceWindowTargetRequired =
   { resource_type: Text
   , window_id: Text
-  , targets: List List Targets
+  , targets: List Targets
   }
 let AwsSsmMaintenanceWindowTarget = AwsSsmMaintenanceWindowTargetOptional //\\ AwsSsmMaintenanceWindowTargetRequired
 

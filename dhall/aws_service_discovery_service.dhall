@@ -12,7 +12,7 @@ let DnsConfigOptional =
 
 let DnsConfigRequired =
   { namespace_id: Text
-  , dns_records: List List DnsRecords
+  , dns_records: List DnsRecords
   }
 let DnsConfig = DnsConfigOptional //\\ DnsConfigRequired
 

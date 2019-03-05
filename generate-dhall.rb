@@ -18,8 +18,6 @@ def print_block_type(name, block_type)
     "Optional (#{type})"
   when block_type.optional
     "Optional #{type}"
-  when block_type.list
-    "List #{type}"
   else
     type
   end

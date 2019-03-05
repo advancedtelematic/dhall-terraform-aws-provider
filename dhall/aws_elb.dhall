@@ -54,7 +54,7 @@ let AwsElbOptional =
   }
 
 let AwsElbRequired =
-  { listener: List List Listener }
+  { listener: List Listener }
 let AwsElb = AwsElbOptional //\\ AwsElbRequired
 
 in

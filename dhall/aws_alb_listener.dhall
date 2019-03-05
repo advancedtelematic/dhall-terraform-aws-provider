@@ -76,7 +76,7 @@ let AwsAlbListenerOptional =
 let AwsAlbListenerRequired =
   { load_balancer_arn: Text
   , port: Natural
-  , default_action: List List DefaultAction
+  , default_action: List DefaultAction
   }
 let AwsAlbListener = AwsAlbListenerOptional //\\ AwsAlbListenerRequired
 
