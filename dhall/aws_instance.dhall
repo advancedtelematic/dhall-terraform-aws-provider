@@ -96,7 +96,9 @@ let AwsInstanceRequired =
 let AwsInstance = AwsInstanceOptional //\\ AwsInstanceRequired
 
 in
-{ AwsInstance = AwsInstance
+{ AwsInstanceOptional = AwsInstanceOptional
+, AwsInstanceRequired = AwsInstanceRequired
+, AwsInstance = AwsInstance
 , RootBlockDeviceOptional = RootBlockDeviceOptional
 , RootBlockDeviceRequired = RootBlockDeviceRequired
 , RootBlockDevice = RootBlockDevice

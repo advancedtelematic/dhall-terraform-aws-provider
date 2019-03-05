@@ -34,7 +34,7 @@ def print_block_type(name, block_type)
     "List #{type}"
   else
     print "Unknown block type: #{block_type}"
-    "Unknown #{type} #{block_type.args}" # TODO print warning here
+    "Unknown #{type} #{block_type.args}"
   end
 end
 
@@ -76,7 +76,6 @@ def print_optional(attribute)
 end
 
 def fields_from_blocks(blocks)
-  # TODO handle optionals better
   blocks.map do |b|
     "#{b.type_name}: #{print_block_type(b.type_name, b.block_type)}"
   end
@@ -105,7 +104,7 @@ def print_type(name, args, optional=false)
     suffix = "Required"
   end
   case
-  when args.count == 0
+  when args.count == 0 # TODO Are empty types even wanted?
   %{
 let #{classify(name)}#{suffix} = {}
 }
@@ -141,7 +140,7 @@ end
 
 def get_all_type_names(dr)
   names = dr.blocks.map { |b| get_all_type_names(b) }
-  names << { name: dr.type_name, optional: dr.block_type&.optional }
+  names << { name: dr.type_name, optional: (dr.fields[:optional].count > 0) }
   names.flatten
 end
 
@@ -157,7 +156,6 @@ def dhall_in_block_to_string(dr)
     end
   }.flatten
 
-  # TODO missing top level *Required and *Optional exports
   %{
 in
 { #{str.join("\n, ")}
