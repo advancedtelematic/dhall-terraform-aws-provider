@@ -5,14 +5,6 @@ file = File.read './schema/test-schema.json'
 
 resources = JSON.parse(file)
 
-# enum NestingMode {
-  # INVALID = 0;
-  # SINGLE = 1;
-  # LIST = 2;
-  # SET = 3;
-  # MAP = 4;
-# }
-
 def print_block_type(name, block_type)
   type_name = classify(name)
   if block_type.list
@@ -22,8 +14,6 @@ def print_block_type(name, block_type)
   end
 
   case
-  when block_type.unknown
-    "Unknown #{type} #{block_type.args}"
   when block_type.optional && block_type.list
     "Optional (#{type})"
   when block_type.optional
@@ -31,8 +21,7 @@ def print_block_type(name, block_type)
   when block_type.list
     "List #{type}"
   else
-    print "Unknown block type: #{block_type}"
-    "Unknown #{type} #{block_type.args}"
+    type
   end
 end
 
@@ -162,20 +151,30 @@ in
 }
 end
 
-BlockType = Struct.new(:optional, :list, :unknown, :args)
-def block_type(block)
-  args = [block["nesting"], block["min_items"], block["max_items"]]
+# enum NestingMode {
+  # INVALID = 0;
+  # SINGLE = 1;
+  # LIST = 2;
+  # SET = 3;
+  # MAP = 4;
+# }
 
-  case args
-  when [2, 0, 1]
-    BlockType.new(true, false, false, args)
-  when [3, 0, 0]
-    BlockType.new(true, true, false, args)
-  else
-    # TODO add more combinations from ./schema/tf-aws-schema.json
-    print "#{block.type_name}: Unknown combination #{args}"
-    BlockType.new(false, false, true, args)
+BlockType = Struct.new(:optional, :list, :record)
+def block_type(block)
+  nesting = block["nesting"]
+  min = block["min_items"]
+  max = block["max_items"]
+
+  # TODO probably buggy, need to test more cases
+  list = (nesting == 2 || nesting == 3)
+  map = nesting == 4
+  optional = min == 0
+  if max == 1
+    record = true
+    list = false
   end
+
+  BlockType.new(optional, list, record)
 end
 
 DhallRepresentation = Struct.new(:fields, :blocks, :type_name, :block_type)
@@ -202,6 +201,7 @@ def dhall_representation_from_resource(resource)
 end
 
 resources.map do |r|
+  print "#{r["type_name"]}\n"
   dr = dhall_representation_from_resource(r)
   dhall_types_as_string = dhall_rep_to_string(dr).join("")
   dhall_in_block_as_string = dhall_in_block_to_string(dr)
