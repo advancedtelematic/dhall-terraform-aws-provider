@@ -173,6 +173,7 @@ def block_type(block)
   when [3, 0, 0]
     BlockType.new(true, true, false, args)
   else
+    # TODO add more combinations from ./schema/tf-aws-schema.json
     BlockType.new(false, false, true, args)
   end
 end
