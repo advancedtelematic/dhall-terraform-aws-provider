@@ -1,7 +1,7 @@
 require 'json'
 require 'pry'
 
-file = File.read './schema/test-schema.json'
+file = File.read './schema/tf-aws-schema.json'
 
 resources = JSON.parse(file)
 
