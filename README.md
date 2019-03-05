@@ -17,3 +17,7 @@ dhall normalize < dhall/aws_instance.dhall
 `make generate-schema` creates the terraform json schema in the `./schema` dir.
 
 `make generate-dhall` creates the `.dhall` files in the `./dhall` dir.
+
+## License
+
+This code is licensed under the Mozilla Public License 2.0, a copy of which can be found in this repository. All code is copyright 2018 HERE Europe B.V.
