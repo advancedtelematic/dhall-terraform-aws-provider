@@ -108,25 +108,12 @@ let #{classify(name)}#{suffix} =
   end
 end
 
-def fields_from_resource(resource)
-  split = resource['attributes'].group_by { |a| a['required'] }
-  required = split[true]&.map { |a| field_from_arg(a) } || []
-  optional = split[false]&.map { |a| field_from_arg(a) } || []
-  { optional: optional, required: required }
-end
-
 def dhall_rep_to_string(dr)
   dr.blocks.map { |d| dhall_rep_to_string(d) } \
   + [ print_type(dr.type_name, dr.fields[:optional], true) \
     + print_type(dr.type_name, dr.fields[:required]) \
     + "let #{classify(dr.type_name)} = #{classify(dr.type_name)}Optional //\\\\ #{classify(dr.type_name)}Required\n"
     ]
-end
-
-def get_all_type_names(dr)
-  names = dr.blocks.map { |b| get_all_type_names(b) }
-  names << { name: dr.type_name, optional: (dr.fields[:optional].count > 0) }
-  names.flatten
 end
 
 def dhall_in_block_to_string(dr)
@@ -149,6 +136,19 @@ in
 }
 end
 
+def fields_from_resource(resource)
+  split = resource['attributes'].group_by { |a| a['required'] }
+  required = split[true]&.map { |a| field_from_arg(a) } || []
+  optional = split[false]&.map { |a| field_from_arg(a) } || []
+  { optional: optional, required: required }
+end
+
+def get_all_type_names(dr)
+  names = dr.blocks.map { |b| get_all_type_names(b) }
+  names << { name: dr.type_name, optional: (dr.fields[:optional].count > 0) }
+  names.flatten
+end
+
 # enum NestingMode {
   # INVALID = 0;
   # SINGLE = 1;
@@ -164,6 +164,7 @@ def block_type(block)
   max = block["max_items"]
 
   # TODO probably buggy, need to test more cases
+  # TODO drop _some_ computed values
   list = (nesting == 2 || nesting == 3)
   map = nesting == 4
   optional = min == 0
