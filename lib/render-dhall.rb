@@ -59,10 +59,6 @@ def fields_from_blocks(blocks)
   end
 end
 
-def field_from_arg(attribute)
-  "#{attribute["name"]}: #{print_optional(attribute)} #{print_attribute_type(attribute)}".squeeze(" ")
-end
-
 def classify(str)
   str.split('_').collect(&:capitalize).join
 end
@@ -77,23 +73,23 @@ end
 
 def print_type(name, args, optional=false)
   if optional
-    suffix = "Optional"
+    type_name = optional_title(name)
   else
-    suffix = "Required"
+    type_name = required_title(name)
   end
   case
   when args.count == 0 # TODO Are empty types even wanted?
   %{
-let #{classify(name)}#{suffix} = {}
+let #{type_name} = {}
 }
   when args.count == 1
   %{
-let #{classify(name)}#{suffix} =
+let #{type_name} =
   { #{args.first} }
 }
   when args.count >1
   %{
-let #{classify(name)}#{suffix} =
+let #{type_name} =
   { #{args.first}
   , #{args.drop(1).join("\n  , ")}
   }
@@ -107,6 +103,12 @@ def dhall_rep_to_string(dr)
     + print_type(dr.type_name, dr.fields[:required]) \
     + "let #{classify(dr.type_name)} = #{classify(dr.type_name)}Optional //\\\\ #{classify(dr.type_name)}Required\n"
     ]
+end
+
+def get_all_type_names(dr)
+  names = dr.blocks.map { |b| get_all_type_names(b) }
+  names << { name: dr.type_name, optional: (dr.fields[:optional].count > 0) }
+  names.flatten
 end
 
 def dhall_in_block_to_string(dr)
@@ -137,17 +139,15 @@ def only_computed?(attribute)
    attribute["sensitive"] == false)
 end
 
-def fields_from_resource(resource)
+def field_from_arg(attribute) # TODO should this return string or an object that gets printed later?
+  "#{attribute["name"]}: #{print_optional(attribute)} #{print_attribute_type(attribute)}".squeeze(" ")
+end
+
+def fields_from_resource(resource) # TODO move out of render?
   split = resource['attributes']
     .delete_if { |a| only_computed?(a)}
     .group_by { |a| a['required'] }
   required = split[true]&.map { |a| field_from_arg(a) } || []
   optional = split[false]&.map { |a| field_from_arg(a) } || []
   { optional: optional, required: required }
-end
-
-def get_all_type_names(dr)
-  names = dr.blocks.map { |b| get_all_type_names(b) }
-  names << { name: dr.type_name, optional: (dr.fields[:optional].count > 0) }
-  names.flatten
 end
