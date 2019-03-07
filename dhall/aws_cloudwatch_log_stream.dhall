@@ -1,6 +1,5 @@
 
-let AwsCloudwatchLogStreamOptional =
-  { arn: Optional Text }
+let AwsCloudwatchLogStreamOptional = {}
 
 let AwsCloudwatchLogStreamRequired =
   { log_group_name: Text
@@ -9,7 +8,5 @@ let AwsCloudwatchLogStreamRequired =
 let AwsCloudwatchLogStream = AwsCloudwatchLogStreamOptional //\\ AwsCloudwatchLogStreamRequired
 
 in
-{ AwsCloudwatchLogStreamOptional = AwsCloudwatchLogStreamOptional
-, AwsCloudwatchLogStreamRequired = AwsCloudwatchLogStreamRequired
-, AwsCloudwatchLogStream = AwsCloudwatchLogStream
+{ AwsCloudwatchLogStream = AwsCloudwatchLogStream
 }

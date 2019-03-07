@@ -9,8 +9,6 @@ let Notification = NotificationOptional //\\ NotificationRequired
 
 let AwsGlacierVaultOptional =
   { access_policy: Optional Text
-  , arn: Optional Text
-  , location: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , notification: Optional (List Notification)
   }

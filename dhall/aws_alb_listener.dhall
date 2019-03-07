@@ -67,8 +67,7 @@ let DefaultActionRequired =
 let DefaultAction = DefaultActionOptional //\\ DefaultActionRequired
 
 let AwsAlbListenerOptional =
-  { arn: Optional Text
-  , certificate_arn: Optional Text
+  { certificate_arn: Optional Text
   , protocol: Optional Text
   , ssl_policy: Optional Text
   }

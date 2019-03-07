@@ -1,8 +1,5 @@
 
-let AwsIamSamlProviderOptional =
-  { arn: Optional Text
-  , valid_until: Optional Text
-  }
+let AwsIamSamlProviderOptional = {}
 
 let AwsIamSamlProviderRequired =
   { name: Text
@@ -11,7 +8,5 @@ let AwsIamSamlProviderRequired =
 let AwsIamSamlProvider = AwsIamSamlProviderOptional //\\ AwsIamSamlProviderRequired
 
 in
-{ AwsIamSamlProviderOptional = AwsIamSamlProviderOptional
-, AwsIamSamlProviderRequired = AwsIamSamlProviderRequired
-, AwsIamSamlProvider = AwsIamSamlProvider
+{ AwsIamSamlProvider = AwsIamSamlProvider
 }

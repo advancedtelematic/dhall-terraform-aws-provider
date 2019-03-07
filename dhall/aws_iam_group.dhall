@@ -1,9 +1,6 @@
 
 let AwsIamGroupOptional =
-  { arn: Optional Text
-  , path: Optional Text
-  , unique_id: Optional Text
-  }
+  { path: Optional Text }
 
 let AwsIamGroupRequired =
   { name: Text }

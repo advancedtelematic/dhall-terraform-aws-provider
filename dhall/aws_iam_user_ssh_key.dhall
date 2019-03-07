@@ -1,9 +1,6 @@
 
 let AwsIamUserSshKeyOptional =
-  { fingerprint: Optional Text
-  , ssh_public_key_id: Optional Text
-  , status: Optional Text
-  }
+  { status: Optional Text }
 
 let AwsIamUserSshKeyRequired =
   { encoding: Text

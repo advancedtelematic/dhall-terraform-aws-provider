@@ -32,12 +32,10 @@ let ListenerRequired =
 let Listener = ListenerOptional //\\ ListenerRequired
 
 let AwsElbOptional =
-  { arn: Optional Text
-  , availability_zones: Optional (List Text)
+  { availability_zones: Optional (List Text)
   , connection_draining: Optional Bool
   , connection_draining_timeout: Optional Natural
   , cross_zone_load_balancing: Optional Bool
-  , dns_name: Optional Text
   , idle_timeout: Optional Natural
   , instances: Optional (List Text)
   , internal: Optional Bool
@@ -45,10 +43,8 @@ let AwsElbOptional =
   , name_prefix: Optional Text
   , security_groups: Optional (List Text)
   , source_security_group: Optional Text
-  , source_security_group_id: Optional Text
   , subnets: Optional (List Text)
   , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , zone_id: Optional Text
   , access_logs: Optional AccessLogs
   , health_check: Optional HealthCheck
   }

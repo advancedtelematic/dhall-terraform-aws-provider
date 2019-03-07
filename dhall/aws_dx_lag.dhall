@@ -1,7 +1,6 @@
 
 let AwsDxLagOptional =
-  { arn: Optional Text
-  , force_destroy: Optional Bool
+  { force_destroy: Optional Bool
   , number_of_connections: Optional Natural
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   }

@@ -6,9 +6,7 @@ let RoutingConfigRequired = {}
 let RoutingConfig = RoutingConfigOptional //\\ RoutingConfigRequired
 
 let AwsLambdaAliasOptional =
-  { arn: Optional Text
-  , description: Optional Text
-  , invoke_arn: Optional Text
+  { description: Optional Text
   , routing_config: Optional RoutingConfig
   }
 

@@ -37,7 +37,6 @@ let WeightedRoutingPolicy = WeightedRoutingPolicyOptional //\\ WeightedRoutingPo
 
 let AwsRoute53RecordOptional =
   { allow_overwrite: Optional Bool
-  , fqdn: Optional Text
   , health_check_id: Optional Text
   , multivalue_answer_routing_policy: Optional Bool
   , records: Optional (List Text)

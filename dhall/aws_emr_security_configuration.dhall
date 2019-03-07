@@ -1,7 +1,6 @@
 
 let AwsEmrSecurityConfigurationOptional =
-  { creation_date: Optional Text
-  , name: Optional Text
+  { name: Optional Text
   , name_prefix: Optional Text
   }
 

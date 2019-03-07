@@ -19,9 +19,7 @@ let ConnectionLogOptions = ConnectionLogOptionsOptional //\\ ConnectionLogOption
 
 let AwsEc2ClientVpnEndpointOptional =
   { description: Optional Text
-  , dns_name: Optional Text
   , dns_servers: Optional (List Text)
-  , status: Optional Text
   , transport_protocol: Optional Text
   }
 

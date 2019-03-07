@@ -1,8 +1,5 @@
 
-let AwsIotPolicyOptional =
-  { arn: Optional Text
-  , default_version_id: Optional Text
-  }
+let AwsIotPolicyOptional = {}
 
 let AwsIotPolicyRequired =
   { name: Text
@@ -11,7 +8,5 @@ let AwsIotPolicyRequired =
 let AwsIotPolicy = AwsIotPolicyOptional //\\ AwsIotPolicyRequired
 
 in
-{ AwsIotPolicyOptional = AwsIotPolicyOptional
-, AwsIotPolicyRequired = AwsIotPolicyRequired
-, AwsIotPolicy = AwsIotPolicy
+{ AwsIotPolicy = AwsIotPolicy
 }

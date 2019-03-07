@@ -44,15 +44,7 @@ let RevocationConfigurationRequired = {}
 let RevocationConfiguration = RevocationConfigurationOptional //\\ RevocationConfigurationRequired
 
 let AwsAcmpcaCertificateAuthorityOptional =
-  { arn: Optional Text
-  , certificate: Optional Text
-  , certificate_chain: Optional Text
-  , certificate_signing_request: Optional Text
-  , enabled: Optional Bool
-  , not_after: Optional Text
-  , not_before: Optional Text
-  , serial: Optional Text
-  , status: Optional Text
+  { enabled: Optional Bool
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , type: Optional Text
   , revocation_configuration: Optional RevocationConfiguration

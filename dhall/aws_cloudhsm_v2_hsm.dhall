@@ -1,9 +1,6 @@
 
 let AwsCloudhsmV2HsmOptional =
   { availability_zone: Optional Text
-  , hsm_eni_id: Optional Text
-  , hsm_id: Optional Text
-  , hsm_state: Optional Text
   , ip_address: Optional Text
   , subnet_id: Optional Text
   }

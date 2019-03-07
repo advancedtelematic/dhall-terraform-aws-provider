@@ -1,7 +1,6 @@
 
 let AwsIamPolicyOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , name: Optional Text
   , name_prefix: Optional Text
   , path: Optional Text

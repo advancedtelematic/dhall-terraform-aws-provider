@@ -5,7 +5,6 @@ let AwsEc2TransitGatewayVpcAttachmentOptional =
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , transit_gateway_default_route_table_association: Optional Bool
   , transit_gateway_default_route_table_propagation: Optional Bool
-  , vpc_owner_id: Optional Text
   }
 
 let AwsEc2TransitGatewayVpcAttachmentRequired =

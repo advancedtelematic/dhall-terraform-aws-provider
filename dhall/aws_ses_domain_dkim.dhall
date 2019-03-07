@@ -1,13 +1,10 @@
 
-let AwsSesDomainDkimOptional =
-  { dkim_tokens: Optional (List Text) }
+let AwsSesDomainDkimOptional = {}
 
 let AwsSesDomainDkimRequired =
   { domain: Text }
 let AwsSesDomainDkim = AwsSesDomainDkimOptional //\\ AwsSesDomainDkimRequired
 
 in
-{ AwsSesDomainDkimOptional = AwsSesDomainDkimOptional
-, AwsSesDomainDkimRequired = AwsSesDomainDkimRequired
-, AwsSesDomainDkim = AwsSesDomainDkim
+{ AwsSesDomainDkim = AwsSesDomainDkim
 }

@@ -1,7 +1,6 @@
 
 let AwsDxHostedPrivateVirtualInterfaceAccepterOptional =
-  { arn: Optional Text
-  , dx_gateway_id: Optional Text
+  { dx_gateway_id: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , vpn_gateway_id: Optional Text
   }

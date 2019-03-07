@@ -1,8 +1,6 @@
 
 let AwsNeptuneEventSubscriptionOptional =
-  { arn: Optional Text
-  , customer_aws_id: Optional Text
-  , enabled: Optional Bool
+  { enabled: Optional Bool
   , event_categories: Optional (List Text)
   , name: Optional Text
   , name_prefix: Optional Text

@@ -1,9 +1,6 @@
 
 let AwsDmsReplicationSubnetGroupOptional =
-  { replication_subnet_group_arn: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , vpc_id: Optional Text
-  }
+  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsDmsReplicationSubnetGroupRequired =
   { replication_subnet_group_description: Text

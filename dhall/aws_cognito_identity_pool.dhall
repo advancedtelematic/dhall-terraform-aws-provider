@@ -10,7 +10,6 @@ let CognitoIdentityProviders = CognitoIdentityProvidersOptional //\\ CognitoIden
 
 let AwsCognitoIdentityPoolOptional =
   { allow_unauthenticated_identities: Optional Bool
-  , arn: Optional Text
   , developer_provider_name: Optional Text
   , openid_connect_provider_arns: Optional (List Text)
   , saml_provider_arns: Optional (List Text)

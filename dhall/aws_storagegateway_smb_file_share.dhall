@@ -1,9 +1,7 @@
 
 let AwsStoragegatewaySmbFileShareOptional =
-  { arn: Optional Text
-  , authentication: Optional Text
+  { authentication: Optional Text
   , default_storage_class: Optional Text
-  , fileshare_id: Optional Text
   , guess_mime_type_enabled: Optional Bool
   , invalid_user_list: Optional (List Text)
   , kms_encrypted: Optional Bool

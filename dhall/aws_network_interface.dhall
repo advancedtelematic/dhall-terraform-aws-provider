@@ -1,6 +1,5 @@
 
-let AttachmentOptional =
-  { attachment_id: Optional Text }
+let AttachmentOptional = {}
 
 let AttachmentRequired =
   { device_index: Natural
@@ -10,7 +9,6 @@ let Attachment = AttachmentOptional //\\ AttachmentRequired
 
 let AwsNetworkInterfaceOptional =
   { description: Optional Text
-  , private_dns_name: Optional Text
   , private_ip: Optional Text
   , private_ips: Optional (List Text)
   , private_ips_count: Optional Natural
@@ -28,7 +26,5 @@ in
 { AwsNetworkInterfaceOptional = AwsNetworkInterfaceOptional
 , AwsNetworkInterfaceRequired = AwsNetworkInterfaceRequired
 , AwsNetworkInterface = AwsNetworkInterface
-, AttachmentOptional = AttachmentOptional
-, AttachmentRequired = AttachmentRequired
 , Attachment = Attachment
 }

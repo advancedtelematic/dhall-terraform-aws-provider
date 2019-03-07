@@ -6,10 +6,7 @@ let OnPremConfigRequired =
 let OnPremConfig = OnPremConfigOptional //\\ OnPremConfigRequired
 
 let AwsDatasyncLocationNfsOptional =
-  { arn: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , uri: Optional Text
-  }
+  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsDatasyncLocationNfsRequired =
   { server_hostname: Text

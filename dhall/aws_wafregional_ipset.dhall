@@ -8,9 +8,7 @@ let IpSetDescriptorRequired =
 let IpSetDescriptor = IpSetDescriptorOptional //\\ IpSetDescriptorRequired
 
 let AwsWafregionalIpsetOptional =
-  { arn: Optional Text
-  , ip_set_descriptor: Optional (List IpSetDescriptor)
-  }
+  { ip_set_descriptor: Optional (List IpSetDescriptor) }
 
 let AwsWafregionalIpsetRequired =
   { name: Text }

@@ -136,8 +136,18 @@ in
 }
 end
 
+def only_computed?(attribute)
+  # TODO find out if this drops more attributes than intended
+  (attribute["computed"] == true &&
+   attribute["required"] == false &&
+   attribute["optional"] == false &&
+   attribute["sensitive"] == false)
+end
+
 def fields_from_resource(resource)
-  split = resource['attributes'].group_by { |a| a['required'] }
+  split = resource['attributes']
+    .delete_if { |a| only_computed?(a)}
+    .group_by { |a| a['required'] }
   required = split[true]&.map { |a| field_from_arg(a) } || []
   optional = split[false]&.map { |a| field_from_arg(a) } || []
   { optional: optional, required: required }
@@ -214,4 +224,4 @@ end
 #dhall_aws_to_str = dhall_rep_to_string(dhall_reps_instance)
 #File.write('./dhall/aws_instance.dhall', dhall_aws_to_str.join("") + dhall_in_block_to_string(dhall_reps_instance))
 
-#pry.inspect
+pry.inspect

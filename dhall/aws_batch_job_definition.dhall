@@ -12,10 +12,8 @@ let TimeoutRequired = {}
 let Timeout = TimeoutOptional //\\ TimeoutRequired
 
 let AwsBatchJobDefinitionOptional =
-  { arn: Optional Text
-  , container_properties: Optional Text
+  { container_properties: Optional Text
   , parameters: Optional (List { mapKey : Text, mapValue : Text })
-  , revision: Optional Natural
   , retry_strategy: Optional RetryStrategy
   , timeout: Optional Timeout
   }

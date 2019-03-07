@@ -18,8 +18,7 @@ let OrganizationAggregationSourceRequired =
 let OrganizationAggregationSource = OrganizationAggregationSourceOptional //\\ OrganizationAggregationSourceRequired
 
 let AwsConfigConfigurationAggregatorOptional =
-  { arn: Optional Text
-  , account_aggregation_source: Optional AccountAggregationSource
+  { account_aggregation_source: Optional AccountAggregationSource
   , organization_aggregation_source: Optional OrganizationAggregationSource
   }
 

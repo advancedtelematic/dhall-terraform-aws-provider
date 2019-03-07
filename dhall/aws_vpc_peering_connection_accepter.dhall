@@ -18,13 +18,8 @@ let RequesterRequired = {}
 let Requester = RequesterOptional //\\ RequesterRequired
 
 let AwsVpcPeeringConnectionAccepterOptional =
-  { accept_status: Optional Text
-  , auto_accept: Optional Bool
-  , peer_owner_id: Optional Text
-  , peer_region: Optional Text
-  , peer_vpc_id: Optional Text
+  { auto_accept: Optional Bool
   , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , vpc_id: Optional Text
   , accepter: Optional Accepter
   , requester: Optional Requester
   }

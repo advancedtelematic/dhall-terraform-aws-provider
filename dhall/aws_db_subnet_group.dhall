@@ -1,7 +1,6 @@
 
 let AwsDbSubnetGroupOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , name: Optional Text
   , name_prefix: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })

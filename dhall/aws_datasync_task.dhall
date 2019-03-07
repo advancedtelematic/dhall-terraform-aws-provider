@@ -15,8 +15,7 @@ let OptionsRequired = {}
 let Options = OptionsOptional //\\ OptionsRequired
 
 let AwsDatasyncTaskOptional =
-  { arn: Optional Text
-  , cloudwatch_log_group_arn: Optional Text
+  { cloudwatch_log_group_arn: Optional Text
   , name: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , options: Optional Options

@@ -1,8 +1,6 @@
 
 let AwsEfsFileSystemOptional =
-  { arn: Optional Text
-  , creation_token: Optional Text
-  , dns_name: Optional Text
+  { creation_token: Optional Text
   , encrypted: Optional Bool
   , kms_key_id: Optional Text
   , performance_mode: Optional Text

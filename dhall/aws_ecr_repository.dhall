@@ -1,10 +1,6 @@
 
 let AwsEcrRepositoryOptional =
-  { arn: Optional Text
-  , registry_id: Optional Text
-  , repository_url: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  }
+  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsEcrRepositoryRequired =
   { name: Text }

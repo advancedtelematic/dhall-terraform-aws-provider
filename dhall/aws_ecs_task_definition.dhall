@@ -27,15 +27,13 @@ let VolumeRequired =
 let Volume = VolumeOptional //\\ VolumeRequired
 
 let AwsEcsTaskDefinitionOptional =
-  { arn: Optional Text
-  , cpu: Optional Text
+  { cpu: Optional Text
   , execution_role_arn: Optional Text
   , ipc_mode: Optional Text
   , memory: Optional Text
   , network_mode: Optional Text
   , pid_mode: Optional Text
   , requires_compatibilities: Optional (List Text)
-  , revision: Optional Natural
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , task_role_arn: Optional Text
   , placement_constraints: Optional (List PlacementConstraints)

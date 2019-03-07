@@ -26,10 +26,8 @@ let AwsAmiOptional =
   , ena_support: Optional Bool
   , image_location: Optional Text
   , kernel_id: Optional Text
-  , manage_ebs_snapshots: Optional Bool
   , ramdisk_id: Optional Text
   , root_device_name: Optional Text
-  , root_snapshot_id: Optional Text
   , sriov_net_support: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , virtualization_type: Optional Text

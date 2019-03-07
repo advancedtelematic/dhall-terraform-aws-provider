@@ -50,8 +50,7 @@ let RuleRequired =
 let Rule = RuleOptional //\\ RuleRequired
 
 let AwsWafregionalWebAclOptional =
-  { arn: Optional Text
-  , logging_configuration: Optional LoggingConfiguration
+  { logging_configuration: Optional LoggingConfiguration
   , rule: Optional (List Rule)
   }
 

@@ -1,6 +1,5 @@
 
-let AwsEcrRepositoryPolicyOptional =
-  { registry_id: Optional Text }
+let AwsEcrRepositoryPolicyOptional = {}
 
 let AwsEcrRepositoryPolicyRequired =
   { policy: Text
@@ -9,7 +8,5 @@ let AwsEcrRepositoryPolicyRequired =
 let AwsEcrRepositoryPolicy = AwsEcrRepositoryPolicyOptional //\\ AwsEcrRepositoryPolicyRequired
 
 in
-{ AwsEcrRepositoryPolicyOptional = AwsEcrRepositoryPolicyOptional
-, AwsEcrRepositoryPolicyRequired = AwsEcrRepositoryPolicyRequired
-, AwsEcrRepositoryPolicy = AwsEcrRepositoryPolicy
+{ AwsEcrRepositoryPolicy = AwsEcrRepositoryPolicy
 }

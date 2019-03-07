@@ -70,8 +70,7 @@ let VideoWatermarksRequired = {}
 let VideoWatermarks = VideoWatermarksOptional //\\ VideoWatermarksRequired
 
 let AwsElastictranscoderPresetOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , name: Optional Text
   , type: Optional Text
   , video_codec_options: Optional (List { mapKey : Text, mapValue : Text })

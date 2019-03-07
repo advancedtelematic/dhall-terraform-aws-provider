@@ -50,11 +50,7 @@ let SpecOptional =
 let SpecRequired = {}
 let Spec = SpecOptional //\\ SpecRequired
 
-let AwsAppmeshVirtualNodeOptional =
-  { arn: Optional Text
-  , created_date: Optional Text
-  , last_updated_date: Optional Text
-  }
+let AwsAppmeshVirtualNodeOptional = {}
 
 let AwsAppmeshVirtualNodeRequired =
   { mesh_name: Text
@@ -64,9 +60,7 @@ let AwsAppmeshVirtualNodeRequired =
 let AwsAppmeshVirtualNode = AwsAppmeshVirtualNodeOptional //\\ AwsAppmeshVirtualNodeRequired
 
 in
-{ AwsAppmeshVirtualNodeOptional = AwsAppmeshVirtualNodeOptional
-, AwsAppmeshVirtualNodeRequired = AwsAppmeshVirtualNodeRequired
-, AwsAppmeshVirtualNode = AwsAppmeshVirtualNode
+{ AwsAppmeshVirtualNode = AwsAppmeshVirtualNode
 , SpecOptional = SpecOptional
 , SpecRequired = SpecRequired
 , Spec = Spec

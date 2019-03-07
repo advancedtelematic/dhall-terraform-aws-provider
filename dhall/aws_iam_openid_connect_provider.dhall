@@ -1,6 +1,5 @@
 
-let AwsIamOpenidConnectProviderOptional =
-  { arn: Optional Text }
+let AwsIamOpenidConnectProviderOptional = {}
 
 let AwsIamOpenidConnectProviderRequired =
   { client_id_list: (List Text)
@@ -10,7 +9,5 @@ let AwsIamOpenidConnectProviderRequired =
 let AwsIamOpenidConnectProvider = AwsIamOpenidConnectProviderOptional //\\ AwsIamOpenidConnectProviderRequired
 
 in
-{ AwsIamOpenidConnectProviderOptional = AwsIamOpenidConnectProviderOptional
-, AwsIamOpenidConnectProviderRequired = AwsIamOpenidConnectProviderRequired
-, AwsIamOpenidConnectProvider = AwsIamOpenidConnectProvider
+{ AwsIamOpenidConnectProvider = AwsIamOpenidConnectProvider
 }

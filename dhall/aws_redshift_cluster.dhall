@@ -30,7 +30,6 @@ let AwsRedshiftClusterOptional =
   , cluster_type: Optional Text
   , cluster_version: Optional Text
   , database_name: Optional Text
-  , dns_name: Optional Text
   , elastic_ip: Optional Text
   , enable_logging: Optional Bool
   , encrypted: Optional Bool

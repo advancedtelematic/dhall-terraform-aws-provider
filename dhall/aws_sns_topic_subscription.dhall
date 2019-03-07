@@ -1,7 +1,6 @@
 
 let AwsSnsTopicSubscriptionOptional =
-  { arn: Optional Text
-  , confirmation_timeout_in_minutes: Optional Natural
+  { confirmation_timeout_in_minutes: Optional Natural
   , delivery_policy: Optional Text
   , endpoint_auto_confirms: Optional Bool
   , filter_policy: Optional Text

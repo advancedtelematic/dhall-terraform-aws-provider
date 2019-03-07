@@ -7,11 +7,7 @@ let ConfigurationOptional =
 let ConfigurationRequired = {}
 let Configuration = ConfigurationOptional //\\ ConfigurationRequired
 
-let InstancesOptional =
-  { console_url: Optional Text
-  , endpoints: Optional (List Text)
-  , ip_address: Optional Text
-  }
+let InstancesOptional = {}
 
 let InstancesRequired = {}
 let Instances = InstancesOptional //\\ InstancesRequired
@@ -46,7 +42,6 @@ let User = UserOptional //\\ UserRequired
 
 let AwsMqBrokerOptional =
   { apply_immediately: Optional Bool
-  , arn: Optional Text
   , auto_minor_version_upgrade: Optional Bool
   , deployment_mode: Optional Text
   , publicly_accessible: Optional Bool
@@ -79,8 +74,6 @@ in
 , LogsOptional = LogsOptional
 , LogsRequired = LogsRequired
 , Logs = Logs
-, InstancesOptional = InstancesOptional
-, InstancesRequired = InstancesRequired
 , Instances = Instances
 , ConfigurationOptional = ConfigurationOptional
 , ConfigurationRequired = ConfigurationRequired

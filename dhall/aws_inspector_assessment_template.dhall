@@ -1,6 +1,5 @@
 
-let AwsInspectorAssessmentTemplateOptional =
-  { arn: Optional Text }
+let AwsInspectorAssessmentTemplateOptional = {}
 
 let AwsInspectorAssessmentTemplateRequired =
   { duration: Natural
@@ -11,7 +10,5 @@ let AwsInspectorAssessmentTemplateRequired =
 let AwsInspectorAssessmentTemplate = AwsInspectorAssessmentTemplateOptional //\\ AwsInspectorAssessmentTemplateRequired
 
 in
-{ AwsInspectorAssessmentTemplateOptional = AwsInspectorAssessmentTemplateOptional
-, AwsInspectorAssessmentTemplateRequired = AwsInspectorAssessmentTemplateRequired
-, AwsInspectorAssessmentTemplate = AwsInspectorAssessmentTemplate
+{ AwsInspectorAssessmentTemplate = AwsInspectorAssessmentTemplate
 }

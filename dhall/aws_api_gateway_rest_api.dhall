@@ -9,12 +9,9 @@ let AwsApiGatewayRestApiOptional =
   { api_key_source: Optional Text
   , binary_media_types: Optional (List Text)
   , body: Optional Text
-  , created_date: Optional Text
   , description: Optional Text
-  , execution_arn: Optional Text
   , minimum_compression_size: Optional Natural
   , policy: Optional Text
-  , root_resource_id: Optional Text
   }
 
 let AwsApiGatewayRestApiRequired =

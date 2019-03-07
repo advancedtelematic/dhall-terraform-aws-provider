@@ -14,8 +14,6 @@ let AwsEmrInstanceGroupOptional =
   { ebs_optimized: Optional Bool
   , instance_count: Optional Natural
   , name: Optional Text
-  , running_instance_count: Optional Natural
-  , status: Optional Text
   , ebs_config: Optional (List EbsConfig)
   }
 

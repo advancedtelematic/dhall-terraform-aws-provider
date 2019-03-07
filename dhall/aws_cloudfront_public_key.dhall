@@ -1,8 +1,6 @@
 
 let AwsCloudfrontPublicKeyOptional =
-  { caller_reference: Optional Text
-  , comment: Optional Text
-  , etag: Optional Text
+  { comment: Optional Text
   , name: Optional Text
   , name_prefix: Optional Text
   }

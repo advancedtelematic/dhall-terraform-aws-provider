@@ -27,7 +27,6 @@ let AwsCloudwatchMetricAlarmOptional =
   { actions_enabled: Optional Bool
   , alarm_actions: Optional (List Text)
   , alarm_description: Optional Text
-  , arn: Optional Text
   , datapoints_to_alarm: Optional Natural
   , dimensions: Optional (List { mapKey : Text, mapValue : Text })
   , evaluate_low_sample_count_percentiles: Optional Text

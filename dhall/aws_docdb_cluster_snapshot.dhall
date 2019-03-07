@@ -1,17 +1,5 @@
 
-let AwsDocdbClusterSnapshotOptional =
-  { availability_zones: Optional (List Text)
-  , db_cluster_snapshot_arn: Optional Text
-  , engine: Optional Text
-  , engine_version: Optional Text
-  , kms_key_id: Optional Text
-  , port: Optional Natural
-  , snapshot_type: Optional Text
-  , source_db_cluster_snapshot_arn: Optional Text
-  , status: Optional Text
-  , storage_encrypted: Optional Bool
-  , vpc_id: Optional Text
-  }
+let AwsDocdbClusterSnapshotOptional = {}
 
 let AwsDocdbClusterSnapshotRequired =
   { db_cluster_identifier: Text
@@ -20,7 +8,5 @@ let AwsDocdbClusterSnapshotRequired =
 let AwsDocdbClusterSnapshot = AwsDocdbClusterSnapshotOptional //\\ AwsDocdbClusterSnapshotRequired
 
 in
-{ AwsDocdbClusterSnapshotOptional = AwsDocdbClusterSnapshotOptional
-, AwsDocdbClusterSnapshotRequired = AwsDocdbClusterSnapshotRequired
-, AwsDocdbClusterSnapshot = AwsDocdbClusterSnapshot
+{ AwsDocdbClusterSnapshot = AwsDocdbClusterSnapshot
 }

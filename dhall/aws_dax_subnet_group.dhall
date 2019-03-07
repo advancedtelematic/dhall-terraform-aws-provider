@@ -1,8 +1,6 @@
 
 let AwsDaxSubnetGroupOptional =
-  { description: Optional Text
-  , vpc_id: Optional Text
-  }
+  { description: Optional Text }
 
 let AwsDaxSubnetGroupRequired =
   { name: Text

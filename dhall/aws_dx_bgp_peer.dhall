@@ -2,7 +2,6 @@
 let AwsDxBgpPeerOptional =
   { amazon_address: Optional Text
   , bgp_auth_key: Optional Text
-  , bgp_status: Optional Text
   , customer_address: Optional Text
   }
 

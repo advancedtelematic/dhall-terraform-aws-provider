@@ -1,13 +1,10 @@
 
-let AwsSesDomainIdentityVerificationOptional =
-  { arn: Optional Text }
+let AwsSesDomainIdentityVerificationOptional = {}
 
 let AwsSesDomainIdentityVerificationRequired =
   { domain: Text }
 let AwsSesDomainIdentityVerification = AwsSesDomainIdentityVerificationOptional //\\ AwsSesDomainIdentityVerificationRequired
 
 in
-{ AwsSesDomainIdentityVerificationOptional = AwsSesDomainIdentityVerificationOptional
-, AwsSesDomainIdentityVerificationRequired = AwsSesDomainIdentityVerificationRequired
-, AwsSesDomainIdentityVerification = AwsSesDomainIdentityVerification
+{ AwsSesDomainIdentityVerification = AwsSesDomainIdentityVerification
 }

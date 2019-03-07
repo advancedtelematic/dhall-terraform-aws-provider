@@ -14,7 +14,6 @@ let AwsS3BucketObjectOptional =
   , source: Optional Text
   , storage_class: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , version_id: Optional Text
   , website_redirect: Optional Text
   }
 

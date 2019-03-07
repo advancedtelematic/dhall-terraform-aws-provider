@@ -1,7 +1,6 @@
 
 let AwsSqsQueueOptional =
-  { arn: Optional Text
-  , content_based_deduplication: Optional Bool
+  { content_based_deduplication: Optional Bool
   , delay_seconds: Optional Natural
   , fifo_queue: Optional Bool
   , kms_data_key_reuse_period_seconds: Optional Natural

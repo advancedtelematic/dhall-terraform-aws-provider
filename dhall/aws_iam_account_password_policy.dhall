@@ -1,7 +1,6 @@
 
 let AwsIamAccountPasswordPolicyOptional =
   { allow_users_to_change_password: Optional Bool
-  , expire_passwords: Optional Bool
   , hard_expiry: Optional Bool
   , max_password_age: Optional Natural
   , minimum_password_length: Optional Natural

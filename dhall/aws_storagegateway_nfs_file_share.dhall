@@ -10,9 +10,7 @@ let NfsFileShareDefaultsRequired = {}
 let NfsFileShareDefaults = NfsFileShareDefaultsOptional //\\ NfsFileShareDefaultsRequired
 
 let AwsStoragegatewayNfsFileShareOptional =
-  { arn: Optional Text
-  , default_storage_class: Optional Text
-  , fileshare_id: Optional Text
+  { default_storage_class: Optional Text
   , guess_mime_type_enabled: Optional Bool
   , kms_encrypted: Optional Bool
   , kms_key_arn: Optional Text

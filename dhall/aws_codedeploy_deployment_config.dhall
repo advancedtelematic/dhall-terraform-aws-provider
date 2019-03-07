@@ -34,7 +34,6 @@ let TrafficRoutingConfig = TrafficRoutingConfigOptional //\\ TrafficRoutingConfi
 
 let AwsCodedeployDeploymentConfigOptional =
   { compute_platform: Optional Text
-  , deployment_config_id: Optional Text
   , minimum_healthy_hosts: Optional MinimumHealthyHosts
   , traffic_routing_config: Optional TrafficRoutingConfig
   }

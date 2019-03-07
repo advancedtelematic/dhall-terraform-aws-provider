@@ -1,8 +1,5 @@
 
-let AwsApiGatewayUsagePlanKeyOptional =
-  { name: Optional Text
-  , value: Optional Text
-  }
+let AwsApiGatewayUsagePlanKeyOptional = {}
 
 let AwsApiGatewayUsagePlanKeyRequired =
   { key_id: Text
@@ -12,7 +9,5 @@ let AwsApiGatewayUsagePlanKeyRequired =
 let AwsApiGatewayUsagePlanKey = AwsApiGatewayUsagePlanKeyOptional //\\ AwsApiGatewayUsagePlanKeyRequired
 
 in
-{ AwsApiGatewayUsagePlanKeyOptional = AwsApiGatewayUsagePlanKeyOptional
-, AwsApiGatewayUsagePlanKeyRequired = AwsApiGatewayUsagePlanKeyRequired
-, AwsApiGatewayUsagePlanKey = AwsApiGatewayUsagePlanKey
+{ AwsApiGatewayUsagePlanKey = AwsApiGatewayUsagePlanKey
 }

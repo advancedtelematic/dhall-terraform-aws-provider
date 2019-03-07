@@ -1,10 +1,5 @@
 
-let CacheNodesOptional =
-  { address: Optional Text
-  , availability_zone: Optional Text
-  , id: Optional Text
-  , port: Optional Natural
-  }
+let CacheNodesOptional = {}
 
 let CacheNodesRequired = {}
 let CacheNodes = CacheNodesOptional //\\ CacheNodesRequired
@@ -14,8 +9,6 @@ let AwsElasticacheClusterOptional =
   , availability_zone: Optional Text
   , availability_zones: Optional (List Text)
   , az_mode: Optional Text
-  , cluster_address: Optional Text
-  , configuration_endpoint: Optional Text
   , engine: Optional Text
   , engine_version: Optional Text
   , maintenance_window: Optional Text
@@ -45,7 +38,5 @@ in
 { AwsElasticacheClusterOptional = AwsElasticacheClusterOptional
 , AwsElasticacheClusterRequired = AwsElasticacheClusterRequired
 , AwsElasticacheCluster = AwsElasticacheCluster
-, CacheNodesOptional = CacheNodesOptional
-, CacheNodesRequired = CacheNodesRequired
 , CacheNodes = CacheNodes
 }

@@ -1,9 +1,6 @@
 
 let AwsEc2TransitGatewayRouteTableOptional =
-  { default_association_route_table: Optional Bool
-  , default_propagation_route_table: Optional Bool
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  }
+  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsEc2TransitGatewayRouteTableRequired =
   { transit_gateway_id: Text }

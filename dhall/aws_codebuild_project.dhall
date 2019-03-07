@@ -109,9 +109,7 @@ let VpcConfigRequired =
 let VpcConfig = VpcConfigOptional //\\ VpcConfigRequired
 
 let AwsCodebuildProjectOptional =
-  { arn: Optional Text
-  , badge_enabled: Optional Bool
-  , badge_url: Optional Text
+  { badge_enabled: Optional Bool
   , build_timeout: Optional Natural
   , description: Optional Text
   , encryption_key: Optional Text

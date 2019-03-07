@@ -10,8 +10,6 @@ let SmbActiveDirectorySettings = SmbActiveDirectorySettingsOptional //\\ SmbActi
 
 let AwsStoragegatewayGatewayOptional =
   { activation_key: Optional Text
-  , arn: Optional Text
-  , gateway_id: Optional Text
   , gateway_ip_address: Optional Text
   , gateway_type: Optional Text
   , medium_changer_type: Optional Text

@@ -5,11 +5,7 @@ let SpecRequired =
   { service_names: (List Text) }
 let Spec = SpecOptional //\\ SpecRequired
 
-let AwsAppmeshVirtualRouterOptional =
-  { arn: Optional Text
-  , created_date: Optional Text
-  , last_updated_date: Optional Text
-  }
+let AwsAppmeshVirtualRouterOptional = {}
 
 let AwsAppmeshVirtualRouterRequired =
   { mesh_name: Text
@@ -19,8 +15,6 @@ let AwsAppmeshVirtualRouterRequired =
 let AwsAppmeshVirtualRouter = AwsAppmeshVirtualRouterOptional //\\ AwsAppmeshVirtualRouterRequired
 
 in
-{ AwsAppmeshVirtualRouterOptional = AwsAppmeshVirtualRouterOptional
-, AwsAppmeshVirtualRouterRequired = AwsAppmeshVirtualRouterRequired
-, AwsAppmeshVirtualRouter = AwsAppmeshVirtualRouter
+{ AwsAppmeshVirtualRouter = AwsAppmeshVirtualRouter
 , Spec = Spec
 }

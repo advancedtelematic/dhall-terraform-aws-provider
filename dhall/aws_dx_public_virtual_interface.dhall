@@ -1,7 +1,6 @@
 
 let AwsDxPublicVirtualInterfaceOptional =
   { amazon_address: Optional Text
-  , arn: Optional Text
   , bgp_auth_key: Optional Text
   , customer_address: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })

@@ -28,8 +28,7 @@ let VpcConfigRequired =
 let VpcConfig = VpcConfigOptional //\\ VpcConfigRequired
 
 let AwsSagemakerModelOptional =
-  { arn: Optional Text
-  , enable_network_isolation: Optional Bool
+  { enable_network_isolation: Optional Bool
   , name: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , container: Optional (List Container)

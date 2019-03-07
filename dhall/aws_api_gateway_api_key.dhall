@@ -8,10 +8,8 @@ let StageKeyRequired =
 let StageKey = StageKeyOptional //\\ StageKeyRequired
 
 let AwsApiGatewayApiKeyOptional =
-  { created_date: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , enabled: Optional Bool
-  , last_updated_date: Optional Text
   , value: Optional Text
   , stage_key: Optional (List StageKey)
   }

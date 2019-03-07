@@ -60,10 +60,8 @@ let SnapshotOptionsRequired =
 let SnapshotOptions = SnapshotOptionsOptional //\\ SnapshotOptionsRequired
 
 let VpcOptionsOptional =
-  { availability_zones: Optional (List Text)
-  , security_group_ids: Optional (List Text)
+  { security_group_ids: Optional (List Text)
   , subnet_ids: Optional (List Text)
-  , vpc_id: Optional Text
   }
 
 let VpcOptionsRequired = {}
@@ -72,11 +70,7 @@ let VpcOptions = VpcOptionsOptional //\\ VpcOptionsRequired
 let AwsElasticsearchDomainOptional =
   { access_policies: Optional Text
   , advanced_options: Optional (List { mapKey : Text, mapValue : Text })
-  , arn: Optional Text
-  , domain_id: Optional Text
   , elasticsearch_version: Optional Text
-  , endpoint: Optional Text
-  , kibana_endpoint: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , cluster_config: Optional ClusterConfig
   , cognito_options: Optional CognitoOptions

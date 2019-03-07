@@ -1,6 +1,5 @@
 
-let AwsIotCertificateOptional =
-  { arn: Optional Text }
+let AwsIotCertificateOptional = {}
 
 let AwsIotCertificateRequired =
   { active: Bool
@@ -9,7 +8,5 @@ let AwsIotCertificateRequired =
 let AwsIotCertificate = AwsIotCertificateOptional //\\ AwsIotCertificateRequired
 
 in
-{ AwsIotCertificateOptional = AwsIotCertificateOptional
-, AwsIotCertificateRequired = AwsIotCertificateRequired
-, AwsIotCertificate = AwsIotCertificate
+{ AwsIotCertificate = AwsIotCertificate
 }

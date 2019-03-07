@@ -32,10 +32,8 @@ let IngressRequired =
 let Ingress = IngressOptional //\\ IngressRequired
 
 let AwsDefaultNetworkAclOptional =
-  { owner_id: Optional Text
-  , subnet_ids: Optional (List Text)
+  { subnet_ids: Optional (List Text)
   , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , vpc_id: Optional Text
   , egress: Optional (List Egress)
   , ingress: Optional (List Ingress)
   }

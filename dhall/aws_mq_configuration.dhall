@@ -1,8 +1,6 @@
 
 let AwsMqConfigurationOptional =
-  { arn: Optional Text
-  , description: Optional Text
-  , latest_revision: Optional Natural
+  { description: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   }
 

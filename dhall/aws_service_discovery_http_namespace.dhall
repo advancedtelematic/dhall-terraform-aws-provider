@@ -1,8 +1,6 @@
 
 let AwsServiceDiscoveryHttpNamespaceOptional =
-  { arn: Optional Text
-  , description: Optional Text
-  }
+  { description: Optional Text }
 
 let AwsServiceDiscoveryHttpNamespaceRequired =
   { name: Text }

@@ -126,9 +126,7 @@ let TagSpecificationsRequired = {}
 let TagSpecifications = TagSpecificationsOptional //\\ TagSpecificationsRequired
 
 let AwsLaunchTemplateOptional =
-  { arn: Optional Text
-  , default_version: Optional Natural
-  , description: Optional Text
+  { description: Optional Text
   , disable_api_termination: Optional Bool
   , ebs_optimized: Optional Text
   , image_id: Optional Text
@@ -136,7 +134,6 @@ let AwsLaunchTemplateOptional =
   , instance_type: Optional Text
   , kernel_id: Optional Text
   , key_name: Optional Text
-  , latest_version: Optional Natural
   , name: Optional Text
   , name_prefix: Optional Text
   , ram_disk_id: Optional Text

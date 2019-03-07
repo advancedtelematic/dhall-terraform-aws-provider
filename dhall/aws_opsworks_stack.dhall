@@ -14,7 +14,6 @@ let CustomCookbooksSource = CustomCookbooksSourceOptional //\\ CustomCookbooksSo
 
 let AwsOpsworksStackOptional =
   { agent_version: Optional Text
-  , arn: Optional Text
   , berkshelf_version: Optional Text
   , color: Optional Text
   , configuration_manager_name: Optional Text
@@ -27,7 +26,6 @@ let AwsOpsworksStackOptional =
   , default_subnet_id: Optional Text
   , hostname_theme: Optional Text
   , manage_berkshelf: Optional Bool
-  , stack_endpoint: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , use_custom_cookbooks: Optional Bool
   , use_opsworks_security_groups: Optional Bool

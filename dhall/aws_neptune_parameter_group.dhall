@@ -9,8 +9,7 @@ let ParameterRequired =
 let Parameter = ParameterOptional //\\ ParameterRequired
 
 let AwsNeptuneParameterGroupOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , parameter: Optional (List Parameter)
   }

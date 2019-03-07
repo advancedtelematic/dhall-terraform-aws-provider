@@ -18,18 +18,7 @@ let PermissionsRequired =
 let Permissions = PermissionsOptional //\\ PermissionsRequired
 
 let AwsSsmDocumentOptional =
-  { arn: Optional Text
-  , created_date: Optional Text
-  , default_version: Optional Text
-  , description: Optional Text
-  , document_format: Optional Text
-  , hash: Optional Text
-  , hash_type: Optional Text
-  , latest_version: Optional Text
-  , owner: Optional Text
-  , platform_types: Optional (List Text)
-  , schema_version: Optional Text
-  , status: Optional Text
+  { document_format: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , parameter: Optional (List Parameter)
   , permissions: Optional Permissions

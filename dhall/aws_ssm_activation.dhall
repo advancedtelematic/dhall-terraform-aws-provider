@@ -1,11 +1,8 @@
 
 let AwsSsmActivationOptional =
-  { activation_code: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , expiration_date: Optional Text
-  , expired: Optional Text
   , name: Optional Text
-  , registration_count: Optional Natural
   , registration_limit: Optional Natural
   }
 

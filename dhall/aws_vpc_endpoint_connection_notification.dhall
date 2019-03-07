@@ -1,8 +1,6 @@
 
 let AwsVpcEndpointConnectionNotificationOptional =
-  { notification_type: Optional Text
-  , state: Optional Text
-  , vpc_endpoint_id: Optional Text
+  { vpc_endpoint_id: Optional Text
   , vpc_endpoint_service_id: Optional Text
   }
 

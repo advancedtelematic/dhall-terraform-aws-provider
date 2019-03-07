@@ -3,7 +3,6 @@ let AwsSnsTopicOptional =
   { application_failure_feedback_role_arn: Optional Text
   , application_success_feedback_role_arn: Optional Text
   , application_success_feedback_sample_rate: Optional Natural
-  , arn: Optional Text
   , delivery_policy: Optional Text
   , display_name: Optional Text
   , http_failure_feedback_role_arn: Optional Text

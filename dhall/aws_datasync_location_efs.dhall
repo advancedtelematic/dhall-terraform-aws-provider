@@ -8,10 +8,8 @@ let Ec2ConfigRequired =
 let Ec2Config = Ec2ConfigOptional //\\ Ec2ConfigRequired
 
 let AwsDatasyncLocationEfsOptional =
-  { arn: Optional Text
-  , subdirectory: Optional Text
+  { subdirectory: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , uri: Optional Text
   }
 
 let AwsDatasyncLocationEfsRequired =

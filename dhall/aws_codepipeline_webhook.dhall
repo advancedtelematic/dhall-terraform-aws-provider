@@ -15,8 +15,7 @@ let FilterRequired =
   }
 let Filter = FilterOptional //\\ FilterRequired
 
-let AwsCodepipelineWebhookOptional =
-  { url: Optional Text }
+let AwsCodepipelineWebhookOptional = {}
 
 let AwsCodepipelineWebhookRequired =
   { authentication: Text
@@ -29,9 +28,7 @@ let AwsCodepipelineWebhookRequired =
 let AwsCodepipelineWebhook = AwsCodepipelineWebhookOptional //\\ AwsCodepipelineWebhookRequired
 
 in
-{ AwsCodepipelineWebhookOptional = AwsCodepipelineWebhookOptional
-, AwsCodepipelineWebhookRequired = AwsCodepipelineWebhookRequired
-, AwsCodepipelineWebhook = AwsCodepipelineWebhook
+{ AwsCodepipelineWebhook = AwsCodepipelineWebhook
 , Filter = Filter
 , AuthenticationConfigurationOptional = AuthenticationConfigurationOptional
 , AuthenticationConfigurationRequired = AuthenticationConfigurationRequired

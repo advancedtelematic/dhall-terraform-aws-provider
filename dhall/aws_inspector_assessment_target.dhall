@@ -1,8 +1,6 @@
 
 let AwsInspectorAssessmentTargetOptional =
-  { arn: Optional Text
-  , resource_group_arn: Optional Text
-  }
+  { resource_group_arn: Optional Text }
 
 let AwsInspectorAssessmentTargetRequired =
   { name: Text }

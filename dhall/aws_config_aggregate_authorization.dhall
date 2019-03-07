@@ -1,6 +1,5 @@
 
-let AwsConfigAggregateAuthorizationOptional =
-  { arn: Optional Text }
+let AwsConfigAggregateAuthorizationOptional = {}
 
 let AwsConfigAggregateAuthorizationRequired =
   { account_id: Text
@@ -9,7 +8,5 @@ let AwsConfigAggregateAuthorizationRequired =
 let AwsConfigAggregateAuthorization = AwsConfigAggregateAuthorizationOptional //\\ AwsConfigAggregateAuthorizationRequired
 
 in
-{ AwsConfigAggregateAuthorizationOptional = AwsConfigAggregateAuthorizationOptional
-, AwsConfigAggregateAuthorizationRequired = AwsConfigAggregateAuthorizationRequired
-, AwsConfigAggregateAuthorization = AwsConfigAggregateAuthorization
+{ AwsConfigAggregateAuthorization = AwsConfigAggregateAuthorization
 }

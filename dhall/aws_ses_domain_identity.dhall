@@ -1,15 +1,10 @@
 
-let AwsSesDomainIdentityOptional =
-  { arn: Optional Text
-  , verification_token: Optional Text
-  }
+let AwsSesDomainIdentityOptional = {}
 
 let AwsSesDomainIdentityRequired =
   { domain: Text }
 let AwsSesDomainIdentity = AwsSesDomainIdentityOptional //\\ AwsSesDomainIdentityRequired
 
 in
-{ AwsSesDomainIdentityOptional = AwsSesDomainIdentityOptional
-, AwsSesDomainIdentityRequired = AwsSesDomainIdentityRequired
-, AwsSesDomainIdentity = AwsSesDomainIdentity
+{ AwsSesDomainIdentity = AwsSesDomainIdentity
 }

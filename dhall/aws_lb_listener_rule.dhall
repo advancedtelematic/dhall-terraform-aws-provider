@@ -75,9 +75,7 @@ let ConditionRequired = {}
 let Condition = ConditionOptional //\\ ConditionRequired
 
 let AwsLbListenerRuleOptional =
-  { arn: Optional Text
-  , priority: Optional Natural
-  }
+  { priority: Optional Natural }
 
 let AwsLbListenerRuleRequired =
   { listener_arn: Text

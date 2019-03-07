@@ -20,12 +20,7 @@ let ComputeResourcesRequired =
 let ComputeResources = ComputeResourcesOptional //\\ ComputeResourcesRequired
 
 let AwsBatchComputeEnvironmentOptional =
-  { arn: Optional Text
-  , ecc_cluster_arn: Optional Text
-  , ecs_cluster_arn: Optional Text
-  , state: Optional Text
-  , status: Optional Text
-  , status_reason: Optional Text
+  { state: Optional Text
   , compute_resources: Optional ComputeResources
   }
 

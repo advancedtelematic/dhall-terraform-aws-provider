@@ -1,6 +1,5 @@
 
-let AwsCloudwatchLogDestinationOptional =
-  { arn: Optional Text }
+let AwsCloudwatchLogDestinationOptional = {}
 
 let AwsCloudwatchLogDestinationRequired =
   { name: Text
@@ -10,7 +9,5 @@ let AwsCloudwatchLogDestinationRequired =
 let AwsCloudwatchLogDestination = AwsCloudwatchLogDestinationOptional //\\ AwsCloudwatchLogDestinationRequired
 
 in
-{ AwsCloudwatchLogDestinationOptional = AwsCloudwatchLogDestinationOptional
-, AwsCloudwatchLogDestinationRequired = AwsCloudwatchLogDestinationRequired
-, AwsCloudwatchLogDestination = AwsCloudwatchLogDestination
+{ AwsCloudwatchLogDestination = AwsCloudwatchLogDestination
 }

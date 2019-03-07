@@ -44,8 +44,7 @@ let ThumbnailConfigPermissionsRequired = {}
 let ThumbnailConfigPermissions = ThumbnailConfigPermissionsOptional //\\ ThumbnailConfigPermissionsRequired
 
 let AwsElastictranscoderPipelineOptional =
-  { arn: Optional Text
-  , aws_kms_key_arn: Optional Text
+  { aws_kms_key_arn: Optional Text
   , name: Optional Text
   , output_bucket: Optional Text
   , content_config: Optional ContentConfig

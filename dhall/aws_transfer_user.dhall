@@ -1,7 +1,6 @@
 
 let AwsTransferUserOptional =
-  { arn: Optional Text
-  , home_directory: Optional Text
+  { home_directory: Optional Text
   , policy: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   }

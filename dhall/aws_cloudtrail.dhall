@@ -17,12 +17,10 @@ let EventSelectorRequired = {}
 let EventSelector = EventSelectorOptional //\\ EventSelectorRequired
 
 let AwsCloudtrailOptional =
-  { arn: Optional Text
-  , cloud_watch_logs_group_arn: Optional Text
+  { cloud_watch_logs_group_arn: Optional Text
   , cloud_watch_logs_role_arn: Optional Text
   , enable_log_file_validation: Optional Bool
   , enable_logging: Optional Bool
-  , home_region: Optional Text
   , include_global_service_events: Optional Bool
   , is_multi_region_trail: Optional Bool
   , is_organization_trail: Optional Bool

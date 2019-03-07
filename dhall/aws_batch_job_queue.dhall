@@ -1,6 +1,5 @@
 
-let AwsBatchJobQueueOptional =
-  { arn: Optional Text }
+let AwsBatchJobQueueOptional = {}
 
 let AwsBatchJobQueueRequired =
   { compute_environments: (List Text)
@@ -11,7 +10,5 @@ let AwsBatchJobQueueRequired =
 let AwsBatchJobQueue = AwsBatchJobQueueOptional //\\ AwsBatchJobQueueRequired
 
 in
-{ AwsBatchJobQueueOptional = AwsBatchJobQueueOptional
-, AwsBatchJobQueueRequired = AwsBatchJobQueueRequired
-, AwsBatchJobQueue = AwsBatchJobQueue
+{ AwsBatchJobQueue = AwsBatchJobQueue
 }

@@ -1,6 +1,5 @@
 
-let CloudwatchLoggingOptionsOptional =
-  { id: Optional Text }
+let CloudwatchLoggingOptionsOptional = {}
 
 let CloudwatchLoggingOptionsRequired =
   { log_stream_arn: Text
@@ -76,9 +75,7 @@ let MappingParametersRequired = {}
 let MappingParameters = MappingParametersOptional //\\ MappingParametersRequired
 
 let RecordFormatOptional =
-  { record_format_type: Optional Text
-  , mapping_parameters: Optional MappingParameters
-  }
+  { mapping_parameters: Optional MappingParameters }
 
 let RecordFormatRequired = {}
 let RecordFormat = RecordFormatOptional //\\ RecordFormatRequired
@@ -92,16 +89,13 @@ let SchemaRequired =
   }
 let Schema = SchemaOptional //\\ SchemaRequired
 
-let StartingPositionConfigurationOptional =
-  { starting_position: Optional Text }
+let StartingPositionConfigurationOptional = {}
 
 let StartingPositionConfigurationRequired = {}
 let StartingPositionConfiguration = StartingPositionConfigurationOptional //\\ StartingPositionConfigurationRequired
 
 let InputsOptional =
-  { id: Optional Text
-  , stream_names: Optional (List Text)
-  , kinesis_firehose: Optional KinesisFirehose
+  { kinesis_firehose: Optional KinesisFirehose
   , kinesis_stream: Optional KinesisStream
   , parallelism: Optional Parallelism
   , processing_configuration: Optional ProcessingConfiguration
@@ -145,8 +139,7 @@ let SchemaRequired = {}
 let Schema = SchemaOptional //\\ SchemaRequired
 
 let OutputsOptional =
-  { id: Optional Text
-  , kinesis_firehose: Optional KinesisFirehose
+  { kinesis_firehose: Optional KinesisFirehose
   , kinesis_stream: Optional KinesisStream
   , lambda: Optional Lambda
   }
@@ -198,9 +191,7 @@ let MappingParametersRequired = {}
 let MappingParameters = MappingParametersOptional //\\ MappingParametersRequired
 
 let RecordFormatOptional =
-  { record_format_type: Optional Text
-  , mapping_parameters: Optional MappingParameters
-  }
+  { mapping_parameters: Optional MappingParameters }
 
 let RecordFormatRequired = {}
 let RecordFormat = RecordFormatOptional //\\ RecordFormatRequired
@@ -214,8 +205,7 @@ let SchemaRequired =
   }
 let Schema = SchemaOptional //\\ SchemaRequired
 
-let ReferenceDataSourcesOptional =
-  { id: Optional Text }
+let ReferenceDataSourcesOptional = {}
 
 let ReferenceDataSourcesRequired =
   { table_name: Text
@@ -225,13 +215,8 @@ let ReferenceDataSourcesRequired =
 let ReferenceDataSources = ReferenceDataSourcesOptional //\\ ReferenceDataSourcesRequired
 
 let AwsKinesisAnalyticsApplicationOptional =
-  { arn: Optional Text
-  , code: Optional Text
-  , create_timestamp: Optional Text
+  { code: Optional Text
   , description: Optional Text
-  , last_update_timestamp: Optional Text
-  , status: Optional Text
-  , version: Optional Natural
   , cloudwatch_logging_options: Optional CloudwatchLoggingOptions
   , inputs: Optional Inputs
   , outputs: Optional (List Outputs)
@@ -246,8 +231,6 @@ in
 { AwsKinesisAnalyticsApplicationOptional = AwsKinesisAnalyticsApplicationOptional
 , AwsKinesisAnalyticsApplicationRequired = AwsKinesisAnalyticsApplicationRequired
 , AwsKinesisAnalyticsApplication = AwsKinesisAnalyticsApplication
-, ReferenceDataSourcesOptional = ReferenceDataSourcesOptional
-, ReferenceDataSourcesRequired = ReferenceDataSourcesRequired
 , ReferenceDataSources = ReferenceDataSources
 , SchemaOptional = SchemaOptional
 , SchemaRequired = SchemaRequired
@@ -276,8 +259,6 @@ in
 , InputsOptional = InputsOptional
 , InputsRequired = InputsRequired
 , Inputs = Inputs
-, StartingPositionConfigurationOptional = StartingPositionConfigurationOptional
-, StartingPositionConfigurationRequired = StartingPositionConfigurationRequired
 , StartingPositionConfiguration = StartingPositionConfiguration
 , SchemaOptional = SchemaOptional
 , SchemaRequired = SchemaRequired
@@ -298,7 +279,5 @@ in
 , Parallelism = Parallelism
 , KinesisStream = KinesisStream
 , KinesisFirehose = KinesisFirehose
-, CloudwatchLoggingOptionsOptional = CloudwatchLoggingOptionsOptional
-, CloudwatchLoggingOptionsRequired = CloudwatchLoggingOptionsRequired
 , CloudwatchLoggingOptions = CloudwatchLoggingOptions
 }

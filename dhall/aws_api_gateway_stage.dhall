@@ -13,8 +13,6 @@ let AwsApiGatewayStageOptional =
   , client_certificate_id: Optional Text
   , description: Optional Text
   , documentation_version: Optional Text
-  , execution_arn: Optional Text
-  , invoke_url: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , variables: Optional (List { mapKey : Text, mapValue : Text })
   , xray_tracing_enabled: Optional Bool

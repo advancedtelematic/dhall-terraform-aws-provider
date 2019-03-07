@@ -15,8 +15,7 @@ let TargetsRequired =
 let Targets = TargetsOptional //\\ TargetsRequired
 
 let AwsSsmAssociationOptional =
-  { association_id: Optional Text
-  , association_name: Optional Text
+  { association_name: Optional Text
   , document_version: Optional Text
   , instance_id: Optional Text
   , parameters: Optional (List { mapKey : Text, mapValue : Text })

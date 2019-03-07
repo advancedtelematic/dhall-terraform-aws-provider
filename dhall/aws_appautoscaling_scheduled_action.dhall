@@ -8,8 +8,7 @@ let ScalableTargetActionRequired = {}
 let ScalableTargetAction = ScalableTargetActionOptional //\\ ScalableTargetActionRequired
 
 let AwsAppautoscalingScheduledActionOptional =
-  { arn: Optional Text
-  , end_time: Optional Text
+  { end_time: Optional Text
   , scalable_dimension: Optional Text
   , schedule: Optional Text
   , start_time: Optional Text

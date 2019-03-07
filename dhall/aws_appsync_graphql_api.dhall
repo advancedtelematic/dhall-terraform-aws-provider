@@ -29,9 +29,7 @@ let UserPoolConfigRequired =
 let UserPoolConfig = UserPoolConfigOptional //\\ UserPoolConfigRequired
 
 let AwsAppsyncGraphqlApiOptional =
-  { arn: Optional Text
-  , uris: Optional (List { mapKey : Text, mapValue : Text })
-  , log_config: Optional LogConfig
+  { log_config: Optional LogConfig
   , openid_connect_config: Optional OpenidConnectConfig
   , user_pool_config: Optional UserPoolConfig
   }

@@ -28,8 +28,7 @@ let LambdaConfigRequired =
 let LambdaConfig = LambdaConfigOptional //\\ LambdaConfigRequired
 
 let AwsAppsyncDatasourceOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , service_role_arn: Optional Text
   , dynamodb_config: Optional DynamodbConfig
   , elasticsearch_config: Optional ElasticsearchConfig

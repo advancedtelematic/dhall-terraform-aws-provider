@@ -8,10 +8,7 @@ let AttributesOptional =
 let AttributesRequired = {}
 let Attributes = AttributesOptional //\\ AttributesRequired
 
-let IpSetsOptional =
-  { ip_addresses: Optional (List Text)
-  , ip_family: Optional Text
-  }
+let IpSetsOptional = {}
 
 let IpSetsRequired = {}
 let IpSets = IpSetsOptional //\\ IpSetsRequired
@@ -31,8 +28,6 @@ in
 { AwsGlobalacceleratorAcceleratorOptional = AwsGlobalacceleratorAcceleratorOptional
 , AwsGlobalacceleratorAcceleratorRequired = AwsGlobalacceleratorAcceleratorRequired
 , AwsGlobalacceleratorAccelerator = AwsGlobalacceleratorAccelerator
-, IpSetsOptional = IpSetsOptional
-, IpSetsRequired = IpSetsRequired
 , IpSets = IpSets
 , AttributesOptional = AttributesOptional
 , AttributesRequired = AttributesRequired

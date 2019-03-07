@@ -1,8 +1,5 @@
 
-let ThrottleSettingsOptional =
-  { burst_limit: Optional Natural
-  , rate_limit: Optional Natural
-  }
+let ThrottleSettingsOptional = {}
 
 let ThrottleSettingsRequired = {}
 let ThrottleSettings = ThrottleSettingsOptional //\\ ThrottleSettingsRequired
@@ -19,7 +16,5 @@ in
 { AwsApiGatewayAccountOptional = AwsApiGatewayAccountOptional
 , AwsApiGatewayAccountRequired = AwsApiGatewayAccountRequired
 , AwsApiGatewayAccount = AwsApiGatewayAccount
-, ThrottleSettingsOptional = ThrottleSettingsOptional
-, ThrottleSettingsRequired = ThrottleSettingsRequired
 , ThrottleSettings = ThrottleSettings
 }

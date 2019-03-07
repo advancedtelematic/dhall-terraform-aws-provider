@@ -41,8 +41,7 @@ let StageRequired =
   }
 let Stage = StageOptional //\\ StageRequired
 
-let AwsCodepipelineOptional =
-  { arn: Optional Text }
+let AwsCodepipelineOptional = {}
 
 let AwsCodepipelineRequired =
   { name: Text
@@ -53,9 +52,7 @@ let AwsCodepipelineRequired =
 let AwsCodepipeline = AwsCodepipelineOptional //\\ AwsCodepipelineRequired
 
 in
-{ AwsCodepipelineOptional = AwsCodepipelineOptional
-, AwsCodepipelineRequired = AwsCodepipelineRequired
-, AwsCodepipeline = AwsCodepipeline
+{ AwsCodepipeline = AwsCodepipeline
 , Stage = Stage
 , ActionOptional = ActionOptional
 , ActionRequired = ActionRequired

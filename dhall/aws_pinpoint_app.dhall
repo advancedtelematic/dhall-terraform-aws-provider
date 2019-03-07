@@ -27,8 +27,7 @@ let QuietTimeRequired = {}
 let QuietTime = QuietTimeOptional //\\ QuietTimeRequired
 
 let AwsPinpointAppOptional =
-  { application_id: Optional Text
-  , name: Optional Text
+  { name: Optional Text
   , name_prefix: Optional Text
   , campaign_hook: Optional CampaignHook
   , limits: Optional Limits

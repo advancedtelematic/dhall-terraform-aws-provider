@@ -6,10 +6,7 @@ let S3ConfigRequired =
 let S3Config = S3ConfigOptional //\\ S3ConfigRequired
 
 let AwsDatasyncLocationS3Optional =
-  { arn: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , uri: Optional Text
-  }
+  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsDatasyncLocationS3Required =
   { s3_bucket_arn: Text

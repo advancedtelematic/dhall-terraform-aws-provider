@@ -1,9 +1,7 @@
 
 let AwsSecretsmanagerSecretVersionOptional =
-  { arn: Optional Text
-  , secret_binary: Optional Text
+  { secret_binary: Optional Text
   , secret_string: Optional Text
-  , version_id: Optional Text
   , version_stages: Optional (List Text)
   }
 

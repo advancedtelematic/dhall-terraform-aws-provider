@@ -20,8 +20,7 @@ let OptionRequired =
 let Option = OptionOptional //\\ OptionRequired
 
 let AwsDbOptionGroupOptional =
-  { arn: Optional Text
-  , name: Optional Text
+  { name: Optional Text
   , name_prefix: Optional Text
   , option_group_description: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })

@@ -1,7 +1,6 @@
 
 let AwsKeyPairOptional =
-  { fingerprint: Optional Text
-  , key_name: Optional Text
+  { key_name: Optional Text
   , key_name_prefix: Optional Text
   }
 

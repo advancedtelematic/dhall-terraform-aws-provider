@@ -73,8 +73,7 @@ let TagRequired =
 let Tag = TagOptional //\\ TagRequired
 
 let AwsAutoscalingGroupOptional =
-  { arn: Optional Text
-  , availability_zones: Optional (List Text)
+  { availability_zones: Optional (List Text)
   , default_cooldown: Optional Natural
   , desired_capacity: Optional Natural
   , enabled_metrics: Optional (List Text)

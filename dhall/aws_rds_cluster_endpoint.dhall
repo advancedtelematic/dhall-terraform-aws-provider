@@ -1,8 +1,6 @@
 
 let AwsRdsClusterEndpointOptional =
-  { arn: Optional Text
-  , endpoint: Optional Text
-  , excluded_members: Optional (List Text)
+  { excluded_members: Optional (List Text)
   , static_members: Optional (List Text)
   }
 

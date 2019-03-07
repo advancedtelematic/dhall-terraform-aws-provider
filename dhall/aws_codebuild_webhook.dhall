@@ -1,9 +1,7 @@
 
 let AwsCodebuildWebhookOptional =
   { branch_filter: Optional Text
-  , payload_url: Optional Text
   , secret: Optional Text
-  , url: Optional Text
   }
 
 let AwsCodebuildWebhookRequired =

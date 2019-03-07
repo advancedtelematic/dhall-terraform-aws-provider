@@ -1,6 +1,5 @@
 
-let AwsMainRouteTableAssociationOptional =
-  { original_route_table_id: Optional Text }
+let AwsMainRouteTableAssociationOptional = {}
 
 let AwsMainRouteTableAssociationRequired =
   { route_table_id: Text
@@ -9,7 +8,5 @@ let AwsMainRouteTableAssociationRequired =
 let AwsMainRouteTableAssociation = AwsMainRouteTableAssociationOptional //\\ AwsMainRouteTableAssociationRequired
 
 in
-{ AwsMainRouteTableAssociationOptional = AwsMainRouteTableAssociationOptional
-, AwsMainRouteTableAssociationRequired = AwsMainRouteTableAssociationRequired
-, AwsMainRouteTableAssociation = AwsMainRouteTableAssociation
+{ AwsMainRouteTableAssociation = AwsMainRouteTableAssociation
 }

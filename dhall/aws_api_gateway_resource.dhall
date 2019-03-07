@@ -1,6 +1,5 @@
 
-let AwsApiGatewayResourceOptional =
-  { path: Optional Text }
+let AwsApiGatewayResourceOptional = {}
 
 let AwsApiGatewayResourceRequired =
   { parent_id: Text
@@ -10,7 +9,5 @@ let AwsApiGatewayResourceRequired =
 let AwsApiGatewayResource = AwsApiGatewayResourceOptional //\\ AwsApiGatewayResourceRequired
 
 in
-{ AwsApiGatewayResourceOptional = AwsApiGatewayResourceOptional
-, AwsApiGatewayResourceRequired = AwsApiGatewayResourceRequired
-, AwsApiGatewayResource = AwsApiGatewayResource
+{ AwsApiGatewayResource = AwsApiGatewayResource
 }

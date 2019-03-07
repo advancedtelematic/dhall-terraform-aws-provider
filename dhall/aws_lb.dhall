@@ -16,10 +16,7 @@ let SubnetMappingRequired =
 let SubnetMapping = SubnetMappingOptional //\\ SubnetMappingRequired
 
 let AwsLbOptional =
-  { arn: Optional Text
-  , arn_suffix: Optional Text
-  , dns_name: Optional Text
-  , enable_cross_zone_load_balancing: Optional Bool
+  { enable_cross_zone_load_balancing: Optional Bool
   , enable_deletion_protection: Optional Bool
   , enable_http2: Optional Bool
   , idle_timeout: Optional Natural
@@ -31,8 +28,6 @@ let AwsLbOptional =
   , security_groups: Optional (List Text)
   , subnets: Optional (List Text)
   , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , vpc_id: Optional Text
-  , zone_id: Optional Text
   , access_logs: Optional AccessLogs
   , subnet_mapping: Optional (List SubnetMapping)
   }

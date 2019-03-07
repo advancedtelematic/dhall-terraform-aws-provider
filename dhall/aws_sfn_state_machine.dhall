@@ -1,9 +1,6 @@
 
 let AwsSfnStateMachineOptional =
-  { creation_date: Optional Text
-  , status: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  }
+  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsSfnStateMachineRequired =
   { definition: Text

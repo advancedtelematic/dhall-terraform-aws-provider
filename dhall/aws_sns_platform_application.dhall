@@ -1,7 +1,6 @@
 
 let AwsSnsPlatformApplicationOptional =
-  { arn: Optional Text
-  , event_delivery_failure_topic_arn: Optional Text
+  { event_delivery_failure_topic_arn: Optional Text
   , event_endpoint_created_topic_arn: Optional Text
   , event_endpoint_deleted_topic_arn: Optional Text
   , event_endpoint_updated_topic_arn: Optional Text

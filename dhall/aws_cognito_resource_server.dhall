@@ -8,9 +8,7 @@ let ScopeRequired =
 let Scope = ScopeOptional //\\ ScopeRequired
 
 let AwsCognitoResourceServerOptional =
-  { scope_identifiers: Optional (List Text)
-  , scope: Optional (List Scope)
-  }
+  { scope: Optional (List Scope) }
 
 let AwsCognitoResourceServerRequired =
   { identifier: Text

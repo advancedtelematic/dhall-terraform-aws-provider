@@ -1,16 +1,7 @@
 
 let AwsLightsailInstanceOptional =
-  { arn: Optional Text
-  , cpu_count: Optional Natural
-  , created_at: Optional Text
-  , ipv6_address: Optional Text
-  , is_static_ip: Optional Bool
-  , key_pair_name: Optional Text
-  , private_ip_address: Optional Text
-  , public_ip_address: Optional Text
-  , ram_size: Optional Natural
+  { key_pair_name: Optional Text
   , user_data: Optional Text
-  , username: Optional Text
   }
 
 let AwsLightsailInstanceRequired =

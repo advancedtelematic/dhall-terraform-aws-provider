@@ -33,11 +33,7 @@ let SpecOptional =
 let SpecRequired = {}
 let Spec = SpecOptional //\\ SpecRequired
 
-let AwsAppmeshRouteOptional =
-  { arn: Optional Text
-  , created_date: Optional Text
-  , last_updated_date: Optional Text
-  }
+let AwsAppmeshRouteOptional = {}
 
 let AwsAppmeshRouteRequired =
   { mesh_name: Text
@@ -48,9 +44,7 @@ let AwsAppmeshRouteRequired =
 let AwsAppmeshRoute = AwsAppmeshRouteOptional //\\ AwsAppmeshRouteRequired
 
 in
-{ AwsAppmeshRouteOptional = AwsAppmeshRouteOptional
-, AwsAppmeshRouteRequired = AwsAppmeshRouteRequired
-, AwsAppmeshRoute = AwsAppmeshRoute
+{ AwsAppmeshRoute = AwsAppmeshRoute
 , SpecOptional = SpecOptional
 , SpecRequired = SpecRequired
 , Spec = Spec

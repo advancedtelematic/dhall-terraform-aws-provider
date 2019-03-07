@@ -1,7 +1,6 @@
 
 let AwsDmsCertificateOptional =
-  { certificate_arn: Optional Text
-  , certificate_pem: Optional Text
+  { certificate_pem: Optional Text
   , certificate_wallet: Optional Text
   }
 

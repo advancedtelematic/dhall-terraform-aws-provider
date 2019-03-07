@@ -1,7 +1,6 @@
 
 let AwsOrganizationsPolicyOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , type: Optional Text
   }
 

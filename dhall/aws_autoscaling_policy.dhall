@@ -47,7 +47,6 @@ let TargetTrackingConfiguration = TargetTrackingConfigurationOptional //\\ Targe
 
 let AwsAutoscalingPolicyOptional =
   { adjustment_type: Optional Text
-  , arn: Optional Text
   , cooldown: Optional Natural
   , estimated_instance_warmup: Optional Natural
   , metric_aggregation_type: Optional Text

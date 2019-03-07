@@ -15,8 +15,7 @@ let RouteRequired = {}
 let Route = RouteOptional //\\ RouteRequired
 
 let AwsRouteTableOptional =
-  { owner_id: Optional Text
-  , propagating_vgws: Optional (List Text)
+  { propagating_vgws: Optional (List Text)
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , route: Optional (List Route)
   }

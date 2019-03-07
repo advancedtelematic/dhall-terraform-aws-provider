@@ -10,11 +10,9 @@ let AwsRoute53ZoneOptional =
   { comment: Optional Text
   , delegation_set_id: Optional Text
   , force_destroy: Optional Bool
-  , name_servers: Optional (List Text)
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , vpc_id: Optional Text
   , vpc_region: Optional Text
-  , zone_id: Optional Text
   }
 
 let AwsRoute53ZoneRequired =

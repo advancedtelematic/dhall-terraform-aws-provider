@@ -1,9 +1,6 @@
 
 let AwsDxConnectionOptional =
-  { arn: Optional Text
-  , jumbo_frame_capable: Optional Bool
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  }
+  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsDxConnectionRequired =
   { bandwidth: Text

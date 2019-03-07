@@ -39,7 +39,6 @@ let AwsOpsworksInstanceOptional =
   , delete_ebs: Optional Bool
   , delete_eip: Optional Bool
   , ebs_optimized: Optional Bool
-  , ec2_instance_id: Optional Text
   , ecs_cluster_arn: Optional Text
   , elastic_ip: Optional Text
   , hostname: Optional Text

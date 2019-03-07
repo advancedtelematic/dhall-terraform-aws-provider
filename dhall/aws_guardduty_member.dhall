@@ -3,7 +3,6 @@ let AwsGuarddutyMemberOptional =
   { disable_email_notification: Optional Bool
   , invitation_message: Optional Text
   , invite: Optional Bool
-  , relationship_status: Optional Text
   }
 
 let AwsGuarddutyMemberRequired =

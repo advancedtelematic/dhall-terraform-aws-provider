@@ -7,8 +7,7 @@ let PlayerLatencyPolicyRequired =
 let PlayerLatencyPolicy = PlayerLatencyPolicyOptional //\\ PlayerLatencyPolicyRequired
 
 let AwsGameliftGameSessionQueueOptional =
-  { arn: Optional Text
-  , destinations: Optional (List Text)
+  { destinations: Optional (List Text)
   , timeout_in_seconds: Optional Natural
   , player_latency_policy: Optional (List PlayerLatencyPolicy)
   }

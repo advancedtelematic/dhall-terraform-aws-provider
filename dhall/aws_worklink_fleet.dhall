@@ -17,13 +17,9 @@ let NetworkRequired =
 let Network = NetworkOptional //\\ NetworkRequired
 
 let AwsWorklinkFleetOptional =
-  { arn: Optional Text
-  , audit_stream_arn: Optional Text
-  , company_code: Optional Text
-  , created_time: Optional Text
+  { audit_stream_arn: Optional Text
   , device_ca_certificate: Optional Text
   , display_name: Optional Text
-  , last_updated_time: Optional Text
   , optimize_for_end_user_location: Optional Bool
   , identity_provider: Optional IdentityProvider
   , network: Optional Network

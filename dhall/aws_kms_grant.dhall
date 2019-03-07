@@ -9,8 +9,6 @@ let Constraints = ConstraintsOptional //\\ ConstraintsRequired
 
 let AwsKmsGrantOptional =
   { grant_creation_tokens: Optional (List Text)
-  , grant_id: Optional Text
-  , grant_token: Optional Text
   , name: Optional Text
   , retire_on_delete: Optional Bool
   , retiring_principal: Optional Text

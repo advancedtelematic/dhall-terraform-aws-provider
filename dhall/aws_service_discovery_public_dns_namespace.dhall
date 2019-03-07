@@ -1,9 +1,6 @@
 
 let AwsServiceDiscoveryPublicDnsNamespaceOptional =
-  { arn: Optional Text
-  , description: Optional Text
-  , hosted_zone: Optional Text
-  }
+  { description: Optional Text }
 
 let AwsServiceDiscoveryPublicDnsNamespaceRequired =
   { name: Text }

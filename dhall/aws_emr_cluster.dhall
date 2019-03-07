@@ -36,7 +36,6 @@ let EbsConfig = EbsConfigOptional //\\ EbsConfigRequired
 let InstanceGroupOptional =
   { autoscaling_policy: Optional Text
   , bid_price: Optional Text
-  , id: Optional Text
   , instance_count: Optional Natural
   , name: Optional Text
   , ebs_config: Optional (List EbsConfig)
@@ -83,7 +82,6 @@ let AwsEmrClusterOptional =
   { additional_info: Optional Text
   , applications: Optional (List Text)
   , autoscaling_role: Optional Text
-  , cluster_state: Optional Text
   , configurations: Optional Text
   , configurations_json: Optional Text
   , core_instance_count: Optional Natural
@@ -93,7 +91,6 @@ let AwsEmrClusterOptional =
   , keep_job_flow_alive_when_no_steps: Optional Bool
   , log_uri: Optional Text
   , master_instance_type: Optional Text
-  , master_public_dns: Optional Text
   , scale_down_behavior: Optional Text
   , security_configuration: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })

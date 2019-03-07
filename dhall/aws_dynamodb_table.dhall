@@ -52,13 +52,10 @@ let TtlRequired =
 let Ttl = TtlOptional //\\ TtlRequired
 
 let AwsDynamodbTableOptional =
-  { arn: Optional Text
-  , billing_mode: Optional Text
+  { billing_mode: Optional Text
   , range_key: Optional Text
   , read_capacity: Optional Natural
-  , stream_arn: Optional Text
   , stream_enabled: Optional Bool
-  , stream_label: Optional Text
   , stream_view_type: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , write_capacity: Optional Natural

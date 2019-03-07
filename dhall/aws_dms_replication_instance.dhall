@@ -9,9 +9,6 @@ let AwsDmsReplicationInstanceOptional =
   , multi_az: Optional Bool
   , preferred_maintenance_window: Optional Text
   , publicly_accessible: Optional Bool
-  , replication_instance_arn: Optional Text
-  , replication_instance_private_ips: Optional (List Text)
-  , replication_instance_public_ips: Optional (List Text)
   , replication_subnet_group_id: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , vpc_security_group_ids: Optional (List Text)

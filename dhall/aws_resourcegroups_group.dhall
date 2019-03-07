@@ -7,9 +7,7 @@ let ResourceQueryRequired =
 let ResourceQuery = ResourceQueryOptional //\\ ResourceQueryRequired
 
 let AwsResourcegroupsGroupOptional =
-  { arn: Optional Text
-  , description: Optional Text
-  }
+  { description: Optional Text }
 
 let AwsResourcegroupsGroupRequired =
   { name: Text

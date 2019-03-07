@@ -9,9 +9,7 @@ let RoutingStrategyRequired =
 let RoutingStrategy = RoutingStrategyOptional //\\ RoutingStrategyRequired
 
 let AwsGameliftAliasOptional =
-  { arn: Optional Text
-  , description: Optional Text
-  }
+  { description: Optional Text }
 
 let AwsGameliftAliasRequired =
   { name: Text

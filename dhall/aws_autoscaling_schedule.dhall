@@ -1,7 +1,6 @@
 
 let AwsAutoscalingScheduleOptional =
-  { arn: Optional Text
-  , desired_capacity: Optional Natural
+  { desired_capacity: Optional Natural
   , end_time: Optional Text
   , max_size: Optional Natural
   , min_size: Optional Natural

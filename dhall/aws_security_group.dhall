@@ -32,11 +32,9 @@ let IngressRequired =
 let Ingress = IngressOptional //\\ IngressRequired
 
 let AwsSecurityGroupOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , name: Optional Text
   , name_prefix: Optional Text
-  , owner_id: Optional Text
   , revoke_rules_on_delete: Optional Bool
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , vpc_id: Optional Text

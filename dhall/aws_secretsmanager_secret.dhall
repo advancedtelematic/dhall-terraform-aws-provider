@@ -6,14 +6,12 @@ let RotationRulesRequired =
 let RotationRules = RotationRulesOptional //\\ RotationRulesRequired
 
 let AwsSecretsmanagerSecretOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , kms_key_id: Optional Text
   , name: Optional Text
   , name_prefix: Optional Text
   , policy: Optional Text
   , recovery_window_in_days: Optional Natural
-  , rotation_enabled: Optional Bool
   , rotation_lambda_arn: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , rotation_rules: Optional RotationRules

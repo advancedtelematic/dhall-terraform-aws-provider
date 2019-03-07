@@ -11,8 +11,7 @@ let TriggerRequired =
   }
 let Trigger = TriggerOptional //\\ TriggerRequired
 
-let AwsCodecommitTriggerOptional =
-  { configuration_id: Optional Text }
+let AwsCodecommitTriggerOptional = {}
 
 let AwsCodecommitTriggerRequired =
   { repository_name: Text
@@ -21,9 +20,7 @@ let AwsCodecommitTriggerRequired =
 let AwsCodecommitTrigger = AwsCodecommitTriggerOptional //\\ AwsCodecommitTriggerRequired
 
 in
-{ AwsCodecommitTriggerOptional = AwsCodecommitTriggerOptional
-, AwsCodecommitTriggerRequired = AwsCodecommitTriggerRequired
-, AwsCodecommitTrigger = AwsCodecommitTrigger
+{ AwsCodecommitTrigger = AwsCodecommitTrigger
 , TriggerOptional = TriggerOptional
 , TriggerRequired = TriggerRequired
 , Trigger = Trigger

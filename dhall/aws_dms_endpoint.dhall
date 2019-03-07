@@ -27,7 +27,6 @@ let S3Settings = S3SettingsOptional //\\ S3SettingsRequired
 let AwsDmsEndpointOptional =
   { certificate_arn: Optional Text
   , database_name: Optional Text
-  , endpoint_arn: Optional Text
   , extra_connection_attributes: Optional Text
   , kms_key_arn: Optional Text
   , password: Optional Text

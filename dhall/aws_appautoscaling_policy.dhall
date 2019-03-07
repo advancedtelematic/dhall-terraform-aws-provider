@@ -70,7 +70,6 @@ let TargetTrackingScalingPolicyConfiguration = TargetTrackingScalingPolicyConfig
 let AwsAppautoscalingPolicyOptional =
   { adjustment_type: Optional Text
   , alarms: Optional (List Text)
-  , arn: Optional Text
   , cooldown: Optional Natural
   , metric_aggregation_type: Optional Text
   , min_adjustment_magnitude: Optional Natural

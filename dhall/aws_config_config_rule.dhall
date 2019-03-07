@@ -28,11 +28,9 @@ let SourceRequired =
 let Source = SourceOptional //\\ SourceRequired
 
 let AwsConfigConfigRuleOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , input_parameters: Optional Text
   , maximum_execution_frequency: Optional Text
-  , rule_id: Optional Text
   , scope: Optional Scope
   }
 

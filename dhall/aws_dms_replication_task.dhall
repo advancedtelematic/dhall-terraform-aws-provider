@@ -1,7 +1,6 @@
 
 let AwsDmsReplicationTaskOptional =
   { cdc_start_time: Optional Text
-  , replication_task_arn: Optional Text
   , replication_task_settings: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   }

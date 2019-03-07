@@ -118,13 +118,9 @@ let VerificationMessageTemplate = VerificationMessageTemplateOptional //\\ Verif
 
 let AwsCognitoUserPoolOptional =
   { alias_attributes: Optional (List Text)
-  , arn: Optional Text
   , auto_verified_attributes: Optional (List Text)
-  , creation_date: Optional Text
   , email_verification_message: Optional Text
   , email_verification_subject: Optional Text
-  , endpoint: Optional Text
-  , last_modified_date: Optional Text
   , mfa_configuration: Optional Text
   , sms_authentication_message: Optional Text
   , sms_verification_message: Optional Text

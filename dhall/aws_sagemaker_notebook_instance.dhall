@@ -1,7 +1,6 @@
 
 let AwsSagemakerNotebookInstanceOptional =
-  { arn: Optional Text
-  , kms_key_id: Optional Text
+  { kms_key_id: Optional Text
   , security_groups: Optional (List Text)
   , subnet_id: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })

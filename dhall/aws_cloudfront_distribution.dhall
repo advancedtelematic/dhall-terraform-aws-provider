@@ -226,22 +226,13 @@ let ViewerCertificateRequired = {}
 let ViewerCertificate = ViewerCertificateOptional //\\ ViewerCertificateRequired
 
 let AwsCloudfrontDistributionOptional =
-  { active_trusted_signers: Optional (List { mapKey : Text, mapValue : Text })
-  , aliases: Optional (List Text)
-  , arn: Optional Text
-  , caller_reference: Optional Text
+  { aliases: Optional (List Text)
   , comment: Optional Text
   , default_root_object: Optional Text
-  , domain_name: Optional Text
-  , etag: Optional Text
-  , hosted_zone_id: Optional Text
   , http_version: Optional Text
-  , in_progress_validation_batches: Optional Natural
   , is_ipv6_enabled: Optional Bool
-  , last_modified_time: Optional Text
   , price_class: Optional Text
   , retain_on_delete: Optional Bool
-  , status: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   , web_acl_id: Optional Text
   , cache_behavior: Optional (List CacheBehavior)

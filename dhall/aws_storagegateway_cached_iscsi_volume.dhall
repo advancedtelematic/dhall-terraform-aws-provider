@@ -1,14 +1,7 @@
 
 let AwsStoragegatewayCachedIscsiVolumeOptional =
-  { arn: Optional Text
-  , chap_enabled: Optional Bool
-  , lun_number: Optional Natural
-  , network_interface_port: Optional Natural
-  , snapshot_id: Optional Text
+  { snapshot_id: Optional Text
   , source_volume_arn: Optional Text
-  , target_arn: Optional Text
-  , volume_arn: Optional Text
-  , volume_id: Optional Text
   }
 
 let AwsStoragegatewayCachedIscsiVolumeRequired =

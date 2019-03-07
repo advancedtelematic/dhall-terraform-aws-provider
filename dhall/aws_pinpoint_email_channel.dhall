@@ -1,8 +1,6 @@
 
 let AwsPinpointEmailChannelOptional =
-  { enabled: Optional Bool
-  , messages_per_second: Optional Natural
-  }
+  { enabled: Optional Bool }
 
 let AwsPinpointEmailChannelRequired =
   { application_id: Text

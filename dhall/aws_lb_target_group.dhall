@@ -23,9 +23,7 @@ let StickinessRequired =
 let Stickiness = StickinessOptional //\\ StickinessRequired
 
 let AwsLbTargetGroupOptional =
-  { arn: Optional Text
-  , arn_suffix: Optional Text
-  , deregistration_delay: Optional Natural
+  { deregistration_delay: Optional Natural
   , name: Optional Text
   , name_prefix: Optional Text
   , port: Optional Natural

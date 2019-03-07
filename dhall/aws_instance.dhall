@@ -10,7 +10,6 @@ let EbsBlockDeviceOptional =
   , encrypted: Optional Bool
   , iops: Optional Natural
   , snapshot_id: Optional Text
-  , volume_id: Optional Text
   , volume_size: Optional Natural
   , volume_type: Optional Text
   }
@@ -40,7 +39,6 @@ let NetworkInterface = NetworkInterfaceOptional //\\ NetworkInterfaceRequired
 let RootBlockDeviceOptional =
   { delete_on_termination: Optional Bool
   , iops: Optional Natural
-  , volume_id: Optional Text
   , volume_size: Optional Natural
   , volume_type: Optional Text
   }
@@ -49,8 +47,7 @@ let RootBlockDeviceRequired = {}
 let RootBlockDevice = RootBlockDeviceOptional //\\ RootBlockDeviceRequired
 
 let AwsInstanceOptional =
-  { arn: Optional Text
-  , associate_public_ip_address: Optional Bool
+  { associate_public_ip_address: Optional Bool
   , availability_zone: Optional Text
   , cpu_core_count: Optional Natural
   , cpu_threads_per_core: Optional Natural
@@ -60,19 +57,12 @@ let AwsInstanceOptional =
   , host_id: Optional Text
   , iam_instance_profile: Optional Text
   , instance_initiated_shutdown_behavior: Optional Text
-  , instance_state: Optional Text
   , ipv6_address_count: Optional Natural
   , ipv6_addresses: Optional (List Text)
   , key_name: Optional Text
   , monitoring: Optional Bool
-  , network_interface_id: Optional Text
-  , password_data: Optional Text
   , placement_group: Optional Text
-  , primary_network_interface_id: Optional Text
-  , private_dns: Optional Text
   , private_ip: Optional Text
-  , public_dns: Optional Text
-  , public_ip: Optional Text
   , security_groups: Optional (List Text)
   , source_dest_check: Optional Bool
   , subnet_id: Optional Text

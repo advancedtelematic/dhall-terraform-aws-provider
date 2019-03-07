@@ -188,9 +188,7 @@ let AwsS3BucketOptional =
   , acl: Optional Text
   , arn: Optional Text
   , bucket: Optional Text
-  , bucket_domain_name: Optional Text
   , bucket_prefix: Optional Text
-  , bucket_regional_domain_name: Optional Text
   , force_destroy: Optional Bool
   , hosted_zone_id: Optional Text
   , policy: Optional Text

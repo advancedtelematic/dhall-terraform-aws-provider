@@ -1,8 +1,6 @@
 
 let AwsIamRoleOptional =
-  { arn: Optional Text
-  , create_date: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , force_detach_policies: Optional Bool
   , max_session_duration: Optional Natural
   , name: Optional Text
@@ -10,7 +8,6 @@ let AwsIamRoleOptional =
   , path: Optional Text
   , permissions_boundary: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , unique_id: Optional Text
   }
 
 let AwsIamRoleRequired =

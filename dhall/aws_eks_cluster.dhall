@@ -1,25 +1,18 @@
 
-let CertificateAuthorityOptional =
-  { data: Optional Text }
+let CertificateAuthorityOptional = {}
 
 let CertificateAuthorityRequired = {}
 let CertificateAuthority = CertificateAuthorityOptional //\\ CertificateAuthorityRequired
 
 let VpcConfigOptional =
-  { security_group_ids: Optional (List Text)
-  , vpc_id: Optional Text
-  }
+  { security_group_ids: Optional (List Text) }
 
 let VpcConfigRequired =
   { subnet_ids: (List Text) }
 let VpcConfig = VpcConfigOptional //\\ VpcConfigRequired
 
 let AwsEksClusterOptional =
-  { arn: Optional Text
-  , created_at: Optional Text
-  , endpoint: Optional Text
-  , platform_version: Optional Text
-  , version: Optional Text
+  { version: Optional Text
   , certificate_authority: Optional CertificateAuthority
   }
 
@@ -37,7 +30,5 @@ in
 , VpcConfigOptional = VpcConfigOptional
 , VpcConfigRequired = VpcConfigRequired
 , VpcConfig = VpcConfig
-, CertificateAuthorityOptional = CertificateAuthorityOptional
-, CertificateAuthorityRequired = CertificateAuthorityRequired
 , CertificateAuthority = CertificateAuthority
 }

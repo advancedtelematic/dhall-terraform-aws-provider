@@ -1,7 +1,6 @@
 
 let AwsCloudwatchEventRuleOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , event_pattern: Optional Text
   , is_enabled: Optional Bool
   , name: Optional Text

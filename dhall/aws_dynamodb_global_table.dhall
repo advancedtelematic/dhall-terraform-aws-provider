@@ -5,8 +5,7 @@ let ReplicaRequired =
   { region_name: Text }
 let Replica = ReplicaOptional //\\ ReplicaRequired
 
-let AwsDynamodbGlobalTableOptional =
-  { arn: Optional Text }
+let AwsDynamodbGlobalTableOptional = {}
 
 let AwsDynamodbGlobalTableRequired =
   { name: Text
@@ -15,8 +14,6 @@ let AwsDynamodbGlobalTableRequired =
 let AwsDynamodbGlobalTable = AwsDynamodbGlobalTableOptional //\\ AwsDynamodbGlobalTableRequired
 
 in
-{ AwsDynamodbGlobalTableOptional = AwsDynamodbGlobalTableOptional
-, AwsDynamodbGlobalTableRequired = AwsDynamodbGlobalTableRequired
-, AwsDynamodbGlobalTable = AwsDynamodbGlobalTable
+{ AwsDynamodbGlobalTable = AwsDynamodbGlobalTable
 , Replica = Replica
 }

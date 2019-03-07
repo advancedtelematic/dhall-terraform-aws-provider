@@ -1,16 +1,10 @@
 
-let AwsAppmeshMeshOptional =
-  { arn: Optional Text
-  , created_date: Optional Text
-  , last_updated_date: Optional Text
-  }
+let AwsAppmeshMeshOptional = {}
 
 let AwsAppmeshMeshRequired =
   { name: Text }
 let AwsAppmeshMesh = AwsAppmeshMeshOptional //\\ AwsAppmeshMeshRequired
 
 in
-{ AwsAppmeshMeshOptional = AwsAppmeshMeshOptional
-, AwsAppmeshMeshRequired = AwsAppmeshMeshRequired
-, AwsAppmeshMesh = AwsAppmeshMesh
+{ AwsAppmeshMesh = AwsAppmeshMesh
 }

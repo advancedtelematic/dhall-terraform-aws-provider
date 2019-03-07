@@ -8,8 +8,7 @@ let PropertiesRequired = {}
 let Properties = PropertiesOptional //\\ PropertiesRequired
 
 let AwsIotThingTypeOptional =
-  { arn: Optional Text
-  , deprecated: Optional Bool
+  { deprecated: Optional Bool
   , properties: Optional Properties
   }
 

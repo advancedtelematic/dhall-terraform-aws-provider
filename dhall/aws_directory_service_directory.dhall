@@ -18,13 +18,10 @@ let VpcSettingsRequired =
 let VpcSettings = VpcSettingsOptional //\\ VpcSettingsRequired
 
 let AwsDirectoryServiceDirectoryOptional =
-  { access_url: Optional Text
-  , alias: Optional Text
+  { alias: Optional Text
   , description: Optional Text
-  , dns_ip_addresses: Optional (List Text)
   , edition: Optional Text
   , enable_sso: Optional Bool
-  , security_group_id: Optional Text
   , short_name: Optional Text
   , size: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })

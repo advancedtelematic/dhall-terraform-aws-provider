@@ -1,9 +1,6 @@
 
 let AwsApiGatewayDeploymentOptional =
-  { created_date: Optional Text
-  , description: Optional Text
-  , execution_arn: Optional Text
-  , invoke_url: Optional Text
+  { description: Optional Text
   , stage_description: Optional Text
   , variables: Optional (List { mapKey : Text, mapValue : Text })
   }

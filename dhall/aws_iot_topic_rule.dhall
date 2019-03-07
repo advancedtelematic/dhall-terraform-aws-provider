@@ -108,8 +108,7 @@ let SqsRequired =
 let Sqs = SqsOptional //\\ SqsRequired
 
 let AwsIotTopicRuleOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , cloudwatch_alarm: Optional (List CloudwatchAlarm)
   , cloudwatch_metric: Optional (List CloudwatchMetric)
   , dynamodb: Optional (List Dynamodb)

@@ -1,9 +1,6 @@
 
 let IngestEndpointsOptional =
-  { password: Optional Text
-  , url: Optional Text
-  , username: Optional Text
-  }
+  { password: Optional Text }
 
 let IngestEndpointsRequired = {}
 let IngestEndpoints = IngestEndpointsOptional //\\ IngestEndpointsRequired
@@ -15,8 +12,7 @@ let HlsIngestRequired = {}
 let HlsIngest = HlsIngestOptional //\\ HlsIngestRequired
 
 let AwsMediaPackageChannelOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , hls_ingest: Optional (List HlsIngest)
   }
 

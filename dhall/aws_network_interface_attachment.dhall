@@ -1,8 +1,5 @@
 
-let AwsNetworkInterfaceAttachmentOptional =
-  { attachment_id: Optional Text
-  , status: Optional Text
-  }
+let AwsNetworkInterfaceAttachmentOptional = {}
 
 let AwsNetworkInterfaceAttachmentRequired =
   { device_index: Natural
@@ -12,7 +9,5 @@ let AwsNetworkInterfaceAttachmentRequired =
 let AwsNetworkInterfaceAttachment = AwsNetworkInterfaceAttachmentOptional //\\ AwsNetworkInterfaceAttachmentRequired
 
 in
-{ AwsNetworkInterfaceAttachmentOptional = AwsNetworkInterfaceAttachmentOptional
-, AwsNetworkInterfaceAttachmentRequired = AwsNetworkInterfaceAttachmentRequired
-, AwsNetworkInterfaceAttachment = AwsNetworkInterfaceAttachment
+{ AwsNetworkInterfaceAttachment = AwsNetworkInterfaceAttachment
 }

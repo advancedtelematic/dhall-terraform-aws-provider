@@ -5,7 +5,6 @@ let AwsCloudformationStackOptional =
   , iam_role_arn: Optional Text
   , notification_arns: Optional (List Text)
   , on_failure: Optional Text
-  , outputs: Optional (List { mapKey : Text, mapValue : Text })
   , parameters: Optional (List { mapKey : Text, mapValue : Text })
   , policy_body: Optional Text
   , policy_url: Optional Text

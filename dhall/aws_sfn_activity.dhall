@@ -1,8 +1,6 @@
 
 let AwsSfnActivityOptional =
-  { creation_date: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  }
+  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsSfnActivityRequired =
   { name: Text }

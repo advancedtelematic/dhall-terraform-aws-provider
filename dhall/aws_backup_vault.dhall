@@ -1,8 +1,6 @@
 
 let AwsBackupVaultOptional =
-  { arn: Optional Text
-  , kms_key_arn: Optional Text
-  , recovery_points: Optional Natural
+  { kms_key_arn: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   }
 

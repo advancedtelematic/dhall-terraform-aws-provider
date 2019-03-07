@@ -32,8 +32,7 @@ let HealthCheckCustomConfigRequired = {}
 let HealthCheckCustomConfig = HealthCheckCustomConfigOptional //\\ HealthCheckCustomConfigRequired
 
 let AwsServiceDiscoveryServiceOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , health_check_config: Optional HealthCheckConfig
   , health_check_custom_config: Optional HealthCheckCustomConfig
   }

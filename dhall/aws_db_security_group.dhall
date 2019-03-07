@@ -10,8 +10,7 @@ let IngressRequired = {}
 let Ingress = IngressOptional //\\ IngressRequired
 
 let AwsDbSecurityGroupOptional =
-  { arn: Optional Text
-  , description: Optional Text
+  { description: Optional Text
   , tags: Optional (List { mapKey : Text, mapValue : Text })
   }
 
