@@ -42,6 +42,52 @@ dhall normalize < dhall/aws_nat_gateway.dhall
 }
 ```
 
+## Usage
+
+The ergonomics of this needs some thought, but something like this already works:
+
+Take a file like this named 'dhall-test.dhall':
+```haskell
+let Types = https://raw.githubusercontent.com/advancedtelematic/dhall-terraform-aws-provider/master/dhall/aws_nat_gateway.dhall
+
+in let gw =
+{ allocation_id = "foo"
+, subnet_id = "bar"
+, tags = None (List { mapKey : Text, mapValue : Text })
+} : Types.AwsNatGateway
+
+in
+{ resource =
+  { aws_nat_gateway =
+    [ { mapKey = "some-gw"
+      , mapValue = gw
+      }
+    ]
+  }
+}
+```
+
+Then run:
+
+```
+dhall-to-json --omitNull < dhall-test.dhall > out.tf
+```
+
+And `terraform plan` will give you the following:
+
+```
+Terraform will perform the following actions:
+
+  + aws_nat_gateway.some-gw
+      id:                   <computed>
+      allocation_id:        "foo"
+      network_interface_id: <computed>
+      private_ip:           <computed>
+      public_ip:            <computed>
+      subnet_id:            "bar"
+```
+
+
 ## Using the generators
 
 `make generate-schema` creates the terraform json schema in the `./schema` dir.
