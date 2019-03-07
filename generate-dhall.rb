@@ -23,7 +23,7 @@ def print_block_type(name, block_type)
   end
 end
 
-def convert_type(attribute)
+def print_attribute_type(attribute)
   case attribute["type"]
   when "Bool"
     "Bool"
@@ -67,7 +67,7 @@ def fields_from_blocks(blocks)
 end
 
 def field_from_arg(attribute)
-  "#{attribute["name"]}: #{print_optional(attribute)} #{convert_type(attribute)}".squeeze(" ")
+  "#{attribute["name"]}: #{print_optional(attribute)} #{print_attribute_type(attribute)}".squeeze(" ")
 end
 
 def classify(str)
@@ -176,7 +176,7 @@ def block_type(block)
   # TODO probably buggy, need to test more cases
   # TODO drop _some_ computed values
   list = (nesting == 2 || nesting == 3)
-  map = nesting == 4
+  record = nesting == 4
   optional = min == 0
   if max == 1
     record = true
