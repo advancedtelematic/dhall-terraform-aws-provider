@@ -1,23 +1,20 @@
-def print_block_type(name, block_type)
-  type_name = classify(name)
-  if block_type.list
-    type = "List #{type_name}"
-  else
-    type = type_name
-  end
+def classify(str)
+  str.split('_').collect(&:capitalize).join
+end
 
-  case
-  when block_type.optional && block_type.list
-    "Optional (#{type})"
-  when block_type.optional
-    "Optional #{type}"
+def dhall_type_from_block(field)
+  type_name = classify(field.name)
+  if field.optional && field.type == :list
+    "(List #{type_name})"
+  elsif field.type == :list
+    "List #{type_name}"
   else
-    type
+    type_name
   end
 end
 
-def print_attribute_type(attribute)
-  case attribute["type"]
+def dhall_type_from_attribute(type)
+  case type
   when "Bool"
     "Bool"
   when "List(Map(String))"
@@ -40,86 +37,107 @@ def print_attribute_type(attribute)
   when "String"
     "Text"
   else
-    print "Unknown type #{attribute["type"]}"
+    print "Unknown type #{type}"
     "Unknown type"
   end
 end
 
-def print_optional(attribute)
-  if attribute["required"]
-    ""
-  else
-    "Optional "
-  end
-end
-
-def fields_from_blocks(blocks)
-  blocks.map do |b|
-    "#{b.type_name}: #{print_block_type(b.type_name, b.block_type)}"
-  end
-end
-
-def classify(str)
-  str.split('_').collect(&:capitalize).join
-end
-
-def optional_title(name)
-  "#{classify(name)}Optional"
-end
-
-def required_title(name)
-  "#{classify(name)}Required"
-end
-
-def print_type(name, args, optional=false)
+def dhall_field(name, type, optional)
   if optional
-    type_name = optional_title(name)
+    return "#{name}: Optional #{type}"
   else
-    type_name = required_title(name)
+    return "#{name}: #{type}"
   end
-  case
-  when args.count == 0 # TODO Are empty types even wanted?
+end
+
+# Field = Struct.new(:name, :type, :optional, :is_block?)
+def dhall_from_attribute_field(field)
+  type = dhall_type_from_attribute(field.type)
+  return dhall_field(field.name, type, field.optional)
+end
+
+def dhall_from_block_field(field)
+  type = dhall_type_from_block(field)
+  return dhall_field(field.name, type, field.optional)
+end
+
+def render_dhall_field(field)
+  if field.is_block?
+    return dhall_from_block_field(field)
+  else
+    return dhall_from_attribute_field(field)
+  end
+end
+
+def dhall_type_template(type_name, fields)
+  f = fields.map { |f| render_dhall_field(f) }.join("\n  , ")
+  if fields.count == 0
   %{
 let #{type_name} = {}
 }
-  when args.count == 1
+  elsif fields.count == 1
   %{
 let #{type_name} =
-  { #{args.first} }
+  { #{f} }
 }
-  when args.count >1
+  elsif fields.count > 1
   %{
 let #{type_name} =
-  { #{args.first}
-  , #{args.drop(1).join("\n  , ")}
+  { #{f}
   }
 }
   end
 end
 
-def dhall_rep_to_string(dr)
-  dr.blocks.map { |d| dhall_rep_to_string(d) } \
-  + [ print_type(dr.type_name, dr.fields[:optional], true) \
-    + print_type(dr.type_name, dr.fields[:required]) \
-    + "let #{classify(dr.type_name)} = #{classify(dr.type_name)}Optional //\\\\ #{classify(dr.type_name)}Required\n"
-    ]
+def render_dhall_type(type)
+  type_name = classify(type.name)
+
+  op_type_name = "#{type_name}Optional"
+  op_fields = type.fields.select { |f| f.optional }
+  op_str = dhall_type_template(op_type_name, op_fields)
+
+  req_type_name = "#{type_name}Required"
+  req_fields = type.fields.select { |f| !f.optional }
+  req_str = dhall_type_template(req_type_name, req_fields)
+
+  full_type = "let #{type_name} = #{op_type_name} //\\\\ #{req_type_name}\n"
+  [op_str, req_str, full_type]
 end
 
-def get_all_type_names(dr)
-  names = dr.blocks.map { |b| get_all_type_names(b) }
-  names << { name: dr.type_name, optional: (dr.fields[:optional].count > 0) }
+def render_dhall_file(type)
+  str = type.blocks.map { |b| render_dhall_file(b) }
+  str.append(render_dhall_type(type))
+end
+
+def render_all(types)
+  types.each do |t|
+    content = render_dhall_file(t).flatten.join("")
+    in_block = render_in_block(t)
+    File.write("./dhall/#{t.name}.dhall", content + in_block)
+  end
+end
+
+## in block
+def get_all_type_names(type)
+  names = type.blocks.map { |b| get_all_type_names(b) }
+  names << { name: type.name, optional?: (type.fields.select { |f| f.optional }.count > 0) }
   names.flatten
 end
 
-def dhall_in_block_to_string(dr)
-  names = get_all_type_names(dr).reverse
+def render_in_block(type)
+  names = get_all_type_names(type).reverse
+
   str = names.map { |n|
-    if n[:optional]
-      [ "#{optional_title(n[:name])} = #{optional_title(n[:name])}",
-        "#{required_title(n[:name])} = #{required_title(n[:name])}",
-        "#{classify(n[:name])} = #{classify(n[:name])}" ]
+    type_name = classify(n[:name])
+    op_type_name = "#{type_name}Optional"
+    req_type_name = "#{type_name}Required"
+
+    if n[:optional?]
+      [ "#{op_type_name} = #{op_type_name}",
+        "#{req_type_name} = #{req_type_name}",
+        "#{type_name} = #{type_name}" ]
     else
-      "#{classify(n[:name])} = #{classify(n[:name])}"
+      "#{type_name} = #{type_name}"
     end
   }.flatten
 
@@ -129,25 +147,4 @@ in
 { #{str.join("\n, ")}
 }
 }
-end
-
-def only_computed?(attribute)
-  # TODO find out if this drops more attributes than intended
-  (attribute["computed"] == true &&
-   attribute["required"] == false &&
-   attribute["optional"] == false &&
-   attribute["sensitive"] == false)
-end
-
-def field_from_arg(attribute) # TODO should this return string or an object that gets printed later?
-  "#{attribute["name"]}: #{print_optional(attribute)} #{print_attribute_type(attribute)}".squeeze(" ")
-end
-
-def fields_from_resource(resource) # TODO move out of render?
-  split = resource['attributes']
-    .delete_if { |a| only_computed?(a)}
-    .group_by { |a| a['required'] }
-  required = split[true]&.map { |a| field_from_arg(a) } || []
-  optional = split[false]&.map { |a| field_from_arg(a) } || []
-  { optional: optional, required: required }
 end

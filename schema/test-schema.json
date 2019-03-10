@@ -594,30 +594,6 @@
   {
     "attributes": [
       {
-        "name": "policy_document",
-        "type": "String",
-        "required": true,
-        "optional": false,
-        "computed": false,
-        "sensitive": false
-      },
-      {
-        "name": "policy_name",
-        "type": "String",
-        "required": true,
-        "optional": false,
-        "computed": false,
-        "sensitive": false
-      }
-    ],
-    "block_types": [
-
-    ],
-    "type_name": "aws_cloudwatch_log_resource_policy"
-  },
-  {
-    "attributes": [
-      {
         "name": "cookie_name",
         "type": "String",
         "required": true,
@@ -654,5 +630,289 @@
 
     ],
     "type_name": "aws_app_cookie_stickiness_policy"
+  },
+  {
+    "attributes": [
+      {
+        "name": "arn",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "certificate",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "certificate_chain",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "certificate_signing_request",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "enabled",
+        "type": "Bool",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "not_after",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "not_before",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "serial",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "status",
+        "type": "String",
+        "required": false,
+        "optional": false,
+        "computed": true,
+        "sensitive": false
+      },
+      {
+        "name": "tags",
+        "type": "Map(String)",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      },
+      {
+        "name": "type",
+        "type": "String",
+        "required": false,
+        "optional": true,
+        "computed": false,
+        "sensitive": false
+      }
+    ],
+    "block_types": [
+      {
+        "type_name": "certificate_authority_configuration",
+        "attributes": [
+          {
+            "name": "key_algorithm",
+            "type": "String",
+            "required": true,
+            "optional": false,
+            "computed": false,
+            "sensitive": false
+          },
+          {
+            "name": "signing_algorithm",
+            "type": "String",
+            "required": true,
+            "optional": false,
+            "computed": false,
+            "sensitive": false
+          }
+        ],
+        "block_types": [
+          {
+            "type_name": "subject",
+            "attributes": [
+              {
+                "name": "common_name",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "country",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "distinguished_name_qualifier",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "generation_qualifier",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "given_name",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "initials",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "locality",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "organization",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "organizational_unit",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "pseudonym",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "state",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "surname",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "title",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              }
+            ],
+            "block_types": [],
+            "nesting": 2,
+            "min_items": 1,
+            "max_items": 1
+          }
+        ],
+        "nesting": 2,
+        "min_items": 1,
+        "max_items": 1
+      },
+      {
+        "type_name": "revocation_configuration",
+        "attributes": [],
+        "block_types": [
+          {
+            "type_name": "crl_configuration",
+            "attributes": [
+              {
+                "name": "custom_cname",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "enabled",
+                "type": "Bool",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "expiration_in_days",
+                "type": "Number",
+                "required": true,
+                "optional": false,
+                "computed": false,
+                "sensitive": false
+              },
+              {
+                "name": "s3_bucket_name",
+                "type": "String",
+                "required": false,
+                "optional": true,
+                "computed": false,
+                "sensitive": false
+              }
+            ],
+            "block_types": [],
+            "nesting": 2,
+            "min_items": 0,
+            "max_items": 1
+          }
+        ],
+        "nesting": 2,
+        "min_items": 0,
+        "max_items": 1
+      }
+    ],
+    "type_name": "aws_acmpca_certificate_authority"
   }
 ]
