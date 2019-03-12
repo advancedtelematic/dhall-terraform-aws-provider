@@ -1,6 +1,7 @@
 require 'json'
 require 'pry'
 require './lib/render.rb'
+require './lib/structs.rb'
 
 file = File.read './schema/tf-aws-schema.json'
 
@@ -14,7 +15,6 @@ def only_computed?(attribute)
    attribute["sensitive"] == false)
 end
 
-Field = Struct.new(:name, :type, :optional, :is_block?)
 def field_from_block(block)
   nesting = block["nesting"]
   min = block["min_items"]
@@ -32,8 +32,6 @@ end
 def field_from_attribute(attribute)
   Field.new(attribute["name"], attribute["type"], !attribute["required"], false)
 end
-
-Type = Struct.new(:name, :fields, :blocks, :exported_attributes)
 
 def type_from_resource(resource)
   blocks = resource["block_types"].map { |bt| type_from_resource(bt) }
