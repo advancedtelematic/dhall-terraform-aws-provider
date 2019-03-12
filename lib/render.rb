@@ -3,6 +3,10 @@ module Render
     str.split('_').collect(&:capitalize).join
   end
 
+  def Render.instanceify(str)
+    classify(str).sub(/^\w/) {$&.downcase}
+  end
+
   def Render.dhall_type_from_block(field)
     type_name = classify(field.name)
     if field.optional && field.type == :list
@@ -59,18 +63,22 @@ module Render
     end
   end
 
-  def Render.render_dhall_field(field)
+  def Render.render_dhall_field(field, parent_type)
     type = get_type(field)
     return dhall_field(field.name, type, field.optional)
   end
 
-  def Render.render_none_field(field)
-    type = get_type(field)
+  def Render.render_none_field(field, parent_type)
+    if field.is_block?
+     type =  dhall_default_type_from_block(field, parent_type)
+    else
+      type = dhall_type_from_attribute(field.type)
+    end
     return "#{field.name} = None #{type}"
   end
 
-  def Render.dhall_type_template(type_name, fields)
-    field_strings = fields.map { |f| render_dhall_field(f) }.join("\n  , ")
+  def Render.dhall_type_template(type_name, fields, func = :render_dhall_field, parent_type = nil)
+    field_strings = fields.map { |f| Render.send(func, f, parent_type) }.join("\n  , ")
     if fields.count == 0
     %{
 let #{type_name} = {}
@@ -142,6 +150,64 @@ let #{type_name} =
     }.flatten
 
     # TODO not exporting empty Optionals, possibly correct?
+    %{
+in
+{ #{str.join("\n, ")}
+}
+}
+  end
+
+  ## defaults
+  def Render.render_default_type(type, parent_type)
+    type_name = instanceify(type.name)
+
+    op_type_name = "#{type_name}"
+    op_fields = type.fields.select { |f| f.optional }
+    op_str = dhall_type_template(op_type_name, op_fields, :render_none_field, parent_type)
+
+    [op_str]
+  end
+
+  def Render.render_default_file(type, parent_type)
+    str = type.blocks.map { |b| render_default_file(b, parent_type) }
+    str.append(render_default_type(type, parent_type))
+  end
+
+  def Render.render_defaults(types)
+    types.each do |t|
+      parent_type = t.name
+      content = render_default_file(t, parent_type).flatten.join("")
+      in_block = render_defaults_in_block(t, false)
+      File.write("./default/#{t.name}.dhall", content + in_block)
+    end
+  end
+
+  def Render.dhall_default_type_from_block(field, parent_type)
+    type_name = classify(field.name)
+    path = "(../dhall/#{parent_type}.dhall).#{type_name}"
+    if field.optional && field.type == :list
+      "(List #{path})"
+    elsif field.type == :list
+      "List #{path}"
+    else
+      path
+    end
+  end
+
+  def Render.render_defaults_in_block(type, only_optionals=false)
+    names = get_all_type_names(type).reverse
+
+    str = names.map { |n|
+      type_name = instanceify(n[:name])
+      op_type_name = "#{type_name}"
+
+      if n[:optional?]
+        [ "#{op_type_name} = #{op_type_name}"]
+      else
+        []
+      end
+    }.flatten
+
     %{
 in
 { #{str.join("\n, ")}
