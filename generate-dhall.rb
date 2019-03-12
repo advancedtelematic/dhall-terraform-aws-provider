@@ -51,4 +51,5 @@ gds = resources.map do |r|
 end
 
 Render.render_all(gds)
+Render.render_defaults(gds)
 pry.inspect

@@ -69,8 +69,8 @@ module Render
     return "#{field.name} = None #{type}"
   end
 
-  def Render.dhall_type_template(type_name, fields)
-    field_strings = fields.map { |f| render_dhall_field(f) }.join("\n  , ")
+  def Render.dhall_type_template(type_name, fields, func = :render_dhall_field)
+    field_strings = fields.map { |f| Render.send(func, f) }.join("\n  , ")
     if fields.count == 0
     %{
 let #{type_name} = {}
@@ -147,5 +147,29 @@ in
 { #{str.join("\n, ")}
 }
 }
+  end
+
+  ## defaults
+  def Render.render_default_type(type)
+    type_name = classify(type.name)
+
+    op_type_name = "#{type_name}Optional"
+    op_fields = type.fields.select { |f| f.optional }
+    op_str = dhall_type_template(op_type_name, op_fields, :render_none_field)
+
+    [op_str]
+  end
+
+  def Render.render_default_file(type)
+    str = type.blocks.map { |b| render_default_file(b) }
+    str.append(render_default_type(type))
+  end
+
+  def Render.render_defaults(types)
+    types.each do |t|
+      content = render_default_file(t).flatten.join("")
+      # in_block = render_in_block(t) TODO put back
+      File.write("./default/#{t.name}.dhall", content)
+    end
   end
 end
