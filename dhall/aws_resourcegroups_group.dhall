@@ -1,17 +1,17 @@
 
 let ResourceQueryOptional =
-  { type: Optional Text }
+  { type : Optional Text }
 
 let ResourceQueryRequired =
-  { query: Text }
+  { query : Text }
 let ResourceQuery = ResourceQueryOptional //\\ ResourceQueryRequired
 
 let AwsResourcegroupsGroupOptional =
-  { description: Optional Text }
+  { description : Optional Text }
 
 let AwsResourcegroupsGroupRequired =
-  { name: Text
-  , resource_query: ResourceQuery
+  { name : Text
+  , resource_query : ResourceQuery
   }
 let AwsResourcegroupsGroup = AwsResourcegroupsGroupOptional //\\ AwsResourcegroupsGroupRequired
 

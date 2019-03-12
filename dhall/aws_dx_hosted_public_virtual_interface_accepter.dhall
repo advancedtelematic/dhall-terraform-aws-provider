@@ -1,9 +1,9 @@
 
 let AwsDxHostedPublicVirtualInterfaceAccepterOptional =
-  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
+  { tags : Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsDxHostedPublicVirtualInterfaceAccepterRequired =
-  { virtual_interface_id: Text }
+  { virtual_interface_id : Text }
 let AwsDxHostedPublicVirtualInterfaceAccepter = AwsDxHostedPublicVirtualInterfaceAccepterOptional //\\ AwsDxHostedPublicVirtualInterfaceAccepterRequired
 
 in

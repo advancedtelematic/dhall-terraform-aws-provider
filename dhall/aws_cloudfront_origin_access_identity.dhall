@@ -1,6 +1,6 @@
 
 let AwsCloudfrontOriginAccessIdentityOptional =
-  { comment: Optional Text }
+  { comment : Optional Text }
 
 let AwsCloudfrontOriginAccessIdentityRequired = {}
 let AwsCloudfrontOriginAccessIdentity = AwsCloudfrontOriginAccessIdentityOptional //\\ AwsCloudfrontOriginAccessIdentityRequired

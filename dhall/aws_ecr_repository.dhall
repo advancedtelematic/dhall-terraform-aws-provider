@@ -1,9 +1,9 @@
 
 let AwsEcrRepositoryOptional =
-  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
+  { tags : Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsEcrRepositoryRequired =
-  { name: Text }
+  { name : Text }
 let AwsEcrRepository = AwsEcrRepositoryOptional //\\ AwsEcrRepositoryRequired
 
 in

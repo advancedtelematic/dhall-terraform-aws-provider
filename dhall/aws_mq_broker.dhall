@@ -1,7 +1,7 @@
 
 let ConfigurationOptional =
-  { id: Optional Text
-  , revision: Optional Natural
+  { id : Optional Text
+  , revision : Optional Natural
   }
 
 let ConfigurationRequired = {}
@@ -13,8 +13,8 @@ let InstancesRequired = {}
 let Instances = InstancesOptional //\\ InstancesRequired
 
 let LogsOptional =
-  { audit: Optional Bool
-  , general: Optional Bool
+  { audit : Optional Bool
+  , general : Optional Bool
   }
 
 let LogsRequired = {}
@@ -23,43 +23,43 @@ let Logs = LogsOptional //\\ LogsRequired
 let MaintenanceWindowStartTimeOptional = {}
 
 let MaintenanceWindowStartTimeRequired =
-  { day_of_week: Text
-  , time_of_day: Text
-  , time_zone: Text
+  { day_of_week : Text
+  , time_of_day : Text
+  , time_zone : Text
   }
 let MaintenanceWindowStartTime = MaintenanceWindowStartTimeOptional //\\ MaintenanceWindowStartTimeRequired
 
 let UserOptional =
-  { console_access: Optional Bool
-  , groups: Optional (List Text)
+  { console_access : Optional Bool
+  , groups : Optional (List Text)
   }
 
 let UserRequired =
-  { password: Text
-  , username: Text
+  { password : Text
+  , username : Text
   }
 let User = UserOptional //\\ UserRequired
 
 let AwsMqBrokerOptional =
-  { apply_immediately: Optional Bool
-  , auto_minor_version_upgrade: Optional Bool
-  , deployment_mode: Optional Text
-  , publicly_accessible: Optional Bool
-  , subnet_ids: Optional (List Text)
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , configuration: Optional Configuration
-  , instances: Optional (List Instances)
-  , logs: Optional Logs
-  , maintenance_window_start_time: Optional MaintenanceWindowStartTime
+  { apply_immediately : Optional Bool
+  , auto_minor_version_upgrade : Optional Bool
+  , deployment_mode : Optional Text
+  , publicly_accessible : Optional Bool
+  , subnet_ids : Optional (List Text)
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , configuration : Optional Configuration
+  , instances : Optional (List Instances)
+  , logs : Optional Logs
+  , maintenance_window_start_time : Optional MaintenanceWindowStartTime
   }
 
 let AwsMqBrokerRequired =
-  { broker_name: Text
-  , engine_type: Text
-  , engine_version: Text
-  , host_instance_type: Text
-  , security_groups: (List Text)
-  , user: List User
+  { broker_name : Text
+  , engine_type : Text
+  , engine_version : Text
+  , host_instance_type : Text
+  , security_groups : (List Text)
+  , user : List User
   }
 let AwsMqBroker = AwsMqBrokerOptional //\\ AwsMqBrokerRequired
 

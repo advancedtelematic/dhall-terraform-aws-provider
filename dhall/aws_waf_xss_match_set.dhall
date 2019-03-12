@@ -1,24 +1,24 @@
 
 let FieldToMatchOptional =
-  { data: Optional Text }
+  { data : Optional Text }
 
 let FieldToMatchRequired =
-  { type: Text }
+  { type : Text }
 let FieldToMatch = FieldToMatchOptional //\\ FieldToMatchRequired
 
 let XssMatchTuplesOptional = {}
 
 let XssMatchTuplesRequired =
-  { text_transformation: Text
-  , field_to_match: FieldToMatch
+  { text_transformation : Text
+  , field_to_match : FieldToMatch
   }
 let XssMatchTuples = XssMatchTuplesOptional //\\ XssMatchTuplesRequired
 
 let AwsWafXssMatchSetOptional =
-  { xss_match_tuples: Optional (List XssMatchTuples) }
+  { xss_match_tuples : Optional (List XssMatchTuples) }
 
 let AwsWafXssMatchSetRequired =
-  { name: Text }
+  { name : Text }
 let AwsWafXssMatchSet = AwsWafXssMatchSetOptional //\\ AwsWafXssMatchSetRequired
 
 in

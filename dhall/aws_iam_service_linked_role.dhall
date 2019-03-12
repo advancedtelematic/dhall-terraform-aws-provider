@@ -1,11 +1,11 @@
 
 let AwsIamServiceLinkedRoleOptional =
-  { custom_suffix: Optional Text
-  , description: Optional Text
+  { custom_suffix : Optional Text
+  , description : Optional Text
   }
 
 let AwsIamServiceLinkedRoleRequired =
-  { aws_service_name: Text }
+  { aws_service_name : Text }
 let AwsIamServiceLinkedRole = AwsIamServiceLinkedRoleOptional //\\ AwsIamServiceLinkedRoleRequired
 
 in

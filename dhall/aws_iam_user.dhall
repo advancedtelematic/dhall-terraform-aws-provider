@@ -1,13 +1,13 @@
 
 let AwsIamUserOptional =
-  { force_destroy: Optional Bool
-  , path: Optional Text
-  , permissions_boundary: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
+  { force_destroy : Optional Bool
+  , path : Optional Text
+  , permissions_boundary : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
   }
 
 let AwsIamUserRequired =
-  { name: Text }
+  { name : Text }
 let AwsIamUser = AwsIamUserOptional //\\ AwsIamUserRequired
 
 in

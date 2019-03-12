@@ -1,12 +1,12 @@
 
 let AwsAlbTargetGroupAttachmentOptional =
-  { availability_zone: Optional Text
-  , port: Optional Natural
+  { availability_zone : Optional Text
+  , port : Optional Natural
   }
 
 let AwsAlbTargetGroupAttachmentRequired =
-  { target_group_arn: Text
-  , target_id: Text
+  { target_group_arn : Text
+  , target_id : Text
   }
 let AwsAlbTargetGroupAttachment = AwsAlbTargetGroupAttachmentOptional //\\ AwsAlbTargetGroupAttachmentRequired
 

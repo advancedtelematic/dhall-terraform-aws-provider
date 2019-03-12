@@ -2,8 +2,8 @@
 let AwsIotPolicyOptional = {}
 
 let AwsIotPolicyRequired =
-  { name: Text
-  , policy: Text
+  { name : Text
+  , policy : Text
   }
 let AwsIotPolicy = AwsIotPolicyOptional //\\ AwsIotPolicyRequired
 

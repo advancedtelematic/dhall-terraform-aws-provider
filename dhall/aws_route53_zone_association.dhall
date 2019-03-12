@@ -1,10 +1,10 @@
 
 let AwsRoute53ZoneAssociationOptional =
-  { vpc_region: Optional Text }
+  { vpc_region : Optional Text }
 
 let AwsRoute53ZoneAssociationRequired =
-  { vpc_id: Text
-  , zone_id: Text
+  { vpc_id : Text
+  , zone_id : Text
   }
 let AwsRoute53ZoneAssociation = AwsRoute53ZoneAssociationOptional //\\ AwsRoute53ZoneAssociationRequired
 

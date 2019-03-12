@@ -1,9 +1,9 @@
 
 let AwsEcsClusterOptional =
-  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
+  { tags : Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsEcsClusterRequired =
-  { name: Text }
+  { name : Text }
 let AwsEcsCluster = AwsEcsClusterOptional //\\ AwsEcsClusterRequired
 
 in

@@ -1,21 +1,21 @@
 
 let AppversionLifecycleOptional =
-  { delete_source_from_s3: Optional Bool
-  , max_age_in_days: Optional Natural
-  , max_count: Optional Natural
+  { delete_source_from_s3 : Optional Bool
+  , max_age_in_days : Optional Natural
+  , max_count : Optional Natural
   }
 
 let AppversionLifecycleRequired =
-  { service_role: Text }
+  { service_role : Text }
 let AppversionLifecycle = AppversionLifecycleOptional //\\ AppversionLifecycleRequired
 
 let AwsElasticBeanstalkApplicationOptional =
-  { description: Optional Text
-  , appversion_lifecycle: Optional AppversionLifecycle
+  { description : Optional Text
+  , appversion_lifecycle : Optional AppversionLifecycle
   }
 
 let AwsElasticBeanstalkApplicationRequired =
-  { name: Text }
+  { name : Text }
 let AwsElasticBeanstalkApplication = AwsElasticBeanstalkApplicationOptional //\\ AwsElasticBeanstalkApplicationRequired
 
 in

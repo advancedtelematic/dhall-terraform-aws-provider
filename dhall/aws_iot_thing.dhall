@@ -1,11 +1,11 @@
 
 let AwsIotThingOptional =
-  { attributes: Optional (List { mapKey : Text, mapValue : Text })
-  , thing_type_name: Optional Text
+  { attributes : Optional (List { mapKey : Text, mapValue : Text })
+  , thing_type_name : Optional Text
   }
 
 let AwsIotThingRequired =
-  { name: Text }
+  { name : Text }
 let AwsIotThing = AwsIotThingOptional //\\ AwsIotThingRequired
 
 in

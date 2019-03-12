@@ -1,9 +1,9 @@
 
 let AwsWafregionalRegexPatternSetOptional =
-  { regex_pattern_strings: Optional (List Text) }
+  { regex_pattern_strings : Optional (List Text) }
 
 let AwsWafregionalRegexPatternSetRequired =
-  { name: Text }
+  { name : Text }
 let AwsWafregionalRegexPatternSet = AwsWafregionalRegexPatternSetOptional //\\ AwsWafregionalRegexPatternSetRequired
 
 in

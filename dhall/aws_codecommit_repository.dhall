@@ -1,11 +1,11 @@
 
 let AwsCodecommitRepositoryOptional =
-  { default_branch: Optional Text
-  , description: Optional Text
+  { default_branch : Optional Text
+  , description : Optional Text
   }
 
 let AwsCodecommitRepositoryRequired =
-  { repository_name: Text }
+  { repository_name : Text }
 let AwsCodecommitRepository = AwsCodecommitRepositoryOptional //\\ AwsCodecommitRepositoryRequired
 
 in

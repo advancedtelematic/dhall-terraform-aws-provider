@@ -1,7 +1,7 @@
 
 let AwsGuarddutyDetectorOptional =
-  { enable: Optional Bool
-  , finding_publishing_frequency: Optional Text
+  { enable : Optional Bool
+  , finding_publishing_frequency : Optional Text
   }
 
 let AwsGuarddutyDetectorRequired = {}

@@ -1,11 +1,11 @@
 
 let AwsIamUserSshKeyOptional =
-  { status: Optional Text }
+  { status : Optional Text }
 
 let AwsIamUserSshKeyRequired =
-  { encoding: Text
-  , public_key: Text
-  , username: Text
+  { encoding : Text
+  , public_key : Text
+  , username : Text
   }
 let AwsIamUserSshKey = AwsIamUserSshKeyOptional //\\ AwsIamUserSshKeyRequired
 

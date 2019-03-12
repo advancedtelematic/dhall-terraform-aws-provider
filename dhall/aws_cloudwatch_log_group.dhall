@@ -1,10 +1,10 @@
 
 let AwsCloudwatchLogGroupOptional =
-  { kms_key_id: Optional Text
-  , name: Optional Text
-  , name_prefix: Optional Text
-  , retention_in_days: Optional Natural
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
+  { kms_key_id : Optional Text
+  , name : Optional Text
+  , name_prefix : Optional Text
+  , retention_in_days : Optional Natural
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
   }
 
 let AwsCloudwatchLogGroupRequired = {}

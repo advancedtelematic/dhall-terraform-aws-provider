@@ -2,42 +2,42 @@
 let PatchFilterOptional = {}
 
 let PatchFilterRequired =
-  { key: Text
-  , values: (List Text)
+  { key : Text
+  , values : (List Text)
   }
 let PatchFilter = PatchFilterOptional //\\ PatchFilterRequired
 
 let ApprovalRuleOptional =
-  { compliance_level: Optional Text
-  , enable_non_security: Optional Bool
+  { compliance_level : Optional Text
+  , enable_non_security : Optional Bool
   }
 
 let ApprovalRuleRequired =
-  { approve_after_days: Natural
-  , patch_filter: List PatchFilter
+  { approve_after_days : Natural
+  , patch_filter : List PatchFilter
   }
 let ApprovalRule = ApprovalRuleOptional //\\ ApprovalRuleRequired
 
 let GlobalFilterOptional = {}
 
 let GlobalFilterRequired =
-  { key: Text
-  , values: (List Text)
+  { key : Text
+  , values : (List Text)
   }
 let GlobalFilter = GlobalFilterOptional //\\ GlobalFilterRequired
 
 let AwsSsmPatchBaselineOptional =
-  { approved_patches: Optional (List Text)
-  , approved_patches_compliance_level: Optional Text
-  , description: Optional Text
-  , operating_system: Optional Text
-  , rejected_patches: Optional (List Text)
-  , approval_rule: Optional (List ApprovalRule)
-  , global_filter: Optional (List GlobalFilter)
+  { approved_patches : Optional (List Text)
+  , approved_patches_compliance_level : Optional Text
+  , description : Optional Text
+  , operating_system : Optional Text
+  , rejected_patches : Optional (List Text)
+  , approval_rule : Optional (List ApprovalRule)
+  , global_filter : Optional (List GlobalFilter)
   }
 
 let AwsSsmPatchBaselineRequired =
-  { name: Text }
+  { name : Text }
 let AwsSsmPatchBaseline = AwsSsmPatchBaselineOptional //\\ AwsSsmPatchBaselineRequired
 
 in

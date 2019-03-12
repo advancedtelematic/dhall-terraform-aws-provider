@@ -1,11 +1,11 @@
 
 let AwsKeyPairOptional =
-  { key_name: Optional Text
-  , key_name_prefix: Optional Text
+  { key_name : Optional Text
+  , key_name_prefix : Optional Text
   }
 
 let AwsKeyPairRequired =
-  { public_key: Text }
+  { public_key : Text }
 let AwsKeyPair = AwsKeyPairOptional //\\ AwsKeyPairRequired
 
 in

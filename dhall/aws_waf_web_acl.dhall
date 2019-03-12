@@ -2,62 +2,62 @@
 let DefaultActionOptional = {}
 
 let DefaultActionRequired =
-  { type: Text }
+  { type : Text }
 let DefaultAction = DefaultActionOptional //\\ DefaultActionRequired
 
 let FieldToMatchOptional =
-  { data: Optional Text }
+  { data : Optional Text }
 
 let FieldToMatchRequired =
-  { type: Text }
+  { type : Text }
 let FieldToMatch = FieldToMatchOptional //\\ FieldToMatchRequired
 
 let RedactedFieldsOptional = {}
 
 let RedactedFieldsRequired =
-  { field_to_match: List FieldToMatch }
+  { field_to_match : List FieldToMatch }
 let RedactedFields = RedactedFieldsOptional //\\ RedactedFieldsRequired
 
 let LoggingConfigurationOptional =
-  { redacted_fields: Optional RedactedFields }
+  { redacted_fields : Optional RedactedFields }
 
 let LoggingConfigurationRequired =
-  { log_destination: Text }
+  { log_destination : Text }
 let LoggingConfiguration = LoggingConfigurationOptional //\\ LoggingConfigurationRequired
 
 let ActionOptional = {}
 
 let ActionRequired =
-  { type: Text }
+  { type : Text }
 let Action = ActionOptional //\\ ActionRequired
 
 let OverrideActionOptional = {}
 
 let OverrideActionRequired =
-  { type: Text }
+  { type : Text }
 let OverrideAction = OverrideActionOptional //\\ OverrideActionRequired
 
 let RulesOptional =
-  { type: Optional Text
-  , action: Optional Action
-  , override_action: Optional OverrideAction
+  { type : Optional Text
+  , action : Optional Action
+  , override_action : Optional OverrideAction
   }
 
 let RulesRequired =
-  { priority: Natural
-  , rule_id: Text
+  { priority : Natural
+  , rule_id : Text
   }
 let Rules = RulesOptional //\\ RulesRequired
 
 let AwsWafWebAclOptional =
-  { logging_configuration: Optional LoggingConfiguration
-  , rules: Optional (List Rules)
+  { logging_configuration : Optional LoggingConfiguration
+  , rules : Optional (List Rules)
   }
 
 let AwsWafWebAclRequired =
-  { metric_name: Text
-  , name: Text
-  , default_action: DefaultAction
+  { metric_name : Text
+  , name : Text
+  , default_action : DefaultAction
   }
 let AwsWafWebAcl = AwsWafWebAclOptional //\\ AwsWafWebAclRequired
 

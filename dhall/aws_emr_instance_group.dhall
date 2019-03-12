@@ -1,25 +1,25 @@
 
 let EbsConfigOptional =
-  { iops: Optional Natural
-  , volumes_per_instance: Optional Natural
+  { iops : Optional Natural
+  , volumes_per_instance : Optional Natural
   }
 
 let EbsConfigRequired =
-  { size: Natural
-  , type: Text
+  { size : Natural
+  , type : Text
   }
 let EbsConfig = EbsConfigOptional //\\ EbsConfigRequired
 
 let AwsEmrInstanceGroupOptional =
-  { ebs_optimized: Optional Bool
-  , instance_count: Optional Natural
-  , name: Optional Text
-  , ebs_config: Optional (List EbsConfig)
+  { ebs_optimized : Optional Bool
+  , instance_count : Optional Natural
+  , name : Optional Text
+  , ebs_config : Optional (List EbsConfig)
   }
 
 let AwsEmrInstanceGroupRequired =
-  { cluster_id: Text
-  , instance_type: Text
+  { cluster_id : Text
+  , instance_type : Text
   }
 let AwsEmrInstanceGroup = AwsEmrInstanceGroupOptional //\\ AwsEmrInstanceGroupRequired
 

@@ -1,35 +1,35 @@
 
 let GrokClassifierOptional =
-  { custom_patterns: Optional Text }
+  { custom_patterns : Optional Text }
 
 let GrokClassifierRequired =
-  { classification: Text
-  , grok_pattern: Text
+  { classification : Text
+  , grok_pattern : Text
   }
 let GrokClassifier = GrokClassifierOptional //\\ GrokClassifierRequired
 
 let JsonClassifierOptional = {}
 
 let JsonClassifierRequired =
-  { json_path: Text }
+  { json_path : Text }
 let JsonClassifier = JsonClassifierOptional //\\ JsonClassifierRequired
 
 let XmlClassifierOptional = {}
 
 let XmlClassifierRequired =
-  { classification: Text
-  , row_tag: Text
+  { classification : Text
+  , row_tag : Text
   }
 let XmlClassifier = XmlClassifierOptional //\\ XmlClassifierRequired
 
 let AwsGlueClassifierOptional =
-  { grok_classifier: Optional GrokClassifier
-  , json_classifier: Optional JsonClassifier
-  , xml_classifier: Optional XmlClassifier
+  { grok_classifier : Optional GrokClassifier
+  , json_classifier : Optional JsonClassifier
+  , xml_classifier : Optional XmlClassifier
   }
 
 let AwsGlueClassifierRequired =
-  { name: Text }
+  { name : Text }
 let AwsGlueClassifier = AwsGlueClassifierOptional //\\ AwsGlueClassifierRequired
 
 in

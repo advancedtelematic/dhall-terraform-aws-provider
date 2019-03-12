@@ -1,11 +1,11 @@
 
 let AwsAthenaNamedQueryOptional =
-  { description: Optional Text }
+  { description : Optional Text }
 
 let AwsAthenaNamedQueryRequired =
-  { database: Text
-  , name: Text
-  , query: Text
+  { database : Text
+  , name : Text
+  , query : Text
   }
 let AwsAthenaNamedQuery = AwsAthenaNamedQueryOptional //\\ AwsAthenaNamedQueryRequired
 

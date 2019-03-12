@@ -1,11 +1,11 @@
 
 let AwsCodedeployAppOptional =
-  { compute_platform: Optional Text
-  , unique_id: Optional Text
+  { compute_platform : Optional Text
+  , unique_id : Optional Text
   }
 
 let AwsCodedeployAppRequired =
-  { name: Text }
+  { name : Text }
 let AwsCodedeployApp = AwsCodedeployAppOptional //\\ AwsCodedeployAppRequired
 
 in

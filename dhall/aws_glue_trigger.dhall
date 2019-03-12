@@ -1,40 +1,40 @@
 
 let ActionsOptional =
-  { arguments: Optional (List { mapKey : Text, mapValue : Text })
-  , timeout: Optional Natural
+  { arguments : Optional (List { mapKey : Text, mapValue : Text })
+  , timeout : Optional Natural
   }
 
 let ActionsRequired =
-  { job_name: Text }
+  { job_name : Text }
 let Actions = ActionsOptional //\\ ActionsRequired
 
 let ConditionsOptional =
-  { logical_operator: Optional Text }
+  { logical_operator : Optional Text }
 
 let ConditionsRequired =
-  { job_name: Text
-  , state: Text
+  { job_name : Text
+  , state : Text
   }
 let Conditions = ConditionsOptional //\\ ConditionsRequired
 
 let PredicateOptional =
-  { logical: Optional Text }
+  { logical : Optional Text }
 
 let PredicateRequired =
-  { conditions: List Conditions }
+  { conditions : List Conditions }
 let Predicate = PredicateOptional //\\ PredicateRequired
 
 let AwsGlueTriggerOptional =
-  { description: Optional Text
-  , enabled: Optional Bool
-  , schedule: Optional Text
-  , predicate: Optional Predicate
+  { description : Optional Text
+  , enabled : Optional Bool
+  , schedule : Optional Text
+  , predicate : Optional Predicate
   }
 
 let AwsGlueTriggerRequired =
-  { name: Text
-  , type: Text
-  , actions: List Actions
+  { name : Text
+  , type : Text
+  , actions : List Actions
   }
 let AwsGlueTrigger = AwsGlueTriggerOptional //\\ AwsGlueTriggerRequired
 

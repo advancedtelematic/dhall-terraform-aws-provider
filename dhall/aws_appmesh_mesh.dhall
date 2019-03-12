@@ -2,7 +2,7 @@
 let AwsAppmeshMeshOptional = {}
 
 let AwsAppmeshMeshRequired =
-  { name: Text }
+  { name : Text }
 let AwsAppmeshMesh = AwsAppmeshMeshOptional //\\ AwsAppmeshMeshRequired
 
 in

@@ -2,8 +2,8 @@
 let AwsIamGroupPolicyAttachmentOptional = {}
 
 let AwsIamGroupPolicyAttachmentRequired =
-  { group: Text
-  , policy_arn: Text
+  { group : Text
+  , policy_arn : Text
   }
 let AwsIamGroupPolicyAttachment = AwsIamGroupPolicyAttachmentOptional //\\ AwsIamGroupPolicyAttachmentRequired
 

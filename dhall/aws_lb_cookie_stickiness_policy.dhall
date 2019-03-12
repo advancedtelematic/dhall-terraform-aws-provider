@@ -1,11 +1,11 @@
 
 let AwsLbCookieStickinessPolicyOptional =
-  { cookie_expiration_period: Optional Natural }
+  { cookie_expiration_period : Optional Natural }
 
 let AwsLbCookieStickinessPolicyRequired =
-  { lb_port: Natural
-  , load_balancer: Text
-  , name: Text
+  { lb_port : Natural
+  , load_balancer : Text
+  , name : Text
   }
 let AwsLbCookieStickinessPolicy = AwsLbCookieStickinessPolicyOptional //\\ AwsLbCookieStickinessPolicyRequired
 

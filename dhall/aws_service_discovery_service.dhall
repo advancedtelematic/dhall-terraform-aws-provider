@@ -2,44 +2,44 @@
 let DnsRecordsOptional = {}
 
 let DnsRecordsRequired =
-  { ttl: Natural
-  , type: Text
+  { ttl : Natural
+  , type : Text
   }
 let DnsRecords = DnsRecordsOptional //\\ DnsRecordsRequired
 
 let DnsConfigOptional =
-  { routing_policy: Optional Text }
+  { routing_policy : Optional Text }
 
 let DnsConfigRequired =
-  { namespace_id: Text
-  , dns_records: List DnsRecords
+  { namespace_id : Text
+  , dns_records : List DnsRecords
   }
 let DnsConfig = DnsConfigOptional //\\ DnsConfigRequired
 
 let HealthCheckConfigOptional =
-  { failure_threshold: Optional Natural
-  , resource_path: Optional Text
-  , type: Optional Text
+  { failure_threshold : Optional Natural
+  , resource_path : Optional Text
+  , type : Optional Text
   }
 
 let HealthCheckConfigRequired = {}
 let HealthCheckConfig = HealthCheckConfigOptional //\\ HealthCheckConfigRequired
 
 let HealthCheckCustomConfigOptional =
-  { failure_threshold: Optional Natural }
+  { failure_threshold : Optional Natural }
 
 let HealthCheckCustomConfigRequired = {}
 let HealthCheckCustomConfig = HealthCheckCustomConfigOptional //\\ HealthCheckCustomConfigRequired
 
 let AwsServiceDiscoveryServiceOptional =
-  { description: Optional Text
-  , health_check_config: Optional HealthCheckConfig
-  , health_check_custom_config: Optional HealthCheckCustomConfig
+  { description : Optional Text
+  , health_check_config : Optional HealthCheckConfig
+  , health_check_custom_config : Optional HealthCheckCustomConfig
   }
 
 let AwsServiceDiscoveryServiceRequired =
-  { name: Text
-  , dns_config: DnsConfig
+  { name : Text
+  , dns_config : DnsConfig
   }
 let AwsServiceDiscoveryService = AwsServiceDiscoveryServiceOptional //\\ AwsServiceDiscoveryServiceRequired
 

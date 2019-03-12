@@ -2,7 +2,7 @@
 let AwsSesDomainDkimOptional = {}
 
 let AwsSesDomainDkimRequired =
-  { domain: Text }
+  { domain : Text }
 let AwsSesDomainDkim = AwsSesDomainDkimOptional //\\ AwsSesDomainDkimRequired
 
 in

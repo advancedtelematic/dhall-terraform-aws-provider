@@ -1,9 +1,9 @@
 
 let AwsAcmCertificateValidationOptional =
-  { validation_record_fqdns: Optional (List Text) }
+  { validation_record_fqdns : Optional (List Text) }
 
 let AwsAcmCertificateValidationRequired =
-  { certificate_arn: Text }
+  { certificate_arn : Text }
 let AwsAcmCertificateValidation = AwsAcmCertificateValidationOptional //\\ AwsAcmCertificateValidationRequired
 
 in

@@ -1,9 +1,9 @@
 
 let AwsWafRegexPatternSetOptional =
-  { regex_pattern_strings: Optional (List Text) }
+  { regex_pattern_strings : Optional (List Text) }
 
 let AwsWafRegexPatternSetRequired =
-  { name: Text }
+  { name : Text }
 let AwsWafRegexPatternSet = AwsWafRegexPatternSetOptional //\\ AwsWafRegexPatternSetRequired
 
 in

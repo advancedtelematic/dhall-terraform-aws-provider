@@ -5,8 +5,8 @@ let ThrottleSettingsRequired = {}
 let ThrottleSettings = ThrottleSettingsOptional //\\ ThrottleSettingsRequired
 
 let AwsApiGatewayAccountOptional =
-  { cloudwatch_role_arn: Optional Text
-  , throttle_settings: Optional ThrottleSettings
+  { cloudwatch_role_arn : Optional Text
+  , throttle_settings : Optional ThrottleSettings
   }
 
 let AwsApiGatewayAccountRequired = {}

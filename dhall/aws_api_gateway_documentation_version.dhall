@@ -1,10 +1,10 @@
 
 let AwsApiGatewayDocumentationVersionOptional =
-  { description: Optional Text }
+  { description : Optional Text }
 
 let AwsApiGatewayDocumentationVersionRequired =
-  { rest_api_id: Text
-  , version: Text
+  { rest_api_id : Text
+  , version : Text
   }
 let AwsApiGatewayDocumentationVersion = AwsApiGatewayDocumentationVersionOptional //\\ AwsApiGatewayDocumentationVersionRequired
 

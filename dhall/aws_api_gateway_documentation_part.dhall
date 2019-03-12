@@ -1,21 +1,21 @@
 
 let LocationOptional =
-  { method: Optional Text
-  , name: Optional Text
-  , path: Optional Text
-  , status_code: Optional Text
+  { method : Optional Text
+  , name : Optional Text
+  , path : Optional Text
+  , status_code : Optional Text
   }
 
 let LocationRequired =
-  { type: Text }
+  { type : Text }
 let Location = LocationOptional //\\ LocationRequired
 
 let AwsApiGatewayDocumentationPartOptional = {}
 
 let AwsApiGatewayDocumentationPartRequired =
-  { properties: Text
-  , rest_api_id: Text
-  , location: Location
+  { properties : Text
+  , rest_api_id : Text
+  , location : Location
   }
 let AwsApiGatewayDocumentationPart = AwsApiGatewayDocumentationPartOptional //\\ AwsApiGatewayDocumentationPartRequired
 

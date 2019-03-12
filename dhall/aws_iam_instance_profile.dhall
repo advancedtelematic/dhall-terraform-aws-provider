@@ -1,10 +1,10 @@
 
 let AwsIamInstanceProfileOptional =
-  { name: Optional Text
-  , name_prefix: Optional Text
-  , path: Optional Text
-  , role: Optional Text
-  , roles: Optional (List Text)
+  { name : Optional Text
+  , name_prefix : Optional Text
+  , path : Optional Text
+  , role : Optional Text
+  , roles : Optional (List Text)
   }
 
 let AwsIamInstanceProfileRequired = {}

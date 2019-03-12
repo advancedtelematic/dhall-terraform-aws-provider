@@ -1,23 +1,23 @@
 
 let ParameterOptional =
-  { apply_method: Optional Text }
+  { apply_method : Optional Text }
 
 let ParameterRequired =
-  { name: Text
-  , value: Text
+  { name : Text
+  , value : Text
   }
 let Parameter = ParameterOptional //\\ ParameterRequired
 
 let AwsNeptuneClusterParameterGroupOptional =
-  { description: Optional Text
-  , name: Optional Text
-  , name_prefix: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , parameter: Optional (List Parameter)
+  { description : Optional Text
+  , name : Optional Text
+  , name_prefix : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , parameter : Optional (List Parameter)
   }
 
 let AwsNeptuneClusterParameterGroupRequired =
-  { family: Text }
+  { family : Text }
 let AwsNeptuneClusterParameterGroup = AwsNeptuneClusterParameterGroupOptional //\\ AwsNeptuneClusterParameterGroupRequired
 
 in

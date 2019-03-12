@@ -2,7 +2,7 @@
 let AwsSesDomainIdentityOptional = {}
 
 let AwsSesDomainIdentityRequired =
-  { domain: Text }
+  { domain : Text }
 let AwsSesDomainIdentity = AwsSesDomainIdentityOptional //\\ AwsSesDomainIdentityRequired
 
 in

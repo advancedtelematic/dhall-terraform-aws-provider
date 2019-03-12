@@ -1,12 +1,12 @@
 
 let AwsSecretsmanagerSecretVersionOptional =
-  { secret_binary: Optional Text
-  , secret_string: Optional Text
-  , version_stages: Optional (List Text)
+  { secret_binary : Optional Text
+  , secret_string : Optional Text
+  , version_stages : Optional (List Text)
   }
 
 let AwsSecretsmanagerSecretVersionRequired =
-  { secret_id: Text }
+  { secret_id : Text }
 let AwsSecretsmanagerSecretVersion = AwsSecretsmanagerSecretVersionOptional //\\ AwsSecretsmanagerSecretVersionRequired
 
 in

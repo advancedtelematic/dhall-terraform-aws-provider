@@ -2,19 +2,19 @@
 let ParameterOptional = {}
 
 let ParameterRequired =
-  { name: Text
-  , value: Text
+  { name : Text
+  , value : Text
   }
 let Parameter = ParameterOptional //\\ ParameterRequired
 
 let AwsRedshiftParameterGroupOptional =
-  { description: Optional Text
-  , parameter: Optional (List Parameter)
+  { description : Optional Text
+  , parameter : Optional (List Parameter)
   }
 
 let AwsRedshiftParameterGroupRequired =
-  { family: Text
-  , name: Text
+  { family : Text
+  , name : Text
   }
 let AwsRedshiftParameterGroup = AwsRedshiftParameterGroupOptional //\\ AwsRedshiftParameterGroupRequired
 

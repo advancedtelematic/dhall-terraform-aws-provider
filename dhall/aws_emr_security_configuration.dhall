@@ -1,11 +1,11 @@
 
 let AwsEmrSecurityConfigurationOptional =
-  { name: Optional Text
-  , name_prefix: Optional Text
+  { name : Optional Text
+  , name_prefix : Optional Text
   }
 
 let AwsEmrSecurityConfigurationRequired =
-  { configuration: Text }
+  { configuration : Text }
 let AwsEmrSecurityConfiguration = AwsEmrSecurityConfigurationOptional //\\ AwsEmrSecurityConfigurationRequired
 
 in

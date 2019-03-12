@@ -1,7 +1,7 @@
 
 let AwsOrganizationsOrganizationOptional =
-  { aws_service_access_principals: Optional (List Text)
-  , feature_set: Optional Text
+  { aws_service_access_principals : Optional (List Text)
+  , feature_set : Optional Text
   }
 
 let AwsOrganizationsOrganizationRequired = {}

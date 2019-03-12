@@ -5,21 +5,21 @@ let CertificateAuthorityRequired = {}
 let CertificateAuthority = CertificateAuthorityOptional //\\ CertificateAuthorityRequired
 
 let VpcConfigOptional =
-  { security_group_ids: Optional (List Text) }
+  { security_group_ids : Optional (List Text) }
 
 let VpcConfigRequired =
-  { subnet_ids: (List Text) }
+  { subnet_ids : (List Text) }
 let VpcConfig = VpcConfigOptional //\\ VpcConfigRequired
 
 let AwsEksClusterOptional =
-  { version: Optional Text
-  , certificate_authority: Optional CertificateAuthority
+  { version : Optional Text
+  , certificate_authority : Optional CertificateAuthority
   }
 
 let AwsEksClusterRequired =
-  { name: Text
-  , role_arn: Text
-  , vpc_config: VpcConfig
+  { name : Text
+  , role_arn : Text
+  , vpc_config : VpcConfig
   }
 let AwsEksCluster = AwsEksClusterOptional //\\ AwsEksClusterRequired
 

@@ -2,34 +2,34 @@
 let OptionSettingsOptional = {}
 
 let OptionSettingsRequired =
-  { name: Text
-  , value: Text
+  { name : Text
+  , value : Text
   }
 let OptionSettings = OptionSettingsOptional //\\ OptionSettingsRequired
 
 let OptionOptional =
-  { db_security_group_memberships: Optional (List Text)
-  , port: Optional Natural
-  , version: Optional Text
-  , vpc_security_group_memberships: Optional (List Text)
-  , option_settings: Optional (List OptionSettings)
+  { db_security_group_memberships : Optional (List Text)
+  , port : Optional Natural
+  , version : Optional Text
+  , vpc_security_group_memberships : Optional (List Text)
+  , option_settings : Optional (List OptionSettings)
   }
 
 let OptionRequired =
-  { option_name: Text }
+  { option_name : Text }
 let Option = OptionOptional //\\ OptionRequired
 
 let AwsDbOptionGroupOptional =
-  { name: Optional Text
-  , name_prefix: Optional Text
-  , option_group_description: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , option: Optional (List Option)
+  { name : Optional Text
+  , name_prefix : Optional Text
+  , option_group_description : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , option : Optional (List Option)
   }
 
 let AwsDbOptionGroupRequired =
-  { engine_name: Text
-  , major_engine_version: Text
+  { engine_name : Text
+  , major_engine_version : Text
   }
 let AwsDbOptionGroup = AwsDbOptionGroupOptional //\\ AwsDbOptionGroupRequired
 

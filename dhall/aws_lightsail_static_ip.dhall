@@ -2,7 +2,7 @@
 let AwsLightsailStaticIpOptional = {}
 
 let AwsLightsailStaticIpRequired =
-  { name: Text }
+  { name : Text }
 let AwsLightsailStaticIp = AwsLightsailStaticIpOptional //\\ AwsLightsailStaticIpRequired
 
 in

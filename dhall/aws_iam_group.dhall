@@ -1,9 +1,9 @@
 
 let AwsIamGroupOptional =
-  { path: Optional Text }
+  { path : Optional Text }
 
 let AwsIamGroupRequired =
-  { name: Text }
+  { name : Text }
 let AwsIamGroup = AwsIamGroupOptional //\\ AwsIamGroupRequired
 
 in

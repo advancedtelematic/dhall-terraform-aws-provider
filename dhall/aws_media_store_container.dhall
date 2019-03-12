@@ -2,7 +2,7 @@
 let AwsMediaStoreContainerOptional = {}
 
 let AwsMediaStoreContainerRequired =
-  { name: Text }
+  { name : Text }
 let AwsMediaStoreContainer = AwsMediaStoreContainerOptional //\\ AwsMediaStoreContainerRequired
 
 in

@@ -1,13 +1,13 @@
 
 let AwsSsmActivationOptional =
-  { description: Optional Text
-  , expiration_date: Optional Text
-  , name: Optional Text
-  , registration_limit: Optional Natural
+  { description : Optional Text
+  , expiration_date : Optional Text
+  , name : Optional Text
+  , registration_limit : Optional Natural
   }
 
 let AwsSsmActivationRequired =
-  { iam_role: Text }
+  { iam_role : Text }
 let AwsSsmActivation = AwsSsmActivationOptional //\\ AwsSsmActivationRequired
 
 in

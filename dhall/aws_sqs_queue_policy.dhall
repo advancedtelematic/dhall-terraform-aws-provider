@@ -2,8 +2,8 @@
 let AwsSqsQueuePolicyOptional = {}
 
 let AwsSqsQueuePolicyRequired =
-  { policy: Text
-  , queue_url: Text
+  { policy : Text
+  , queue_url : Text
   }
 let AwsSqsQueuePolicy = AwsSqsQueuePolicyOptional //\\ AwsSqsQueuePolicyRequired
 

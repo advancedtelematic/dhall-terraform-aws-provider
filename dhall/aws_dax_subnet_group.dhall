@@ -1,10 +1,10 @@
 
 let AwsDaxSubnetGroupOptional =
-  { description: Optional Text }
+  { description : Optional Text }
 
 let AwsDaxSubnetGroupRequired =
-  { name: Text
-  , subnet_ids: (List Text)
+  { name : Text
+  , subnet_ids : (List Text)
   }
 let AwsDaxSubnetGroup = AwsDaxSubnetGroupOptional //\\ AwsDaxSubnetGroupRequired
 

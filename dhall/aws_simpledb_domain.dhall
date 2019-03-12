@@ -2,7 +2,7 @@
 let AwsSimpledbDomainOptional = {}
 
 let AwsSimpledbDomainRequired =
-  { name: Text }
+  { name : Text }
 let AwsSimpledbDomain = AwsSimpledbDomainOptional //\\ AwsSimpledbDomainRequired
 
 in

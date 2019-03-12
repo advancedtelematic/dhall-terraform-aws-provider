@@ -2,38 +2,38 @@
 let ApiStagesOptional = {}
 
 let ApiStagesRequired =
-  { api_id: Text
-  , stage: Text
+  { api_id : Text
+  , stage : Text
   }
 let ApiStages = ApiStagesOptional //\\ ApiStagesRequired
 
 let QuotaSettingsOptional =
-  { offset: Optional Natural }
+  { offset : Optional Natural }
 
 let QuotaSettingsRequired =
-  { limit: Natural
-  , period: Text
+  { limit : Natural
+  , period : Text
   }
 let QuotaSettings = QuotaSettingsOptional //\\ QuotaSettingsRequired
 
 let ThrottleSettingsOptional =
-  { burst_limit: Optional Natural
-  , rate_limit: Optional Natural
+  { burst_limit : Optional Natural
+  , rate_limit : Optional Natural
   }
 
 let ThrottleSettingsRequired = {}
 let ThrottleSettings = ThrottleSettingsOptional //\\ ThrottleSettingsRequired
 
 let AwsApiGatewayUsagePlanOptional =
-  { description: Optional Text
-  , product_code: Optional Text
-  , api_stages: Optional (List ApiStages)
-  , quota_settings: Optional QuotaSettings
-  , throttle_settings: Optional ThrottleSettings
+  { description : Optional Text
+  , product_code : Optional Text
+  , api_stages : Optional (List ApiStages)
+  , quota_settings : Optional QuotaSettings
+  , throttle_settings : Optional ThrottleSettings
   }
 
 let AwsApiGatewayUsagePlanRequired =
-  { name: Text }
+  { name : Text }
 let AwsApiGatewayUsagePlan = AwsApiGatewayUsagePlanOptional //\\ AwsApiGatewayUsagePlanRequired
 
 in

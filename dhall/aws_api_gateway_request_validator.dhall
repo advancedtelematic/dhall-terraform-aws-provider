@@ -1,12 +1,12 @@
 
 let AwsApiGatewayRequestValidatorOptional =
-  { validate_request_body: Optional Bool
-  , validate_request_parameters: Optional Bool
+  { validate_request_body : Optional Bool
+  , validate_request_parameters : Optional Bool
   }
 
 let AwsApiGatewayRequestValidatorRequired =
-  { name: Text
-  , rest_api_id: Text
+  { name : Text
+  , rest_api_id : Text
   }
 let AwsApiGatewayRequestValidator = AwsApiGatewayRequestValidatorOptional //\\ AwsApiGatewayRequestValidatorRequired
 

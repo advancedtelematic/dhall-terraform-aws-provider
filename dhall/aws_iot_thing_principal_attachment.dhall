@@ -2,8 +2,8 @@
 let AwsIotThingPrincipalAttachmentOptional = {}
 
 let AwsIotThingPrincipalAttachmentRequired =
-  { principal: Text
-  , thing: Text
+  { principal : Text
+  , thing : Text
   }
 let AwsIotThingPrincipalAttachment = AwsIotThingPrincipalAttachmentOptional //\\ AwsIotThingPrincipalAttachmentRequired
 

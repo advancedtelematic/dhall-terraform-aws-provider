@@ -2,7 +2,7 @@
 let AwsSesActiveReceiptRuleSetOptional = {}
 
 let AwsSesActiveReceiptRuleSetRequired =
-  { rule_set_name: Text }
+  { rule_set_name : Text }
 let AwsSesActiveReceiptRuleSet = AwsSesActiveReceiptRuleSetOptional //\\ AwsSesActiveReceiptRuleSetRequired
 
 in

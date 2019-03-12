@@ -2,16 +2,16 @@
 let IpSetDescriptorOptional = {}
 
 let IpSetDescriptorRequired =
-  { type: Text
-  , value: Text
+  { type : Text
+  , value : Text
   }
 let IpSetDescriptor = IpSetDescriptorOptional //\\ IpSetDescriptorRequired
 
 let AwsWafregionalIpsetOptional =
-  { ip_set_descriptor: Optional (List IpSetDescriptor) }
+  { ip_set_descriptor : Optional (List IpSetDescriptor) }
 
 let AwsWafregionalIpsetRequired =
-  { name: Text }
+  { name : Text }
 let AwsWafregionalIpset = AwsWafregionalIpsetOptional //\\ AwsWafregionalIpsetRequired
 
 in

@@ -1,19 +1,19 @@
 
 let RoutingConfigOptional =
-  { additional_version_weights: Optional (List { mapKey : Natural, mapValue : Double }) }
+  { additional_version_weights : Optional (List { mapKey : Natural, mapValue : Double }) }
 
 let RoutingConfigRequired = {}
 let RoutingConfig = RoutingConfigOptional //\\ RoutingConfigRequired
 
 let AwsLambdaAliasOptional =
-  { description: Optional Text
-  , routing_config: Optional RoutingConfig
+  { description : Optional Text
+  , routing_config : Optional RoutingConfig
   }
 
 let AwsLambdaAliasRequired =
-  { function_name: Text
-  , function_version: Text
-  , name: Text
+  { function_name : Text
+  , function_version : Text
+  , name : Text
   }
 let AwsLambdaAlias = AwsLambdaAliasOptional //\\ AwsLambdaAliasRequired
 

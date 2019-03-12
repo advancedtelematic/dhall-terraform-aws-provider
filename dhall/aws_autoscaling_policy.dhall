@@ -1,66 +1,66 @@
 
 let StepAdjustmentOptional =
-  { metric_interval_lower_bound: Optional Text
-  , metric_interval_upper_bound: Optional Text
+  { metric_interval_lower_bound : Optional Text
+  , metric_interval_upper_bound : Optional Text
   }
 
 let StepAdjustmentRequired =
-  { scaling_adjustment: Natural }
+  { scaling_adjustment : Natural }
 let StepAdjustment = StepAdjustmentOptional //\\ StepAdjustmentRequired
 
 let MetricDimensionOptional = {}
 
 let MetricDimensionRequired =
-  { name: Text
-  , value: Text
+  { name : Text
+  , value : Text
   }
 let MetricDimension = MetricDimensionOptional //\\ MetricDimensionRequired
 
 let CustomizedMetricSpecificationOptional =
-  { unit: Optional Text
-  , metric_dimension: Optional (List MetricDimension)
+  { unit : Optional Text
+  , metric_dimension : Optional (List MetricDimension)
   }
 
 let CustomizedMetricSpecificationRequired =
-  { metric_name: Text
-  , namespace: Text
-  , statistic: Text
+  { metric_name : Text
+  , namespace : Text
+  , statistic : Text
   }
 let CustomizedMetricSpecification = CustomizedMetricSpecificationOptional //\\ CustomizedMetricSpecificationRequired
 
 let PredefinedMetricSpecificationOptional =
-  { resource_label: Optional Text }
+  { resource_label : Optional Text }
 
 let PredefinedMetricSpecificationRequired =
-  { predefined_metric_type: Text }
+  { predefined_metric_type : Text }
 let PredefinedMetricSpecification = PredefinedMetricSpecificationOptional //\\ PredefinedMetricSpecificationRequired
 
 let TargetTrackingConfigurationOptional =
-  { disable_scale_in: Optional Bool
-  , customized_metric_specification: Optional CustomizedMetricSpecification
-  , predefined_metric_specification: Optional PredefinedMetricSpecification
+  { disable_scale_in : Optional Bool
+  , customized_metric_specification : Optional CustomizedMetricSpecification
+  , predefined_metric_specification : Optional PredefinedMetricSpecification
   }
 
 let TargetTrackingConfigurationRequired =
-  { target_value: Natural }
+  { target_value : Natural }
 let TargetTrackingConfiguration = TargetTrackingConfigurationOptional //\\ TargetTrackingConfigurationRequired
 
 let AwsAutoscalingPolicyOptional =
-  { adjustment_type: Optional Text
-  , cooldown: Optional Natural
-  , estimated_instance_warmup: Optional Natural
-  , metric_aggregation_type: Optional Text
-  , min_adjustment_magnitude: Optional Natural
-  , min_adjustment_step: Optional Natural
-  , policy_type: Optional Text
-  , scaling_adjustment: Optional Natural
-  , step_adjustment: Optional (List StepAdjustment)
-  , target_tracking_configuration: Optional TargetTrackingConfiguration
+  { adjustment_type : Optional Text
+  , cooldown : Optional Natural
+  , estimated_instance_warmup : Optional Natural
+  , metric_aggregation_type : Optional Text
+  , min_adjustment_magnitude : Optional Natural
+  , min_adjustment_step : Optional Natural
+  , policy_type : Optional Text
+  , scaling_adjustment : Optional Natural
+  , step_adjustment : Optional (List StepAdjustment)
+  , target_tracking_configuration : Optional TargetTrackingConfiguration
   }
 
 let AwsAutoscalingPolicyRequired =
-  { autoscaling_group_name: Text
-  , name: Text
+  { autoscaling_group_name : Text
+  , name : Text
   }
 let AwsAutoscalingPolicy = AwsAutoscalingPolicyOptional //\\ AwsAutoscalingPolicyRequired
 

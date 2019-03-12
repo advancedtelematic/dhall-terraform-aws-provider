@@ -2,8 +2,8 @@
 let AwsPlacementGroupOptional = {}
 
 let AwsPlacementGroupRequired =
-  { name: Text
-  , strategy: Text
+  { name : Text
+  , strategy : Text
   }
 let AwsPlacementGroup = AwsPlacementGroupOptional //\\ AwsPlacementGroupRequired
 

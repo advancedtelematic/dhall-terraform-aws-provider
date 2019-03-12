@@ -1,26 +1,26 @@
 
 let FieldToMatchOptional =
-  { data: Optional Text }
+  { data : Optional Text }
 
 let FieldToMatchRequired =
-  { type: Text }
+  { type : Text }
 let FieldToMatch = FieldToMatchOptional //\\ FieldToMatchRequired
 
 let ByteMatchTuplesOptional =
-  { target_string: Optional Text }
+  { target_string : Optional Text }
 
 let ByteMatchTuplesRequired =
-  { positional_constraint: Text
-  , text_transformation: Text
-  , field_to_match: FieldToMatch
+  { positional_constraint : Text
+  , text_transformation : Text
+  , field_to_match : FieldToMatch
   }
 let ByteMatchTuples = ByteMatchTuplesOptional //\\ ByteMatchTuplesRequired
 
 let AwsWafByteMatchSetOptional =
-  { byte_match_tuples: Optional (List ByteMatchTuples) }
+  { byte_match_tuples : Optional (List ByteMatchTuples) }
 
 let AwsWafByteMatchSetRequired =
-  { name: Text }
+  { name : Text }
 let AwsWafByteMatchSet = AwsWafByteMatchSetOptional //\\ AwsWafByteMatchSetRequired
 
 in

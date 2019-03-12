@@ -2,18 +2,18 @@
 let TargetsOptional = {}
 
 let TargetsRequired =
-  { key: Text
-  , values: (List Text)
+  { key : Text
+  , values : (List Text)
   }
 let Targets = TargetsOptional //\\ TargetsRequired
 
 let AwsSsmMaintenanceWindowTargetOptional =
-  { owner_information: Optional Text }
+  { owner_information : Optional Text }
 
 let AwsSsmMaintenanceWindowTargetRequired =
-  { resource_type: Text
-  , window_id: Text
-  , targets: List Targets
+  { resource_type : Text
+  , window_id : Text
+  , targets : List Targets
   }
 let AwsSsmMaintenanceWindowTarget = AwsSsmMaintenanceWindowTargetOptional //\\ AwsSsmMaintenanceWindowTargetRequired
 

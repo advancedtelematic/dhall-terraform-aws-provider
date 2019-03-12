@@ -1,9 +1,9 @@
 
 let AwsServiceDiscoveryHttpNamespaceOptional =
-  { description: Optional Text }
+  { description : Optional Text }
 
 let AwsServiceDiscoveryHttpNamespaceRequired =
-  { name: Text }
+  { name : Text }
 let AwsServiceDiscoveryHttpNamespace = AwsServiceDiscoveryHttpNamespaceOptional //\\ AwsServiceDiscoveryHttpNamespaceRequired
 
 in

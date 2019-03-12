@@ -1,29 +1,29 @@
 
 let AccountAggregationSourceOptional =
-  { all_regions: Optional Bool
-  , regions: Optional (List Text)
+  { all_regions : Optional Bool
+  , regions : Optional (List Text)
   }
 
 let AccountAggregationSourceRequired =
-  { account_ids: (List Text) }
+  { account_ids : (List Text) }
 let AccountAggregationSource = AccountAggregationSourceOptional //\\ AccountAggregationSourceRequired
 
 let OrganizationAggregationSourceOptional =
-  { all_regions: Optional Bool
-  , regions: Optional (List Text)
+  { all_regions : Optional Bool
+  , regions : Optional (List Text)
   }
 
 let OrganizationAggregationSourceRequired =
-  { role_arn: Text }
+  { role_arn : Text }
 let OrganizationAggregationSource = OrganizationAggregationSourceOptional //\\ OrganizationAggregationSourceRequired
 
 let AwsConfigConfigurationAggregatorOptional =
-  { account_aggregation_source: Optional AccountAggregationSource
-  , organization_aggregation_source: Optional OrganizationAggregationSource
+  { account_aggregation_source : Optional AccountAggregationSource
+  , organization_aggregation_source : Optional OrganizationAggregationSource
   }
 
 let AwsConfigConfigurationAggregatorRequired =
-  { name: Text }
+  { name : Text }
 let AwsConfigConfigurationAggregator = AwsConfigConfigurationAggregatorOptional //\\ AwsConfigConfigurationAggregatorRequired
 
 in

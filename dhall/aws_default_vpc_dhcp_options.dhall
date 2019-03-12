@@ -1,8 +1,8 @@
 
 let AwsDefaultVpcDhcpOptionsOptional =
-  { netbios_name_servers: Optional (List Text)
-  , netbios_node_type: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
+  { netbios_name_servers : Optional (List Text)
+  , netbios_node_type : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
   }
 
 let AwsDefaultVpcDhcpOptionsRequired = {}

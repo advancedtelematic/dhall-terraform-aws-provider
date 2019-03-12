@@ -2,8 +2,8 @@
 let AwsEcrLifecyclePolicyOptional = {}
 
 let AwsEcrLifecyclePolicyRequired =
-  { policy: Text
-  , repository: Text
+  { policy : Text
+  , repository : Text
   }
 let AwsEcrLifecyclePolicy = AwsEcrLifecyclePolicyOptional //\\ AwsEcrLifecyclePolicyRequired
 

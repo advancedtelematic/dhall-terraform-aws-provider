@@ -1,42 +1,42 @@
 
 let ScopeOptional =
-  { compliance_resource_id: Optional Text
-  , compliance_resource_types: Optional (List Text)
-  , tag_key: Optional Text
-  , tag_value: Optional Text
+  { compliance_resource_id : Optional Text
+  , compliance_resource_types : Optional (List Text)
+  , tag_key : Optional Text
+  , tag_value : Optional Text
   }
 
 let ScopeRequired = {}
 let Scope = ScopeOptional //\\ ScopeRequired
 
 let SourceDetailOptional =
-  { event_source: Optional Text
-  , maximum_execution_frequency: Optional Text
-  , message_type: Optional Text
+  { event_source : Optional Text
+  , maximum_execution_frequency : Optional Text
+  , message_type : Optional Text
   }
 
 let SourceDetailRequired = {}
 let SourceDetail = SourceDetailOptional //\\ SourceDetailRequired
 
 let SourceOptional =
-  { source_detail: Optional (List SourceDetail) }
+  { source_detail : Optional (List SourceDetail) }
 
 let SourceRequired =
-  { owner: Text
-  , source_identifier: Text
+  { owner : Text
+  , source_identifier : Text
   }
 let Source = SourceOptional //\\ SourceRequired
 
 let AwsConfigConfigRuleOptional =
-  { description: Optional Text
-  , input_parameters: Optional Text
-  , maximum_execution_frequency: Optional Text
-  , scope: Optional Scope
+  { description : Optional Text
+  , input_parameters : Optional Text
+  , maximum_execution_frequency : Optional Text
+  , scope : Optional Scope
   }
 
 let AwsConfigConfigRuleRequired =
-  { name: Text
-  , source: Source
+  { name : Text
+  , source : Source
   }
 let AwsConfigConfigRule = AwsConfigConfigRuleOptional //\\ AwsConfigConfigRuleRequired
 

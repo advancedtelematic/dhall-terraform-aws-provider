@@ -2,7 +2,7 @@
 let AwsDevicefarmProjectOptional = {}
 
 let AwsDevicefarmProjectRequired =
-  { name: Text }
+  { name : Text }
 let AwsDevicefarmProject = AwsDevicefarmProjectOptional //\\ AwsDevicefarmProjectRequired
 
 in

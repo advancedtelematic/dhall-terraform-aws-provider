@@ -1,9 +1,9 @@
 
 let AwsSfnActivityOptional =
-  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
+  { tags : Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsSfnActivityRequired =
-  { name: Text }
+  { name : Text }
 let AwsSfnActivity = AwsSfnActivityOptional //\\ AwsSfnActivityRequired
 
 in

@@ -1,26 +1,26 @@
 
 let RetryStrategyOptional =
-  { attempts: Optional Natural }
+  { attempts : Optional Natural }
 
 let RetryStrategyRequired = {}
 let RetryStrategy = RetryStrategyOptional //\\ RetryStrategyRequired
 
 let TimeoutOptional =
-  { attempt_duration_seconds: Optional Natural }
+  { attempt_duration_seconds : Optional Natural }
 
 let TimeoutRequired = {}
 let Timeout = TimeoutOptional //\\ TimeoutRequired
 
 let AwsBatchJobDefinitionOptional =
-  { container_properties: Optional Text
-  , parameters: Optional (List { mapKey : Text, mapValue : Text })
-  , retry_strategy: Optional RetryStrategy
-  , timeout: Optional Timeout
+  { container_properties : Optional Text
+  , parameters : Optional (List { mapKey : Text, mapValue : Text })
+  , retry_strategy : Optional RetryStrategy
+  , timeout : Optional Timeout
   }
 
 let AwsBatchJobDefinitionRequired =
-  { name: Text
-  , type: Text
+  { name : Text
+  , type : Text
   }
 let AwsBatchJobDefinition = AwsBatchJobDefinitionOptional //\\ AwsBatchJobDefinitionRequired
 

@@ -1,9 +1,9 @@
 
 let AwsSpotDatafeedSubscriptionOptional =
-  { prefix: Optional Text }
+  { prefix : Optional Text }
 
 let AwsSpotDatafeedSubscriptionRequired =
-  { bucket: Text }
+  { bucket : Text }
 let AwsSpotDatafeedSubscription = AwsSpotDatafeedSubscriptionOptional //\\ AwsSpotDatafeedSubscriptionRequired
 
 in

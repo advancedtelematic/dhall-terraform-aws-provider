@@ -1,11 +1,11 @@
 
 let AwsDmsCertificateOptional =
-  { certificate_pem: Optional Text
-  , certificate_wallet: Optional Text
+  { certificate_pem : Optional Text
+  , certificate_wallet : Optional Text
   }
 
 let AwsDmsCertificateRequired =
-  { certificate_id: Text }
+  { certificate_id : Text }
 let AwsDmsCertificate = AwsDmsCertificateOptional //\\ AwsDmsCertificateRequired
 
 in

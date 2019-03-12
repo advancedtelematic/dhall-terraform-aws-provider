@@ -1,32 +1,32 @@
 
 let CommandOptional =
-  { name: Optional Text }
+  { name : Optional Text }
 
 let CommandRequired =
-  { script_location: Text }
+  { script_location : Text }
 let Command = CommandOptional //\\ CommandRequired
 
 let ExecutionPropertyOptional =
-  { max_concurrent_runs: Optional Natural }
+  { max_concurrent_runs : Optional Natural }
 
 let ExecutionPropertyRequired = {}
 let ExecutionProperty = ExecutionPropertyOptional //\\ ExecutionPropertyRequired
 
 let AwsGlueJobOptional =
-  { allocated_capacity: Optional Natural
-  , connections: Optional (List Text)
-  , default_arguments: Optional (List { mapKey : Text, mapValue : Text })
-  , description: Optional Text
-  , max_retries: Optional Natural
-  , security_configuration: Optional Text
-  , timeout: Optional Natural
-  , execution_property: Optional ExecutionProperty
+  { allocated_capacity : Optional Natural
+  , connections : Optional (List Text)
+  , default_arguments : Optional (List { mapKey : Text, mapValue : Text })
+  , description : Optional Text
+  , max_retries : Optional Natural
+  , security_configuration : Optional Text
+  , timeout : Optional Natural
+  , execution_property : Optional ExecutionProperty
   }
 
 let AwsGlueJobRequired =
-  { name: Text
-  , role_arn: Text
-  , command: Command
+  { name : Text
+  , role_arn : Text
+  , command : Command
   }
 let AwsGlueJob = AwsGlueJobOptional //\\ AwsGlueJobRequired
 

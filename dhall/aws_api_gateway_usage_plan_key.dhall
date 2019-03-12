@@ -2,9 +2,9 @@
 let AwsApiGatewayUsagePlanKeyOptional = {}
 
 let AwsApiGatewayUsagePlanKeyRequired =
-  { key_id: Text
-  , key_type: Text
-  , usage_plan_id: Text
+  { key_id : Text
+  , key_type : Text
+  , usage_plan_id : Text
   }
 let AwsApiGatewayUsagePlanKey = AwsApiGatewayUsagePlanKeyOptional //\\ AwsApiGatewayUsagePlanKeyRequired
 

@@ -2,20 +2,20 @@
 let StageKeyOptional = {}
 
 let StageKeyRequired =
-  { rest_api_id: Text
-  , stage_name: Text
+  { rest_api_id : Text
+  , stage_name : Text
   }
 let StageKey = StageKeyOptional //\\ StageKeyRequired
 
 let AwsApiGatewayApiKeyOptional =
-  { description: Optional Text
-  , enabled: Optional Bool
-  , value: Optional Text
-  , stage_key: Optional (List StageKey)
+  { description : Optional Text
+  , enabled : Optional Bool
+  , value : Optional Text
+  , stage_key : Optional (List StageKey)
   }
 
 let AwsApiGatewayApiKeyRequired =
-  { name: Text }
+  { name : Text }
 let AwsApiGatewayApiKey = AwsApiGatewayApiKeyOptional //\\ AwsApiGatewayApiKeyRequired
 
 in

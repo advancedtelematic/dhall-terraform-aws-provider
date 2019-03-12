@@ -2,25 +2,25 @@
 let ActionOptional = {}
 
 let ActionRequired =
-  { type: Text }
+  { type : Text }
 let Action = ActionOptional //\\ ActionRequired
 
 let ActivatedRuleOptional =
-  { type: Optional Text }
+  { type : Optional Text }
 
 let ActivatedRuleRequired =
-  { priority: Natural
-  , rule_id: Text
-  , action: Action
+  { priority : Natural
+  , rule_id : Text
+  , action : Action
   }
 let ActivatedRule = ActivatedRuleOptional //\\ ActivatedRuleRequired
 
 let AwsWafRuleGroupOptional =
-  { activated_rule: Optional (List ActivatedRule) }
+  { activated_rule : Optional (List ActivatedRule) }
 
 let AwsWafRuleGroupRequired =
-  { metric_name: Text
-  , name: Text
+  { metric_name : Text
+  , name : Text
   }
 let AwsWafRuleGroup = AwsWafRuleGroupOptional //\\ AwsWafRuleGroupRequired
 

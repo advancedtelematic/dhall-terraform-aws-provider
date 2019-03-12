@@ -1,10 +1,10 @@
 
 let AwsNatGatewayOptional =
-  { tags: Optional (List { mapKey : Text, mapValue : Text }) }
+  { tags : Optional (List { mapKey : Text, mapValue : Text }) }
 
 let AwsNatGatewayRequired =
-  { allocation_id: Text
-  , subnet_id: Text
+  { allocation_id : Text
+  , subnet_id : Text
   }
 let AwsNatGateway = AwsNatGatewayOptional //\\ AwsNatGatewayRequired
 

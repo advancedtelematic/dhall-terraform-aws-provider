@@ -1,10 +1,10 @@
 
 let AwsServiceDiscoveryPrivateDnsNamespaceOptional =
-  { description: Optional Text }
+  { description : Optional Text }
 
 let AwsServiceDiscoveryPrivateDnsNamespaceRequired =
-  { name: Text
-  , vpc: Text
+  { name : Text
+  , vpc : Text
   }
 let AwsServiceDiscoveryPrivateDnsNamespace = AwsServiceDiscoveryPrivateDnsNamespaceOptional //\\ AwsServiceDiscoveryPrivateDnsNamespaceRequired
 

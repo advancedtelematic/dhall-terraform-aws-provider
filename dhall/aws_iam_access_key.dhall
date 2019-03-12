@@ -1,9 +1,9 @@
 
 let AwsIamAccessKeyOptional =
-  { pgp_key: Optional Text }
+  { pgp_key : Optional Text }
 
 let AwsIamAccessKeyRequired =
-  { user: Text }
+  { user : Text }
 let AwsIamAccessKey = AwsIamAccessKeyOptional //\\ AwsIamAccessKeyRequired
 
 in

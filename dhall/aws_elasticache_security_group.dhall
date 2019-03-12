@@ -1,10 +1,10 @@
 
 let AwsElasticacheSecurityGroupOptional =
-  { description: Optional Text }
+  { description : Optional Text }
 
 let AwsElasticacheSecurityGroupRequired =
-  { name: Text
-  , security_group_names: (List Text)
+  { name : Text
+  , security_group_names : (List Text)
   }
 let AwsElasticacheSecurityGroup = AwsElasticacheSecurityGroupOptional //\\ AwsElasticacheSecurityGroupRequired
 

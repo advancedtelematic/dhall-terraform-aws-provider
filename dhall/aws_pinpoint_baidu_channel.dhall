@@ -1,11 +1,11 @@
 
 let AwsPinpointBaiduChannelOptional =
-  { enabled: Optional Bool }
+  { enabled : Optional Bool }
 
 let AwsPinpointBaiduChannelRequired =
-  { api_key: Text
-  , application_id: Text
-  , secret_key: Text
+  { api_key : Text
+  , application_id : Text
+  , secret_key : Text
   }
 let AwsPinpointBaiduChannel = AwsPinpointBaiduChannelOptional //\\ AwsPinpointBaiduChannelRequired
 

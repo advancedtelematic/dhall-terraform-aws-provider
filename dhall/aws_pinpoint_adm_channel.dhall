@@ -1,11 +1,11 @@
 
 let AwsPinpointAdmChannelOptional =
-  { enabled: Optional Bool }
+  { enabled : Optional Bool }
 
 let AwsPinpointAdmChannelRequired =
-  { application_id: Text
-  , client_id: Text
-  , client_secret: Text
+  { application_id : Text
+  , client_id : Text
+  , client_secret : Text
   }
 let AwsPinpointAdmChannel = AwsPinpointAdmChannelOptional //\\ AwsPinpointAdmChannelRequired
 

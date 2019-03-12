@@ -1,6 +1,6 @@
 
 let AwsApiGatewayClientCertificateOptional =
-  { description: Optional Text }
+  { description : Optional Text }
 
 let AwsApiGatewayClientCertificateRequired = {}
 let AwsApiGatewayClientCertificate = AwsApiGatewayClientCertificateOptional //\\ AwsApiGatewayClientCertificateRequired

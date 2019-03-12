@@ -2,8 +2,8 @@
 let AwsOrganizationsPolicyAttachmentOptional = {}
 
 let AwsOrganizationsPolicyAttachmentRequired =
-  { policy_id: Text
-  , target_id: Text
+  { policy_id : Text
+  , target_id : Text
   }
 let AwsOrganizationsPolicyAttachment = AwsOrganizationsPolicyAttachmentOptional //\\ AwsOrganizationsPolicyAttachmentRequired
 

@@ -45,9 +45,9 @@ module Render
 
   def Render.dhall_field(name, type, optional)
     if optional
-      return "#{name}: Optional #{type}"
+      return "#{name} : Optional #{type}"
     else
-      return "#{name}: #{type}"
+      return "#{name} : #{type}"
     end
   end
 

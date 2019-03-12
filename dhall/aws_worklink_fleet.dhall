@@ -2,31 +2,31 @@
 let IdentityProviderOptional = {}
 
 let IdentityProviderRequired =
-  { saml_metadata: Text
-  , type: Text
+  { saml_metadata : Text
+  , type : Text
   }
 let IdentityProvider = IdentityProviderOptional //\\ IdentityProviderRequired
 
 let NetworkOptional = {}
 
 let NetworkRequired =
-  { security_group_ids: (List Text)
-  , subnet_ids: (List Text)
-  , vpc_id: Text
+  { security_group_ids : (List Text)
+  , subnet_ids : (List Text)
+  , vpc_id : Text
   }
 let Network = NetworkOptional //\\ NetworkRequired
 
 let AwsWorklinkFleetOptional =
-  { audit_stream_arn: Optional Text
-  , device_ca_certificate: Optional Text
-  , display_name: Optional Text
-  , optimize_for_end_user_location: Optional Bool
-  , identity_provider: Optional IdentityProvider
-  , network: Optional Network
+  { audit_stream_arn : Optional Text
+  , device_ca_certificate : Optional Text
+  , display_name : Optional Text
+  , optimize_for_end_user_location : Optional Bool
+  , identity_provider : Optional IdentityProvider
+  , network : Optional Network
   }
 
 let AwsWorklinkFleetRequired =
-  { name: Text }
+  { name : Text }
 let AwsWorklinkFleet = AwsWorklinkFleetOptional //\\ AwsWorklinkFleetRequired
 
 in

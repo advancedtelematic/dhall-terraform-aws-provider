@@ -2,7 +2,7 @@
 let AwsSecurityhubStandardsSubscriptionOptional = {}
 
 let AwsSecurityhubStandardsSubscriptionRequired =
-  { standards_arn: Text }
+  { standards_arn : Text }
 let AwsSecurityhubStandardsSubscription = AwsSecurityhubStandardsSubscriptionOptional //\\ AwsSecurityhubStandardsSubscriptionRequired
 
 in

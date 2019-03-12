@@ -1,10 +1,10 @@
 
 let AwsApiGatewayVpcLinkOptional =
-  { description: Optional Text }
+  { description : Optional Text }
 
 let AwsApiGatewayVpcLinkRequired =
-  { name: Text
-  , target_arns: (List Text)
+  { name : Text
+  , target_arns : (List Text)
   }
 let AwsApiGatewayVpcLink = AwsApiGatewayVpcLinkOptional //\\ AwsApiGatewayVpcLinkRequired
 

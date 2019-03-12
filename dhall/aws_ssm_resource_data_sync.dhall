@@ -1,21 +1,21 @@
 
 let S3DestinationOptional =
-  { kms_key_arn: Optional Text
-  , prefix: Optional Text
-  , sync_format: Optional Text
+  { kms_key_arn : Optional Text
+  , prefix : Optional Text
+  , sync_format : Optional Text
   }
 
 let S3DestinationRequired =
-  { bucket_name: Text
-  , region: Text
+  { bucket_name : Text
+  , region : Text
   }
 let S3Destination = S3DestinationOptional //\\ S3DestinationRequired
 
 let AwsSsmResourceDataSyncOptional = {}
 
 let AwsSsmResourceDataSyncRequired =
-  { name: Text
-  , s3_destination: S3Destination
+  { name : Text
+  , s3_destination : S3Destination
   }
 let AwsSsmResourceDataSync = AwsSsmResourceDataSyncOptional //\\ AwsSsmResourceDataSyncRequired
 

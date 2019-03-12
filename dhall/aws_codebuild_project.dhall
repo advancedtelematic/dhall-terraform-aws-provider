@@ -1,131 +1,131 @@
 
 let ArtifactsOptional =
-  { encryption_disabled: Optional Bool
-  , location: Optional Text
-  , name: Optional Text
-  , namespace_type: Optional Text
-  , packaging: Optional Text
-  , path: Optional Text
+  { encryption_disabled : Optional Bool
+  , location : Optional Text
+  , name : Optional Text
+  , namespace_type : Optional Text
+  , packaging : Optional Text
+  , path : Optional Text
   }
 
 let ArtifactsRequired =
-  { type: Text }
+  { type : Text }
 let Artifacts = ArtifactsOptional //\\ ArtifactsRequired
 
 let CacheOptional =
-  { location: Optional Text
-  , type: Optional Text
+  { location : Optional Text
+  , type : Optional Text
   }
 
 let CacheRequired = {}
 let Cache = CacheOptional //\\ CacheRequired
 
 let EnvironmentVariableOptional =
-  { type: Optional Text }
+  { type : Optional Text }
 
 let EnvironmentVariableRequired =
-  { name: Text
-  , value: Text
+  { name : Text
+  , value : Text
   }
 let EnvironmentVariable = EnvironmentVariableOptional //\\ EnvironmentVariableRequired
 
 let EnvironmentOptional =
-  { certificate: Optional Text
-  , privileged_mode: Optional Bool
-  , environment_variable: Optional (List EnvironmentVariable)
+  { certificate : Optional Text
+  , privileged_mode : Optional Bool
+  , environment_variable : Optional (List EnvironmentVariable)
   }
 
 let EnvironmentRequired =
-  { compute_type: Text
-  , image: Text
-  , type: Text
+  { compute_type : Text
+  , image : Text
+  , type : Text
   }
 let Environment = EnvironmentOptional //\\ EnvironmentRequired
 
 let SecondaryArtifactsOptional =
-  { encryption_disabled: Optional Bool
-  , location: Optional Text
-  , name: Optional Text
-  , namespace_type: Optional Text
-  , packaging: Optional Text
-  , path: Optional Text
+  { encryption_disabled : Optional Bool
+  , location : Optional Text
+  , name : Optional Text
+  , namespace_type : Optional Text
+  , packaging : Optional Text
+  , path : Optional Text
   }
 
 let SecondaryArtifactsRequired =
-  { artifact_identifier: Text
-  , type: Text
+  { artifact_identifier : Text
+  , type : Text
   }
 let SecondaryArtifacts = SecondaryArtifactsOptional //\\ SecondaryArtifactsRequired
 
 let AuthOptional =
-  { resource: Optional Text }
+  { resource : Optional Text }
 
 let AuthRequired =
-  { type: Text }
+  { type : Text }
 let Auth = AuthOptional //\\ AuthRequired
 
 let SecondarySourcesOptional =
-  { buildspec: Optional Text
-  , git_clone_depth: Optional Natural
-  , insecure_ssl: Optional Bool
-  , location: Optional Text
-  , report_build_status: Optional Bool
-  , auth: Optional (List Auth)
+  { buildspec : Optional Text
+  , git_clone_depth : Optional Natural
+  , insecure_ssl : Optional Bool
+  , location : Optional Text
+  , report_build_status : Optional Bool
+  , auth : Optional (List Auth)
   }
 
 let SecondarySourcesRequired =
-  { source_identifier: Text
-  , type: Text
+  { source_identifier : Text
+  , type : Text
   }
 let SecondarySources = SecondarySourcesOptional //\\ SecondarySourcesRequired
 
 let AuthOptional =
-  { resource: Optional Text }
+  { resource : Optional Text }
 
 let AuthRequired =
-  { type: Text }
+  { type : Text }
 let Auth = AuthOptional //\\ AuthRequired
 
 let SourceOptional =
-  { buildspec: Optional Text
-  , git_clone_depth: Optional Natural
-  , insecure_ssl: Optional Bool
-  , location: Optional Text
-  , report_build_status: Optional Bool
-  , auth: Optional (List Auth)
+  { buildspec : Optional Text
+  , git_clone_depth : Optional Natural
+  , insecure_ssl : Optional Bool
+  , location : Optional Text
+  , report_build_status : Optional Bool
+  , auth : Optional (List Auth)
   }
 
 let SourceRequired =
-  { type: Text }
+  { type : Text }
 let Source = SourceOptional //\\ SourceRequired
 
 let VpcConfigOptional = {}
 
 let VpcConfigRequired =
-  { security_group_ids: (List Text)
-  , subnets: (List Text)
-  , vpc_id: Text
+  { security_group_ids : (List Text)
+  , subnets : (List Text)
+  , vpc_id : Text
   }
 let VpcConfig = VpcConfigOptional //\\ VpcConfigRequired
 
 let AwsCodebuildProjectOptional =
-  { badge_enabled: Optional Bool
-  , build_timeout: Optional Natural
-  , description: Optional Text
-  , encryption_key: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , cache: Optional Cache
-  , secondary_artifacts: Optional (List SecondaryArtifacts)
-  , secondary_sources: Optional (List SecondarySources)
-  , vpc_config: Optional VpcConfig
+  { badge_enabled : Optional Bool
+  , build_timeout : Optional Natural
+  , description : Optional Text
+  , encryption_key : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , cache : Optional Cache
+  , secondary_artifacts : Optional (List SecondaryArtifacts)
+  , secondary_sources : Optional (List SecondarySources)
+  , vpc_config : Optional VpcConfig
   }
 
 let AwsCodebuildProjectRequired =
-  { name: Text
-  , service_role: Text
-  , artifacts: Artifacts
-  , environment: Environment
-  , source: Source
+  { name : Text
+  , service_role : Text
+  , artifacts : Artifacts
+  , environment : Environment
+  , source : Source
   }
 let AwsCodebuildProject = AwsCodebuildProjectOptional //\\ AwsCodebuildProjectRequired
 

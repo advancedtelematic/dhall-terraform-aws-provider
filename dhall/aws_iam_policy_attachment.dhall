@@ -1,13 +1,13 @@
 
 let AwsIamPolicyAttachmentOptional =
-  { groups: Optional (List Text)
-  , roles: Optional (List Text)
-  , users: Optional (List Text)
+  { groups : Optional (List Text)
+  , roles : Optional (List Text)
+  , users : Optional (List Text)
   }
 
 let AwsIamPolicyAttachmentRequired =
-  { name: Text
-  , policy_arn: Text
+  { name : Text
+  , policy_arn : Text
   }
 let AwsIamPolicyAttachment = AwsIamPolicyAttachmentOptional //\\ AwsIamPolicyAttachmentRequired
 

@@ -2,8 +2,8 @@
 let AwsConfigAggregateAuthorizationOptional = {}
 
 let AwsConfigAggregateAuthorizationRequired =
-  { account_id: Text
-  , region: Text
+  { account_id : Text
+  , region : Text
   }
 let AwsConfigAggregateAuthorization = AwsConfigAggregateAuthorizationOptional //\\ AwsConfigAggregateAuthorizationRequired
 

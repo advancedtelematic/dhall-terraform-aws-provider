@@ -1,20 +1,20 @@
 
 let ClassificationTypeOptional =
-  { continuous: Optional Text
-  , one_time: Optional Text
+  { continuous : Optional Text
+  , one_time : Optional Text
   }
 
 let ClassificationTypeRequired = {}
 let ClassificationType = ClassificationTypeOptional //\\ ClassificationTypeRequired
 
 let AwsMacieS3BucketAssociationOptional =
-  { member_account_id: Optional Text
-  , prefix: Optional Text
-  , classification_type: Optional ClassificationType
+  { member_account_id : Optional Text
+  , prefix : Optional Text
+  , classification_type : Optional ClassificationType
   }
 
 let AwsMacieS3BucketAssociationRequired =
-  { bucket_name: Text }
+  { bucket_name : Text }
 let AwsMacieS3BucketAssociation = AwsMacieS3BucketAssociationOptional //\\ AwsMacieS3BucketAssociationRequired
 
 in

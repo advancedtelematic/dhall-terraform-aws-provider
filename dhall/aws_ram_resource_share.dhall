@@ -1,11 +1,11 @@
 
 let AwsRamResourceShareOptional =
-  { allow_external_principals: Optional Bool
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
+  { allow_external_principals : Optional Bool
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
   }
 
 let AwsRamResourceShareRequired =
-  { name: Text }
+  { name : Text }
 let AwsRamResourceShare = AwsRamResourceShareOptional //\\ AwsRamResourceShareRequired
 
 in

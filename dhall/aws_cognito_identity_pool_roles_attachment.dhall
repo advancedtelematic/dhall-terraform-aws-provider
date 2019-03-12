@@ -2,38 +2,38 @@
 let MappingRuleOptional = {}
 
 let MappingRuleRequired =
-  { claim: Text
-  , match_type: Text
-  , role_arn: Text
-  , value: Text
+  { claim : Text
+  , match_type : Text
+  , role_arn : Text
+  , value : Text
   }
 let MappingRule = MappingRuleOptional //\\ MappingRuleRequired
 
 let RoleMappingOptional =
-  { ambiguous_role_resolution: Optional Text
-  , mapping_rule: Optional (List MappingRule)
+  { ambiguous_role_resolution : Optional Text
+  , mapping_rule : Optional (List MappingRule)
   }
 
 let RoleMappingRequired =
-  { identity_provider: Text
-  , type: Text
+  { identity_provider : Text
+  , type : Text
   }
 let RoleMapping = RoleMappingOptional //\\ RoleMappingRequired
 
 let RolesOptional =
-  { authenticated: Optional Text
-  , unauthenticated: Optional Text
+  { authenticated : Optional Text
+  , unauthenticated : Optional Text
   }
 
 let RolesRequired = {}
 let Roles = RolesOptional //\\ RolesRequired
 
 let AwsCognitoIdentityPoolRolesAttachmentOptional =
-  { role_mapping: Optional (List RoleMapping) }
+  { role_mapping : Optional (List RoleMapping) }
 
 let AwsCognitoIdentityPoolRolesAttachmentRequired =
-  { identity_pool_id: Text
-  , roles: Roles
+  { identity_pool_id : Text
+  , roles : Roles
   }
 let AwsCognitoIdentityPoolRolesAttachment = AwsCognitoIdentityPoolRolesAttachmentOptional //\\ AwsCognitoIdentityPoolRolesAttachmentRequired
 

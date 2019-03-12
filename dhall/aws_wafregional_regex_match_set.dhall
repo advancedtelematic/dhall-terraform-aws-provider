@@ -1,25 +1,25 @@
 
 let FieldToMatchOptional =
-  { data: Optional Text }
+  { data : Optional Text }
 
 let FieldToMatchRequired =
-  { type: Text }
+  { type : Text }
 let FieldToMatch = FieldToMatchOptional //\\ FieldToMatchRequired
 
 let RegexMatchTupleOptional = {}
 
 let RegexMatchTupleRequired =
-  { regex_pattern_set_id: Text
-  , text_transformation: Text
-  , field_to_match: FieldToMatch
+  { regex_pattern_set_id : Text
+  , text_transformation : Text
+  , field_to_match : FieldToMatch
   }
 let RegexMatchTuple = RegexMatchTupleOptional //\\ RegexMatchTupleRequired
 
 let AwsWafregionalRegexMatchSetOptional =
-  { regex_match_tuple: Optional (List RegexMatchTuple) }
+  { regex_match_tuple : Optional (List RegexMatchTuple) }
 
 let AwsWafregionalRegexMatchSetRequired =
-  { name: Text }
+  { name : Text }
 let AwsWafregionalRegexMatchSet = AwsWafregionalRegexMatchSetOptional //\\ AwsWafregionalRegexMatchSetRequired
 
 in

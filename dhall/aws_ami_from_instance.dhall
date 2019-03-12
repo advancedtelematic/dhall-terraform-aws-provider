@@ -10,16 +10,16 @@ let EphemeralBlockDeviceRequired = {}
 let EphemeralBlockDevice = EphemeralBlockDeviceOptional //\\ EphemeralBlockDeviceRequired
 
 let AwsAmiFromInstanceOptional =
-  { description: Optional Text
-  , snapshot_without_reboot: Optional Bool
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
-  , ebs_block_device: Optional (List EbsBlockDevice)
-  , ephemeral_block_device: Optional (List EphemeralBlockDevice)
+  { description : Optional Text
+  , snapshot_without_reboot : Optional Bool
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , ebs_block_device : Optional (List EbsBlockDevice)
+  , ephemeral_block_device : Optional (List EphemeralBlockDevice)
   }
 
 let AwsAmiFromInstanceRequired =
-  { name: Text
-  , source_instance_id: Text
+  { name : Text
+  , source_instance_id : Text
   }
 let AwsAmiFromInstance = AwsAmiFromInstanceOptional //\\ AwsAmiFromInstanceRequired
 

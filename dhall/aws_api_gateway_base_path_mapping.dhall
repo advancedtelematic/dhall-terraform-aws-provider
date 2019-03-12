@@ -1,12 +1,12 @@
 
 let AwsApiGatewayBasePathMappingOptional =
-  { base_path: Optional Text
-  , stage_name: Optional Text
+  { base_path : Optional Text
+  , stage_name : Optional Text
   }
 
 let AwsApiGatewayBasePathMappingRequired =
-  { api_id: Text
-  , domain_name: Text
+  { api_id : Text
+  , domain_name : Text
   }
 let AwsApiGatewayBasePathMapping = AwsApiGatewayBasePathMappingOptional //\\ AwsApiGatewayBasePathMappingRequired
 

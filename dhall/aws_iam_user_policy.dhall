@@ -1,12 +1,12 @@
 
 let AwsIamUserPolicyOptional =
-  { name: Optional Text
-  , name_prefix: Optional Text
+  { name : Optional Text
+  , name_prefix : Optional Text
   }
 
 let AwsIamUserPolicyRequired =
-  { policy: Text
-  , user: Text
+  { policy : Text
+  , user : Text
   }
 let AwsIamUserPolicy = AwsIamUserPolicyOptional //\\ AwsIamUserPolicyRequired
 

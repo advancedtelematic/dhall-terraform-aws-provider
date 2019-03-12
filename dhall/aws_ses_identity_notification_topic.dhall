@@ -1,10 +1,10 @@
 
 let AwsSesIdentityNotificationTopicOptional =
-  { topic_arn: Optional Text }
+  { topic_arn : Optional Text }
 
 let AwsSesIdentityNotificationTopicRequired =
-  { identity: Text
-  , notification_type: Text
+  { identity : Text
+  , notification_type : Text
   }
 let AwsSesIdentityNotificationTopic = AwsSesIdentityNotificationTopicOptional //\\ AwsSesIdentityNotificationTopicRequired
 

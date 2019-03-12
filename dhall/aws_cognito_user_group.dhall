@@ -1,13 +1,13 @@
 
 let AwsCognitoUserGroupOptional =
-  { description: Optional Text
-  , precedence: Optional Natural
-  , role_arn: Optional Text
+  { description : Optional Text
+  , precedence : Optional Natural
+  , role_arn : Optional Text
   }
 
 let AwsCognitoUserGroupRequired =
-  { name: Text
-  , user_pool_id: Text
+  { name : Text
+  , user_pool_id : Text
   }
 let AwsCognitoUserGroup = AwsCognitoUserGroupOptional //\\ AwsCognitoUserGroupRequired
 

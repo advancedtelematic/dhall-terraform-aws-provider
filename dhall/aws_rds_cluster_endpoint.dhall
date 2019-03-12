@@ -1,13 +1,13 @@
 
 let AwsRdsClusterEndpointOptional =
-  { excluded_members: Optional (List Text)
-  , static_members: Optional (List Text)
+  { excluded_members : Optional (List Text)
+  , static_members : Optional (List Text)
   }
 
 let AwsRdsClusterEndpointRequired =
-  { cluster_endpoint_identifier: Text
-  , cluster_identifier: Text
-  , custom_endpoint_type: Text
+  { cluster_endpoint_identifier : Text
+  , cluster_identifier : Text
+  , custom_endpoint_type : Text
   }
 let AwsRdsClusterEndpoint = AwsRdsClusterEndpointOptional //\\ AwsRdsClusterEndpointRequired
 

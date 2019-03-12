@@ -2,7 +2,7 @@
 let AwsSesConfigurationSetOptional = {}
 
 let AwsSesConfigurationSetRequired =
-  { name: Text }
+  { name : Text }
 let AwsSesConfigurationSet = AwsSesConfigurationSetOptional //\\ AwsSesConfigurationSetRequired
 
 in

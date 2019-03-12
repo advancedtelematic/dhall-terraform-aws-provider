@@ -1,45 +1,45 @@
 
 let FieldToMatchOptional =
-  { data: Optional Text }
+  { data : Optional Text }
 
 let FieldToMatchRequired =
-  { type: Text }
+  { type : Text }
 let FieldToMatch = FieldToMatchOptional //\\ FieldToMatchRequired
 
 let ByteMatchTupleOptional =
-  { target_string: Optional Text }
+  { target_string : Optional Text }
 
 let ByteMatchTupleRequired =
-  { positional_constraint: Text
-  , text_transformation: Text
-  , field_to_match: FieldToMatch
+  { positional_constraint : Text
+  , text_transformation : Text
+  , field_to_match : FieldToMatch
   }
 let ByteMatchTuple = ByteMatchTupleOptional //\\ ByteMatchTupleRequired
 
 let FieldToMatchOptional =
-  { data: Optional Text }
+  { data : Optional Text }
 
 let FieldToMatchRequired =
-  { type: Text }
+  { type : Text }
 let FieldToMatch = FieldToMatchOptional //\\ FieldToMatchRequired
 
 let ByteMatchTuplesOptional =
-  { target_string: Optional Text }
+  { target_string : Optional Text }
 
 let ByteMatchTuplesRequired =
-  { positional_constraint: Text
-  , text_transformation: Text
-  , field_to_match: FieldToMatch
+  { positional_constraint : Text
+  , text_transformation : Text
+  , field_to_match : FieldToMatch
   }
 let ByteMatchTuples = ByteMatchTuplesOptional //\\ ByteMatchTuplesRequired
 
 let AwsWafregionalByteMatchSetOptional =
-  { byte_match_tuple: Optional (List ByteMatchTuple)
-  , byte_match_tuples: Optional (List ByteMatchTuples)
+  { byte_match_tuple : Optional (List ByteMatchTuple)
+  , byte_match_tuples : Optional (List ByteMatchTuples)
   }
 
 let AwsWafregionalByteMatchSetRequired =
-  { name: Text }
+  { name : Text }
 let AwsWafregionalByteMatchSet = AwsWafregionalByteMatchSetOptional //\\ AwsWafregionalByteMatchSetRequired
 
 in

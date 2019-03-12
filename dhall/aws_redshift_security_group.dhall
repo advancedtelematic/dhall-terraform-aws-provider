@@ -1,19 +1,19 @@
 
 let IngressOptional =
-  { cidr: Optional Text
-  , security_group_name: Optional Text
-  , security_group_owner_id: Optional Text
+  { cidr : Optional Text
+  , security_group_name : Optional Text
+  , security_group_owner_id : Optional Text
   }
 
 let IngressRequired = {}
 let Ingress = IngressOptional //\\ IngressRequired
 
 let AwsRedshiftSecurityGroupOptional =
-  { description: Optional Text }
+  { description : Optional Text }
 
 let AwsRedshiftSecurityGroupRequired =
-  { name: Text
-  , ingress: List Ingress
+  { name : Text
+  , ingress : List Ingress
   }
 let AwsRedshiftSecurityGroup = AwsRedshiftSecurityGroupOptional //\\ AwsRedshiftSecurityGroupRequired
 

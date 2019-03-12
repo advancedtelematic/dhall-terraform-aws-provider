@@ -1,12 +1,12 @@
 
 let AwsSesTemplateOptional =
-  { html: Optional Text
-  , subject: Optional Text
-  , text: Optional Text
+  { html : Optional Text
+  , subject : Optional Text
+  , text : Optional Text
   }
 
 let AwsSesTemplateRequired =
-  { name: Text }
+  { name : Text }
 let AwsSesTemplate = AwsSesTemplateOptional //\\ AwsSesTemplateRequired
 
 in

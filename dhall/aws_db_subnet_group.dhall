@@ -1,13 +1,13 @@
 
 let AwsDbSubnetGroupOptional =
-  { description: Optional Text
-  , name: Optional Text
-  , name_prefix: Optional Text
-  , tags: Optional (List { mapKey : Text, mapValue : Text })
+  { description : Optional Text
+  , name : Optional Text
+  , name_prefix : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
   }
 
 let AwsDbSubnetGroupRequired =
-  { subnet_ids: (List Text) }
+  { subnet_ids : (List Text) }
 let AwsDbSubnetGroup = AwsDbSubnetGroupOptional //\\ AwsDbSubnetGroupRequired
 
 in
