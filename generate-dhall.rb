@@ -1,6 +1,6 @@
 require 'json'
 require 'pry'
-require './lib/render-dhall.rb'
+require './lib/render.rb'
 
 file = File.read './schema/tf-aws-schema.json'
 
@@ -52,5 +52,5 @@ gds = resources.map do |r|
   type_from_resource(r)
 end
 
-render_all(gds)
+Render.render_all(gds)
 pry.inspect
