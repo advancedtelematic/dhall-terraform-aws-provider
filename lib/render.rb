@@ -51,23 +51,22 @@ module Render
     end
   end
 
-  # Field = Struct.new(:name, :type, :optional, :is_block?)
-  def Render.dhall_from_attribute_field(field)
-    type = dhall_type_from_attribute(field.type)
-    return dhall_field(field.name, type, field.optional)
-  end
-
-  def Render.dhall_from_block_field(field)
-    type = dhall_type_from_block(field)
-    return dhall_field(field.name, type, field.optional)
+  def Render.get_type(field)
+    if field.is_block?
+      dhall_type_from_block(field)
+    else
+      dhall_type_from_attribute(field.type)
+    end
   end
 
   def Render.render_dhall_field(field)
-    if field.is_block?
-      return dhall_from_block_field(field)
-    else
-      return dhall_from_attribute_field(field)
-    end
+    type = get_type(field)
+    return dhall_field(field.name, type, field.optional)
+  end
+
+  def Render.render_none_field(field)
+    type = get_type(field)
+    return "#{field.name} = None #{type}"
   end
 
   def Render.dhall_type_template(type_name, fields)
