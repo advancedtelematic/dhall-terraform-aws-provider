@@ -1,0 +1,6 @@
+
+let awsApiGatewayResource = {}
+
+in
+{ 
+}

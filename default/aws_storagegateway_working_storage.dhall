@@ -1,0 +1,6 @@
+
+let awsStoragegatewayWorkingStorage = {}
+
+in
+{ 
+}

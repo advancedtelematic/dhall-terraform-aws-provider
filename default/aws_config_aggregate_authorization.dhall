@@ -1,0 +1,6 @@
+
+let awsConfigAggregateAuthorization = {}
+
+in
+{ 
+}

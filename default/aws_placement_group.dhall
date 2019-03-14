@@ -1,0 +1,6 @@
+
+let awsPlacementGroup = {}
+
+in
+{ 
+}

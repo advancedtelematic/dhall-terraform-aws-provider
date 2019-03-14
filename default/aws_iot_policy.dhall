@@ -1,0 +1,6 @@
+
+let awsIotPolicy = {}
+
+in
+{ 
+}

@@ -1,0 +1,6 @@
+
+let awsSnsTopicPolicy = {}
+
+in
+{ 
+}

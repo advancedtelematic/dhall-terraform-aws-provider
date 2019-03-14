@@ -1,0 +1,6 @@
+
+let awsEgressOnlyInternetGateway = {}
+
+in
+{ 
+}

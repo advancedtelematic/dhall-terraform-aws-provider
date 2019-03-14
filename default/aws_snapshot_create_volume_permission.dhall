@@ -1,0 +1,6 @@
+
+let awsSnapshotCreateVolumePermission = {}
+
+in
+{ 
+}

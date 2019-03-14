@@ -1,0 +1,6 @@
+
+let awsCloudwatchLogResourcePolicy = {}
+
+in
+{ 
+}

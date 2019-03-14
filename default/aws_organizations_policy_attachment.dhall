@@ -1,0 +1,6 @@
+
+let awsOrganizationsPolicyAttachment = {}
+
+in
+{ 
+}

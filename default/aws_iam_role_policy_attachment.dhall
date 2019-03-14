@@ -1,0 +1,6 @@
+
+let awsIamRolePolicyAttachment = {}
+
+in
+{ 
+}

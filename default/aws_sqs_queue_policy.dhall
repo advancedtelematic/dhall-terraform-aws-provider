@@ -1,0 +1,6 @@
+
+let awsSqsQueuePolicy = {}
+
+in
+{ 
+}

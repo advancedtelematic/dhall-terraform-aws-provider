@@ -1,0 +1,6 @@
+
+let awsStoragegatewayUploadBuffer = {}
+
+in
+{ 
+}
