@@ -3,6 +3,10 @@ module Render
     str.split('_').collect(&:capitalize).join
   end
 
+  def Render.instanceify(str)
+    classify(str).sub(/^\w/) {$&.downcase}
+  end
+
   def Render.dhall_type_from_block(field)
     type_name = classify(field.name)
     if field.optional && field.type == :list
@@ -151,8 +155,9 @@ in
 
   ## defaults
   def Render.render_default_type(type)
-    type_name = classify(type.name)
+    type_name = instanceify(type.name)
 
+    # TODO need to handle imports somehow
     op_type_name = "#{type_name}Optional"
     op_fields = type.fields.select { |f| f.optional }
     op_str = dhall_type_template(op_type_name, op_fields, :render_none_field)
@@ -168,8 +173,30 @@ in
   def Render.render_defaults(types)
     types.each do |t|
       content = render_default_file(t).flatten.join("")
-      # in_block = render_in_block(t) TODO put back
-      File.write("./default/#{t.name}.dhall", content)
+      in_block = render_defaults_in_block(t, false)
+      File.write("./default/#{t.name}.dhall", content + in_block)
     end
+  end
+
+  def Render.render_defaults_in_block(type, only_optionals=false)
+    names = get_all_type_names(type).reverse
+
+    str = names.map { |n|
+      type_name = instanceify(n[:name])
+      op_type_name = "#{type_name}Optional"
+
+      if n[:optional?]
+        [ "#{op_type_name} = #{op_type_name}"]
+      else
+        []
+      end
+    }.flatten
+
+    # TODO not exporting empty Optionals, possibly correct?
+    %{
+in
+{ #{str.join("\n, ")}
+}
+}
   end
 end
