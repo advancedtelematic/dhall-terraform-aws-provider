@@ -1,0 +1,6 @@
+
+let awsMediaStoreContainerPolicy = {}
+
+in
+{ 
+}

@@ -1,0 +1,6 @@
+
+let awsRamResourceAssociation = {}
+
+in
+{ 
+}

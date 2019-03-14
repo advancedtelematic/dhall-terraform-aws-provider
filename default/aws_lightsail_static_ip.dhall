@@ -1,0 +1,6 @@
+
+let awsLightsailStaticIp = {}
+
+in
+{ 
+}

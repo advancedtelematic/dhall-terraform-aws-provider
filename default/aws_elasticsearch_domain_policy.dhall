@@ -1,0 +1,6 @@
+
+let awsElasticsearchDomainPolicy = {}
+
+in
+{ 
+}

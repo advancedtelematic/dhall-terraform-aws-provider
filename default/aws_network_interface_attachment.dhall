@@ -1,0 +1,6 @@
+
+let awsNetworkInterfaceAttachment = {}
+
+in
+{ 
+}

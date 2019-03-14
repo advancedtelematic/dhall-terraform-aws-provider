@@ -1,0 +1,6 @@
+
+let awsSecurityhubStandardsSubscription = {}
+
+in
+{ 
+}

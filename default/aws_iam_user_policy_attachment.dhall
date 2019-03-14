@@ -1,0 +1,6 @@
+
+let awsIamUserPolicyAttachment = {}
+
+in
+{ 
+}

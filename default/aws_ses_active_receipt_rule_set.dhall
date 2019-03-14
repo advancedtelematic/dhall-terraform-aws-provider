@@ -1,0 +1,6 @@
+
+let awsSesActiveReceiptRuleSet = {}
+
+in
+{ 
+}

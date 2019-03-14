@@ -1,0 +1,6 @@
+
+let awsSimpledbDomain = {}
+
+in
+{ 
+}

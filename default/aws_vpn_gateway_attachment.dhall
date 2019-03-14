@@ -1,0 +1,6 @@
+
+let awsVpnGatewayAttachment = {}
+
+in
+{ 
+}

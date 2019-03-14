@@ -1,0 +1,6 @@
+
+let awsIotCertificate = {}
+
+in
+{ 
+}

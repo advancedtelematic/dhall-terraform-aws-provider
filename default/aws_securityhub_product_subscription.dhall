@@ -1,0 +1,6 @@
+
+let awsSecurityhubProductSubscription = {}
+
+in
+{ 
+}

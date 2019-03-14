@@ -1,0 +1,6 @@
+
+let awsIamGroupPolicyAttachment = {}
+
+in
+{ 
+}

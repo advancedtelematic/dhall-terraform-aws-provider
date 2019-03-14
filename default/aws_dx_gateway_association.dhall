@@ -1,0 +1,6 @@
+
+let awsDxGatewayAssociation = {}
+
+in
+{ 
+}
