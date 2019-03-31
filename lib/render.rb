@@ -3,18 +3,26 @@ module Render
     str.split('_').collect(&:capitalize).join
   end
 
+  def Render.filenamify(name, parents)
+    type_name = classify(name)
+    "#{parents.map { |n| classify(n) }.join('.')}.#{type_name}"
+  end
+
   def Render.instanceify(str)
     classify(str).sub(/^\w/) {$&.downcase}
   end
 
-  def Render.dhall_type_from_block(field)
-    type_name = classify(field.name)
+  def Render.dhall_type_from_block(field, parents)
+    # TODO current type missing from parents list
+    # need to find way to pass that to here
+    type_name = filenamify(field.name, parents)
+    full_field_name = "(./#{type_name}).#{classify(field.name)}"
     if field.optional && field.type == :list
-      "(List #{type_name})"
+      "(List #{full_field_name})"
     elsif field.type == :list
-      "List #{type_name}"
+      "List #{full_field_name}"
     else
-      type_name
+      "#{full_field_name}"
     end
   end
 
@@ -55,30 +63,30 @@ module Render
     end
   end
 
-  def Render.get_type(field)
+  def Render.get_type(field, parents)
     if field.is_block?
-      dhall_type_from_block(field)
+      dhall_type_from_block(field, parents)
     else
       dhall_type_from_attribute(field.type)
     end
   end
 
-  def Render.render_dhall_field(field, parent_type)
-    type = get_type(field)
+  def Render.render_dhall_field(field, parents)
+    type = get_type(field, parents)
     return dhall_field(field.name, type, field.optional)
   end
 
   def Render.render_none_field(field, parent_type)
     if field.is_block?
-     type =  dhall_default_type_from_block(field, parent_type)
+      type =  dhall_default_type_from_block(field, parent_type)
     else
       type = dhall_type_from_attribute(field.type)
     end
     return "#{field.name} = None #{type}"
   end
 
-  def Render.dhall_type_template(type_name, fields, func = :render_dhall_field, parent_type = nil)
-    field_strings = fields.map { |f| Render.send(func, f, parent_type) }.join("\n  , ")
+  def Render.dhall_type_template(type_name, fields, func = :render_dhall_field, parents = [])
+    field_strings = fields.map { |f| Render.send(func, f, parents) }.join("\n  , ")
     if fields.count == 0
     %{
 let #{type_name} = {}
@@ -102,26 +110,28 @@ let #{type_name} =
 
     op_type_name = "#{type_name}Optional"
     op_fields = type.fields.select { |f| f.optional }
-    op_str = dhall_type_template(op_type_name, op_fields)
+    op_str = dhall_type_template(op_type_name, op_fields, :render_dhall_field, type.parents)
 
     req_type_name = "#{type_name}Required"
     req_fields = type.fields.select { |f| !f.optional }
-    req_str = dhall_type_template(req_type_name, req_fields)
+    req_str = dhall_type_template(req_type_name, req_fields, :render_dhall_field, type.parents)
 
     full_type = "let #{type_name} = #{op_type_name} //\\\\ #{req_type_name}\n"
     [op_str, req_str, full_type]
   end
 
   def Render.render_dhall_file(type)
-    str = type.blocks.map { |b| render_dhall_file(b) }
-    str.append(render_dhall_type(type))
+    type.blocks.each { |b| render_dhall_file(b) }
+    content = render_dhall_type(type).flatten.join("")
+    in_block = render_in_block(type)
+    filename = type.parents.map { |n| classify(n) }.join('.')
+
+    File.write("./types/#{filename}", content + in_block)
   end
 
   def Render.render_all(types)
     types.each do |t|
-      content = render_dhall_file(t).flatten.join("")
-      in_block = render_in_block(t)
-      File.write("./dhall/#{t.name}.dhall", content + in_block)
+      render_dhall_file(t)
     end
   end
 
@@ -133,21 +143,17 @@ let #{type_name} =
   end
 
   def Render.render_in_block(type)
-    names = get_all_type_names(type).reverse
+    type_name = classify(type.name)
+    op_type_name = "#{type_name}Optional"
+    req_type_name = "#{type_name}Required"
 
-    str = names.map { |n|
-      type_name = classify(n[:name])
-      op_type_name = "#{type_name}Optional"
-      req_type_name = "#{type_name}Required"
-
-      if n[:optional?]
-        [ "#{op_type_name} = #{op_type_name}",
-          "#{req_type_name} = #{req_type_name}",
-          "#{type_name} = #{type_name}" ]
-      else
-        "#{type_name} = #{type_name}"
-      end
-    }.flatten
+    if type.fields.select { |f| f.optional }.count > 0
+      str = [ "#{op_type_name} = #{op_type_name}",
+        "#{req_type_name} = #{req_type_name}",
+        "#{type_name} = #{type_name}" ]
+    else
+      str = ["#{type_name} = #{type_name}"]
+    end
 
     # TODO not exporting empty Optionals, possibly correct?
     %{
