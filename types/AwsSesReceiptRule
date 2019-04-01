@@ -1,0 +1,27 @@
+
+let AwsSesReceiptRuleOptional =
+  { after : Optional Text
+  , enabled : Optional Bool
+  , recipients : Optional (List Text)
+  , scan_enabled : Optional Bool
+  , tls_policy : Optional Text
+  , add_header_action : Optional (List (./AwsSesReceiptRule.AddHeaderAction).AddHeaderAction)
+  , bounce_action : Optional (List (./AwsSesReceiptRule.BounceAction).BounceAction)
+  , lambda_action : Optional (List (./AwsSesReceiptRule.LambdaAction).LambdaAction)
+  , s3_action : Optional (List (./AwsSesReceiptRule.S3Action).S3Action)
+  , sns_action : Optional (List (./AwsSesReceiptRule.SnsAction).SnsAction)
+  , stop_action : Optional (List (./AwsSesReceiptRule.StopAction).StopAction)
+  , workmail_action : Optional (List (./AwsSesReceiptRule.WorkmailAction).WorkmailAction)
+  }
+
+let AwsSesReceiptRuleRequired =
+  { name : Text
+  , rule_set_name : Text
+  }
+let AwsSesReceiptRule = AwsSesReceiptRuleOptional //\\ AwsSesReceiptRuleRequired
+
+in
+{ AwsSesReceiptRuleOptional = AwsSesReceiptRuleOptional
+, AwsSesReceiptRuleRequired = AwsSesReceiptRuleRequired
+, AwsSesReceiptRule = AwsSesReceiptRule
+}

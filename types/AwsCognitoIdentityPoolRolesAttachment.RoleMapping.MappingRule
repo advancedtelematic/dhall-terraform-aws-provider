@@ -1,0 +1,14 @@
+
+let MappingRuleOptional = {}
+
+let MappingRuleRequired =
+  { claim : Text
+  , match_type : Text
+  , role_arn : Text
+  , value : Text
+  }
+let MappingRule = MappingRuleOptional //\\ MappingRuleRequired
+
+in
+{ MappingRule = MappingRule
+}

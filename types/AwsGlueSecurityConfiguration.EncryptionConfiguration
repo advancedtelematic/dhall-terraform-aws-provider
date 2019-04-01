@@ -1,0 +1,13 @@
+
+let EncryptionConfigurationOptional = {}
+
+let EncryptionConfigurationRequired =
+  { cloudwatch_encryption : (./AwsGlueSecurityConfiguration.EncryptionConfiguration.CloudwatchEncryption).CloudwatchEncryption
+  , job_bookmarks_encryption : (./AwsGlueSecurityConfiguration.EncryptionConfiguration.JobBookmarksEncryption).JobBookmarksEncryption
+  , s3_encryption : (./AwsGlueSecurityConfiguration.EncryptionConfiguration.S3Encryption).S3Encryption
+  }
+let EncryptionConfiguration = EncryptionConfigurationOptional //\\ EncryptionConfigurationRequired
+
+in
+{ EncryptionConfiguration = EncryptionConfiguration
+}

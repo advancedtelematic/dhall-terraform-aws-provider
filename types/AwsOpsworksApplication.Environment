@@ -1,0 +1,15 @@
+
+let EnvironmentOptional =
+  { secure : Optional Bool }
+
+let EnvironmentRequired =
+  { key : Text
+  , value : Text
+  }
+let Environment = EnvironmentOptional //\\ EnvironmentRequired
+
+in
+{ EnvironmentOptional = EnvironmentOptional
+, EnvironmentRequired = EnvironmentRequired
+, Environment = Environment
+}

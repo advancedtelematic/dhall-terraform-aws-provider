@@ -1,0 +1,17 @@
+
+let AwsGlobalacceleratorAcceleratorOptional =
+  { enabled : Optional Bool
+  , ip_address_type : Optional Text
+  , attributes : Optional (./AwsGlobalacceleratorAccelerator.Attributes).Attributes
+  , ip_sets : Optional (List (./AwsGlobalacceleratorAccelerator.IpSets).IpSets)
+  }
+
+let AwsGlobalacceleratorAcceleratorRequired =
+  { name : Text }
+let AwsGlobalacceleratorAccelerator = AwsGlobalacceleratorAcceleratorOptional //\\ AwsGlobalacceleratorAcceleratorRequired
+
+in
+{ AwsGlobalacceleratorAcceleratorOptional = AwsGlobalacceleratorAcceleratorOptional
+, AwsGlobalacceleratorAcceleratorRequired = AwsGlobalacceleratorAcceleratorRequired
+, AwsGlobalacceleratorAccelerator = AwsGlobalacceleratorAccelerator
+}

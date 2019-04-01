@@ -1,0 +1,12 @@
+
+let SqlInjectionMatchTupleOptional = {}
+
+let SqlInjectionMatchTupleRequired =
+  { text_transformation : Text
+  , field_to_match : (./AwsWafregionalSqlInjectionMatchSet.SqlInjectionMatchTuple.FieldToMatch).FieldToMatch
+  }
+let SqlInjectionMatchTuple = SqlInjectionMatchTupleOptional //\\ SqlInjectionMatchTupleRequired
+
+in
+{ SqlInjectionMatchTuple = SqlInjectionMatchTuple
+}

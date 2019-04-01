@@ -1,0 +1,16 @@
+
+let AwsSsmMaintenanceWindowTargetOptional =
+  { owner_information : Optional Text }
+
+let AwsSsmMaintenanceWindowTargetRequired =
+  { resource_type : Text
+  , window_id : Text
+  , targets : List (./AwsSsmMaintenanceWindowTarget.Targets).Targets
+  }
+let AwsSsmMaintenanceWindowTarget = AwsSsmMaintenanceWindowTargetOptional //\\ AwsSsmMaintenanceWindowTargetRequired
+
+in
+{ AwsSsmMaintenanceWindowTargetOptional = AwsSsmMaintenanceWindowTargetOptional
+, AwsSsmMaintenanceWindowTargetRequired = AwsSsmMaintenanceWindowTargetRequired
+, AwsSsmMaintenanceWindowTarget = AwsSsmMaintenanceWindowTarget
+}

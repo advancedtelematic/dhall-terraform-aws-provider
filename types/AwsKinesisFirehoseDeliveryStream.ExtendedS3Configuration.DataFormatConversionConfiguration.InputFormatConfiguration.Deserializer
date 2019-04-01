@@ -1,0 +1,14 @@
+
+let DeserializerOptional =
+  { hive_json_ser_de : Optional (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration.DataFormatConversionConfiguration.InputFormatConfiguration.Deserializer.HiveJsonSerDe).HiveJsonSerDe
+  , open_x_json_ser_de : Optional (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration.DataFormatConversionConfiguration.InputFormatConfiguration.Deserializer.OpenXJsonSerDe).OpenXJsonSerDe
+  }
+
+let DeserializerRequired = {}
+let Deserializer = DeserializerOptional //\\ DeserializerRequired
+
+in
+{ DeserializerOptional = DeserializerOptional
+, DeserializerRequired = DeserializerRequired
+, Deserializer = Deserializer
+}

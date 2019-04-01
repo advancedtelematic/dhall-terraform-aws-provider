@@ -1,0 +1,10 @@
+
+let LatencyRoutingPolicyOptional = {}
+
+let LatencyRoutingPolicyRequired =
+  { region : Text }
+let LatencyRoutingPolicy = LatencyRoutingPolicyOptional //\\ LatencyRoutingPolicyRequired
+
+in
+{ LatencyRoutingPolicy = LatencyRoutingPolicy
+}

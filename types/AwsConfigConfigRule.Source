@@ -1,0 +1,15 @@
+
+let SourceOptional =
+  { source_detail : Optional (List (./AwsConfigConfigRule.Source.SourceDetail).SourceDetail) }
+
+let SourceRequired =
+  { owner : Text
+  , source_identifier : Text
+  }
+let Source = SourceOptional //\\ SourceRequired
+
+in
+{ SourceOptional = SourceOptional
+, SourceRequired = SourceRequired
+, Source = Source
+}

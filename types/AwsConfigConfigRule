@@ -1,0 +1,19 @@
+
+let AwsConfigConfigRuleOptional =
+  { description : Optional Text
+  , input_parameters : Optional Text
+  , maximum_execution_frequency : Optional Text
+  , scope : Optional (./AwsConfigConfigRule.Scope).Scope
+  }
+
+let AwsConfigConfigRuleRequired =
+  { name : Text
+  , source : (./AwsConfigConfigRule.Source).Source
+  }
+let AwsConfigConfigRule = AwsConfigConfigRuleOptional //\\ AwsConfigConfigRuleRequired
+
+in
+{ AwsConfigConfigRuleOptional = AwsConfigConfigRuleOptional
+, AwsConfigConfigRuleRequired = AwsConfigConfigRuleRequired
+, AwsConfigConfigRule = AwsConfigConfigRule
+}

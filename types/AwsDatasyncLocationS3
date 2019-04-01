@@ -1,0 +1,16 @@
+
+let AwsDatasyncLocationS3Optional =
+  { tags : Optional (List { mapKey : Text, mapValue : Text }) }
+
+let AwsDatasyncLocationS3Required =
+  { s3_bucket_arn : Text
+  , subdirectory : Text
+  , s3_config : (./AwsDatasyncLocationS3.S3Config).S3Config
+  }
+let AwsDatasyncLocationS3 = AwsDatasyncLocationS3Optional //\\ AwsDatasyncLocationS3Required
+
+in
+{ AwsDatasyncLocationS3Optional = AwsDatasyncLocationS3Optional
+, AwsDatasyncLocationS3Required = AwsDatasyncLocationS3Required
+, AwsDatasyncLocationS3 = AwsDatasyncLocationS3
+}

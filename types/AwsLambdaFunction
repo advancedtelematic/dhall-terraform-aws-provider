@@ -1,0 +1,34 @@
+
+let AwsLambdaFunctionOptional =
+  { description : Optional Text
+  , filename : Optional Text
+  , kms_key_arn : Optional Text
+  , layers : Optional (List Text)
+  , memory_size : Optional Natural
+  , publish : Optional Bool
+  , reserved_concurrent_executions : Optional Natural
+  , s3_bucket : Optional Text
+  , s3_key : Optional Text
+  , s3_object_version : Optional Text
+  , source_code_hash : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , timeout : Optional Natural
+  , dead_letter_config : Optional (./AwsLambdaFunction.DeadLetterConfig).DeadLetterConfig
+  , environment : Optional (./AwsLambdaFunction.Environment).Environment
+  , tracing_config : Optional (./AwsLambdaFunction.TracingConfig).TracingConfig
+  , vpc_config : Optional (./AwsLambdaFunction.VpcConfig).VpcConfig
+  }
+
+let AwsLambdaFunctionRequired =
+  { function_name : Text
+  , handler : Text
+  , role : Text
+  , runtime : Text
+  }
+let AwsLambdaFunction = AwsLambdaFunctionOptional //\\ AwsLambdaFunctionRequired
+
+in
+{ AwsLambdaFunctionOptional = AwsLambdaFunctionOptional
+, AwsLambdaFunctionRequired = AwsLambdaFunctionRequired
+, AwsLambdaFunction = AwsLambdaFunction
+}

@@ -1,0 +1,18 @@
+
+let AwsLambdaAliasOptional =
+  { description : Optional Text
+  , routing_config : Optional (./AwsLambdaAlias.RoutingConfig).RoutingConfig
+  }
+
+let AwsLambdaAliasRequired =
+  { function_name : Text
+  , function_version : Text
+  , name : Text
+  }
+let AwsLambdaAlias = AwsLambdaAliasOptional //\\ AwsLambdaAliasRequired
+
+in
+{ AwsLambdaAliasOptional = AwsLambdaAliasOptional
+, AwsLambdaAliasRequired = AwsLambdaAliasRequired
+, AwsLambdaAlias = AwsLambdaAlias
+}

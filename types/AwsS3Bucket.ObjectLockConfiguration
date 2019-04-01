@@ -1,0 +1,13 @@
+
+let ObjectLockConfigurationOptional =
+  { rule : Optional (./AwsS3Bucket.ObjectLockConfiguration.Rule).Rule }
+
+let ObjectLockConfigurationRequired =
+  { object_lock_enabled : Text }
+let ObjectLockConfiguration = ObjectLockConfigurationOptional //\\ ObjectLockConfigurationRequired
+
+in
+{ ObjectLockConfigurationOptional = ObjectLockConfigurationOptional
+, ObjectLockConfigurationRequired = ObjectLockConfigurationRequired
+, ObjectLockConfiguration = ObjectLockConfiguration
+}

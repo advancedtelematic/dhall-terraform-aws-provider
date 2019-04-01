@@ -1,0 +1,27 @@
+
+let OrderedCacheBehaviorOptional =
+  { compress : Optional Bool
+  , default_ttl : Optional Natural
+  , field_level_encryption_id : Optional Text
+  , max_ttl : Optional Natural
+  , min_ttl : Optional Natural
+  , smooth_streaming : Optional Bool
+  , trusted_signers : Optional (List Text)
+  , lambda_function_association : Optional (List (./AwsCloudfrontDistribution.OrderedCacheBehavior.LambdaFunctionAssociation).LambdaFunctionAssociation)
+  }
+
+let OrderedCacheBehaviorRequired =
+  { allowed_methods : (List Text)
+  , cached_methods : (List Text)
+  , path_pattern : Text
+  , target_origin_id : Text
+  , viewer_protocol_policy : Text
+  , forwarded_values : (./AwsCloudfrontDistribution.OrderedCacheBehavior.ForwardedValues).ForwardedValues
+  }
+let OrderedCacheBehavior = OrderedCacheBehaviorOptional //\\ OrderedCacheBehaviorRequired
+
+in
+{ OrderedCacheBehaviorOptional = OrderedCacheBehaviorOptional
+, OrderedCacheBehaviorRequired = OrderedCacheBehaviorRequired
+, OrderedCacheBehavior = OrderedCacheBehavior
+}

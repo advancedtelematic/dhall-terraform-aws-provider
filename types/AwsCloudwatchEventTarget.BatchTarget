@@ -1,0 +1,17 @@
+
+let BatchTargetOptional =
+  { array_size : Optional Natural
+  , job_attempts : Optional Natural
+  }
+
+let BatchTargetRequired =
+  { job_definition : Text
+  , job_name : Text
+  }
+let BatchTarget = BatchTargetOptional //\\ BatchTargetRequired
+
+in
+{ BatchTargetOptional = BatchTargetOptional
+, BatchTargetRequired = BatchTargetRequired
+, BatchTarget = BatchTarget
+}

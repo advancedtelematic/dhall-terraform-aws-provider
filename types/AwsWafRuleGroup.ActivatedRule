@@ -1,0 +1,16 @@
+
+let ActivatedRuleOptional =
+  { type : Optional Text }
+
+let ActivatedRuleRequired =
+  { priority : Natural
+  , rule_id : Text
+  , action : (./AwsWafRuleGroup.ActivatedRule.Action).Action
+  }
+let ActivatedRule = ActivatedRuleOptional //\\ ActivatedRuleRequired
+
+in
+{ ActivatedRuleOptional = ActivatedRuleOptional
+, ActivatedRuleRequired = ActivatedRuleRequired
+, ActivatedRule = ActivatedRule
+}

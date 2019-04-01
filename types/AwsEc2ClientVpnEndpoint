@@ -1,0 +1,20 @@
+
+let AwsEc2ClientVpnEndpointOptional =
+  { description : Optional Text
+  , dns_servers : Optional (List Text)
+  , transport_protocol : Optional Text
+  }
+
+let AwsEc2ClientVpnEndpointRequired =
+  { client_cidr_block : Text
+  , server_certificate_arn : Text
+  , authentication_options : (./AwsEc2ClientVpnEndpoint.AuthenticationOptions).AuthenticationOptions
+  , connection_log_options : (./AwsEc2ClientVpnEndpoint.ConnectionLogOptions).ConnectionLogOptions
+  }
+let AwsEc2ClientVpnEndpoint = AwsEc2ClientVpnEndpointOptional //\\ AwsEc2ClientVpnEndpointRequired
+
+in
+{ AwsEc2ClientVpnEndpointOptional = AwsEc2ClientVpnEndpointOptional
+, AwsEc2ClientVpnEndpointRequired = AwsEc2ClientVpnEndpointRequired
+, AwsEc2ClientVpnEndpoint = AwsEc2ClientVpnEndpoint
+}

@@ -1,0 +1,15 @@
+
+let VolumeOptional =
+  { host_path : Optional Text
+  , docker_volume_configuration : Optional (./AwsEcsTaskDefinition.Volume.DockerVolumeConfiguration).DockerVolumeConfiguration
+  }
+
+let VolumeRequired =
+  { name : Text }
+let Volume = VolumeOptional //\\ VolumeRequired
+
+in
+{ VolumeOptional = VolumeOptional
+, VolumeRequired = VolumeRequired
+, Volume = Volume
+}

@@ -1,0 +1,12 @@
+
+let HlsIngestOptional =
+  { ingest_endpoints : Optional (List (./AwsMediaPackageChannel.HlsIngest.IngestEndpoints).IngestEndpoints) }
+
+let HlsIngestRequired = {}
+let HlsIngest = HlsIngestOptional //\\ HlsIngestRequired
+
+in
+{ HlsIngestOptional = HlsIngestOptional
+, HlsIngestRequired = HlsIngestRequired
+, HlsIngest = HlsIngest
+}

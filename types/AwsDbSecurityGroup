@@ -1,0 +1,17 @@
+
+let AwsDbSecurityGroupOptional =
+  { description : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  }
+
+let AwsDbSecurityGroupRequired =
+  { name : Text
+  , ingress : List (./AwsDbSecurityGroup.Ingress).Ingress
+  }
+let AwsDbSecurityGroup = AwsDbSecurityGroupOptional //\\ AwsDbSecurityGroupRequired
+
+in
+{ AwsDbSecurityGroupOptional = AwsDbSecurityGroupOptional
+, AwsDbSecurityGroupRequired = AwsDbSecurityGroupRequired
+, AwsDbSecurityGroup = AwsDbSecurityGroup
+}

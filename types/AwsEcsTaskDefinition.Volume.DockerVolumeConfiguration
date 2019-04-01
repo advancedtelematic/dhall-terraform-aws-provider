@@ -1,0 +1,17 @@
+
+let DockerVolumeConfigurationOptional =
+  { autoprovision : Optional Bool
+  , driver : Optional Text
+  , driver_opts : Optional (List { mapKey : Text, mapValue : Text })
+  , labels : Optional (List { mapKey : Text, mapValue : Text })
+  , scope : Optional Text
+  }
+
+let DockerVolumeConfigurationRequired = {}
+let DockerVolumeConfiguration = DockerVolumeConfigurationOptional //\\ DockerVolumeConfigurationRequired
+
+in
+{ DockerVolumeConfigurationOptional = DockerVolumeConfigurationOptional
+, DockerVolumeConfigurationRequired = DockerVolumeConfigurationRequired
+, DockerVolumeConfiguration = DockerVolumeConfiguration
+}

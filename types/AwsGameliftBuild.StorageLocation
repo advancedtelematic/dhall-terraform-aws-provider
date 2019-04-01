@@ -1,0 +1,13 @@
+
+let StorageLocationOptional = {}
+
+let StorageLocationRequired =
+  { bucket : Text
+  , key : Text
+  , role_arn : Text
+  }
+let StorageLocation = StorageLocationOptional //\\ StorageLocationRequired
+
+in
+{ StorageLocation = StorageLocation
+}

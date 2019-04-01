@@ -1,0 +1,15 @@
+
+let AwsCognitoIdentityPoolRolesAttachmentOptional =
+  { role_mapping : Optional (List (./AwsCognitoIdentityPoolRolesAttachment.RoleMapping).RoleMapping) }
+
+let AwsCognitoIdentityPoolRolesAttachmentRequired =
+  { identity_pool_id : Text
+  , roles : (./AwsCognitoIdentityPoolRolesAttachment.Roles).Roles
+  }
+let AwsCognitoIdentityPoolRolesAttachment = AwsCognitoIdentityPoolRolesAttachmentOptional //\\ AwsCognitoIdentityPoolRolesAttachmentRequired
+
+in
+{ AwsCognitoIdentityPoolRolesAttachmentOptional = AwsCognitoIdentityPoolRolesAttachmentOptional
+, AwsCognitoIdentityPoolRolesAttachmentRequired = AwsCognitoIdentityPoolRolesAttachmentRequired
+, AwsCognitoIdentityPoolRolesAttachment = AwsCognitoIdentityPoolRolesAttachment
+}

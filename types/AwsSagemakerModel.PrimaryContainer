@@ -1,0 +1,16 @@
+
+let PrimaryContainerOptional =
+  { container_hostname : Optional Text
+  , environment : Optional (List { mapKey : Text, mapValue : Text })
+  , model_data_url : Optional Text
+  }
+
+let PrimaryContainerRequired =
+  { image : Text }
+let PrimaryContainer = PrimaryContainerOptional //\\ PrimaryContainerRequired
+
+in
+{ PrimaryContainerOptional = PrimaryContainerOptional
+, PrimaryContainerRequired = PrimaryContainerRequired
+, PrimaryContainer = PrimaryContainer
+}

@@ -1,0 +1,19 @@
+
+let AwsWorklinkFleetOptional =
+  { audit_stream_arn : Optional Text
+  , device_ca_certificate : Optional Text
+  , display_name : Optional Text
+  , optimize_for_end_user_location : Optional Bool
+  , identity_provider : Optional (./AwsWorklinkFleet.IdentityProvider).IdentityProvider
+  , network : Optional (./AwsWorklinkFleet.Network).Network
+  }
+
+let AwsWorklinkFleetRequired =
+  { name : Text }
+let AwsWorklinkFleet = AwsWorklinkFleetOptional //\\ AwsWorklinkFleetRequired
+
+in
+{ AwsWorklinkFleetOptional = AwsWorklinkFleetOptional
+, AwsWorklinkFleetRequired = AwsWorklinkFleetRequired
+, AwsWorklinkFleet = AwsWorklinkFleet
+}

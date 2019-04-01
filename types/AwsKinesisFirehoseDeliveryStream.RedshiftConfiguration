@@ -1,0 +1,25 @@
+
+let RedshiftConfigurationOptional =
+  { copy_options : Optional Text
+  , data_table_columns : Optional Text
+  , retry_duration : Optional Natural
+  , s3_backup_mode : Optional Text
+  , cloudwatch_logging_options : Optional (./AwsKinesisFirehoseDeliveryStream.RedshiftConfiguration.CloudwatchLoggingOptions).CloudwatchLoggingOptions
+  , processing_configuration : Optional (./AwsKinesisFirehoseDeliveryStream.RedshiftConfiguration.ProcessingConfiguration).ProcessingConfiguration
+  , s3_backup_configuration : Optional (./AwsKinesisFirehoseDeliveryStream.RedshiftConfiguration.S3BackupConfiguration).S3BackupConfiguration
+  }
+
+let RedshiftConfigurationRequired =
+  { cluster_jdbcurl : Text
+  , data_table_name : Text
+  , password : Text
+  , role_arn : Text
+  , username : Text
+  }
+let RedshiftConfiguration = RedshiftConfigurationOptional //\\ RedshiftConfigurationRequired
+
+in
+{ RedshiftConfigurationOptional = RedshiftConfigurationOptional
+, RedshiftConfigurationRequired = RedshiftConfigurationRequired
+, RedshiftConfiguration = RedshiftConfiguration
+}

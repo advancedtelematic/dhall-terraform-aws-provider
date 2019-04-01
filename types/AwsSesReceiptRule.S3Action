@@ -1,0 +1,18 @@
+
+let S3ActionOptional =
+  { kms_key_arn : Optional Text
+  , object_key_prefix : Optional Text
+  , topic_arn : Optional Text
+  }
+
+let S3ActionRequired =
+  { bucket_name : Text
+  , position : Natural
+  }
+let S3Action = S3ActionOptional //\\ S3ActionRequired
+
+in
+{ S3ActionOptional = S3ActionOptional
+, S3ActionRequired = S3ActionRequired
+, S3Action = S3Action
+}

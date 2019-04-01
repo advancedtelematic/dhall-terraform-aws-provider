@@ -1,0 +1,18 @@
+
+let EcsTargetOptional =
+  { group : Optional Text
+  , launch_type : Optional Text
+  , platform_version : Optional Text
+  , task_count : Optional Natural
+  , network_configuration : Optional (./AwsCloudwatchEventTarget.EcsTarget.NetworkConfiguration).NetworkConfiguration
+  }
+
+let EcsTargetRequired =
+  { task_definition_arn : Text }
+let EcsTarget = EcsTargetOptional //\\ EcsTargetRequired
+
+in
+{ EcsTargetOptional = EcsTargetOptional
+, EcsTargetRequired = EcsTargetRequired
+, EcsTarget = EcsTarget
+}

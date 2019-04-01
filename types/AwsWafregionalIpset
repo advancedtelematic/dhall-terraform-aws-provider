@@ -1,0 +1,13 @@
+
+let AwsWafregionalIpsetOptional =
+  { ip_set_descriptor : Optional (List (./AwsWafregionalIpset.IpSetDescriptor).IpSetDescriptor) }
+
+let AwsWafregionalIpsetRequired =
+  { name : Text }
+let AwsWafregionalIpset = AwsWafregionalIpsetOptional //\\ AwsWafregionalIpsetRequired
+
+in
+{ AwsWafregionalIpsetOptional = AwsWafregionalIpsetOptional
+, AwsWafregionalIpsetRequired = AwsWafregionalIpsetRequired
+, AwsWafregionalIpset = AwsWafregionalIpset
+}

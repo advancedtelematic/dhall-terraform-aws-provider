@@ -1,0 +1,9 @@
+
+let StartingPositionConfigurationOptional = {}
+
+let StartingPositionConfigurationRequired = {}
+let StartingPositionConfiguration = StartingPositionConfigurationOptional //\\ StartingPositionConfigurationRequired
+
+in
+{ StartingPositionConfiguration = StartingPositionConfiguration
+}

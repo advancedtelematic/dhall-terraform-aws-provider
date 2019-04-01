@@ -1,0 +1,12 @@
+
+let GlobalFilterOptional = {}
+
+let GlobalFilterRequired =
+  { key : Text
+  , values : (List Text)
+  }
+let GlobalFilter = GlobalFilterOptional //\\ GlobalFilterRequired
+
+in
+{ GlobalFilter = GlobalFilter
+}

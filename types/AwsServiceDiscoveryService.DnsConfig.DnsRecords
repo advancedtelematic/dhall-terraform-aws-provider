@@ -1,0 +1,12 @@
+
+let DnsRecordsOptional = {}
+
+let DnsRecordsRequired =
+  { ttl : Natural
+  , type : Text
+  }
+let DnsRecords = DnsRecordsOptional //\\ DnsRecordsRequired
+
+in
+{ DnsRecords = DnsRecords
+}

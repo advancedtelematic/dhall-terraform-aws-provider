@@ -1,0 +1,12 @@
+
+let TtlOptional = {}
+
+let TtlRequired =
+  { attribute_name : Text
+  , enabled : Bool
+  }
+let Ttl = TtlOptional //\\ TtlRequired
+
+in
+{ Ttl = Ttl
+}

@@ -1,0 +1,15 @@
+
+let AwsGameliftAliasOptional =
+  { description : Optional Text }
+
+let AwsGameliftAliasRequired =
+  { name : Text
+  , routing_strategy : (./AwsGameliftAlias.RoutingStrategy).RoutingStrategy
+  }
+let AwsGameliftAlias = AwsGameliftAliasOptional //\\ AwsGameliftAliasRequired
+
+in
+{ AwsGameliftAliasOptional = AwsGameliftAliasOptional
+, AwsGameliftAliasRequired = AwsGameliftAliasRequired
+, AwsGameliftAlias = AwsGameliftAlias
+}

@@ -1,0 +1,15 @@
+
+let BlueGreenDeploymentConfigOptional =
+  { deployment_ready_option : Optional (./AwsCodedeployDeploymentGroup.BlueGreenDeploymentConfig.DeploymentReadyOption).DeploymentReadyOption
+  , green_fleet_provisioning_option : Optional (./AwsCodedeployDeploymentGroup.BlueGreenDeploymentConfig.GreenFleetProvisioningOption).GreenFleetProvisioningOption
+  , terminate_blue_instances_on_deployment_success : Optional (./AwsCodedeployDeploymentGroup.BlueGreenDeploymentConfig.TerminateBlueInstancesOnDeploymentSuccess).TerminateBlueInstancesOnDeploymentSuccess
+  }
+
+let BlueGreenDeploymentConfigRequired = {}
+let BlueGreenDeploymentConfig = BlueGreenDeploymentConfigOptional //\\ BlueGreenDeploymentConfigRequired
+
+in
+{ BlueGreenDeploymentConfigOptional = BlueGreenDeploymentConfigOptional
+, BlueGreenDeploymentConfigRequired = BlueGreenDeploymentConfigRequired
+, BlueGreenDeploymentConfig = BlueGreenDeploymentConfig
+}

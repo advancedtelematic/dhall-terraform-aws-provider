@@ -1,0 +1,17 @@
+
+let AwsCloudwatchEventPermissionOptional =
+  { action : Optional Text
+  , condition : Optional (./AwsCloudwatchEventPermission.Condition).Condition
+  }
+
+let AwsCloudwatchEventPermissionRequired =
+  { principal : Text
+  , statement_id : Text
+  }
+let AwsCloudwatchEventPermission = AwsCloudwatchEventPermissionOptional //\\ AwsCloudwatchEventPermissionRequired
+
+in
+{ AwsCloudwatchEventPermissionOptional = AwsCloudwatchEventPermissionOptional
+, AwsCloudwatchEventPermissionRequired = AwsCloudwatchEventPermissionRequired
+, AwsCloudwatchEventPermission = AwsCloudwatchEventPermission
+}

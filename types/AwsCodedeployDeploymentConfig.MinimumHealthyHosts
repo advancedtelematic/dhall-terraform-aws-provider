@@ -1,0 +1,14 @@
+
+let MinimumHealthyHostsOptional =
+  { type : Optional Text
+  , value : Optional Natural
+  }
+
+let MinimumHealthyHostsRequired = {}
+let MinimumHealthyHosts = MinimumHealthyHostsOptional //\\ MinimumHealthyHostsRequired
+
+in
+{ MinimumHealthyHostsOptional = MinimumHealthyHostsOptional
+, MinimumHealthyHostsRequired = MinimumHealthyHostsRequired
+, MinimumHealthyHosts = MinimumHealthyHosts
+}

@@ -1,0 +1,10 @@
+
+let ElasticGpuSpecificationsOptional = {}
+
+let ElasticGpuSpecificationsRequired =
+  { type : Text }
+let ElasticGpuSpecifications = ElasticGpuSpecificationsOptional //\\ ElasticGpuSpecificationsRequired
+
+in
+{ ElasticGpuSpecifications = ElasticGpuSpecifications
+}

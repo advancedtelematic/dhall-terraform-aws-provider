@@ -1,0 +1,14 @@
+
+let ScalableTargetActionOptional =
+  { max_capacity : Optional Natural
+  , min_capacity : Optional Natural
+  }
+
+let ScalableTargetActionRequired = {}
+let ScalableTargetAction = ScalableTargetActionOptional //\\ ScalableTargetActionRequired
+
+in
+{ ScalableTargetActionOptional = ScalableTargetActionOptional
+, ScalableTargetActionRequired = ScalableTargetActionRequired
+, ScalableTargetAction = ScalableTargetAction
+}

@@ -1,0 +1,17 @@
+
+let ForwardedValuesOptional =
+  { headers : Optional (List Text)
+  , query_string_cache_keys : Optional (List Text)
+  }
+
+let ForwardedValuesRequired =
+  { query_string : Bool
+  , cookies : (./AwsCloudfrontDistribution.DefaultCacheBehavior.ForwardedValues.Cookies).Cookies
+  }
+let ForwardedValues = ForwardedValuesOptional //\\ ForwardedValuesRequired
+
+in
+{ ForwardedValuesOptional = ForwardedValuesOptional
+, ForwardedValuesRequired = ForwardedValuesRequired
+, ForwardedValues = ForwardedValues
+}

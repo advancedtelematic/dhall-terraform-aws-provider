@@ -1,0 +1,12 @@
+
+let AccessLogSettingsOptional = {}
+
+let AccessLogSettingsRequired =
+  { destination_arn : Text
+  , format : Text
+  }
+let AccessLogSettings = AccessLogSettingsOptional //\\ AccessLogSettingsRequired
+
+in
+{ AccessLogSettings = AccessLogSettings
+}

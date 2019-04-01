@@ -1,0 +1,15 @@
+
+let AdminCreateUserConfigOptional =
+  { allow_admin_create_user_only : Optional Bool
+  , unused_account_validity_days : Optional Natural
+  , invite_message_template : Optional (./AwsCognitoUserPool.AdminCreateUserConfig.InviteMessageTemplate).InviteMessageTemplate
+  }
+
+let AdminCreateUserConfigRequired = {}
+let AdminCreateUserConfig = AdminCreateUserConfigOptional //\\ AdminCreateUserConfigRequired
+
+in
+{ AdminCreateUserConfigOptional = AdminCreateUserConfigOptional
+, AdminCreateUserConfigRequired = AdminCreateUserConfigRequired
+, AdminCreateUserConfig = AdminCreateUserConfig
+}

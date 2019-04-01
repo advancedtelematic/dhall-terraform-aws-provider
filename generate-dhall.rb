@@ -3,7 +3,7 @@ require 'pry'
 require './lib/render.rb'
 require './lib/structs.rb'
 
-file = File.read './schema/test-schema.json'
+file = File.read './schema/tf-aws-schema.json'
 
 resources = JSON.parse(file)
 

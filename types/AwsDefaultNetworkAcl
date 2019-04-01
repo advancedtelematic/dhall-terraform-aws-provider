@@ -1,0 +1,17 @@
+
+let AwsDefaultNetworkAclOptional =
+  { subnet_ids : Optional (List Text)
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , egress : Optional (List (./AwsDefaultNetworkAcl.Egress).Egress)
+  , ingress : Optional (List (./AwsDefaultNetworkAcl.Ingress).Ingress)
+  }
+
+let AwsDefaultNetworkAclRequired =
+  { default_network_acl_id : Text }
+let AwsDefaultNetworkAcl = AwsDefaultNetworkAclOptional //\\ AwsDefaultNetworkAclRequired
+
+in
+{ AwsDefaultNetworkAclOptional = AwsDefaultNetworkAclOptional
+, AwsDefaultNetworkAclRequired = AwsDefaultNetworkAclRequired
+, AwsDefaultNetworkAcl = AwsDefaultNetworkAcl
+}

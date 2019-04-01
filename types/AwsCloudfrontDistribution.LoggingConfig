@@ -1,0 +1,15 @@
+
+let LoggingConfigOptional =
+  { include_cookies : Optional Bool
+  , prefix : Optional Text
+  }
+
+let LoggingConfigRequired =
+  { bucket : Text }
+let LoggingConfig = LoggingConfigOptional //\\ LoggingConfigRequired
+
+in
+{ LoggingConfigOptional = LoggingConfigOptional
+, LoggingConfigRequired = LoggingConfigRequired
+, LoggingConfig = LoggingConfig
+}

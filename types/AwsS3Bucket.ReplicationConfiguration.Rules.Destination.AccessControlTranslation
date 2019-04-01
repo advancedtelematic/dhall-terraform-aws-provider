@@ -1,0 +1,10 @@
+
+let AccessControlTranslationOptional = {}
+
+let AccessControlTranslationRequired =
+  { owner : Text }
+let AccessControlTranslation = AccessControlTranslationOptional //\\ AccessControlTranslationRequired
+
+in
+{ AccessControlTranslation = AccessControlTranslation
+}

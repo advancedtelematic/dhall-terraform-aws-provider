@@ -1,0 +1,12 @@
+
+let TargetsOptional = {}
+
+let TargetsRequired =
+  { key : Text
+  , values : (List Text)
+  }
+let Targets = TargetsOptional //\\ TargetsRequired
+
+in
+{ Targets = Targets
+}

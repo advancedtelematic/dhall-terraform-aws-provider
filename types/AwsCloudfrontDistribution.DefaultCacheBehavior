@@ -1,0 +1,26 @@
+
+let DefaultCacheBehaviorOptional =
+  { compress : Optional Bool
+  , default_ttl : Optional Natural
+  , field_level_encryption_id : Optional Text
+  , max_ttl : Optional Natural
+  , min_ttl : Optional Natural
+  , smooth_streaming : Optional Bool
+  , trusted_signers : Optional (List Text)
+  , lambda_function_association : Optional (List (./AwsCloudfrontDistribution.DefaultCacheBehavior.LambdaFunctionAssociation).LambdaFunctionAssociation)
+  }
+
+let DefaultCacheBehaviorRequired =
+  { allowed_methods : (List Text)
+  , cached_methods : (List Text)
+  , target_origin_id : Text
+  , viewer_protocol_policy : Text
+  , forwarded_values : (./AwsCloudfrontDistribution.DefaultCacheBehavior.ForwardedValues).ForwardedValues
+  }
+let DefaultCacheBehavior = DefaultCacheBehaviorOptional //\\ DefaultCacheBehaviorRequired
+
+in
+{ DefaultCacheBehaviorOptional = DefaultCacheBehaviorOptional
+, DefaultCacheBehaviorRequired = DefaultCacheBehaviorRequired
+, DefaultCacheBehavior = DefaultCacheBehavior
+}

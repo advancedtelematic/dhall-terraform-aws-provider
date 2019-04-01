@@ -1,0 +1,13 @@
+
+let MaintenanceWindowStartTimeOptional = {}
+
+let MaintenanceWindowStartTimeRequired =
+  { day_of_week : Text
+  , time_of_day : Text
+  , time_zone : Text
+  }
+let MaintenanceWindowStartTime = MaintenanceWindowStartTimeOptional //\\ MaintenanceWindowStartTimeRequired
+
+in
+{ MaintenanceWindowStartTime = MaintenanceWindowStartTime
+}

@@ -1,0 +1,14 @@
+
+let SizeConstraintsOptional = {}
+
+let SizeConstraintsRequired =
+  { comparison_operator : Text
+  , size : Natural
+  , text_transformation : Text
+  , field_to_match : (./AwsWafregionalSizeConstraintSet.SizeConstraints.FieldToMatch).FieldToMatch
+  }
+let SizeConstraints = SizeConstraintsOptional //\\ SizeConstraintsRequired
+
+in
+{ SizeConstraints = SizeConstraints
+}

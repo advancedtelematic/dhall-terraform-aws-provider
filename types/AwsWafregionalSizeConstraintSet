@@ -1,0 +1,13 @@
+
+let AwsWafregionalSizeConstraintSetOptional =
+  { size_constraints : Optional (List (./AwsWafregionalSizeConstraintSet.SizeConstraints).SizeConstraints) }
+
+let AwsWafregionalSizeConstraintSetRequired =
+  { name : Text }
+let AwsWafregionalSizeConstraintSet = AwsWafregionalSizeConstraintSetOptional //\\ AwsWafregionalSizeConstraintSetRequired
+
+in
+{ AwsWafregionalSizeConstraintSetOptional = AwsWafregionalSizeConstraintSetOptional
+, AwsWafregionalSizeConstraintSetRequired = AwsWafregionalSizeConstraintSetRequired
+, AwsWafregionalSizeConstraintSet = AwsWafregionalSizeConstraintSet
+}

@@ -1,0 +1,14 @@
+
+let QuietTimeOptional =
+  { end : Optional Text
+  , start : Optional Text
+  }
+
+let QuietTimeRequired = {}
+let QuietTime = QuietTimeOptional //\\ QuietTimeRequired
+
+in
+{ QuietTimeOptional = QuietTimeOptional
+, QuietTimeRequired = QuietTimeRequired
+, QuietTime = QuietTime
+}

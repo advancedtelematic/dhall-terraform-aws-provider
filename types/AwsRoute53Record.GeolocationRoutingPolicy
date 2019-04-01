@@ -1,0 +1,15 @@
+
+let GeolocationRoutingPolicyOptional =
+  { continent : Optional Text
+  , country : Optional Text
+  , subdivision : Optional Text
+  }
+
+let GeolocationRoutingPolicyRequired = {}
+let GeolocationRoutingPolicy = GeolocationRoutingPolicyOptional //\\ GeolocationRoutingPolicyRequired
+
+in
+{ GeolocationRoutingPolicyOptional = GeolocationRoutingPolicyOptional
+, GeolocationRoutingPolicyRequired = GeolocationRoutingPolicyRequired
+, GeolocationRoutingPolicy = GeolocationRoutingPolicy
+}

@@ -1,0 +1,13 @@
+
+let LaunchTemplateConfigOptional =
+  { override : Optional (List (./AwsEc2Fleet.LaunchTemplateConfig.Override).Override) }
+
+let LaunchTemplateConfigRequired =
+  { launch_template_specification : (./AwsEc2Fleet.LaunchTemplateConfig.LaunchTemplateSpecification).LaunchTemplateSpecification }
+let LaunchTemplateConfig = LaunchTemplateConfigOptional //\\ LaunchTemplateConfigRequired
+
+in
+{ LaunchTemplateConfigOptional = LaunchTemplateConfigOptional
+, LaunchTemplateConfigRequired = LaunchTemplateConfigRequired
+, LaunchTemplateConfig = LaunchTemplateConfig
+}

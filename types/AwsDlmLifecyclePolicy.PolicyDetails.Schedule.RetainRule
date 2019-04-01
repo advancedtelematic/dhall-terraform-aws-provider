@@ -1,0 +1,10 @@
+
+let RetainRuleOptional = {}
+
+let RetainRuleRequired =
+  { count : Natural }
+let RetainRule = RetainRuleOptional //\\ RetainRuleRequired
+
+in
+{ RetainRule = RetainRule
+}

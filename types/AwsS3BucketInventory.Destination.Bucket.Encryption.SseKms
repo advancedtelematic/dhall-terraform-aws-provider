@@ -1,0 +1,10 @@
+
+let SseKmsOptional = {}
+
+let SseKmsRequired =
+  { key_id : Text }
+let SseKms = SseKmsOptional //\\ SseKmsRequired
+
+in
+{ SseKms = SseKms
+}

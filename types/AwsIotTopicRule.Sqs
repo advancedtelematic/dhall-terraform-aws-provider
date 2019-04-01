@@ -1,0 +1,13 @@
+
+let SqsOptional = {}
+
+let SqsRequired =
+  { queue_url : Text
+  , role_arn : Text
+  , use_base64 : Bool
+  }
+let Sqs = SqsOptional //\\ SqsRequired
+
+in
+{ Sqs = Sqs
+}

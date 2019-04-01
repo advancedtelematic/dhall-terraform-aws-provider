@@ -1,0 +1,10 @@
+
+let HttpConfigOptional = {}
+
+let HttpConfigRequired =
+  { endpoint : Text }
+let HttpConfig = HttpConfigOptional //\\ HttpConfigRequired
+
+in
+{ HttpConfig = HttpConfig
+}

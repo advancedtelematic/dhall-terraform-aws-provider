@@ -1,0 +1,14 @@
+
+let AutoRollbackConfigurationOptional =
+  { enabled : Optional Bool
+  , events : Optional (List Text)
+  }
+
+let AutoRollbackConfigurationRequired = {}
+let AutoRollbackConfiguration = AutoRollbackConfigurationOptional //\\ AutoRollbackConfigurationRequired
+
+in
+{ AutoRollbackConfigurationOptional = AutoRollbackConfigurationOptional
+, AutoRollbackConfigurationRequired = AutoRollbackConfigurationRequired
+, AutoRollbackConfiguration = AutoRollbackConfiguration
+}

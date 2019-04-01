@@ -1,0 +1,14 @@
+
+let ContentConfigOptional =
+  { bucket : Optional Text
+  , storage_class : Optional Text
+  }
+
+let ContentConfigRequired = {}
+let ContentConfig = ContentConfigOptional //\\ ContentConfigRequired
+
+in
+{ ContentConfigOptional = ContentConfigOptional
+, ContentConfigRequired = ContentConfigRequired
+, ContentConfig = ContentConfig
+}

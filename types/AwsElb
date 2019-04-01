@@ -1,0 +1,28 @@
+
+let AwsElbOptional =
+  { availability_zones : Optional (List Text)
+  , connection_draining : Optional Bool
+  , connection_draining_timeout : Optional Natural
+  , cross_zone_load_balancing : Optional Bool
+  , idle_timeout : Optional Natural
+  , instances : Optional (List Text)
+  , internal : Optional Bool
+  , name : Optional Text
+  , name_prefix : Optional Text
+  , security_groups : Optional (List Text)
+  , source_security_group : Optional Text
+  , subnets : Optional (List Text)
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , access_logs : Optional (./AwsElb.AccessLogs).AccessLogs
+  , health_check : Optional (./AwsElb.HealthCheck).HealthCheck
+  }
+
+let AwsElbRequired =
+  { listener : List (./AwsElb.Listener).Listener }
+let AwsElb = AwsElbOptional //\\ AwsElbRequired
+
+in
+{ AwsElbOptional = AwsElbOptional
+, AwsElbRequired = AwsElbRequired
+, AwsElb = AwsElb
+}

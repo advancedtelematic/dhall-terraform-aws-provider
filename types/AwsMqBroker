@@ -1,0 +1,29 @@
+
+let AwsMqBrokerOptional =
+  { apply_immediately : Optional Bool
+  , auto_minor_version_upgrade : Optional Bool
+  , deployment_mode : Optional Text
+  , publicly_accessible : Optional Bool
+  , subnet_ids : Optional (List Text)
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , configuration : Optional (./AwsMqBroker.Configuration).Configuration
+  , instances : Optional (List (./AwsMqBroker.Instances).Instances)
+  , logs : Optional (./AwsMqBroker.Logs).Logs
+  , maintenance_window_start_time : Optional (./AwsMqBroker.MaintenanceWindowStartTime).MaintenanceWindowStartTime
+  }
+
+let AwsMqBrokerRequired =
+  { broker_name : Text
+  , engine_type : Text
+  , engine_version : Text
+  , host_instance_type : Text
+  , security_groups : (List Text)
+  , user : List (./AwsMqBroker.User).User
+  }
+let AwsMqBroker = AwsMqBrokerOptional //\\ AwsMqBrokerRequired
+
+in
+{ AwsMqBrokerOptional = AwsMqBrokerOptional
+, AwsMqBrokerRequired = AwsMqBrokerRequired
+, AwsMqBroker = AwsMqBroker
+}

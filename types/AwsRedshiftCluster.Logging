@@ -1,0 +1,15 @@
+
+let LoggingOptional =
+  { bucket_name : Optional Text
+  , s3_key_prefix : Optional Text
+  }
+
+let LoggingRequired =
+  { enable : Bool }
+let Logging = LoggingOptional //\\ LoggingRequired
+
+in
+{ LoggingOptional = LoggingOptional
+, LoggingRequired = LoggingRequired
+, Logging = Logging
+}

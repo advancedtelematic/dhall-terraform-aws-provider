@@ -1,0 +1,15 @@
+
+let TargetGroupPairInfoOptional =
+  { test_traffic_route : Optional (./AwsCodedeployDeploymentGroup.LoadBalancerInfo.TargetGroupPairInfo.TestTrafficRoute).TestTrafficRoute }
+
+let TargetGroupPairInfoRequired =
+  { prod_traffic_route : (./AwsCodedeployDeploymentGroup.LoadBalancerInfo.TargetGroupPairInfo.ProdTrafficRoute).ProdTrafficRoute
+  , target_group : List (./AwsCodedeployDeploymentGroup.LoadBalancerInfo.TargetGroupPairInfo.TargetGroup).TargetGroup
+  }
+let TargetGroupPairInfo = TargetGroupPairInfoOptional //\\ TargetGroupPairInfoRequired
+
+in
+{ TargetGroupPairInfoOptional = TargetGroupPairInfoOptional
+, TargetGroupPairInfoRequired = TargetGroupPairInfoRequired
+, TargetGroupPairInfo = TargetGroupPairInfo
+}

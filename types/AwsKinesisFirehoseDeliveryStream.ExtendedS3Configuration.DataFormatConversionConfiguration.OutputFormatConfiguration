@@ -1,0 +1,10 @@
+
+let OutputFormatConfigurationOptional = {}
+
+let OutputFormatConfigurationRequired =
+  { serializer : (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration.DataFormatConversionConfiguration.OutputFormatConfiguration.Serializer).Serializer }
+let OutputFormatConfiguration = OutputFormatConfigurationOptional //\\ OutputFormatConfigurationRequired
+
+in
+{ OutputFormatConfiguration = OutputFormatConfiguration
+}

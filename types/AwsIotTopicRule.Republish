@@ -1,0 +1,12 @@
+
+let RepublishOptional = {}
+
+let RepublishRequired =
+  { role_arn : Text
+  , topic : Text
+  }
+let Republish = RepublishOptional //\\ RepublishRequired
+
+in
+{ Republish = Republish
+}

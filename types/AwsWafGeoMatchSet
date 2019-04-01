@@ -1,0 +1,13 @@
+
+let AwsWafGeoMatchSetOptional =
+  { geo_match_constraint : Optional (List (./AwsWafGeoMatchSet.GeoMatchConstraint).GeoMatchConstraint) }
+
+let AwsWafGeoMatchSetRequired =
+  { name : Text }
+let AwsWafGeoMatchSet = AwsWafGeoMatchSetOptional //\\ AwsWafGeoMatchSetRequired
+
+in
+{ AwsWafGeoMatchSetOptional = AwsWafGeoMatchSetOptional
+, AwsWafGeoMatchSetRequired = AwsWafGeoMatchSetRequired
+, AwsWafGeoMatchSet = AwsWafGeoMatchSet
+}

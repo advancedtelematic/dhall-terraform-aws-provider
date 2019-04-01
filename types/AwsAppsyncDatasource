@@ -1,0 +1,22 @@
+
+let AwsAppsyncDatasourceOptional =
+  { description : Optional Text
+  , service_role_arn : Optional Text
+  , dynamodb_config : Optional (./AwsAppsyncDatasource.DynamodbConfig).DynamodbConfig
+  , elasticsearch_config : Optional (./AwsAppsyncDatasource.ElasticsearchConfig).ElasticsearchConfig
+  , http_config : Optional (./AwsAppsyncDatasource.HttpConfig).HttpConfig
+  , lambda_config : Optional (./AwsAppsyncDatasource.LambdaConfig).LambdaConfig
+  }
+
+let AwsAppsyncDatasourceRequired =
+  { api_id : Text
+  , name : Text
+  , type : Text
+  }
+let AwsAppsyncDatasource = AwsAppsyncDatasourceOptional //\\ AwsAppsyncDatasourceRequired
+
+in
+{ AwsAppsyncDatasourceOptional = AwsAppsyncDatasourceOptional
+, AwsAppsyncDatasourceRequired = AwsAppsyncDatasourceRequired
+, AwsAppsyncDatasource = AwsAppsyncDatasource
+}

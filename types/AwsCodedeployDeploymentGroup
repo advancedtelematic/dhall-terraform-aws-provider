@@ -1,0 +1,28 @@
+
+let AwsCodedeployDeploymentGroupOptional =
+  { autoscaling_groups : Optional (List Text)
+  , deployment_config_name : Optional Text
+  , alarm_configuration : Optional (./AwsCodedeployDeploymentGroup.AlarmConfiguration).AlarmConfiguration
+  , auto_rollback_configuration : Optional (./AwsCodedeployDeploymentGroup.AutoRollbackConfiguration).AutoRollbackConfiguration
+  , blue_green_deployment_config : Optional (./AwsCodedeployDeploymentGroup.BlueGreenDeploymentConfig).BlueGreenDeploymentConfig
+  , deployment_style : Optional (./AwsCodedeployDeploymentGroup.DeploymentStyle).DeploymentStyle
+  , ec2_tag_filter : Optional (List (./AwsCodedeployDeploymentGroup.Ec2TagFilter).Ec2TagFilter)
+  , ec2_tag_set : Optional (List (./AwsCodedeployDeploymentGroup.Ec2TagSet).Ec2TagSet)
+  , ecs_service : Optional (./AwsCodedeployDeploymentGroup.EcsService).EcsService
+  , load_balancer_info : Optional (./AwsCodedeployDeploymentGroup.LoadBalancerInfo).LoadBalancerInfo
+  , on_premises_instance_tag_filter : Optional (List (./AwsCodedeployDeploymentGroup.OnPremisesInstanceTagFilter).OnPremisesInstanceTagFilter)
+  , trigger_configuration : Optional (List (./AwsCodedeployDeploymentGroup.TriggerConfiguration).TriggerConfiguration)
+  }
+
+let AwsCodedeployDeploymentGroupRequired =
+  { app_name : Text
+  , deployment_group_name : Text
+  , service_role_arn : Text
+  }
+let AwsCodedeployDeploymentGroup = AwsCodedeployDeploymentGroupOptional //\\ AwsCodedeployDeploymentGroupRequired
+
+in
+{ AwsCodedeployDeploymentGroupOptional = AwsCodedeployDeploymentGroupOptional
+, AwsCodedeployDeploymentGroupRequired = AwsCodedeployDeploymentGroupRequired
+, AwsCodedeployDeploymentGroup = AwsCodedeployDeploymentGroup
+}

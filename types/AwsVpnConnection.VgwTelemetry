@@ -1,0 +1,9 @@
+
+let VgwTelemetryOptional = {}
+
+let VgwTelemetryRequired = {}
+let VgwTelemetry = VgwTelemetryOptional //\\ VgwTelemetryRequired
+
+in
+{ VgwTelemetry = VgwTelemetry
+}

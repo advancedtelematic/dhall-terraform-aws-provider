@@ -1,0 +1,16 @@
+
+let AwsCodepipelineWebhookOptional = {}
+
+let AwsCodepipelineWebhookRequired =
+  { authentication : Text
+  , name : Text
+  , target_action : Text
+  , target_pipeline : Text
+  , authentication_configuration : (./AwsCodepipelineWebhook.AuthenticationConfiguration).AuthenticationConfiguration
+  , filter : List (./AwsCodepipelineWebhook.Filter).Filter
+  }
+let AwsCodepipelineWebhook = AwsCodepipelineWebhookOptional //\\ AwsCodepipelineWebhookRequired
+
+in
+{ AwsCodepipelineWebhook = AwsCodepipelineWebhook
+}

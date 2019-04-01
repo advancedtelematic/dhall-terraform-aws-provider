@@ -1,0 +1,13 @@
+
+let SmbActiveDirectorySettingsOptional = {}
+
+let SmbActiveDirectorySettingsRequired =
+  { domain_name : Text
+  , password : Text
+  , username : Text
+  }
+let SmbActiveDirectorySettings = SmbActiveDirectorySettingsOptional //\\ SmbActiveDirectorySettingsRequired
+
+in
+{ SmbActiveDirectorySettings = SmbActiveDirectorySettings
+}

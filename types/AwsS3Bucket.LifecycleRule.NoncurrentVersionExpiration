@@ -1,0 +1,12 @@
+
+let NoncurrentVersionExpirationOptional =
+  { days : Optional Natural }
+
+let NoncurrentVersionExpirationRequired = {}
+let NoncurrentVersionExpiration = NoncurrentVersionExpirationOptional //\\ NoncurrentVersionExpirationRequired
+
+in
+{ NoncurrentVersionExpirationOptional = NoncurrentVersionExpirationOptional
+, NoncurrentVersionExpirationRequired = NoncurrentVersionExpirationRequired
+, NoncurrentVersionExpiration = NoncurrentVersionExpiration
+}

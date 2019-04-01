@@ -1,0 +1,18 @@
+
+let BucketOptional =
+  { account_id : Optional Text
+  , prefix : Optional Text
+  , encryption : Optional (./AwsS3BucketInventory.Destination.Bucket.Encryption).Encryption
+  }
+
+let BucketRequired =
+  { bucket_arn : Text
+  , format : Text
+  }
+let Bucket = BucketOptional //\\ BucketRequired
+
+in
+{ BucketOptional = BucketOptional
+, BucketRequired = BucketRequired
+, Bucket = Bucket
+}

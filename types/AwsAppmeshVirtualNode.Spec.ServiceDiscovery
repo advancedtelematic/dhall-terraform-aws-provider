@@ -1,0 +1,10 @@
+
+let ServiceDiscoveryOptional = {}
+
+let ServiceDiscoveryRequired =
+  { dns : (./AwsAppmeshVirtualNode.Spec.ServiceDiscovery.Dns).Dns }
+let ServiceDiscovery = ServiceDiscoveryOptional //\\ ServiceDiscoveryRequired
+
+in
+{ ServiceDiscovery = ServiceDiscovery
+}

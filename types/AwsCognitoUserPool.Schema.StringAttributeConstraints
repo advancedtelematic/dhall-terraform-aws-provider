@@ -1,0 +1,14 @@
+
+let StringAttributeConstraintsOptional =
+  { max_length : Optional Text
+  , min_length : Optional Text
+  }
+
+let StringAttributeConstraintsRequired = {}
+let StringAttributeConstraints = StringAttributeConstraintsOptional //\\ StringAttributeConstraintsRequired
+
+in
+{ StringAttributeConstraintsOptional = StringAttributeConstraintsOptional
+, StringAttributeConstraintsRequired = StringAttributeConstraintsRequired
+, StringAttributeConstraints = StringAttributeConstraints
+}

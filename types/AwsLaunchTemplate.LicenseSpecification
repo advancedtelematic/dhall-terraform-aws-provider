@@ -1,0 +1,10 @@
+
+let LicenseSpecificationOptional = {}
+
+let LicenseSpecificationRequired =
+  { license_configuration_arn : Text }
+let LicenseSpecification = LicenseSpecificationOptional //\\ LicenseSpecificationRequired
+
+in
+{ LicenseSpecification = LicenseSpecification
+}

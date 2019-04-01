@@ -1,0 +1,20 @@
+
+let AwsSsmAssociationOptional =
+  { association_name : Optional Text
+  , document_version : Optional Text
+  , instance_id : Optional Text
+  , parameters : Optional (List { mapKey : Text, mapValue : Text })
+  , schedule_expression : Optional Text
+  , output_location : Optional (./AwsSsmAssociation.OutputLocation).OutputLocation
+  , targets : Optional (List (./AwsSsmAssociation.Targets).Targets)
+  }
+
+let AwsSsmAssociationRequired =
+  { name : Text }
+let AwsSsmAssociation = AwsSsmAssociationOptional //\\ AwsSsmAssociationRequired
+
+in
+{ AwsSsmAssociationOptional = AwsSsmAssociationOptional
+, AwsSsmAssociationRequired = AwsSsmAssociationRequired
+, AwsSsmAssociation = AwsSsmAssociation
+}

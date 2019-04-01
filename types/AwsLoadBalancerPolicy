@@ -1,0 +1,16 @@
+
+let AwsLoadBalancerPolicyOptional =
+  { policy_attribute : Optional (List (./AwsLoadBalancerPolicy.PolicyAttribute).PolicyAttribute) }
+
+let AwsLoadBalancerPolicyRequired =
+  { load_balancer_name : Text
+  , policy_name : Text
+  , policy_type_name : Text
+  }
+let AwsLoadBalancerPolicy = AwsLoadBalancerPolicyOptional //\\ AwsLoadBalancerPolicyRequired
+
+in
+{ AwsLoadBalancerPolicyOptional = AwsLoadBalancerPolicyOptional
+, AwsLoadBalancerPolicyRequired = AwsLoadBalancerPolicyRequired
+, AwsLoadBalancerPolicy = AwsLoadBalancerPolicy
+}

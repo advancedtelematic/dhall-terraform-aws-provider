@@ -1,0 +1,15 @@
+
+let StickinessOptional =
+  { cookie_duration : Optional Natural
+  , enabled : Optional Bool
+  }
+
+let StickinessRequired =
+  { type : Text }
+let Stickiness = StickinessOptional //\\ StickinessRequired
+
+in
+{ StickinessOptional = StickinessOptional
+, StickinessRequired = StickinessRequired
+, Stickiness = Stickiness
+}

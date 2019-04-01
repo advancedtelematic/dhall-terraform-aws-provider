@@ -1,0 +1,15 @@
+
+let ConnectionLogOptionsOptional =
+  { cloudwatch_log_group : Optional Text
+  , cloudwatch_log_stream : Optional Text
+  }
+
+let ConnectionLogOptionsRequired =
+  { enabled : Bool }
+let ConnectionLogOptions = ConnectionLogOptionsOptional //\\ ConnectionLogOptionsRequired
+
+in
+{ ConnectionLogOptionsOptional = ConnectionLogOptionsOptional
+, ConnectionLogOptionsRequired = ConnectionLogOptionsRequired
+, ConnectionLogOptions = ConnectionLogOptions
+}

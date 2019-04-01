@@ -1,0 +1,18 @@
+
+let CloudwatchMetricOptional =
+  { metric_timestamp : Optional Text }
+
+let CloudwatchMetricRequired =
+  { metric_name : Text
+  , metric_namespace : Text
+  , metric_unit : Text
+  , metric_value : Text
+  , role_arn : Text
+  }
+let CloudwatchMetric = CloudwatchMetricOptional //\\ CloudwatchMetricRequired
+
+in
+{ CloudwatchMetricOptional = CloudwatchMetricOptional
+, CloudwatchMetricRequired = CloudwatchMetricRequired
+, CloudwatchMetric = CloudwatchMetric
+}

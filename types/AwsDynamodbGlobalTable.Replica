@@ -1,0 +1,10 @@
+
+let ReplicaOptional = {}
+
+let ReplicaRequired =
+  { region_name : Text }
+let Replica = ReplicaOptional //\\ ReplicaRequired
+
+in
+{ Replica = Replica
+}

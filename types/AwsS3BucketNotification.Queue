@@ -1,0 +1,18 @@
+
+let QueueOptional =
+  { filter_prefix : Optional Text
+  , filter_suffix : Optional Text
+  , id : Optional Text
+  }
+
+let QueueRequired =
+  { events : (List Text)
+  , queue_arn : Text
+  }
+let Queue = QueueOptional //\\ QueueRequired
+
+in
+{ QueueOptional = QueueOptional
+, QueueRequired = QueueRequired
+, Queue = Queue
+}

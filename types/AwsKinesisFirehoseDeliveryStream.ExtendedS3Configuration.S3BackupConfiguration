@@ -1,0 +1,21 @@
+
+let S3BackupConfigurationOptional =
+  { buffer_interval : Optional Natural
+  , buffer_size : Optional Natural
+  , compression_format : Optional Text
+  , kms_key_arn : Optional Text
+  , prefix : Optional Text
+  , cloudwatch_logging_options : Optional (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration.S3BackupConfiguration.CloudwatchLoggingOptions).CloudwatchLoggingOptions
+  }
+
+let S3BackupConfigurationRequired =
+  { bucket_arn : Text
+  , role_arn : Text
+  }
+let S3BackupConfiguration = S3BackupConfigurationOptional //\\ S3BackupConfigurationRequired
+
+in
+{ S3BackupConfigurationOptional = S3BackupConfigurationOptional
+, S3BackupConfigurationRequired = S3BackupConfigurationRequired
+, S3BackupConfiguration = S3BackupConfiguration
+}

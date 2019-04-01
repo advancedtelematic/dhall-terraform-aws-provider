@@ -1,0 +1,12 @@
+
+let PatchFilterOptional = {}
+
+let PatchFilterRequired =
+  { key : Text
+  , values : (List Text)
+  }
+let PatchFilter = PatchFilterOptional //\\ PatchFilterRequired
+
+in
+{ PatchFilter = PatchFilter
+}

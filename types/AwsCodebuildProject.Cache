@@ -1,0 +1,14 @@
+
+let CacheOptional =
+  { location : Optional Text
+  , type : Optional Text
+  }
+
+let CacheRequired = {}
+let Cache = CacheOptional //\\ CacheRequired
+
+in
+{ CacheOptional = CacheOptional
+, CacheRequired = CacheRequired
+, Cache = Cache
+}

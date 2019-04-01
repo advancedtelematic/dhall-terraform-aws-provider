@@ -1,0 +1,15 @@
+
+let CampaignHookOptional =
+  { lambda_function_name : Optional Text
+  , mode : Optional Text
+  , web_url : Optional Text
+  }
+
+let CampaignHookRequired = {}
+let CampaignHook = CampaignHookOptional //\\ CampaignHookRequired
+
+in
+{ CampaignHookOptional = CampaignHookOptional
+, CampaignHookRequired = CampaignHookRequired
+, CampaignHook = CampaignHook
+}

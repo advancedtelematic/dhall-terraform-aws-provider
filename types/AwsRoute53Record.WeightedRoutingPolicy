@@ -1,0 +1,10 @@
+
+let WeightedRoutingPolicyOptional = {}
+
+let WeightedRoutingPolicyRequired =
+  { weight : Natural }
+let WeightedRoutingPolicy = WeightedRoutingPolicyOptional //\\ WeightedRoutingPolicyRequired
+
+in
+{ WeightedRoutingPolicy = WeightedRoutingPolicy
+}

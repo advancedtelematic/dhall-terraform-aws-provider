@@ -1,0 +1,15 @@
+
+let SourceDetailOptional =
+  { event_source : Optional Text
+  , maximum_execution_frequency : Optional Text
+  , message_type : Optional Text
+  }
+
+let SourceDetailRequired = {}
+let SourceDetail = SourceDetailOptional //\\ SourceDetailRequired
+
+in
+{ SourceDetailOptional = SourceDetailOptional
+, SourceDetailRequired = SourceDetailRequired
+, SourceDetail = SourceDetail
+}

@@ -1,0 +1,12 @@
+
+let IngestEndpointsOptional =
+  { password : Optional Text }
+
+let IngestEndpointsRequired = {}
+let IngestEndpoints = IngestEndpointsOptional //\\ IngestEndpointsRequired
+
+in
+{ IngestEndpointsOptional = IngestEndpointsOptional
+, IngestEndpointsRequired = IngestEndpointsRequired
+, IngestEndpoints = IngestEndpoints
+}

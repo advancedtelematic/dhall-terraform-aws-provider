@@ -1,0 +1,13 @@
+
+let EncryptAtRestOptional =
+  { kms_key_id : Optional Text }
+
+let EncryptAtRestRequired =
+  { enabled : Bool }
+let EncryptAtRest = EncryptAtRestOptional //\\ EncryptAtRestRequired
+
+in
+{ EncryptAtRestOptional = EncryptAtRestOptional
+, EncryptAtRestRequired = EncryptAtRestRequired
+, EncryptAtRest = EncryptAtRest
+}

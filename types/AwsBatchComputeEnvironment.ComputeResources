@@ -1,0 +1,26 @@
+
+let ComputeResourcesOptional =
+  { bid_percentage : Optional Natural
+  , desired_vcpus : Optional Natural
+  , ec2_key_pair : Optional Text
+  , image_id : Optional Text
+  , spot_iam_fleet_role : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  }
+
+let ComputeResourcesRequired =
+  { instance_role : Text
+  , instance_type : (List Text)
+  , max_vcpus : Natural
+  , min_vcpus : Natural
+  , security_group_ids : (List Text)
+  , subnets : (List Text)
+  , type : Text
+  }
+let ComputeResources = ComputeResourcesOptional //\\ ComputeResourcesRequired
+
+in
+{ ComputeResourcesOptional = ComputeResourcesOptional
+, ComputeResourcesRequired = ComputeResourcesRequired
+, ComputeResources = ComputeResources
+}

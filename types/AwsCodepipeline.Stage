@@ -1,0 +1,12 @@
+
+let StageOptional = {}
+
+let StageRequired =
+  { name : Text
+  , action : List (./AwsCodepipeline.Stage.Action).Action
+  }
+let Stage = StageOptional //\\ StageRequired
+
+in
+{ Stage = Stage
+}

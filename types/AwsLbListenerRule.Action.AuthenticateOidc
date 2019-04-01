@@ -1,0 +1,24 @@
+
+let AuthenticateOidcOptional =
+  { authentication_request_extra_params : Optional (List { mapKey : Text, mapValue : Text })
+  , on_unauthenticated_request : Optional Text
+  , scope : Optional Text
+  , session_cookie_name : Optional Text
+  , session_timeout : Optional Natural
+  }
+
+let AuthenticateOidcRequired =
+  { authorization_endpoint : Text
+  , client_id : Text
+  , client_secret : Text
+  , issuer : Text
+  , token_endpoint : Text
+  , user_info_endpoint : Text
+  }
+let AuthenticateOidc = AuthenticateOidcOptional //\\ AuthenticateOidcRequired
+
+in
+{ AuthenticateOidcOptional = AuthenticateOidcOptional
+, AuthenticateOidcRequired = AuthenticateOidcRequired
+, AuthenticateOidc = AuthenticateOidc
+}

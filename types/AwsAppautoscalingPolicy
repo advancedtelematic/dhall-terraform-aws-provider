@@ -1,0 +1,26 @@
+
+let AwsAppautoscalingPolicyOptional =
+  { adjustment_type : Optional Text
+  , alarms : Optional (List Text)
+  , cooldown : Optional Natural
+  , metric_aggregation_type : Optional Text
+  , min_adjustment_magnitude : Optional Natural
+  , policy_type : Optional Text
+  , step_adjustment : Optional (List (./AwsAppautoscalingPolicy.StepAdjustment).StepAdjustment)
+  , step_scaling_policy_configuration : Optional (./AwsAppautoscalingPolicy.StepScalingPolicyConfiguration).StepScalingPolicyConfiguration
+  , target_tracking_scaling_policy_configuration : Optional (./AwsAppautoscalingPolicy.TargetTrackingScalingPolicyConfiguration).TargetTrackingScalingPolicyConfiguration
+  }
+
+let AwsAppautoscalingPolicyRequired =
+  { name : Text
+  , resource_id : Text
+  , scalable_dimension : Text
+  , service_namespace : Text
+  }
+let AwsAppautoscalingPolicy = AwsAppautoscalingPolicyOptional //\\ AwsAppautoscalingPolicyRequired
+
+in
+{ AwsAppautoscalingPolicyOptional = AwsAppautoscalingPolicyOptional
+, AwsAppautoscalingPolicyRequired = AwsAppautoscalingPolicyRequired
+, AwsAppautoscalingPolicy = AwsAppautoscalingPolicy
+}

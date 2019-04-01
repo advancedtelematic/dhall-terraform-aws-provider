@@ -1,0 +1,10 @@
+
+let ServerSideEncryptionConfigurationOptional = {}
+
+let ServerSideEncryptionConfigurationRequired =
+  { rule : (./AwsS3Bucket.ServerSideEncryptionConfiguration.Rule).Rule }
+let ServerSideEncryptionConfiguration = ServerSideEncryptionConfigurationOptional //\\ ServerSideEncryptionConfigurationRequired
+
+in
+{ ServerSideEncryptionConfiguration = ServerSideEncryptionConfiguration
+}

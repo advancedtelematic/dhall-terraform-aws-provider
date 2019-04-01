@@ -1,0 +1,15 @@
+
+let LoadBalancerInfoOptional =
+  { elb_info : Optional (List (./AwsCodedeployDeploymentGroup.LoadBalancerInfo.ElbInfo).ElbInfo)
+  , target_group_info : Optional (List (./AwsCodedeployDeploymentGroup.LoadBalancerInfo.TargetGroupInfo).TargetGroupInfo)
+  , target_group_pair_info : Optional (./AwsCodedeployDeploymentGroup.LoadBalancerInfo.TargetGroupPairInfo).TargetGroupPairInfo
+  }
+
+let LoadBalancerInfoRequired = {}
+let LoadBalancerInfo = LoadBalancerInfoOptional //\\ LoadBalancerInfoRequired
+
+in
+{ LoadBalancerInfoOptional = LoadBalancerInfoOptional
+, LoadBalancerInfoRequired = LoadBalancerInfoRequired
+, LoadBalancerInfo = LoadBalancerInfo
+}

@@ -1,0 +1,16 @@
+
+let AwsGameliftGameSessionQueueOptional =
+  { destinations : Optional (List Text)
+  , timeout_in_seconds : Optional Natural
+  , player_latency_policy : Optional (List (./AwsGameliftGameSessionQueue.PlayerLatencyPolicy).PlayerLatencyPolicy)
+  }
+
+let AwsGameliftGameSessionQueueRequired =
+  { name : Text }
+let AwsGameliftGameSessionQueue = AwsGameliftGameSessionQueueOptional //\\ AwsGameliftGameSessionQueueRequired
+
+in
+{ AwsGameliftGameSessionQueueOptional = AwsGameliftGameSessionQueueOptional
+, AwsGameliftGameSessionQueueRequired = AwsGameliftGameSessionQueueRequired
+, AwsGameliftGameSessionQueue = AwsGameliftGameSessionQueue
+}

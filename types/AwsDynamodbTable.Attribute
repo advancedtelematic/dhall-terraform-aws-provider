@@ -1,0 +1,12 @@
+
+let AttributeOptional = {}
+
+let AttributeRequired =
+  { name : Text
+  , type : Text
+  }
+let Attribute = AttributeOptional //\\ AttributeRequired
+
+in
+{ Attribute = Attribute
+}

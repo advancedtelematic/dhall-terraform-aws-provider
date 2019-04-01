@@ -1,0 +1,12 @@
+
+let IdentityProviderOptional = {}
+
+let IdentityProviderRequired =
+  { saml_metadata : Text
+  , type : Text
+  }
+let IdentityProvider = IdentityProviderOptional //\\ IdentityProviderRequired
+
+in
+{ IdentityProvider = IdentityProvider
+}

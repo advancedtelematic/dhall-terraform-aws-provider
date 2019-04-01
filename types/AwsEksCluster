@@ -1,0 +1,18 @@
+
+let AwsEksClusterOptional =
+  { version : Optional Text
+  , certificate_authority : Optional (./AwsEksCluster.CertificateAuthority).CertificateAuthority
+  }
+
+let AwsEksClusterRequired =
+  { name : Text
+  , role_arn : Text
+  , vpc_config : (./AwsEksCluster.VpcConfig).VpcConfig
+  }
+let AwsEksCluster = AwsEksClusterOptional //\\ AwsEksClusterRequired
+
+in
+{ AwsEksClusterOptional = AwsEksClusterOptional
+, AwsEksClusterRequired = AwsEksClusterRequired
+, AwsEksCluster = AwsEksCluster
+}

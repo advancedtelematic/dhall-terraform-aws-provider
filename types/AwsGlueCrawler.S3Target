@@ -1,0 +1,13 @@
+
+let S3TargetOptional =
+  { exclusions : Optional (List Text) }
+
+let S3TargetRequired =
+  { path : Text }
+let S3Target = S3TargetOptional //\\ S3TargetRequired
+
+in
+{ S3TargetOptional = S3TargetOptional
+, S3TargetRequired = S3TargetRequired
+, S3Target = S3Target
+}

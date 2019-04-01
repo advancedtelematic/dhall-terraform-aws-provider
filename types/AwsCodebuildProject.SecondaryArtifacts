@@ -1,0 +1,21 @@
+
+let SecondaryArtifactsOptional =
+  { encryption_disabled : Optional Bool
+  , location : Optional Text
+  , name : Optional Text
+  , namespace_type : Optional Text
+  , packaging : Optional Text
+  , path : Optional Text
+  }
+
+let SecondaryArtifactsRequired =
+  { artifact_identifier : Text
+  , type : Text
+  }
+let SecondaryArtifacts = SecondaryArtifactsOptional //\\ SecondaryArtifactsRequired
+
+in
+{ SecondaryArtifactsOptional = SecondaryArtifactsOptional
+, SecondaryArtifactsRequired = SecondaryArtifactsRequired
+, SecondaryArtifacts = SecondaryArtifacts
+}

@@ -1,0 +1,17 @@
+
+let LambdaActionOptional =
+  { invocation_type : Optional Text
+  , topic_arn : Optional Text
+  }
+
+let LambdaActionRequired =
+  { function_arn : Text
+  , position : Natural
+  }
+let LambdaAction = LambdaActionOptional //\\ LambdaActionRequired
+
+in
+{ LambdaActionOptional = LambdaActionOptional
+, LambdaActionRequired = LambdaActionRequired
+, LambdaAction = LambdaAction
+}

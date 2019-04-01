@@ -1,0 +1,13 @@
+
+let ReferenceDataSourcesOptional = {}
+
+let ReferenceDataSourcesRequired =
+  { table_name : Text
+  , s3 : (./AwsKinesisAnalyticsApplication.ReferenceDataSources.S3).S3
+  , schema : (./AwsKinesisAnalyticsApplication.ReferenceDataSources.Schema).Schema
+  }
+let ReferenceDataSources = ReferenceDataSourcesOptional //\\ ReferenceDataSourcesRequired
+
+in
+{ ReferenceDataSources = ReferenceDataSources
+}

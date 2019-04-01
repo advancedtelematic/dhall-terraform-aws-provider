@@ -1,0 +1,16 @@
+
+let DataFormatConversionConfigurationOptional =
+  { enabled : Optional Bool }
+
+let DataFormatConversionConfigurationRequired =
+  { input_format_configuration : (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration.DataFormatConversionConfiguration.InputFormatConfiguration).InputFormatConfiguration
+  , output_format_configuration : (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration.DataFormatConversionConfiguration.OutputFormatConfiguration).OutputFormatConfiguration
+  , schema_configuration : (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration.DataFormatConversionConfiguration.SchemaConfiguration).SchemaConfiguration
+  }
+let DataFormatConversionConfiguration = DataFormatConversionConfigurationOptional //\\ DataFormatConversionConfigurationRequired
+
+in
+{ DataFormatConversionConfigurationOptional = DataFormatConversionConfigurationOptional
+, DataFormatConversionConfigurationRequired = DataFormatConversionConfigurationRequired
+, DataFormatConversionConfiguration = DataFormatConversionConfiguration
+}

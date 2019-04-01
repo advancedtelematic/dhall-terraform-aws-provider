@@ -1,0 +1,15 @@
+
+let JdbcTargetOptional =
+  { exclusions : Optional (List Text) }
+
+let JdbcTargetRequired =
+  { connection_name : Text
+  , path : Text
+  }
+let JdbcTarget = JdbcTargetOptional //\\ JdbcTargetRequired
+
+in
+{ JdbcTargetOptional = JdbcTargetOptional
+, JdbcTargetRequired = JdbcTargetRequired
+, JdbcTarget = JdbcTarget
+}

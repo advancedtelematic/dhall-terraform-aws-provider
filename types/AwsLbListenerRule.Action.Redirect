@@ -1,0 +1,18 @@
+
+let RedirectOptional =
+  { host : Optional Text
+  , path : Optional Text
+  , port : Optional Text
+  , protocol : Optional Text
+  , query : Optional Text
+  }
+
+let RedirectRequired =
+  { status_code : Text }
+let Redirect = RedirectOptional //\\ RedirectRequired
+
+in
+{ RedirectOptional = RedirectOptional
+, RedirectRequired = RedirectRequired
+, Redirect = Redirect
+}

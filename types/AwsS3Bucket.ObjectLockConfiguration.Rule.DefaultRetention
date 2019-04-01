@@ -1,0 +1,15 @@
+
+let DefaultRetentionOptional =
+  { days : Optional Natural
+  , years : Optional Natural
+  }
+
+let DefaultRetentionRequired =
+  { mode : Text }
+let DefaultRetention = DefaultRetentionOptional //\\ DefaultRetentionRequired
+
+in
+{ DefaultRetentionOptional = DefaultRetentionOptional
+, DefaultRetentionRequired = DefaultRetentionRequired
+, DefaultRetention = DefaultRetention
+}

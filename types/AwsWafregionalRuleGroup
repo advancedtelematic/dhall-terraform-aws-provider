@@ -1,0 +1,15 @@
+
+let AwsWafregionalRuleGroupOptional =
+  { activated_rule : Optional (List (./AwsWafregionalRuleGroup.ActivatedRule).ActivatedRule) }
+
+let AwsWafregionalRuleGroupRequired =
+  { metric_name : Text
+  , name : Text
+  }
+let AwsWafregionalRuleGroup = AwsWafregionalRuleGroupOptional //\\ AwsWafregionalRuleGroupRequired
+
+in
+{ AwsWafregionalRuleGroupOptional = AwsWafregionalRuleGroupOptional
+, AwsWafregionalRuleGroupRequired = AwsWafregionalRuleGroupRequired
+, AwsWafregionalRuleGroup = AwsWafregionalRuleGroup
+}

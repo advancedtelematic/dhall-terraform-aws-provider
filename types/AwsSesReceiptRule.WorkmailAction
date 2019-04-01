@@ -1,0 +1,15 @@
+
+let WorkmailActionOptional =
+  { topic_arn : Optional Text }
+
+let WorkmailActionRequired =
+  { organization_arn : Text
+  , position : Natural
+  }
+let WorkmailAction = WorkmailActionOptional //\\ WorkmailActionRequired
+
+in
+{ WorkmailActionOptional = WorkmailActionOptional
+, WorkmailActionRequired = WorkmailActionRequired
+, WorkmailAction = WorkmailAction
+}

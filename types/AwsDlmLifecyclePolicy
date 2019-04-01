@@ -1,0 +1,16 @@
+
+let AwsDlmLifecyclePolicyOptional =
+  { state : Optional Text }
+
+let AwsDlmLifecyclePolicyRequired =
+  { description : Text
+  , execution_role_arn : Text
+  , policy_details : (./AwsDlmLifecyclePolicy.PolicyDetails).PolicyDetails
+  }
+let AwsDlmLifecyclePolicy = AwsDlmLifecyclePolicyOptional //\\ AwsDlmLifecyclePolicyRequired
+
+in
+{ AwsDlmLifecyclePolicyOptional = AwsDlmLifecyclePolicyOptional
+, AwsDlmLifecyclePolicyRequired = AwsDlmLifecyclePolicyRequired
+, AwsDlmLifecyclePolicy = AwsDlmLifecyclePolicy
+}

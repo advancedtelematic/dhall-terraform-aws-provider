@@ -1,0 +1,13 @@
+
+let SubnetMappingOptional =
+  { allocation_id : Optional Text }
+
+let SubnetMappingRequired =
+  { subnet_id : Text }
+let SubnetMapping = SubnetMappingOptional //\\ SubnetMappingRequired
+
+in
+{ SubnetMappingOptional = SubnetMappingOptional
+, SubnetMappingRequired = SubnetMappingRequired
+, SubnetMapping = SubnetMapping
+}

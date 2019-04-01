@@ -1,0 +1,14 @@
+
+let MappingParametersOptional =
+  { csv : Optional (./AwsKinesisAnalyticsApplication.Inputs.Schema.RecordFormat.MappingParameters.Csv).Csv
+  , json : Optional (./AwsKinesisAnalyticsApplication.Inputs.Schema.RecordFormat.MappingParameters.Json).Json
+  }
+
+let MappingParametersRequired = {}
+let MappingParameters = MappingParametersOptional //\\ MappingParametersRequired
+
+in
+{ MappingParametersOptional = MappingParametersOptional
+, MappingParametersRequired = MappingParametersRequired
+, MappingParameters = MappingParameters
+}

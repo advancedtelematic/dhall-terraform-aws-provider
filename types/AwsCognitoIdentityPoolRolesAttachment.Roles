@@ -1,0 +1,14 @@
+
+let RolesOptional =
+  { authenticated : Optional Text
+  , unauthenticated : Optional Text
+  }
+
+let RolesRequired = {}
+let Roles = RolesOptional //\\ RolesRequired
+
+in
+{ RolesOptional = RolesOptional
+, RolesRequired = RolesRequired
+, Roles = Roles
+}

@@ -1,0 +1,15 @@
+
+let SslConfigurationOptional =
+  { chain : Optional Text }
+
+let SslConfigurationRequired =
+  { certificate : Text
+  , private_key : Text
+  }
+let SslConfiguration = SslConfigurationOptional //\\ SslConfigurationRequired
+
+in
+{ SslConfigurationOptional = SslConfigurationOptional
+, SslConfigurationRequired = SslConfigurationRequired
+, SslConfiguration = SslConfiguration
+}

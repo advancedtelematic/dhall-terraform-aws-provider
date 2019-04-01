@@ -1,0 +1,12 @@
+
+let AwsDynamodbGlobalTableOptional = {}
+
+let AwsDynamodbGlobalTableRequired =
+  { name : Text
+  , replica : List (./AwsDynamodbGlobalTable.Replica).Replica
+  }
+let AwsDynamodbGlobalTable = AwsDynamodbGlobalTableOptional //\\ AwsDynamodbGlobalTableRequired
+
+in
+{ AwsDynamodbGlobalTable = AwsDynamodbGlobalTable
+}

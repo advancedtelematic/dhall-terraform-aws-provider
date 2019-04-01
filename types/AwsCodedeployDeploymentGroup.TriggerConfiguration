@@ -1,0 +1,13 @@
+
+let TriggerConfigurationOptional = {}
+
+let TriggerConfigurationRequired =
+  { trigger_events : (List Text)
+  , trigger_name : Text
+  , trigger_target_arn : Text
+  }
+let TriggerConfiguration = TriggerConfigurationOptional //\\ TriggerConfigurationRequired
+
+in
+{ TriggerConfiguration = TriggerConfiguration
+}

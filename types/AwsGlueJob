@@ -1,0 +1,24 @@
+
+let AwsGlueJobOptional =
+  { allocated_capacity : Optional Natural
+  , connections : Optional (List Text)
+  , default_arguments : Optional (List { mapKey : Text, mapValue : Text })
+  , description : Optional Text
+  , max_retries : Optional Natural
+  , security_configuration : Optional Text
+  , timeout : Optional Natural
+  , execution_property : Optional (./AwsGlueJob.ExecutionProperty).ExecutionProperty
+  }
+
+let AwsGlueJobRequired =
+  { name : Text
+  , role_arn : Text
+  , command : (./AwsGlueJob.Command).Command
+  }
+let AwsGlueJob = AwsGlueJobOptional //\\ AwsGlueJobRequired
+
+in
+{ AwsGlueJobOptional = AwsGlueJobOptional
+, AwsGlueJobRequired = AwsGlueJobRequired
+, AwsGlueJob = AwsGlueJob
+}

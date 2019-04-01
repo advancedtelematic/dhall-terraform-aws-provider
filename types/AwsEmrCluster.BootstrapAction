@@ -1,0 +1,15 @@
+
+let BootstrapActionOptional =
+  { args : Optional (List Text) }
+
+let BootstrapActionRequired =
+  { name : Text
+  , path : Text
+  }
+let BootstrapAction = BootstrapActionOptional //\\ BootstrapActionRequired
+
+in
+{ BootstrapActionOptional = BootstrapActionOptional
+, BootstrapActionRequired = BootstrapActionRequired
+, BootstrapAction = BootstrapAction
+}

@@ -1,0 +1,12 @@
+
+let IpSetDescriptorsOptional = {}
+
+let IpSetDescriptorsRequired =
+  { type : Text
+  , value : Text
+  }
+let IpSetDescriptors = IpSetDescriptorsOptional //\\ IpSetDescriptorsRequired
+
+in
+{ IpSetDescriptors = IpSetDescriptors
+}

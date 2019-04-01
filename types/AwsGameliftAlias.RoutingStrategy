@@ -1,0 +1,15 @@
+
+let RoutingStrategyOptional =
+  { fleet_id : Optional Text
+  , message : Optional Text
+  }
+
+let RoutingStrategyRequired =
+  { type : Text }
+let RoutingStrategy = RoutingStrategyOptional //\\ RoutingStrategyRequired
+
+in
+{ RoutingStrategyOptional = RoutingStrategyOptional
+, RoutingStrategyRequired = RoutingStrategyRequired
+, RoutingStrategy = RoutingStrategy
+}

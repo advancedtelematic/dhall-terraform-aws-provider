@@ -1,0 +1,15 @@
+
+let SpotOptionsOptional =
+  { allocation_strategy : Optional Text
+  , instance_interruption_behavior : Optional Text
+  , instance_pools_to_use_count : Optional Natural
+  }
+
+let SpotOptionsRequired = {}
+let SpotOptions = SpotOptionsOptional //\\ SpotOptionsRequired
+
+in
+{ SpotOptionsOptional = SpotOptionsOptional
+, SpotOptionsRequired = SpotOptionsRequired
+, SpotOptions = SpotOptions
+}

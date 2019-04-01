@@ -1,0 +1,15 @@
+
+let PhysicalConnectionRequirementsOptional =
+  { availability_zone : Optional Text
+  , security_group_id_list : Optional (List Text)
+  , subnet_id : Optional Text
+  }
+
+let PhysicalConnectionRequirementsRequired = {}
+let PhysicalConnectionRequirements = PhysicalConnectionRequirementsOptional //\\ PhysicalConnectionRequirementsRequired
+
+in
+{ PhysicalConnectionRequirementsOptional = PhysicalConnectionRequirementsOptional
+, PhysicalConnectionRequirementsRequired = PhysicalConnectionRequirementsRequired
+, PhysicalConnectionRequirements = PhysicalConnectionRequirements
+}

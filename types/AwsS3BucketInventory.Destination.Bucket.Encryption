@@ -1,0 +1,14 @@
+
+let EncryptionOptional =
+  { sse_kms : Optional (./AwsS3BucketInventory.Destination.Bucket.Encryption.SseKms).SseKms
+  , sse_s3 : Optional (./AwsS3BucketInventory.Destination.Bucket.Encryption.SseS3).SseS3
+  }
+
+let EncryptionRequired = {}
+let Encryption = EncryptionOptional //\\ EncryptionRequired
+
+in
+{ EncryptionOptional = EncryptionOptional
+, EncryptionRequired = EncryptionRequired
+, Encryption = Encryption
+}

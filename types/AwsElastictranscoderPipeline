@@ -1,0 +1,23 @@
+
+let AwsElastictranscoderPipelineOptional =
+  { aws_kms_key_arn : Optional Text
+  , name : Optional Text
+  , output_bucket : Optional Text
+  , content_config : Optional (./AwsElastictranscoderPipeline.ContentConfig).ContentConfig
+  , content_config_permissions : Optional (List (./AwsElastictranscoderPipeline.ContentConfigPermissions).ContentConfigPermissions)
+  , notifications : Optional (./AwsElastictranscoderPipeline.Notifications).Notifications
+  , thumbnail_config : Optional (./AwsElastictranscoderPipeline.ThumbnailConfig).ThumbnailConfig
+  , thumbnail_config_permissions : Optional (List (./AwsElastictranscoderPipeline.ThumbnailConfigPermissions).ThumbnailConfigPermissions)
+  }
+
+let AwsElastictranscoderPipelineRequired =
+  { input_bucket : Text
+  , role : Text
+  }
+let AwsElastictranscoderPipeline = AwsElastictranscoderPipelineOptional //\\ AwsElastictranscoderPipelineRequired
+
+in
+{ AwsElastictranscoderPipelineOptional = AwsElastictranscoderPipelineOptional
+, AwsElastictranscoderPipelineRequired = AwsElastictranscoderPipelineRequired
+, AwsElastictranscoderPipeline = AwsElastictranscoderPipeline
+}

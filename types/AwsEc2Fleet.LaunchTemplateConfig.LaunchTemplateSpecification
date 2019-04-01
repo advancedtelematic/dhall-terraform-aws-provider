@@ -1,0 +1,15 @@
+
+let LaunchTemplateSpecificationOptional =
+  { launch_template_id : Optional Text
+  , launch_template_name : Optional Text
+  }
+
+let LaunchTemplateSpecificationRequired =
+  { version : Text }
+let LaunchTemplateSpecification = LaunchTemplateSpecificationOptional //\\ LaunchTemplateSpecificationRequired
+
+in
+{ LaunchTemplateSpecificationOptional = LaunchTemplateSpecificationOptional
+, LaunchTemplateSpecificationRequired = LaunchTemplateSpecificationRequired
+, LaunchTemplateSpecification = LaunchTemplateSpecification
+}

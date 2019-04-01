@@ -1,0 +1,13 @@
+
+let MixedInstancesPolicyOptional =
+  { instances_distribution : Optional (./AwsAutoscalingGroup.MixedInstancesPolicy.InstancesDistribution).InstancesDistribution }
+
+let MixedInstancesPolicyRequired =
+  { launch_template : (./AwsAutoscalingGroup.MixedInstancesPolicy.LaunchTemplate).LaunchTemplate }
+let MixedInstancesPolicy = MixedInstancesPolicyOptional //\\ MixedInstancesPolicyRequired
+
+in
+{ MixedInstancesPolicyOptional = MixedInstancesPolicyOptional
+, MixedInstancesPolicyRequired = MixedInstancesPolicyRequired
+, MixedInstancesPolicy = MixedInstancesPolicy
+}

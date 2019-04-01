@@ -1,0 +1,12 @@
+
+let AttachmentOptional = {}
+
+let AttachmentRequired =
+  { device_index : Natural
+  , instance : Text
+  }
+let Attachment = AttachmentOptional //\\ AttachmentRequired
+
+in
+{ Attachment = Attachment
+}

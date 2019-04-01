@@ -1,0 +1,12 @@
+
+let XmlClassifierOptional = {}
+
+let XmlClassifierRequired =
+  { classification : Text
+  , row_tag : Text
+  }
+let XmlClassifier = XmlClassifierOptional //\\ XmlClassifierRequired
+
+in
+{ XmlClassifier = XmlClassifier
+}

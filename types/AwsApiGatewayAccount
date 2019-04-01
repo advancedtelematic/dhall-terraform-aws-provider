@@ -1,0 +1,14 @@
+
+let AwsApiGatewayAccountOptional =
+  { cloudwatch_role_arn : Optional Text
+  , throttle_settings : Optional (./AwsApiGatewayAccount.ThrottleSettings).ThrottleSettings
+  }
+
+let AwsApiGatewayAccountRequired = {}
+let AwsApiGatewayAccount = AwsApiGatewayAccountOptional //\\ AwsApiGatewayAccountRequired
+
+in
+{ AwsApiGatewayAccountOptional = AwsApiGatewayAccountOptional
+, AwsApiGatewayAccountRequired = AwsApiGatewayAccountRequired
+, AwsApiGatewayAccount = AwsApiGatewayAccount
+}

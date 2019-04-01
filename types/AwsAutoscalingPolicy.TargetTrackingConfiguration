@@ -1,0 +1,16 @@
+
+let TargetTrackingConfigurationOptional =
+  { disable_scale_in : Optional Bool
+  , customized_metric_specification : Optional (./AwsAutoscalingPolicy.TargetTrackingConfiguration.CustomizedMetricSpecification).CustomizedMetricSpecification
+  , predefined_metric_specification : Optional (./AwsAutoscalingPolicy.TargetTrackingConfiguration.PredefinedMetricSpecification).PredefinedMetricSpecification
+  }
+
+let TargetTrackingConfigurationRequired =
+  { target_value : Natural }
+let TargetTrackingConfiguration = TargetTrackingConfigurationOptional //\\ TargetTrackingConfigurationRequired
+
+in
+{ TargetTrackingConfigurationOptional = TargetTrackingConfigurationOptional
+, TargetTrackingConfigurationRequired = TargetTrackingConfigurationRequired
+, TargetTrackingConfiguration = TargetTrackingConfiguration
+}

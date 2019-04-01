@@ -1,0 +1,16 @@
+
+let AwsGlacierVaultOptional =
+  { access_policy : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , notification : Optional (List (./AwsGlacierVault.Notification).Notification)
+  }
+
+let AwsGlacierVaultRequired =
+  { name : Text }
+let AwsGlacierVault = AwsGlacierVaultOptional //\\ AwsGlacierVaultRequired
+
+in
+{ AwsGlacierVaultOptional = AwsGlacierVaultOptional
+, AwsGlacierVaultRequired = AwsGlacierVaultRequired
+, AwsGlacierVault = AwsGlacierVault
+}

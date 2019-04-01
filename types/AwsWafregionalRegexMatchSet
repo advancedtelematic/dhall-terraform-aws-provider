@@ -1,0 +1,13 @@
+
+let AwsWafregionalRegexMatchSetOptional =
+  { regex_match_tuple : Optional (List (./AwsWafregionalRegexMatchSet.RegexMatchTuple).RegexMatchTuple) }
+
+let AwsWafregionalRegexMatchSetRequired =
+  { name : Text }
+let AwsWafregionalRegexMatchSet = AwsWafregionalRegexMatchSetOptional //\\ AwsWafregionalRegexMatchSetRequired
+
+in
+{ AwsWafregionalRegexMatchSetOptional = AwsWafregionalRegexMatchSetOptional
+, AwsWafregionalRegexMatchSetRequired = AwsWafregionalRegexMatchSetRequired
+, AwsWafregionalRegexMatchSet = AwsWafregionalRegexMatchSet
+}

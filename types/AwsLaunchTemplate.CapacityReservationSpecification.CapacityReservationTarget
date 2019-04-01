@@ -1,0 +1,12 @@
+
+let CapacityReservationTargetOptional =
+  { capacity_reservation_id : Optional Text }
+
+let CapacityReservationTargetRequired = {}
+let CapacityReservationTarget = CapacityReservationTargetOptional //\\ CapacityReservationTargetRequired
+
+in
+{ CapacityReservationTargetOptional = CapacityReservationTargetOptional
+, CapacityReservationTargetRequired = CapacityReservationTargetRequired
+, CapacityReservationTarget = CapacityReservationTarget
+}

@@ -1,0 +1,10 @@
+
+let RestrictionsOptional = {}
+
+let RestrictionsRequired =
+  { geo_restriction : (./AwsCloudfrontDistribution.Restrictions.GeoRestriction).GeoRestriction }
+let Restrictions = RestrictionsOptional //\\ RestrictionsRequired
+
+in
+{ Restrictions = Restrictions
+}

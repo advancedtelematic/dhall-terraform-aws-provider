@@ -1,0 +1,26 @@
+
+let AwsEcsTaskDefinitionOptional =
+  { cpu : Optional Text
+  , execution_role_arn : Optional Text
+  , ipc_mode : Optional Text
+  , memory : Optional Text
+  , network_mode : Optional Text
+  , pid_mode : Optional Text
+  , requires_compatibilities : Optional (List Text)
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , task_role_arn : Optional Text
+  , placement_constraints : Optional (List (./AwsEcsTaskDefinition.PlacementConstraints).PlacementConstraints)
+  , volume : Optional (List (./AwsEcsTaskDefinition.Volume).Volume)
+  }
+
+let AwsEcsTaskDefinitionRequired =
+  { container_definitions : Text
+  , family : Text
+  }
+let AwsEcsTaskDefinition = AwsEcsTaskDefinitionOptional //\\ AwsEcsTaskDefinitionRequired
+
+in
+{ AwsEcsTaskDefinitionOptional = AwsEcsTaskDefinitionOptional
+, AwsEcsTaskDefinitionRequired = AwsEcsTaskDefinitionRequired
+, AwsEcsTaskDefinition = AwsEcsTaskDefinition
+}

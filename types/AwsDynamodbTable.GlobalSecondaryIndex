@@ -1,0 +1,20 @@
+
+let GlobalSecondaryIndexOptional =
+  { non_key_attributes : Optional (List Text)
+  , range_key : Optional Text
+  , read_capacity : Optional Natural
+  , write_capacity : Optional Natural
+  }
+
+let GlobalSecondaryIndexRequired =
+  { hash_key : Text
+  , name : Text
+  , projection_type : Text
+  }
+let GlobalSecondaryIndex = GlobalSecondaryIndexOptional //\\ GlobalSecondaryIndexRequired
+
+in
+{ GlobalSecondaryIndexOptional = GlobalSecondaryIndexOptional
+, GlobalSecondaryIndexRequired = GlobalSecondaryIndexRequired
+, GlobalSecondaryIndex = GlobalSecondaryIndex
+}

@@ -1,0 +1,14 @@
+
+let Ec2InboundPermissionOptional = {}
+
+let Ec2InboundPermissionRequired =
+  { from_port : Natural
+  , ip_range : Text
+  , protocol : Text
+  , to_port : Natural
+  }
+let Ec2InboundPermission = Ec2InboundPermissionOptional //\\ Ec2InboundPermissionRequired
+
+in
+{ Ec2InboundPermission = Ec2InboundPermission
+}

@@ -1,0 +1,12 @@
+
+let DeploymentControllerOptional =
+  { type : Optional Text }
+
+let DeploymentControllerRequired = {}
+let DeploymentController = DeploymentControllerOptional //\\ DeploymentControllerRequired
+
+in
+{ DeploymentControllerOptional = DeploymentControllerOptional
+, DeploymentControllerRequired = DeploymentControllerRequired
+, DeploymentController = DeploymentController
+}

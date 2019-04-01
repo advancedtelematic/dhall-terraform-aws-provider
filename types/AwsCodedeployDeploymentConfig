@@ -1,0 +1,16 @@
+
+let AwsCodedeployDeploymentConfigOptional =
+  { compute_platform : Optional Text
+  , minimum_healthy_hosts : Optional (./AwsCodedeployDeploymentConfig.MinimumHealthyHosts).MinimumHealthyHosts
+  , traffic_routing_config : Optional (./AwsCodedeployDeploymentConfig.TrafficRoutingConfig).TrafficRoutingConfig
+  }
+
+let AwsCodedeployDeploymentConfigRequired =
+  { deployment_config_name : Text }
+let AwsCodedeployDeploymentConfig = AwsCodedeployDeploymentConfigOptional //\\ AwsCodedeployDeploymentConfigRequired
+
+in
+{ AwsCodedeployDeploymentConfigOptional = AwsCodedeployDeploymentConfigOptional
+, AwsCodedeployDeploymentConfigRequired = AwsCodedeployDeploymentConfigRequired
+, AwsCodedeployDeploymentConfig = AwsCodedeployDeploymentConfig
+}

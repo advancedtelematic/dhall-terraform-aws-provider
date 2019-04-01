@@ -1,0 +1,10 @@
+
+let SnsDestinationOptional = {}
+
+let SnsDestinationRequired =
+  { topic_arn : Text }
+let SnsDestination = SnsDestinationOptional //\\ SnsDestinationRequired
+
+in
+{ SnsDestination = SnsDestination
+}

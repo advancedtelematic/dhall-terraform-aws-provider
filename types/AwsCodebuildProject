@@ -1,0 +1,27 @@
+
+let AwsCodebuildProjectOptional =
+  { badge_enabled : Optional Bool
+  , build_timeout : Optional Natural
+  , description : Optional Text
+  , encryption_key : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , cache : Optional (./AwsCodebuildProject.Cache).Cache
+  , secondary_artifacts : Optional (List (./AwsCodebuildProject.SecondaryArtifacts).SecondaryArtifacts)
+  , secondary_sources : Optional (List (./AwsCodebuildProject.SecondarySources).SecondarySources)
+  , vpc_config : Optional (./AwsCodebuildProject.VpcConfig).VpcConfig
+  }
+
+let AwsCodebuildProjectRequired =
+  { name : Text
+  , service_role : Text
+  , artifacts : (./AwsCodebuildProject.Artifacts).Artifacts
+  , environment : (./AwsCodebuildProject.Environment).Environment
+  , source : (./AwsCodebuildProject.Source).Source
+  }
+let AwsCodebuildProject = AwsCodebuildProjectOptional //\\ AwsCodebuildProjectRequired
+
+in
+{ AwsCodebuildProjectOptional = AwsCodebuildProjectOptional
+, AwsCodebuildProjectRequired = AwsCodebuildProjectRequired
+, AwsCodebuildProject = AwsCodebuildProject
+}

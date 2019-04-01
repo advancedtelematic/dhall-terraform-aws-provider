@@ -1,0 +1,14 @@
+
+let S3EncryptionOptional =
+  { kms_key_arn : Optional Text
+  , s3_encryption_mode : Optional Text
+  }
+
+let S3EncryptionRequired = {}
+let S3Encryption = S3EncryptionOptional //\\ S3EncryptionRequired
+
+in
+{ S3EncryptionOptional = S3EncryptionOptional
+, S3EncryptionRequired = S3EncryptionRequired
+, S3Encryption = S3Encryption
+}

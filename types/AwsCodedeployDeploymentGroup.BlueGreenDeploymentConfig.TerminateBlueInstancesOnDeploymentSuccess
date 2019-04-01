@@ -1,0 +1,14 @@
+
+let TerminateBlueInstancesOnDeploymentSuccessOptional =
+  { action : Optional Text
+  , termination_wait_time_in_minutes : Optional Natural
+  }
+
+let TerminateBlueInstancesOnDeploymentSuccessRequired = {}
+let TerminateBlueInstancesOnDeploymentSuccess = TerminateBlueInstancesOnDeploymentSuccessOptional //\\ TerminateBlueInstancesOnDeploymentSuccessRequired
+
+in
+{ TerminateBlueInstancesOnDeploymentSuccessOptional = TerminateBlueInstancesOnDeploymentSuccessOptional
+, TerminateBlueInstancesOnDeploymentSuccessRequired = TerminateBlueInstancesOnDeploymentSuccessRequired
+, TerminateBlueInstancesOnDeploymentSuccess = TerminateBlueInstancesOnDeploymentSuccess
+}

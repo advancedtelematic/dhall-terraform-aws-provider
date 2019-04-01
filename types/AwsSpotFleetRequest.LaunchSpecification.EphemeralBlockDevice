@@ -1,0 +1,12 @@
+
+let EphemeralBlockDeviceOptional = {}
+
+let EphemeralBlockDeviceRequired =
+  { device_name : Text
+  , virtual_name : Text
+  }
+let EphemeralBlockDevice = EphemeralBlockDeviceOptional //\\ EphemeralBlockDeviceRequired
+
+in
+{ EphemeralBlockDevice = EphemeralBlockDevice
+}

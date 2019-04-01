@@ -1,0 +1,20 @@
+
+let InputsOptional =
+  { kinesis_firehose : Optional (./AwsKinesisAnalyticsApplication.Inputs.KinesisFirehose).KinesisFirehose
+  , kinesis_stream : Optional (./AwsKinesisAnalyticsApplication.Inputs.KinesisStream).KinesisStream
+  , parallelism : Optional (./AwsKinesisAnalyticsApplication.Inputs.Parallelism).Parallelism
+  , processing_configuration : Optional (./AwsKinesisAnalyticsApplication.Inputs.ProcessingConfiguration).ProcessingConfiguration
+  , starting_position_configuration : Optional (List (./AwsKinesisAnalyticsApplication.Inputs.StartingPositionConfiguration).StartingPositionConfiguration)
+  }
+
+let InputsRequired =
+  { name_prefix : Text
+  , schema : (./AwsKinesisAnalyticsApplication.Inputs.Schema).Schema
+  }
+let Inputs = InputsOptional //\\ InputsRequired
+
+in
+{ InputsOptional = InputsOptional
+, InputsRequired = InputsRequired
+, Inputs = Inputs
+}

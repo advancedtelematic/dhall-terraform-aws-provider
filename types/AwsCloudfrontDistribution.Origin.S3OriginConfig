@@ -1,0 +1,10 @@
+
+let S3OriginConfigOptional = {}
+
+let S3OriginConfigRequired =
+  { origin_access_identity : Text }
+let S3OriginConfig = S3OriginConfigOptional //\\ S3OriginConfigRequired
+
+in
+{ S3OriginConfig = S3OriginConfig
+}

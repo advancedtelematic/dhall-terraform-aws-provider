@@ -1,0 +1,13 @@
+
+let AwsWafXssMatchSetOptional =
+  { xss_match_tuples : Optional (List (./AwsWafXssMatchSet.XssMatchTuples).XssMatchTuples) }
+
+let AwsWafXssMatchSetRequired =
+  { name : Text }
+let AwsWafXssMatchSet = AwsWafXssMatchSetOptional //\\ AwsWafXssMatchSetRequired
+
+in
+{ AwsWafXssMatchSetOptional = AwsWafXssMatchSetOptional
+, AwsWafXssMatchSetRequired = AwsWafXssMatchSetRequired
+, AwsWafXssMatchSet = AwsWafXssMatchSet
+}

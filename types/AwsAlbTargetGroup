@@ -1,0 +1,24 @@
+
+let AwsAlbTargetGroupOptional =
+  { deregistration_delay : Optional Natural
+  , name : Optional Text
+  , name_prefix : Optional Text
+  , port : Optional Natural
+  , protocol : Optional Text
+  , proxy_protocol_v2 : Optional Bool
+  , slow_start : Optional Natural
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , target_type : Optional Text
+  , vpc_id : Optional Text
+  , health_check : Optional (./AwsAlbTargetGroup.HealthCheck).HealthCheck
+  , stickiness : Optional (./AwsAlbTargetGroup.Stickiness).Stickiness
+  }
+
+let AwsAlbTargetGroupRequired = {}
+let AwsAlbTargetGroup = AwsAlbTargetGroupOptional //\\ AwsAlbTargetGroupRequired
+
+in
+{ AwsAlbTargetGroupOptional = AwsAlbTargetGroupOptional
+, AwsAlbTargetGroupRequired = AwsAlbTargetGroupRequired
+, AwsAlbTargetGroup = AwsAlbTargetGroup
+}

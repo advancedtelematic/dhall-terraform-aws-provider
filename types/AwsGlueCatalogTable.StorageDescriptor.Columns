@@ -1,0 +1,15 @@
+
+let ColumnsOptional =
+  { comment : Optional Text
+  , type : Optional Text
+  }
+
+let ColumnsRequired =
+  { name : Text }
+let Columns = ColumnsOptional //\\ ColumnsRequired
+
+in
+{ ColumnsOptional = ColumnsOptional
+, ColumnsRequired = ColumnsRequired
+, Columns = Columns
+}

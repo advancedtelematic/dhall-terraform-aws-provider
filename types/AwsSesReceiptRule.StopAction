@@ -1,0 +1,15 @@
+
+let StopActionOptional =
+  { topic_arn : Optional Text }
+
+let StopActionRequired =
+  { position : Natural
+  , scope : Text
+  }
+let StopAction = StopActionOptional //\\ StopActionRequired
+
+in
+{ StopActionOptional = StopActionOptional
+, StopActionRequired = StopActionRequired
+, StopAction = StopAction
+}

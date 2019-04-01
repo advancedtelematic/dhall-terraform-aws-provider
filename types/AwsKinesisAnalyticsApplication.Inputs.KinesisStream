@@ -1,0 +1,12 @@
+
+let KinesisStreamOptional = {}
+
+let KinesisStreamRequired =
+  { resource_arn : Text
+  , role_arn : Text
+  }
+let KinesisStream = KinesisStreamOptional //\\ KinesisStreamRequired
+
+in
+{ KinesisStream = KinesisStream
+}

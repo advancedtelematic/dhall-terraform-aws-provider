@@ -1,0 +1,16 @@
+
+let AudioCodecOptionsOptional =
+  { bit_depth : Optional Text
+  , bit_order : Optional Text
+  , profile : Optional Text
+  , signed : Optional Text
+  }
+
+let AudioCodecOptionsRequired = {}
+let AudioCodecOptions = AudioCodecOptionsOptional //\\ AudioCodecOptionsRequired
+
+in
+{ AudioCodecOptionsOptional = AudioCodecOptionsOptional
+, AudioCodecOptionsRequired = AudioCodecOptionsRequired
+, AudioCodecOptions = AudioCodecOptions
+}

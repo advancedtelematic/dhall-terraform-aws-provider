@@ -1,0 +1,19 @@
+
+let ArtifactsOptional =
+  { encryption_disabled : Optional Bool
+  , location : Optional Text
+  , name : Optional Text
+  , namespace_type : Optional Text
+  , packaging : Optional Text
+  , path : Optional Text
+  }
+
+let ArtifactsRequired =
+  { type : Text }
+let Artifacts = ArtifactsOptional //\\ ArtifactsRequired
+
+in
+{ ArtifactsOptional = ArtifactsOptional
+, ArtifactsRequired = ArtifactsRequired
+, Artifacts = Artifacts
+}

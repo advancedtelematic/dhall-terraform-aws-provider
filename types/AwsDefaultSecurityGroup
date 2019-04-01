@@ -1,0 +1,17 @@
+
+let AwsDefaultSecurityGroupOptional =
+  { revoke_rules_on_delete : Optional Bool
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , vpc_id : Optional Text
+  , egress : Optional (List (./AwsDefaultSecurityGroup.Egress).Egress)
+  , ingress : Optional (List (./AwsDefaultSecurityGroup.Ingress).Ingress)
+  }
+
+let AwsDefaultSecurityGroupRequired = {}
+let AwsDefaultSecurityGroup = AwsDefaultSecurityGroupOptional //\\ AwsDefaultSecurityGroupRequired
+
+in
+{ AwsDefaultSecurityGroupOptional = AwsDefaultSecurityGroupOptional
+, AwsDefaultSecurityGroupRequired = AwsDefaultSecurityGroupRequired
+, AwsDefaultSecurityGroup = AwsDefaultSecurityGroup
+}

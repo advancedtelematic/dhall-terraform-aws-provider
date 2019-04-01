@@ -1,0 +1,15 @@
+
+let CloudwatchLoggingOptionsOptional =
+  { enabled : Optional Bool
+  , log_group_name : Optional Text
+  , log_stream_name : Optional Text
+  }
+
+let CloudwatchLoggingOptionsRequired = {}
+let CloudwatchLoggingOptions = CloudwatchLoggingOptionsOptional //\\ CloudwatchLoggingOptionsRequired
+
+in
+{ CloudwatchLoggingOptionsOptional = CloudwatchLoggingOptionsOptional
+, CloudwatchLoggingOptionsRequired = CloudwatchLoggingOptionsRequired
+, CloudwatchLoggingOptions = CloudwatchLoggingOptions
+}

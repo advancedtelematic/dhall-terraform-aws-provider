@@ -1,0 +1,10 @@
+
+let ProcessingConfigurationOptional = {}
+
+let ProcessingConfigurationRequired =
+  { lambda : (./AwsKinesisAnalyticsApplication.Inputs.ProcessingConfiguration.Lambda).Lambda }
+let ProcessingConfiguration = ProcessingConfigurationOptional //\\ ProcessingConfigurationRequired
+
+in
+{ ProcessingConfiguration = ProcessingConfiguration
+}

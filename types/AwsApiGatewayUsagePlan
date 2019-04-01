@@ -1,0 +1,18 @@
+
+let AwsApiGatewayUsagePlanOptional =
+  { description : Optional Text
+  , product_code : Optional Text
+  , api_stages : Optional (List (./AwsApiGatewayUsagePlan.ApiStages).ApiStages)
+  , quota_settings : Optional (./AwsApiGatewayUsagePlan.QuotaSettings).QuotaSettings
+  , throttle_settings : Optional (./AwsApiGatewayUsagePlan.ThrottleSettings).ThrottleSettings
+  }
+
+let AwsApiGatewayUsagePlanRequired =
+  { name : Text }
+let AwsApiGatewayUsagePlan = AwsApiGatewayUsagePlanOptional //\\ AwsApiGatewayUsagePlanRequired
+
+in
+{ AwsApiGatewayUsagePlanOptional = AwsApiGatewayUsagePlanOptional
+, AwsApiGatewayUsagePlanRequired = AwsApiGatewayUsagePlanRequired
+, AwsApiGatewayUsagePlan = AwsApiGatewayUsagePlan
+}

@@ -1,0 +1,14 @@
+
+let ConstraintsOptional =
+  { encryption_context_equals : Optional (List { mapKey : Text, mapValue : Text })
+  , encryption_context_subset : Optional (List { mapKey : Text, mapValue : Text })
+  }
+
+let ConstraintsRequired = {}
+let Constraints = ConstraintsOptional //\\ ConstraintsRequired
+
+in
+{ ConstraintsOptional = ConstraintsOptional
+, ConstraintsRequired = ConstraintsRequired
+, Constraints = Constraints
+}

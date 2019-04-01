@@ -1,0 +1,19 @@
+
+let AwsDatasyncTaskOptional =
+  { cloudwatch_log_group_arn : Optional Text
+  , name : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , options : Optional (./AwsDatasyncTask.Options).Options
+  }
+
+let AwsDatasyncTaskRequired =
+  { destination_location_arn : Text
+  , source_location_arn : Text
+  }
+let AwsDatasyncTask = AwsDatasyncTaskOptional //\\ AwsDatasyncTaskRequired
+
+in
+{ AwsDatasyncTaskOptional = AwsDatasyncTaskOptional
+, AwsDatasyncTaskRequired = AwsDatasyncTaskRequired
+, AwsDatasyncTask = AwsDatasyncTask
+}

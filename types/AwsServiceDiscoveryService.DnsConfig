@@ -1,0 +1,15 @@
+
+let DnsConfigOptional =
+  { routing_policy : Optional Text }
+
+let DnsConfigRequired =
+  { namespace_id : Text
+  , dns_records : List (./AwsServiceDiscoveryService.DnsConfig.DnsRecords).DnsRecords
+  }
+let DnsConfig = DnsConfigOptional //\\ DnsConfigRequired
+
+in
+{ DnsConfigOptional = DnsConfigOptional
+, DnsConfigRequired = DnsConfigRequired
+, DnsConfig = DnsConfig
+}

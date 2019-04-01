@@ -1,0 +1,10 @@
+
+let ProdTrafficRouteOptional = {}
+
+let ProdTrafficRouteRequired =
+  { listener_arns : (List Text) }
+let ProdTrafficRoute = ProdTrafficRouteOptional //\\ ProdTrafficRouteRequired
+
+in
+{ ProdTrafficRoute = ProdTrafficRoute
+}

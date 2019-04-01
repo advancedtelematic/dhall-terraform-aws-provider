@@ -1,0 +1,12 @@
+
+let DataResourceOptional = {}
+
+let DataResourceRequired =
+  { type : Text
+  , values : (List Text)
+  }
+let DataResource = DataResourceOptional //\\ DataResourceRequired
+
+in
+{ DataResource = DataResource
+}

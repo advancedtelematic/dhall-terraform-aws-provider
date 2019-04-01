@@ -1,0 +1,29 @@
+
+let AwsSpotFleetRequestOptional =
+  { allocation_strategy : Optional Text
+  , excess_capacity_termination_policy : Optional Text
+  , fleet_type : Optional Text
+  , instance_interruption_behaviour : Optional Text
+  , instance_pools_to_use_count : Optional Natural
+  , load_balancers : Optional (List Text)
+  , replace_unhealthy_instances : Optional Bool
+  , spot_price : Optional Text
+  , target_group_arns : Optional (List Text)
+  , terminate_instances_with_expiration : Optional Bool
+  , valid_from : Optional Text
+  , valid_until : Optional Text
+  , wait_for_fulfillment : Optional Bool
+  }
+
+let AwsSpotFleetRequestRequired =
+  { iam_fleet_role : Text
+  , target_capacity : Natural
+  , launch_specification : List (./AwsSpotFleetRequest.LaunchSpecification).LaunchSpecification
+  }
+let AwsSpotFleetRequest = AwsSpotFleetRequestOptional //\\ AwsSpotFleetRequestRequired
+
+in
+{ AwsSpotFleetRequestOptional = AwsSpotFleetRequestOptional
+, AwsSpotFleetRequestRequired = AwsSpotFleetRequestRequired
+, AwsSpotFleetRequest = AwsSpotFleetRequest
+}

@@ -1,0 +1,24 @@
+
+let AwsBudgetsBudgetOptional =
+  { account_id : Optional Text
+  , cost_filters : Optional (List { mapKey : Text, mapValue : Text })
+  , name : Optional Text
+  , name_prefix : Optional Text
+  , time_period_end : Optional Text
+  , cost_types : Optional (./AwsBudgetsBudget.CostTypes).CostTypes
+  }
+
+let AwsBudgetsBudgetRequired =
+  { budget_type : Text
+  , limit_amount : Text
+  , limit_unit : Text
+  , time_period_start : Text
+  , time_unit : Text
+  }
+let AwsBudgetsBudget = AwsBudgetsBudgetOptional //\\ AwsBudgetsBudgetRequired
+
+in
+{ AwsBudgetsBudgetOptional = AwsBudgetsBudgetOptional
+, AwsBudgetsBudgetRequired = AwsBudgetsBudgetRequired
+, AwsBudgetsBudget = AwsBudgetsBudget
+}

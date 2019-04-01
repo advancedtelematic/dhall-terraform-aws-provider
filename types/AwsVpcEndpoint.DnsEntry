@@ -1,0 +1,9 @@
+
+let DnsEntryOptional = {}
+
+let DnsEntryRequired = {}
+let DnsEntry = DnsEntryOptional //\\ DnsEntryRequired
+
+in
+{ DnsEntry = DnsEntry
+}

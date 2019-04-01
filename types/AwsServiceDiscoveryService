@@ -1,0 +1,18 @@
+
+let AwsServiceDiscoveryServiceOptional =
+  { description : Optional Text
+  , health_check_config : Optional (./AwsServiceDiscoveryService.HealthCheckConfig).HealthCheckConfig
+  , health_check_custom_config : Optional (./AwsServiceDiscoveryService.HealthCheckCustomConfig).HealthCheckCustomConfig
+  }
+
+let AwsServiceDiscoveryServiceRequired =
+  { name : Text
+  , dns_config : (./AwsServiceDiscoveryService.DnsConfig).DnsConfig
+  }
+let AwsServiceDiscoveryService = AwsServiceDiscoveryServiceOptional //\\ AwsServiceDiscoveryServiceRequired
+
+in
+{ AwsServiceDiscoveryServiceOptional = AwsServiceDiscoveryServiceOptional
+, AwsServiceDiscoveryServiceRequired = AwsServiceDiscoveryServiceRequired
+, AwsServiceDiscoveryService = AwsServiceDiscoveryService
+}

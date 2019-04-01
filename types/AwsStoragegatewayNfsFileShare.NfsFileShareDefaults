@@ -1,0 +1,16 @@
+
+let NfsFileShareDefaultsOptional =
+  { directory_mode : Optional Text
+  , file_mode : Optional Text
+  , group_id : Optional Natural
+  , owner_id : Optional Natural
+  }
+
+let NfsFileShareDefaultsRequired = {}
+let NfsFileShareDefaults = NfsFileShareDefaultsOptional //\\ NfsFileShareDefaultsRequired
+
+in
+{ NfsFileShareDefaultsOptional = NfsFileShareDefaultsOptional
+, NfsFileShareDefaultsRequired = NfsFileShareDefaultsRequired
+, NfsFileShareDefaults = NfsFileShareDefaults
+}

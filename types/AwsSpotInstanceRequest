@@ -1,0 +1,53 @@
+
+let AwsSpotInstanceRequestOptional =
+  { associate_public_ip_address : Optional Bool
+  , availability_zone : Optional Text
+  , block_duration_minutes : Optional Natural
+  , cpu_core_count : Optional Natural
+  , cpu_threads_per_core : Optional Natural
+  , disable_api_termination : Optional Bool
+  , ebs_optimized : Optional Bool
+  , get_password_data : Optional Bool
+  , host_id : Optional Text
+  , iam_instance_profile : Optional Text
+  , instance_initiated_shutdown_behavior : Optional Text
+  , instance_interruption_behaviour : Optional Text
+  , ipv6_address_count : Optional Natural
+  , ipv6_addresses : Optional (List Text)
+  , key_name : Optional Text
+  , launch_group : Optional Text
+  , monitoring : Optional Bool
+  , placement_group : Optional Text
+  , private_ip : Optional Text
+  , security_groups : Optional (List Text)
+  , source_dest_check : Optional Bool
+  , spot_price : Optional Text
+  , spot_type : Optional Text
+  , subnet_id : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , tenancy : Optional Text
+  , user_data : Optional Text
+  , user_data_base64 : Optional Text
+  , valid_from : Optional Text
+  , valid_until : Optional Text
+  , volume_tags : Optional (List { mapKey : Text, mapValue : Text })
+  , vpc_security_group_ids : Optional (List Text)
+  , wait_for_fulfillment : Optional Bool
+  , credit_specification : Optional (./AwsSpotInstanceRequest.CreditSpecification).CreditSpecification
+  , ebs_block_device : Optional (List (./AwsSpotInstanceRequest.EbsBlockDevice).EbsBlockDevice)
+  , ephemeral_block_device : Optional (List (./AwsSpotInstanceRequest.EphemeralBlockDevice).EphemeralBlockDevice)
+  , network_interface : Optional (List (./AwsSpotInstanceRequest.NetworkInterface).NetworkInterface)
+  , root_block_device : Optional (./AwsSpotInstanceRequest.RootBlockDevice).RootBlockDevice
+  }
+
+let AwsSpotInstanceRequestRequired =
+  { ami : Text
+  , instance_type : Text
+  }
+let AwsSpotInstanceRequest = AwsSpotInstanceRequestOptional //\\ AwsSpotInstanceRequestRequired
+
+in
+{ AwsSpotInstanceRequestOptional = AwsSpotInstanceRequestOptional
+, AwsSpotInstanceRequestRequired = AwsSpotInstanceRequestRequired
+, AwsSpotInstanceRequest = AwsSpotInstanceRequest
+}

@@ -1,0 +1,18 @@
+
+let KerberosAttributesOptional =
+  { ad_domain_join_password : Optional Text
+  , ad_domain_join_user : Optional Text
+  , cross_realm_trust_principal_password : Optional Text
+  }
+
+let KerberosAttributesRequired =
+  { kdc_admin_password : Text
+  , realm : Text
+  }
+let KerberosAttributes = KerberosAttributesOptional //\\ KerberosAttributesRequired
+
+in
+{ KerberosAttributesOptional = KerberosAttributesOptional
+, KerberosAttributesRequired = KerberosAttributesRequired
+, KerberosAttributes = KerberosAttributes
+}

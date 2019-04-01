@@ -1,0 +1,17 @@
+
+let LambdaFunctionOptional =
+  { filter_prefix : Optional Text
+  , filter_suffix : Optional Text
+  , id : Optional Text
+  , lambda_function_arn : Optional Text
+  }
+
+let LambdaFunctionRequired =
+  { events : (List Text) }
+let LambdaFunction = LambdaFunctionOptional //\\ LambdaFunctionRequired
+
+in
+{ LambdaFunctionOptional = LambdaFunctionOptional
+, LambdaFunctionRequired = LambdaFunctionRequired
+, LambdaFunction = LambdaFunction
+}

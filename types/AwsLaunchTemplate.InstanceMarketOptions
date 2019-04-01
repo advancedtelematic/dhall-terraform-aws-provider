@@ -1,0 +1,14 @@
+
+let InstanceMarketOptionsOptional =
+  { market_type : Optional Text
+  , spot_options : Optional (./AwsLaunchTemplate.InstanceMarketOptions.SpotOptions).SpotOptions
+  }
+
+let InstanceMarketOptionsRequired = {}
+let InstanceMarketOptions = InstanceMarketOptionsOptional //\\ InstanceMarketOptionsRequired
+
+in
+{ InstanceMarketOptionsOptional = InstanceMarketOptionsOptional
+, InstanceMarketOptionsRequired = InstanceMarketOptionsRequired
+, InstanceMarketOptions = InstanceMarketOptions
+}

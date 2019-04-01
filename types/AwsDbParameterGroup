@@ -1,0 +1,18 @@
+
+let AwsDbParameterGroupOptional =
+  { description : Optional Text
+  , name : Optional Text
+  , name_prefix : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , parameter : Optional (List (./AwsDbParameterGroup.Parameter).Parameter)
+  }
+
+let AwsDbParameterGroupRequired =
+  { family : Text }
+let AwsDbParameterGroup = AwsDbParameterGroupOptional //\\ AwsDbParameterGroupRequired
+
+in
+{ AwsDbParameterGroupOptional = AwsDbParameterGroupOptional
+, AwsDbParameterGroupRequired = AwsDbParameterGroupRequired
+, AwsDbParameterGroup = AwsDbParameterGroup
+}

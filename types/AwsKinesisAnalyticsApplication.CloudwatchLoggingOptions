@@ -1,0 +1,12 @@
+
+let CloudwatchLoggingOptionsOptional = {}
+
+let CloudwatchLoggingOptionsRequired =
+  { log_stream_arn : Text
+  , role_arn : Text
+  }
+let CloudwatchLoggingOptions = CloudwatchLoggingOptionsOptional //\\ CloudwatchLoggingOptionsRequired
+
+in
+{ CloudwatchLoggingOptions = CloudwatchLoggingOptions
+}

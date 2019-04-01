@@ -1,0 +1,33 @@
+
+let LaunchSpecificationOptional =
+  { associate_public_ip_address : Optional Bool
+  , availability_zone : Optional Text
+  , ebs_optimized : Optional Bool
+  , iam_instance_profile : Optional Text
+  , iam_instance_profile_arn : Optional Text
+  , key_name : Optional Text
+  , monitoring : Optional Bool
+  , placement_group : Optional Text
+  , placement_tenancy : Optional Text
+  , spot_price : Optional Text
+  , subnet_id : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , user_data : Optional Text
+  , vpc_security_group_ids : Optional (List Text)
+  , weighted_capacity : Optional Text
+  , ebs_block_device : Optional (List (./AwsSpotFleetRequest.LaunchSpecification.EbsBlockDevice).EbsBlockDevice)
+  , ephemeral_block_device : Optional (List (./AwsSpotFleetRequest.LaunchSpecification.EphemeralBlockDevice).EphemeralBlockDevice)
+  , root_block_device : Optional (List (./AwsSpotFleetRequest.LaunchSpecification.RootBlockDevice).RootBlockDevice)
+  }
+
+let LaunchSpecificationRequired =
+  { ami : Text
+  , instance_type : Text
+  }
+let LaunchSpecification = LaunchSpecificationOptional //\\ LaunchSpecificationRequired
+
+in
+{ LaunchSpecificationOptional = LaunchSpecificationOptional
+, LaunchSpecificationRequired = LaunchSpecificationRequired
+, LaunchSpecification = LaunchSpecification
+}

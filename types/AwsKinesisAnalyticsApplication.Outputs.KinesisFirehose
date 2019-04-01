@@ -1,0 +1,12 @@
+
+let KinesisFirehoseOptional = {}
+
+let KinesisFirehoseRequired =
+  { resource_arn : Text
+  , role_arn : Text
+  }
+let KinesisFirehose = KinesisFirehoseOptional //\\ KinesisFirehoseRequired
+
+in
+{ KinesisFirehose = KinesisFirehose
+}

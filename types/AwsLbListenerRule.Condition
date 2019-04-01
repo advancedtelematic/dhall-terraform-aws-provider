@@ -1,0 +1,14 @@
+
+let ConditionOptional =
+  { field : Optional Text
+  , values : Optional (List Text)
+  }
+
+let ConditionRequired = {}
+let Condition = ConditionOptional //\\ ConditionRequired
+
+in
+{ ConditionOptional = ConditionOptional
+, ConditionRequired = ConditionRequired
+, Condition = Condition
+}

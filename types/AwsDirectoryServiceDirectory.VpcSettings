@@ -1,0 +1,12 @@
+
+let VpcSettingsOptional = {}
+
+let VpcSettingsRequired =
+  { subnet_ids : (List Text)
+  , vpc_id : Text
+  }
+let VpcSettings = VpcSettingsOptional //\\ VpcSettingsRequired
+
+in
+{ VpcSettings = VpcSettings
+}

@@ -1,0 +1,12 @@
+
+let ClusterModeOptional = {}
+
+let ClusterModeRequired =
+  { num_node_groups : Natural
+  , replicas_per_node_group : Natural
+  }
+let ClusterMode = ClusterModeOptional //\\ ClusterModeRequired
+
+in
+{ ClusterMode = ClusterMode
+}

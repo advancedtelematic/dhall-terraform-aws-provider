@@ -1,0 +1,25 @@
+
+let AwsKinesisFirehoseDeliveryStreamOptional =
+  { arn : Optional Text
+  , destination_id : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , version_id : Optional Text
+  , elasticsearch_configuration : Optional (./AwsKinesisFirehoseDeliveryStream.ElasticsearchConfiguration).ElasticsearchConfiguration
+  , extended_s3_configuration : Optional (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration).ExtendedS3Configuration
+  , kinesis_source_configuration : Optional (./AwsKinesisFirehoseDeliveryStream.KinesisSourceConfiguration).KinesisSourceConfiguration
+  , redshift_configuration : Optional (./AwsKinesisFirehoseDeliveryStream.RedshiftConfiguration).RedshiftConfiguration
+  , s3_configuration : Optional (./AwsKinesisFirehoseDeliveryStream.S3Configuration).S3Configuration
+  , splunk_configuration : Optional (./AwsKinesisFirehoseDeliveryStream.SplunkConfiguration).SplunkConfiguration
+  }
+
+let AwsKinesisFirehoseDeliveryStreamRequired =
+  { destination : Text
+  , name : Text
+  }
+let AwsKinesisFirehoseDeliveryStream = AwsKinesisFirehoseDeliveryStreamOptional //\\ AwsKinesisFirehoseDeliveryStreamRequired
+
+in
+{ AwsKinesisFirehoseDeliveryStreamOptional = AwsKinesisFirehoseDeliveryStreamOptional
+, AwsKinesisFirehoseDeliveryStreamRequired = AwsKinesisFirehoseDeliveryStreamRequired
+, AwsKinesisFirehoseDeliveryStream = AwsKinesisFirehoseDeliveryStream
+}

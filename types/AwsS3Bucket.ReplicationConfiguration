@@ -1,0 +1,12 @@
+
+let ReplicationConfigurationOptional = {}
+
+let ReplicationConfigurationRequired =
+  { role : Text
+  , rules : List (./AwsS3Bucket.ReplicationConfiguration.Rules).Rules
+  }
+let ReplicationConfiguration = ReplicationConfigurationOptional //\\ ReplicationConfigurationRequired
+
+in
+{ ReplicationConfiguration = ReplicationConfiguration
+}

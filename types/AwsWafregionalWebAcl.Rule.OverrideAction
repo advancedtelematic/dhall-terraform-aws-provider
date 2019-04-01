@@ -1,0 +1,10 @@
+
+let OverrideActionOptional = {}
+
+let OverrideActionRequired =
+  { type : Text }
+let OverrideAction = OverrideActionOptional //\\ OverrideActionRequired
+
+in
+{ OverrideAction = OverrideAction
+}

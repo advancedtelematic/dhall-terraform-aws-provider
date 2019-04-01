@@ -1,0 +1,12 @@
+
+let OnDemandOptionsOptional =
+  { allocation_strategy : Optional Text }
+
+let OnDemandOptionsRequired = {}
+let OnDemandOptions = OnDemandOptionsOptional //\\ OnDemandOptionsRequired
+
+in
+{ OnDemandOptionsOptional = OnDemandOptionsOptional
+, OnDemandOptionsRequired = OnDemandOptionsRequired
+, OnDemandOptions = OnDemandOptions
+}

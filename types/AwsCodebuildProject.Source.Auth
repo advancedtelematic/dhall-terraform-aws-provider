@@ -1,0 +1,13 @@
+
+let AuthOptional =
+  { resource : Optional Text }
+
+let AuthRequired =
+  { type : Text }
+let Auth = AuthOptional //\\ AuthRequired
+
+in
+{ AuthOptional = AuthOptional
+, AuthRequired = AuthRequired
+, Auth = Auth
+}

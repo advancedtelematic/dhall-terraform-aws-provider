@@ -1,0 +1,20 @@
+
+let InstanceGroupOptional =
+  { autoscaling_policy : Optional Text
+  , bid_price : Optional Text
+  , instance_count : Optional Natural
+  , name : Optional Text
+  , ebs_config : Optional (List (./AwsEmrCluster.InstanceGroup.EbsConfig).EbsConfig)
+  }
+
+let InstanceGroupRequired =
+  { instance_role : Text
+  , instance_type : Text
+  }
+let InstanceGroup = InstanceGroupOptional //\\ InstanceGroupRequired
+
+in
+{ InstanceGroupOptional = InstanceGroupOptional
+, InstanceGroupRequired = InstanceGroupRequired
+, InstanceGroup = InstanceGroup
+}

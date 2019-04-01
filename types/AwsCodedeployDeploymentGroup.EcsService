@@ -1,0 +1,12 @@
+
+let EcsServiceOptional = {}
+
+let EcsServiceRequired =
+  { cluster_name : Text
+  , service_name : Text
+  }
+let EcsService = EcsServiceOptional //\\ EcsServiceRequired
+
+in
+{ EcsService = EcsService
+}

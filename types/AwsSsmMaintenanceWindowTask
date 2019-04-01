@@ -1,0 +1,25 @@
+
+let AwsSsmMaintenanceWindowTaskOptional =
+  { description : Optional Text
+  , name : Optional Text
+  , priority : Optional Natural
+  , logging_info : Optional (./AwsSsmMaintenanceWindowTask.LoggingInfo).LoggingInfo
+  , task_parameters : Optional (List (./AwsSsmMaintenanceWindowTask.TaskParameters).TaskParameters)
+  }
+
+let AwsSsmMaintenanceWindowTaskRequired =
+  { max_concurrency : Text
+  , max_errors : Text
+  , service_role_arn : Text
+  , task_arn : Text
+  , task_type : Text
+  , window_id : Text
+  , targets : List (./AwsSsmMaintenanceWindowTask.Targets).Targets
+  }
+let AwsSsmMaintenanceWindowTask = AwsSsmMaintenanceWindowTaskOptional //\\ AwsSsmMaintenanceWindowTaskRequired
+
+in
+{ AwsSsmMaintenanceWindowTaskOptional = AwsSsmMaintenanceWindowTaskOptional
+, AwsSsmMaintenanceWindowTaskRequired = AwsSsmMaintenanceWindowTaskRequired
+, AwsSsmMaintenanceWindowTask = AwsSsmMaintenanceWindowTask
+}

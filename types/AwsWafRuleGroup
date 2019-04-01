@@ -1,0 +1,15 @@
+
+let AwsWafRuleGroupOptional =
+  { activated_rule : Optional (List (./AwsWafRuleGroup.ActivatedRule).ActivatedRule) }
+
+let AwsWafRuleGroupRequired =
+  { metric_name : Text
+  , name : Text
+  }
+let AwsWafRuleGroup = AwsWafRuleGroupOptional //\\ AwsWafRuleGroupRequired
+
+in
+{ AwsWafRuleGroupOptional = AwsWafRuleGroupOptional
+, AwsWafRuleGroupRequired = AwsWafRuleGroupRequired
+, AwsWafRuleGroup = AwsWafRuleGroup
+}

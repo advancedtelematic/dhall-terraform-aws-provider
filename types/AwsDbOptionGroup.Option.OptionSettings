@@ -1,0 +1,12 @@
+
+let OptionSettingsOptional = {}
+
+let OptionSettingsRequired =
+  { name : Text
+  , value : Text
+  }
+let OptionSettings = OptionSettingsOptional //\\ OptionSettingsRequired
+
+in
+{ OptionSettings = OptionSettings
+}

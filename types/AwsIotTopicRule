@@ -1,0 +1,29 @@
+
+let AwsIotTopicRuleOptional =
+  { description : Optional Text
+  , cloudwatch_alarm : Optional (List (./AwsIotTopicRule.CloudwatchAlarm).CloudwatchAlarm)
+  , cloudwatch_metric : Optional (List (./AwsIotTopicRule.CloudwatchMetric).CloudwatchMetric)
+  , dynamodb : Optional (List (./AwsIotTopicRule.Dynamodb).Dynamodb)
+  , elasticsearch : Optional (List (./AwsIotTopicRule.Elasticsearch).Elasticsearch)
+  , firehose : Optional (List (./AwsIotTopicRule.Firehose).Firehose)
+  , kinesis : Optional (List (./AwsIotTopicRule.Kinesis).Kinesis)
+  , lambda : Optional (List (./AwsIotTopicRule.Lambda).Lambda)
+  , republish : Optional (List (./AwsIotTopicRule.Republish).Republish)
+  , s3 : Optional (List (./AwsIotTopicRule.S3).S3)
+  , sns : Optional (List (./AwsIotTopicRule.Sns).Sns)
+  , sqs : Optional (List (./AwsIotTopicRule.Sqs).Sqs)
+  }
+
+let AwsIotTopicRuleRequired =
+  { enabled : Bool
+  , name : Text
+  , sql : Text
+  , sql_version : Text
+  }
+let AwsIotTopicRule = AwsIotTopicRuleOptional //\\ AwsIotTopicRuleRequired
+
+in
+{ AwsIotTopicRuleOptional = AwsIotTopicRuleOptional
+, AwsIotTopicRuleRequired = AwsIotTopicRuleRequired
+, AwsIotTopicRule = AwsIotTopicRule
+}

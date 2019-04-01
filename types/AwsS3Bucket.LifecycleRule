@@ -1,0 +1,21 @@
+
+let LifecycleRuleOptional =
+  { abort_incomplete_multipart_upload_days : Optional Natural
+  , id : Optional Text
+  , prefix : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , expiration : Optional (./AwsS3Bucket.LifecycleRule.Expiration).Expiration
+  , noncurrent_version_expiration : Optional (./AwsS3Bucket.LifecycleRule.NoncurrentVersionExpiration).NoncurrentVersionExpiration
+  , noncurrent_version_transition : Optional (List (./AwsS3Bucket.LifecycleRule.NoncurrentVersionTransition).NoncurrentVersionTransition)
+  , transition : Optional (List (./AwsS3Bucket.LifecycleRule.Transition).Transition)
+  }
+
+let LifecycleRuleRequired =
+  { enabled : Bool }
+let LifecycleRule = LifecycleRuleOptional //\\ LifecycleRuleRequired
+
+in
+{ LifecycleRuleOptional = LifecycleRuleOptional
+, LifecycleRuleRequired = LifecycleRuleRequired
+, LifecycleRule = LifecycleRule
+}

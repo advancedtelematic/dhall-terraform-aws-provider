@@ -1,0 +1,15 @@
+
+let RecordingGroupOptional =
+  { all_supported : Optional Bool
+  , include_global_resource_types : Optional Bool
+  , resource_types : Optional (List Text)
+  }
+
+let RecordingGroupRequired = {}
+let RecordingGroup = RecordingGroupOptional //\\ RecordingGroupRequired
+
+in
+{ RecordingGroupOptional = RecordingGroupOptional
+, RecordingGroupRequired = RecordingGroupRequired
+, RecordingGroup = RecordingGroup
+}

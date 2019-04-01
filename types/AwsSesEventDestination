@@ -1,0 +1,20 @@
+
+let AwsSesEventDestinationOptional =
+  { enabled : Optional Bool
+  , cloudwatch_destination : Optional (List (./AwsSesEventDestination.CloudwatchDestination).CloudwatchDestination)
+  , kinesis_destination : Optional (./AwsSesEventDestination.KinesisDestination).KinesisDestination
+  , sns_destination : Optional (./AwsSesEventDestination.SnsDestination).SnsDestination
+  }
+
+let AwsSesEventDestinationRequired =
+  { configuration_set_name : Text
+  , matching_types : (List Text)
+  , name : Text
+  }
+let AwsSesEventDestination = AwsSesEventDestinationOptional //\\ AwsSesEventDestinationRequired
+
+in
+{ AwsSesEventDestinationOptional = AwsSesEventDestinationOptional
+, AwsSesEventDestinationRequired = AwsSesEventDestinationRequired
+, AwsSesEventDestination = AwsSesEventDestination
+}

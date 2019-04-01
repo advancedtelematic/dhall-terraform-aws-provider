@@ -1,0 +1,10 @@
+
+let S3ConfigOptional = {}
+
+let S3ConfigRequired =
+  { bucket_access_role_arn : Text }
+let S3Config = S3ConfigOptional //\\ S3ConfigRequired
+
+in
+{ S3Config = S3Config
+}

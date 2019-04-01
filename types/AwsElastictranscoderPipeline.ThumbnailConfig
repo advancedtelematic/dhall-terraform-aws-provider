@@ -1,0 +1,14 @@
+
+let ThumbnailConfigOptional =
+  { bucket : Optional Text
+  , storage_class : Optional Text
+  }
+
+let ThumbnailConfigRequired = {}
+let ThumbnailConfig = ThumbnailConfigOptional //\\ ThumbnailConfigRequired
+
+in
+{ ThumbnailConfigOptional = ThumbnailConfigOptional
+, ThumbnailConfigRequired = ThumbnailConfigRequired
+, ThumbnailConfig = ThumbnailConfig
+}

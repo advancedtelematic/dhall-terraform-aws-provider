@@ -1,0 +1,17 @@
+
+let AwsAthenaDatabaseOptional =
+  { force_destroy : Optional Bool
+  , encryption_configuration : Optional (./AwsAthenaDatabase.EncryptionConfiguration).EncryptionConfiguration
+  }
+
+let AwsAthenaDatabaseRequired =
+  { bucket : Text
+  , name : Text
+  }
+let AwsAthenaDatabase = AwsAthenaDatabaseOptional //\\ AwsAthenaDatabaseRequired
+
+in
+{ AwsAthenaDatabaseOptional = AwsAthenaDatabaseOptional
+, AwsAthenaDatabaseRequired = AwsAthenaDatabaseRequired
+, AwsAthenaDatabase = AwsAthenaDatabase
+}

@@ -1,0 +1,15 @@
+
+let ElasticsearchOptional = {}
+
+let ElasticsearchRequired =
+  { endpoint : Text
+  , id : Text
+  , index : Text
+  , role_arn : Text
+  , type : Text
+  }
+let Elasticsearch = ElasticsearchOptional //\\ ElasticsearchRequired
+
+in
+{ Elasticsearch = Elasticsearch
+}

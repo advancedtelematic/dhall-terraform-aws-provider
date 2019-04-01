@@ -1,0 +1,12 @@
+
+let OverrideOptional =
+  { instance_type : Optional Text }
+
+let OverrideRequired = {}
+let Override = OverrideOptional //\\ OverrideRequired
+
+in
+{ OverrideOptional = OverrideOptional
+, OverrideRequired = OverrideRequired
+, Override = Override
+}

@@ -1,0 +1,12 @@
+
+let AwsSsmResourceDataSyncOptional = {}
+
+let AwsSsmResourceDataSyncRequired =
+  { name : Text
+  , s3_destination : (./AwsSsmResourceDataSync.S3Destination).S3Destination
+  }
+let AwsSsmResourceDataSync = AwsSsmResourceDataSyncOptional //\\ AwsSsmResourceDataSyncRequired
+
+in
+{ AwsSsmResourceDataSync = AwsSsmResourceDataSync
+}

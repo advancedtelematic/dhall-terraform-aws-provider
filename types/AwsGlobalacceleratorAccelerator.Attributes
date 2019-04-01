@@ -1,0 +1,15 @@
+
+let AttributesOptional =
+  { flow_logs_enabled : Optional Bool
+  , flow_logs_s3_bucket : Optional Text
+  , flow_logs_s3_prefix : Optional Text
+  }
+
+let AttributesRequired = {}
+let Attributes = AttributesOptional //\\ AttributesRequired
+
+in
+{ AttributesOptional = AttributesOptional
+, AttributesRequired = AttributesRequired
+, Attributes = Attributes
+}

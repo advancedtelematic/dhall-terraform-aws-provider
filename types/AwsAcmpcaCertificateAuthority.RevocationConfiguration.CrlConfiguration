@@ -1,0 +1,16 @@
+
+let CrlConfigurationOptional =
+  { custom_cname : Optional Text
+  , enabled : Optional Bool
+  , s3_bucket_name : Optional Text
+  }
+
+let CrlConfigurationRequired =
+  { expiration_in_days : Natural }
+let CrlConfiguration = CrlConfigurationOptional //\\ CrlConfigurationRequired
+
+in
+{ CrlConfigurationOptional = CrlConfigurationOptional
+, CrlConfigurationRequired = CrlConfigurationRequired
+, CrlConfiguration = CrlConfiguration
+}

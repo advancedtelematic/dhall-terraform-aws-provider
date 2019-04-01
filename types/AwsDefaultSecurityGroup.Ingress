@@ -1,0 +1,22 @@
+
+let IngressOptional =
+  { cidr_blocks : Optional (List Text)
+  , description : Optional Text
+  , ipv6_cidr_blocks : Optional (List Text)
+  , prefix_list_ids : Optional (List Text)
+  , security_groups : Optional (List Text)
+  , self : Optional Bool
+  }
+
+let IngressRequired =
+  { from_port : Natural
+  , protocol : Text
+  , to_port : Natural
+  }
+let Ingress = IngressOptional //\\ IngressRequired
+
+in
+{ IngressOptional = IngressOptional
+, IngressRequired = IngressRequired
+, Ingress = Ingress
+}

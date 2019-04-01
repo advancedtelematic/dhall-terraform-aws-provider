@@ -1,0 +1,19 @@
+
+let AwsElasticBeanstalkConfigurationTemplateOptional =
+  { description : Optional Text
+  , environment_id : Optional Text
+  , solution_stack_name : Optional Text
+  , setting : Optional (List (./AwsElasticBeanstalkConfigurationTemplate.Setting).Setting)
+  }
+
+let AwsElasticBeanstalkConfigurationTemplateRequired =
+  { application : Text
+  , name : Text
+  }
+let AwsElasticBeanstalkConfigurationTemplate = AwsElasticBeanstalkConfigurationTemplateOptional //\\ AwsElasticBeanstalkConfigurationTemplateRequired
+
+in
+{ AwsElasticBeanstalkConfigurationTemplateOptional = AwsElasticBeanstalkConfigurationTemplateOptional
+, AwsElasticBeanstalkConfigurationTemplateRequired = AwsElasticBeanstalkConfigurationTemplateRequired
+, AwsElasticBeanstalkConfigurationTemplate = AwsElasticBeanstalkConfigurationTemplate
+}

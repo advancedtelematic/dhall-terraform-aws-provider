@@ -1,0 +1,15 @@
+
+let Ec2TagFilterOptional =
+  { key : Optional Text
+  , type : Optional Text
+  , value : Optional Text
+  }
+
+let Ec2TagFilterRequired = {}
+let Ec2TagFilter = Ec2TagFilterOptional //\\ Ec2TagFilterRequired
+
+in
+{ Ec2TagFilterOptional = Ec2TagFilterOptional
+, Ec2TagFilterRequired = Ec2TagFilterRequired
+, Ec2TagFilter = Ec2TagFilter
+}

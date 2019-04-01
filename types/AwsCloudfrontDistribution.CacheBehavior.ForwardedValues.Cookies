@@ -1,0 +1,13 @@
+
+let CookiesOptional =
+  { whitelisted_names : Optional (List Text) }
+
+let CookiesRequired =
+  { forward : Text }
+let Cookies = CookiesOptional //\\ CookiesRequired
+
+in
+{ CookiesOptional = CookiesOptional
+, CookiesRequired = CookiesRequired
+, Cookies = Cookies
+}

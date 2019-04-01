@@ -1,0 +1,16 @@
+
+let CognitoOptionsOptional =
+  { enabled : Optional Bool }
+
+let CognitoOptionsRequired =
+  { identity_pool_id : Text
+  , role_arn : Text
+  , user_pool_id : Text
+  }
+let CognitoOptions = CognitoOptionsOptional //\\ CognitoOptionsRequired
+
+in
+{ CognitoOptionsOptional = CognitoOptionsOptional
+, CognitoOptionsRequired = CognitoOptionsRequired
+, CognitoOptions = CognitoOptions
+}

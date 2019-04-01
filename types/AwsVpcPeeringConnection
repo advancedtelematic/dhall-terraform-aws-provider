@@ -1,0 +1,21 @@
+
+let AwsVpcPeeringConnectionOptional =
+  { auto_accept : Optional Bool
+  , peer_owner_id : Optional Text
+  , peer_region : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , accepter : Optional (./AwsVpcPeeringConnection.Accepter).Accepter
+  , requester : Optional (./AwsVpcPeeringConnection.Requester).Requester
+  }
+
+let AwsVpcPeeringConnectionRequired =
+  { peer_vpc_id : Text
+  , vpc_id : Text
+  }
+let AwsVpcPeeringConnection = AwsVpcPeeringConnectionOptional //\\ AwsVpcPeeringConnectionRequired
+
+in
+{ AwsVpcPeeringConnectionOptional = AwsVpcPeeringConnectionOptional
+, AwsVpcPeeringConnectionRequired = AwsVpcPeeringConnectionRequired
+, AwsVpcPeeringConnection = AwsVpcPeeringConnection
+}

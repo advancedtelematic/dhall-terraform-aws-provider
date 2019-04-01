@@ -1,0 +1,15 @@
+
+let PartitionKeysOptional =
+  { comment : Optional Text
+  , type : Optional Text
+  }
+
+let PartitionKeysRequired =
+  { name : Text }
+let PartitionKeys = PartitionKeysOptional //\\ PartitionKeysRequired
+
+in
+{ PartitionKeysOptional = PartitionKeysOptional
+, PartitionKeysRequired = PartitionKeysRequired
+, PartitionKeys = PartitionKeys
+}

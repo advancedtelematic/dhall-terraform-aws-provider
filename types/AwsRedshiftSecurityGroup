@@ -1,0 +1,15 @@
+
+let AwsRedshiftSecurityGroupOptional =
+  { description : Optional Text }
+
+let AwsRedshiftSecurityGroupRequired =
+  { name : Text
+  , ingress : List (./AwsRedshiftSecurityGroup.Ingress).Ingress
+  }
+let AwsRedshiftSecurityGroup = AwsRedshiftSecurityGroupOptional //\\ AwsRedshiftSecurityGroupRequired
+
+in
+{ AwsRedshiftSecurityGroupOptional = AwsRedshiftSecurityGroupOptional
+, AwsRedshiftSecurityGroupRequired = AwsRedshiftSecurityGroupRequired
+, AwsRedshiftSecurityGroup = AwsRedshiftSecurityGroup
+}

@@ -1,0 +1,15 @@
+
+let ServerProcessOptional =
+  { parameters : Optional Text }
+
+let ServerProcessRequired =
+  { concurrent_executions : Natural
+  , launch_path : Text
+  }
+let ServerProcess = ServerProcessOptional //\\ ServerProcessRequired
+
+in
+{ ServerProcessOptional = ServerProcessOptional
+, ServerProcessRequired = ServerProcessRequired
+, ServerProcess = ServerProcess
+}

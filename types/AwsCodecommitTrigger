@@ -1,0 +1,12 @@
+
+let AwsCodecommitTriggerOptional = {}
+
+let AwsCodecommitTriggerRequired =
+  { repository_name : Text
+  , trigger : List (./AwsCodecommitTrigger.Trigger).Trigger
+  }
+let AwsCodecommitTrigger = AwsCodecommitTriggerOptional //\\ AwsCodecommitTriggerRequired
+
+in
+{ AwsCodecommitTrigger = AwsCodecommitTrigger
+}

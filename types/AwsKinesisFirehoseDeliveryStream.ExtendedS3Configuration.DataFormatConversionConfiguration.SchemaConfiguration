@@ -1,0 +1,19 @@
+
+let SchemaConfigurationOptional =
+  { catalog_id : Optional Text
+  , region : Optional Text
+  , version_id : Optional Text
+  }
+
+let SchemaConfigurationRequired =
+  { database_name : Text
+  , role_arn : Text
+  , table_name : Text
+  }
+let SchemaConfiguration = SchemaConfigurationOptional //\\ SchemaConfigurationRequired
+
+in
+{ SchemaConfigurationOptional = SchemaConfigurationOptional
+, SchemaConfigurationRequired = SchemaConfigurationRequired
+, SchemaConfiguration = SchemaConfiguration
+}

@@ -1,0 +1,10 @@
+
+let DynamodbTargetOptional = {}
+
+let DynamodbTargetRequired =
+  { path : Text }
+let DynamodbTarget = DynamodbTargetOptional //\\ DynamodbTargetRequired
+
+in
+{ DynamodbTarget = DynamodbTarget
+}

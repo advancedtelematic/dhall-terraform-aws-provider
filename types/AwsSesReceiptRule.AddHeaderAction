@@ -1,0 +1,13 @@
+
+let AddHeaderActionOptional = {}
+
+let AddHeaderActionRequired =
+  { header_name : Text
+  , header_value : Text
+  , position : Natural
+  }
+let AddHeaderAction = AddHeaderActionOptional //\\ AddHeaderActionRequired
+
+in
+{ AddHeaderAction = AddHeaderAction
+}

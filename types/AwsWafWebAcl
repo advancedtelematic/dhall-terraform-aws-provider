@@ -1,0 +1,18 @@
+
+let AwsWafWebAclOptional =
+  { logging_configuration : Optional (./AwsWafWebAcl.LoggingConfiguration).LoggingConfiguration
+  , rules : Optional (List (./AwsWafWebAcl.Rules).Rules)
+  }
+
+let AwsWafWebAclRequired =
+  { metric_name : Text
+  , name : Text
+  , default_action : (./AwsWafWebAcl.DefaultAction).DefaultAction
+  }
+let AwsWafWebAcl = AwsWafWebAclOptional //\\ AwsWafWebAclRequired
+
+in
+{ AwsWafWebAclOptional = AwsWafWebAclOptional
+, AwsWafWebAclRequired = AwsWafWebAclRequired
+, AwsWafWebAcl = AwsWafWebAcl
+}

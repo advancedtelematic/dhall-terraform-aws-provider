@@ -1,0 +1,19 @@
+
+let AwsBatchJobDefinitionOptional =
+  { container_properties : Optional Text
+  , parameters : Optional (List { mapKey : Text, mapValue : Text })
+  , retry_strategy : Optional (./AwsBatchJobDefinition.RetryStrategy).RetryStrategy
+  , timeout : Optional (./AwsBatchJobDefinition.Timeout).Timeout
+  }
+
+let AwsBatchJobDefinitionRequired =
+  { name : Text
+  , type : Text
+  }
+let AwsBatchJobDefinition = AwsBatchJobDefinitionOptional //\\ AwsBatchJobDefinitionRequired
+
+in
+{ AwsBatchJobDefinitionOptional = AwsBatchJobDefinitionOptional
+, AwsBatchJobDefinitionRequired = AwsBatchJobDefinitionRequired
+, AwsBatchJobDefinition = AwsBatchJobDefinition
+}

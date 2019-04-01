@@ -1,0 +1,13 @@
+
+let CloudwatchDestinationOptional = {}
+
+let CloudwatchDestinationRequired =
+  { default_value : Text
+  , dimension_name : Text
+  , value_source : Text
+  }
+let CloudwatchDestination = CloudwatchDestinationOptional //\\ CloudwatchDestinationRequired
+
+in
+{ CloudwatchDestination = CloudwatchDestination
+}

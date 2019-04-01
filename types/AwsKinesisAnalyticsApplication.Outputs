@@ -1,0 +1,18 @@
+
+let OutputsOptional =
+  { kinesis_firehose : Optional (./AwsKinesisAnalyticsApplication.Outputs.KinesisFirehose).KinesisFirehose
+  , kinesis_stream : Optional (./AwsKinesisAnalyticsApplication.Outputs.KinesisStream).KinesisStream
+  , lambda : Optional (./AwsKinesisAnalyticsApplication.Outputs.Lambda).Lambda
+  }
+
+let OutputsRequired =
+  { name : Text
+  , schema : (./AwsKinesisAnalyticsApplication.Outputs.Schema).Schema
+  }
+let Outputs = OutputsOptional //\\ OutputsRequired
+
+in
+{ OutputsOptional = OutputsOptional
+, OutputsRequired = OutputsRequired
+, Outputs = Outputs
+}

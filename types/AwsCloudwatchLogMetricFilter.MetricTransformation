@@ -1,0 +1,16 @@
+
+let MetricTransformationOptional =
+  { default_value : Optional Text }
+
+let MetricTransformationRequired =
+  { name : Text
+  , namespace : Text
+  , value : Text
+  }
+let MetricTransformation = MetricTransformationOptional //\\ MetricTransformationRequired
+
+in
+{ MetricTransformationOptional = MetricTransformationOptional
+, MetricTransformationRequired = MetricTransformationRequired
+, MetricTransformation = MetricTransformation
+}

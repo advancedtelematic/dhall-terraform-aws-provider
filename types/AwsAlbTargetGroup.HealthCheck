@@ -1,0 +1,20 @@
+
+let HealthCheckOptional =
+  { healthy_threshold : Optional Natural
+  , interval : Optional Natural
+  , matcher : Optional Text
+  , path : Optional Text
+  , port : Optional Text
+  , protocol : Optional Text
+  , timeout : Optional Natural
+  , unhealthy_threshold : Optional Natural
+  }
+
+let HealthCheckRequired = {}
+let HealthCheck = HealthCheckOptional //\\ HealthCheckRequired
+
+in
+{ HealthCheckOptional = HealthCheckOptional
+, HealthCheckRequired = HealthCheckRequired
+, HealthCheck = HealthCheck
+}

@@ -1,0 +1,20 @@
+
+let AwsSsmPatchBaselineOptional =
+  { approved_patches : Optional (List Text)
+  , approved_patches_compliance_level : Optional Text
+  , description : Optional Text
+  , operating_system : Optional Text
+  , rejected_patches : Optional (List Text)
+  , approval_rule : Optional (List (./AwsSsmPatchBaseline.ApprovalRule).ApprovalRule)
+  , global_filter : Optional (List (./AwsSsmPatchBaseline.GlobalFilter).GlobalFilter)
+  }
+
+let AwsSsmPatchBaselineRequired =
+  { name : Text }
+let AwsSsmPatchBaseline = AwsSsmPatchBaselineOptional //\\ AwsSsmPatchBaselineRequired
+
+in
+{ AwsSsmPatchBaselineOptional = AwsSsmPatchBaselineOptional
+, AwsSsmPatchBaselineRequired = AwsSsmPatchBaselineRequired
+, AwsSsmPatchBaseline = AwsSsmPatchBaseline
+}

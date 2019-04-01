@@ -1,0 +1,19 @@
+
+let EbsBlockDeviceOptional =
+  { delete_on_termination : Optional Bool
+  , encrypted : Optional Bool
+  , iops : Optional Natural
+  , snapshot_id : Optional Text
+  , volume_size : Optional Natural
+  , volume_type : Optional Text
+  }
+
+let EbsBlockDeviceRequired =
+  { device_name : Text }
+let EbsBlockDevice = EbsBlockDeviceOptional //\\ EbsBlockDeviceRequired
+
+in
+{ EbsBlockDeviceOptional = EbsBlockDeviceOptional
+, EbsBlockDeviceRequired = EbsBlockDeviceRequired
+, EbsBlockDevice = EbsBlockDevice
+}

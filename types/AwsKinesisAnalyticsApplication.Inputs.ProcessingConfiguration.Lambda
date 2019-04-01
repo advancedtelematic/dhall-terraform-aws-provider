@@ -1,0 +1,12 @@
+
+let LambdaOptional = {}
+
+let LambdaRequired =
+  { resource_arn : Text
+  , role_arn : Text
+  }
+let Lambda = LambdaOptional //\\ LambdaRequired
+
+in
+{ Lambda = Lambda
+}

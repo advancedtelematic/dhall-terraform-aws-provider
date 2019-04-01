@@ -1,0 +1,14 @@
+
+let EmailConfigurationOptional =
+  { reply_to_email_address : Optional Text
+  , source_arn : Optional Text
+  }
+
+let EmailConfigurationRequired = {}
+let EmailConfiguration = EmailConfigurationOptional //\\ EmailConfigurationRequired
+
+in
+{ EmailConfigurationOptional = EmailConfigurationOptional
+, EmailConfigurationRequired = EmailConfigurationRequired
+, EmailConfiguration = EmailConfiguration
+}

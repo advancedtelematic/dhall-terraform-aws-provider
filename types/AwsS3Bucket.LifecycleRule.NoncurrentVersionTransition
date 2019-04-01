@@ -1,0 +1,13 @@
+
+let NoncurrentVersionTransitionOptional =
+  { days : Optional Natural }
+
+let NoncurrentVersionTransitionRequired =
+  { storage_class : Text }
+let NoncurrentVersionTransition = NoncurrentVersionTransitionOptional //\\ NoncurrentVersionTransitionRequired
+
+in
+{ NoncurrentVersionTransitionOptional = NoncurrentVersionTransitionOptional
+, NoncurrentVersionTransitionRequired = NoncurrentVersionTransitionRequired
+, NoncurrentVersionTransition = NoncurrentVersionTransition
+}

@@ -1,0 +1,21 @@
+
+let AwsNetworkInterfaceOptional =
+  { description : Optional Text
+  , private_ip : Optional Text
+  , private_ips : Optional (List Text)
+  , private_ips_count : Optional Natural
+  , security_groups : Optional (List Text)
+  , source_dest_check : Optional Bool
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , attachment : Optional (List (./AwsNetworkInterface.Attachment).Attachment)
+  }
+
+let AwsNetworkInterfaceRequired =
+  { subnet_id : Text }
+let AwsNetworkInterface = AwsNetworkInterfaceOptional //\\ AwsNetworkInterfaceRequired
+
+in
+{ AwsNetworkInterfaceOptional = AwsNetworkInterfaceOptional
+, AwsNetworkInterfaceRequired = AwsNetworkInterfaceRequired
+, AwsNetworkInterface = AwsNetworkInterface
+}

@@ -1,0 +1,12 @@
+
+let SqsTargetOptional =
+  { message_group_id : Optional Text }
+
+let SqsTargetRequired = {}
+let SqsTarget = SqsTargetOptional //\\ SqsTargetRequired
+
+in
+{ SqsTargetOptional = SqsTargetOptional
+, SqsTargetRequired = SqsTargetRequired
+, SqsTarget = SqsTarget
+}

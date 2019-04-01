@@ -1,0 +1,14 @@
+
+let LogsOptional =
+  { audit : Optional Bool
+  , general : Optional Bool
+  }
+
+let LogsRequired = {}
+let Logs = LogsOptional //\\ LogsRequired
+
+in
+{ LogsOptional = LogsOptional
+, LogsRequired = LogsRequired
+, Logs = Logs
+}

@@ -1,0 +1,13 @@
+
+let StepOptional = {}
+
+let StepRequired =
+  { action_on_failure : Text
+  , name : Text
+  , hadoop_jar_step : (./AwsEmrCluster.Step.HadoopJarStep).HadoopJarStep
+  }
+let Step = StepOptional //\\ StepRequired
+
+in
+{ Step = Step
+}

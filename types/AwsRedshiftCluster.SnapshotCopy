@@ -1,0 +1,15 @@
+
+let SnapshotCopyOptional =
+  { grant_name : Optional Text
+  , retention_period : Optional Natural
+  }
+
+let SnapshotCopyRequired =
+  { destination_region : Text }
+let SnapshotCopy = SnapshotCopyOptional //\\ SnapshotCopyRequired
+
+in
+{ SnapshotCopyOptional = SnapshotCopyOptional
+, SnapshotCopyRequired = SnapshotCopyRequired
+, SnapshotCopy = SnapshotCopy
+}

@@ -1,0 +1,13 @@
+
+let LoggingConfigurationOptional =
+  { redacted_fields : Optional (./AwsWafWebAcl.LoggingConfiguration.RedactedFields).RedactedFields }
+
+let LoggingConfigurationRequired =
+  { log_destination : Text }
+let LoggingConfiguration = LoggingConfigurationOptional //\\ LoggingConfigurationRequired
+
+in
+{ LoggingConfigurationOptional = LoggingConfigurationOptional
+, LoggingConfigurationRequired = LoggingConfigurationRequired
+, LoggingConfiguration = LoggingConfiguration
+}

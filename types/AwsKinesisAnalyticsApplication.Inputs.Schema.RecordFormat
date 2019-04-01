@@ -1,0 +1,12 @@
+
+let RecordFormatOptional =
+  { mapping_parameters : Optional (./AwsKinesisAnalyticsApplication.Inputs.Schema.RecordFormat.MappingParameters).MappingParameters }
+
+let RecordFormatRequired = {}
+let RecordFormat = RecordFormatOptional //\\ RecordFormatRequired
+
+in
+{ RecordFormatOptional = RecordFormatOptional
+, RecordFormatRequired = RecordFormatRequired
+, RecordFormat = RecordFormat
+}

@@ -1,0 +1,21 @@
+
+let S3ConfigurationOptional =
+  { buffer_interval : Optional Natural
+  , buffer_size : Optional Natural
+  , compression_format : Optional Text
+  , kms_key_arn : Optional Text
+  , prefix : Optional Text
+  , cloudwatch_logging_options : Optional (./AwsKinesisFirehoseDeliveryStream.S3Configuration.CloudwatchLoggingOptions).CloudwatchLoggingOptions
+  }
+
+let S3ConfigurationRequired =
+  { bucket_arn : Text
+  , role_arn : Text
+  }
+let S3Configuration = S3ConfigurationOptional //\\ S3ConfigurationRequired
+
+in
+{ S3ConfigurationOptional = S3ConfigurationOptional
+, S3ConfigurationRequired = S3ConfigurationRequired
+, S3Configuration = S3Configuration
+}

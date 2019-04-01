@@ -1,0 +1,12 @@
+
+let TimeoutOptional =
+  { attempt_duration_seconds : Optional Natural }
+
+let TimeoutRequired = {}
+let Timeout = TimeoutOptional //\\ TimeoutRequired
+
+in
+{ TimeoutOptional = TimeoutOptional
+, TimeoutRequired = TimeoutRequired
+, Timeout = Timeout
+}

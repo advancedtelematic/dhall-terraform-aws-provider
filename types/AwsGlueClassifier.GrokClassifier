@@ -1,0 +1,15 @@
+
+let GrokClassifierOptional =
+  { custom_patterns : Optional Text }
+
+let GrokClassifierRequired =
+  { classification : Text
+  , grok_pattern : Text
+  }
+let GrokClassifier = GrokClassifierOptional //\\ GrokClassifierRequired
+
+in
+{ GrokClassifierOptional = GrokClassifierOptional
+, GrokClassifierRequired = GrokClassifierRequired
+, GrokClassifier = GrokClassifier
+}

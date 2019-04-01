@@ -1,0 +1,13 @@
+
+let PredefinedMetricSpecificationOptional =
+  { resource_label : Optional Text }
+
+let PredefinedMetricSpecificationRequired =
+  { predefined_metric_type : Text }
+let PredefinedMetricSpecification = PredefinedMetricSpecificationOptional //\\ PredefinedMetricSpecificationRequired
+
+in
+{ PredefinedMetricSpecificationOptional = PredefinedMetricSpecificationOptional
+, PredefinedMetricSpecificationRequired = PredefinedMetricSpecificationRequired
+, PredefinedMetricSpecification = PredefinedMetricSpecification
+}

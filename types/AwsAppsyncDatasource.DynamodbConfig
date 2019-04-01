@@ -1,0 +1,15 @@
+
+let DynamodbConfigOptional =
+  { region : Optional Text
+  , use_caller_credentials : Optional Bool
+  }
+
+let DynamodbConfigRequired =
+  { table_name : Text }
+let DynamodbConfig = DynamodbConfigOptional //\\ DynamodbConfigRequired
+
+in
+{ DynamodbConfigOptional = DynamodbConfigOptional
+, DynamodbConfigRequired = DynamodbConfigRequired
+, DynamodbConfig = DynamodbConfig
+}

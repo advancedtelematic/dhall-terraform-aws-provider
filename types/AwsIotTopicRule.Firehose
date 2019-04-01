@@ -1,0 +1,15 @@
+
+let FirehoseOptional =
+  { separator : Optional Text }
+
+let FirehoseRequired =
+  { delivery_stream_name : Text
+  , role_arn : Text
+  }
+let Firehose = FirehoseOptional //\\ FirehoseRequired
+
+in
+{ FirehoseOptional = FirehoseOptional
+, FirehoseRequired = FirehoseRequired
+, Firehose = Firehose
+}

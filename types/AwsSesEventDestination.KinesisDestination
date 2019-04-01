@@ -1,0 +1,12 @@
+
+let KinesisDestinationOptional = {}
+
+let KinesisDestinationRequired =
+  { role_arn : Text
+  , stream_arn : Text
+  }
+let KinesisDestination = KinesisDestinationOptional //\\ KinesisDestinationRequired
+
+in
+{ KinesisDestination = KinesisDestination
+}

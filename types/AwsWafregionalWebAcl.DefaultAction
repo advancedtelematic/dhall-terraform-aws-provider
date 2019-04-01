@@ -1,0 +1,10 @@
+
+let DefaultActionOptional = {}
+
+let DefaultActionRequired =
+  { type : Text }
+let DefaultAction = DefaultActionOptional //\\ DefaultActionRequired
+
+in
+{ DefaultAction = DefaultAction
+}

@@ -1,0 +1,15 @@
+
+let RecordColumnsOptional =
+  { mapping : Optional Text }
+
+let RecordColumnsRequired =
+  { name : Text
+  , sql_type : Text
+  }
+let RecordColumns = RecordColumnsOptional //\\ RecordColumnsRequired
+
+in
+{ RecordColumnsOptional = RecordColumnsOptional
+, RecordColumnsRequired = RecordColumnsRequired
+, RecordColumns = RecordColumns
+}

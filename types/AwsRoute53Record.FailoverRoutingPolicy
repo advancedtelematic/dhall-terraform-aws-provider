@@ -1,0 +1,10 @@
+
+let FailoverRoutingPolicyOptional = {}
+
+let FailoverRoutingPolicyRequired =
+  { type : Text }
+let FailoverRoutingPolicy = FailoverRoutingPolicyOptional //\\ FailoverRoutingPolicyRequired
+
+in
+{ FailoverRoutingPolicy = FailoverRoutingPolicy
+}

@@ -1,0 +1,14 @@
+
+let SchemaChangePolicyOptional =
+  { delete_behavior : Optional Text
+  , update_behavior : Optional Text
+  }
+
+let SchemaChangePolicyRequired = {}
+let SchemaChangePolicy = SchemaChangePolicyOptional //\\ SchemaChangePolicyRequired
+
+in
+{ SchemaChangePolicyOptional = SchemaChangePolicyOptional
+, SchemaChangePolicyRequired = SchemaChangePolicyRequired
+, SchemaChangePolicy = SchemaChangePolicy
+}

@@ -1,0 +1,14 @@
+
+let FilterOptional =
+  { prefix : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  }
+
+let FilterRequired = {}
+let Filter = FilterOptional //\\ FilterRequired
+
+in
+{ FilterOptional = FilterOptional
+, FilterRequired = FilterRequired
+, Filter = Filter
+}

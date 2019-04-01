@@ -1,0 +1,16 @@
+
+let AwsMacieS3BucketAssociationOptional =
+  { member_account_id : Optional Text
+  , prefix : Optional Text
+  , classification_type : Optional (./AwsMacieS3BucketAssociation.ClassificationType).ClassificationType
+  }
+
+let AwsMacieS3BucketAssociationRequired =
+  { bucket_name : Text }
+let AwsMacieS3BucketAssociation = AwsMacieS3BucketAssociationOptional //\\ AwsMacieS3BucketAssociationRequired
+
+in
+{ AwsMacieS3BucketAssociationOptional = AwsMacieS3BucketAssociationOptional
+, AwsMacieS3BucketAssociationRequired = AwsMacieS3BucketAssociationRequired
+, AwsMacieS3BucketAssociation = AwsMacieS3BucketAssociation
+}

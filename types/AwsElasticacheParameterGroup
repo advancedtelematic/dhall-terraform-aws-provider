@@ -1,0 +1,17 @@
+
+let AwsElasticacheParameterGroupOptional =
+  { description : Optional Text
+  , parameter : Optional (List (./AwsElasticacheParameterGroup.Parameter).Parameter)
+  }
+
+let AwsElasticacheParameterGroupRequired =
+  { family : Text
+  , name : Text
+  }
+let AwsElasticacheParameterGroup = AwsElasticacheParameterGroupOptional //\\ AwsElasticacheParameterGroupRequired
+
+in
+{ AwsElasticacheParameterGroupOptional = AwsElasticacheParameterGroupOptional
+, AwsElasticacheParameterGroupRequired = AwsElasticacheParameterGroupRequired
+, AwsElasticacheParameterGroup = AwsElasticacheParameterGroup
+}

@@ -1,0 +1,14 @@
+
+let TagSpecificationsOptional =
+  { resource_type : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  }
+
+let TagSpecificationsRequired = {}
+let TagSpecifications = TagSpecificationsOptional //\\ TagSpecificationsRequired
+
+in
+{ TagSpecificationsOptional = TagSpecificationsOptional
+, TagSpecificationsRequired = TagSpecificationsRequired
+, TagSpecifications = TagSpecifications
+}

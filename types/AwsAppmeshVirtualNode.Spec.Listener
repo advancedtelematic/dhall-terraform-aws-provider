@@ -1,0 +1,12 @@
+
+let ListenerOptional = {}
+
+let ListenerRequired =
+  { health_check : (./AwsAppmeshVirtualNode.Spec.Listener.HealthCheck).HealthCheck
+  , port_mapping : (./AwsAppmeshVirtualNode.Spec.Listener.PortMapping).PortMapping
+  }
+let Listener = ListenerOptional //\\ ListenerRequired
+
+in
+{ Listener = Listener
+}

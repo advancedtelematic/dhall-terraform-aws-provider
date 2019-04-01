@@ -1,0 +1,10 @@
+
+let ScheduleOptional = {}
+
+let ScheduleRequired =
+  { frequency : Text }
+let Schedule = ScheduleOptional //\\ ScheduleRequired
+
+in
+{ Schedule = Schedule
+}

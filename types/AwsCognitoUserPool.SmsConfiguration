@@ -1,0 +1,12 @@
+
+let SmsConfigurationOptional = {}
+
+let SmsConfigurationRequired =
+  { external_id : Text
+  , sns_caller_arn : Text
+  }
+let SmsConfiguration = SmsConfigurationOptional //\\ SmsConfigurationRequired
+
+in
+{ SmsConfiguration = SmsConfiguration
+}

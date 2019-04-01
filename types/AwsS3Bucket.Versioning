@@ -1,0 +1,14 @@
+
+let VersioningOptional =
+  { enabled : Optional Bool
+  , mfa_delete : Optional Bool
+  }
+
+let VersioningRequired = {}
+let Versioning = VersioningOptional //\\ VersioningRequired
+
+in
+{ VersioningOptional = VersioningOptional
+, VersioningRequired = VersioningRequired
+, Versioning = Versioning
+}

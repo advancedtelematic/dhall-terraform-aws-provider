@@ -1,0 +1,14 @@
+
+let TimeBasedLinearOptional =
+  { interval : Optional Natural
+  , percentage : Optional Natural
+  }
+
+let TimeBasedLinearRequired = {}
+let TimeBasedLinear = TimeBasedLinearOptional //\\ TimeBasedLinearRequired
+
+in
+{ TimeBasedLinearOptional = TimeBasedLinearOptional
+, TimeBasedLinearRequired = TimeBasedLinearRequired
+, TimeBasedLinear = TimeBasedLinear
+}

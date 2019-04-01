@@ -1,0 +1,16 @@
+
+let LocalSecondaryIndexOptional =
+  { non_key_attributes : Optional (List Text) }
+
+let LocalSecondaryIndexRequired =
+  { name : Text
+  , projection_type : Text
+  , range_key : Text
+  }
+let LocalSecondaryIndex = LocalSecondaryIndexOptional //\\ LocalSecondaryIndexRequired
+
+in
+{ LocalSecondaryIndexOptional = LocalSecondaryIndexOptional
+, LocalSecondaryIndexRequired = LocalSecondaryIndexRequired
+, LocalSecondaryIndex = LocalSecondaryIndex
+}

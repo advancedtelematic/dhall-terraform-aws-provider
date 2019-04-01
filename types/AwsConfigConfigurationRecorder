@@ -1,0 +1,15 @@
+
+let AwsConfigConfigurationRecorderOptional =
+  { name : Optional Text
+  , recording_group : Optional (./AwsConfigConfigurationRecorder.RecordingGroup).RecordingGroup
+  }
+
+let AwsConfigConfigurationRecorderRequired =
+  { role_arn : Text }
+let AwsConfigConfigurationRecorder = AwsConfigConfigurationRecorderOptional //\\ AwsConfigConfigurationRecorderRequired
+
+in
+{ AwsConfigConfigurationRecorderOptional = AwsConfigConfigurationRecorderOptional
+, AwsConfigConfigurationRecorderRequired = AwsConfigConfigurationRecorderRequired
+, AwsConfigConfigurationRecorder = AwsConfigConfigurationRecorder
+}

@@ -1,0 +1,12 @@
+
+let DimensionsOptional = {}
+
+let DimensionsRequired =
+  { name : Text
+  , value : Text
+  }
+let Dimensions = DimensionsOptional //\\ DimensionsRequired
+
+in
+{ Dimensions = Dimensions
+}

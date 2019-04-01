@@ -1,0 +1,16 @@
+
+let EbsOptionsOptional =
+  { iops : Optional Natural
+  , volume_size : Optional Natural
+  , volume_type : Optional Text
+  }
+
+let EbsOptionsRequired =
+  { ebs_enabled : Bool }
+let EbsOptions = EbsOptionsOptional //\\ EbsOptionsRequired
+
+in
+{ EbsOptionsOptional = EbsOptionsOptional
+, EbsOptionsRequired = EbsOptionsRequired
+, EbsOptions = EbsOptions
+}

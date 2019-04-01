@@ -1,0 +1,9 @@
+
+let ThrottleSettingsOptional = {}
+
+let ThrottleSettingsRequired = {}
+let ThrottleSettings = ThrottleSettingsOptional //\\ ThrottleSettingsRequired
+
+in
+{ ThrottleSettings = ThrottleSettings
+}

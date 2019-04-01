@@ -1,0 +1,10 @@
+
+let JsonClassifierOptional = {}
+
+let JsonClassifierRequired =
+  { json_path : Text }
+let JsonClassifier = JsonClassifierOptional //\\ JsonClassifierRequired
+
+in
+{ JsonClassifier = JsonClassifier
+}

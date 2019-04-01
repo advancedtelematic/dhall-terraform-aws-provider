@@ -1,0 +1,17 @@
+
+let RoleMappingOptional =
+  { ambiguous_role_resolution : Optional Text
+  , mapping_rule : Optional (List (./AwsCognitoIdentityPoolRolesAttachment.RoleMapping.MappingRule).MappingRule)
+  }
+
+let RoleMappingRequired =
+  { identity_provider : Text
+  , type : Text
+  }
+let RoleMapping = RoleMappingOptional //\\ RoleMappingRequired
+
+in
+{ RoleMappingOptional = RoleMappingOptional
+, RoleMappingRequired = RoleMappingRequired
+, RoleMapping = RoleMapping
+}

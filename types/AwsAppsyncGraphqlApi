@@ -1,0 +1,18 @@
+
+let AwsAppsyncGraphqlApiOptional =
+  { log_config : Optional (./AwsAppsyncGraphqlApi.LogConfig).LogConfig
+  , openid_connect_config : Optional (./AwsAppsyncGraphqlApi.OpenidConnectConfig).OpenidConnectConfig
+  , user_pool_config : Optional (./AwsAppsyncGraphqlApi.UserPoolConfig).UserPoolConfig
+  }
+
+let AwsAppsyncGraphqlApiRequired =
+  { authentication_type : Text
+  , name : Text
+  }
+let AwsAppsyncGraphqlApi = AwsAppsyncGraphqlApiOptional //\\ AwsAppsyncGraphqlApiRequired
+
+in
+{ AwsAppsyncGraphqlApiOptional = AwsAppsyncGraphqlApiOptional
+, AwsAppsyncGraphqlApiRequired = AwsAppsyncGraphqlApiRequired
+, AwsAppsyncGraphqlApi = AwsAppsyncGraphqlApi
+}

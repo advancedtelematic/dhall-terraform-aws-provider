@@ -1,0 +1,17 @@
+
+let TargetCapacitySpecificationOptional =
+  { on_demand_target_capacity : Optional Natural
+  , spot_target_capacity : Optional Natural
+  }
+
+let TargetCapacitySpecificationRequired =
+  { default_target_capacity_type : Text
+  , total_target_capacity : Natural
+  }
+let TargetCapacitySpecification = TargetCapacitySpecificationOptional //\\ TargetCapacitySpecificationRequired
+
+in
+{ TargetCapacitySpecificationOptional = TargetCapacitySpecificationOptional
+, TargetCapacitySpecificationRequired = TargetCapacitySpecificationRequired
+, TargetCapacitySpecification = TargetCapacitySpecification
+}

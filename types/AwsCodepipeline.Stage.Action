@@ -1,0 +1,23 @@
+
+let ActionOptional =
+  { configuration : Optional (List { mapKey : Text, mapValue : Text })
+  , input_artifacts : Optional (List Text)
+  , output_artifacts : Optional (List Text)
+  , role_arn : Optional Text
+  , run_order : Optional Natural
+  }
+
+let ActionRequired =
+  { category : Text
+  , name : Text
+  , owner : Text
+  , provider : Text
+  , version : Text
+  }
+let Action = ActionOptional //\\ ActionRequired
+
+in
+{ ActionOptional = ActionOptional
+, ActionRequired = ActionRequired
+, Action = Action
+}

@@ -1,0 +1,12 @@
+
+let HealthCheckCustomConfigOptional =
+  { failure_threshold : Optional Natural }
+
+let HealthCheckCustomConfigRequired = {}
+let HealthCheckCustomConfig = HealthCheckCustomConfigOptional //\\ HealthCheckCustomConfigRequired
+
+in
+{ HealthCheckCustomConfigOptional = HealthCheckCustomConfigOptional
+, HealthCheckCustomConfigRequired = HealthCheckCustomConfigRequired
+, HealthCheckCustomConfig = HealthCheckCustomConfig
+}

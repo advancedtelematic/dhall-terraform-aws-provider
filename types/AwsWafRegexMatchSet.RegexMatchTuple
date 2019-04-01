@@ -1,0 +1,13 @@
+
+let RegexMatchTupleOptional = {}
+
+let RegexMatchTupleRequired =
+  { regex_pattern_set_id : Text
+  , text_transformation : Text
+  , field_to_match : (./AwsWafRegexMatchSet.RegexMatchTuple.FieldToMatch).FieldToMatch
+  }
+let RegexMatchTuple = RegexMatchTupleOptional //\\ RegexMatchTupleRequired
+
+in
+{ RegexMatchTuple = RegexMatchTuple
+}

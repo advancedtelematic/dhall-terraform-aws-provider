@@ -1,0 +1,14 @@
+
+let ResourceCreationLimitPolicyOptional =
+  { new_game_sessions_per_creator : Optional Natural
+  , policy_period_in_minutes : Optional Natural
+  }
+
+let ResourceCreationLimitPolicyRequired = {}
+let ResourceCreationLimitPolicy = ResourceCreationLimitPolicyOptional //\\ ResourceCreationLimitPolicyRequired
+
+in
+{ ResourceCreationLimitPolicyOptional = ResourceCreationLimitPolicyOptional
+, ResourceCreationLimitPolicyRequired = ResourceCreationLimitPolicyRequired
+, ResourceCreationLimitPolicy = ResourceCreationLimitPolicy
+}

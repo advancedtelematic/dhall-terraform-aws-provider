@@ -1,0 +1,12 @@
+
+let ScopeOptional = {}
+
+let ScopeRequired =
+  { scope_description : Text
+  , scope_name : Text
+  }
+let Scope = ScopeOptional //\\ ScopeRequired
+
+in
+{ Scope = Scope
+}

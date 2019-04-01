@@ -1,0 +1,18 @@
+
+let TopicOptional =
+  { filter_prefix : Optional Text
+  , filter_suffix : Optional Text
+  , id : Optional Text
+  }
+
+let TopicRequired =
+  { events : (List Text)
+  , topic_arn : Text
+  }
+let Topic = TopicOptional //\\ TopicRequired
+
+in
+{ TopicOptional = TopicOptional
+, TopicRequired = TopicRequired
+, Topic = Topic
+}

@@ -1,0 +1,15 @@
+
+let AlarmConfigurationOptional =
+  { alarms : Optional (List Text)
+  , enabled : Optional Bool
+  , ignore_poll_alarm_failure : Optional Bool
+  }
+
+let AlarmConfigurationRequired = {}
+let AlarmConfiguration = AlarmConfigurationOptional //\\ AlarmConfigurationRequired
+
+in
+{ AlarmConfigurationOptional = AlarmConfigurationOptional
+, AlarmConfigurationRequired = AlarmConfigurationRequired
+, AlarmConfiguration = AlarmConfiguration
+}

@@ -1,0 +1,18 @@
+
+let AwsRdsClusterParameterGroupOptional =
+  { description : Optional Text
+  , name : Optional Text
+  , name_prefix : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , parameter : Optional (List (./AwsRdsClusterParameterGroup.Parameter).Parameter)
+  }
+
+let AwsRdsClusterParameterGroupRequired =
+  { family : Text }
+let AwsRdsClusterParameterGroup = AwsRdsClusterParameterGroupOptional //\\ AwsRdsClusterParameterGroupRequired
+
+in
+{ AwsRdsClusterParameterGroupOptional = AwsRdsClusterParameterGroupOptional
+, AwsRdsClusterParameterGroupRequired = AwsRdsClusterParameterGroupRequired
+, AwsRdsClusterParameterGroup = AwsRdsClusterParameterGroup
+}

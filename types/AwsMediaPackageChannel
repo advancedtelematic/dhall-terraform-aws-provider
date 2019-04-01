@@ -1,0 +1,15 @@
+
+let AwsMediaPackageChannelOptional =
+  { description : Optional Text
+  , hls_ingest : Optional (List (./AwsMediaPackageChannel.HlsIngest).HlsIngest)
+  }
+
+let AwsMediaPackageChannelRequired =
+  { channel_id : Text }
+let AwsMediaPackageChannel = AwsMediaPackageChannelOptional //\\ AwsMediaPackageChannelRequired
+
+in
+{ AwsMediaPackageChannelOptional = AwsMediaPackageChannelOptional
+, AwsMediaPackageChannelRequired = AwsMediaPackageChannelRequired
+, AwsMediaPackageChannel = AwsMediaPackageChannel
+}

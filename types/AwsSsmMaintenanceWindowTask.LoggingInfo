@@ -1,0 +1,15 @@
+
+let LoggingInfoOptional =
+  { s3_bucket_prefix : Optional Text }
+
+let LoggingInfoRequired =
+  { s3_bucket_name : Text
+  , s3_region : Text
+  }
+let LoggingInfo = LoggingInfoOptional //\\ LoggingInfoRequired
+
+in
+{ LoggingInfoOptional = LoggingInfoOptional
+, LoggingInfoRequired = LoggingInfoRequired
+, LoggingInfo = LoggingInfo
+}

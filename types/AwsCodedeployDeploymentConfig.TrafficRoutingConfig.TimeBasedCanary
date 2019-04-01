@@ -1,0 +1,14 @@
+
+let TimeBasedCanaryOptional =
+  { interval : Optional Natural
+  , percentage : Optional Natural
+  }
+
+let TimeBasedCanaryRequired = {}
+let TimeBasedCanary = TimeBasedCanaryOptional //\\ TimeBasedCanaryRequired
+
+in
+{ TimeBasedCanaryOptional = TimeBasedCanaryOptional
+, TimeBasedCanaryRequired = TimeBasedCanaryRequired
+, TimeBasedCanary = TimeBasedCanary
+}

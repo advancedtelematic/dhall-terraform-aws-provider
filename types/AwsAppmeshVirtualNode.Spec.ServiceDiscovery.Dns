@@ -1,0 +1,10 @@
+
+let DnsOptional = {}
+
+let DnsRequired =
+  { service_name : Text }
+let Dns = DnsOptional //\\ DnsRequired
+
+in
+{ Dns = Dns
+}

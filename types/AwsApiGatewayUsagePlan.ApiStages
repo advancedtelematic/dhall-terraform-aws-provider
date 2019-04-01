@@ -1,0 +1,12 @@
+
+let ApiStagesOptional = {}
+
+let ApiStagesRequired =
+  { api_id : Text
+  , stage : Text
+  }
+let ApiStages = ApiStagesOptional //\\ ApiStagesRequired
+
+in
+{ ApiStages = ApiStages
+}

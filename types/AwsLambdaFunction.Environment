@@ -1,0 +1,12 @@
+
+let EnvironmentOptional =
+  { variables : Optional (List { mapKey : Text, mapValue : Text }) }
+
+let EnvironmentRequired = {}
+let Environment = EnvironmentOptional //\\ EnvironmentRequired
+
+in
+{ EnvironmentOptional = EnvironmentOptional
+, EnvironmentRequired = EnvironmentRequired
+, Environment = Environment
+}

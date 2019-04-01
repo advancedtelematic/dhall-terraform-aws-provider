@@ -1,0 +1,15 @@
+
+let NetworkConfigurationOptional =
+  { assign_public_ip : Optional Bool
+  , security_groups : Optional (List Text)
+  }
+
+let NetworkConfigurationRequired =
+  { subnets : (List Text) }
+let NetworkConfiguration = NetworkConfigurationOptional //\\ NetworkConfigurationRequired
+
+in
+{ NetworkConfigurationOptional = NetworkConfigurationOptional
+, NetworkConfigurationRequired = NetworkConfigurationRequired
+, NetworkConfiguration = NetworkConfiguration
+}

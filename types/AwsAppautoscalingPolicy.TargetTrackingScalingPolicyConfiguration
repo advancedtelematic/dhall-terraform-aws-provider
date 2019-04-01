@@ -1,0 +1,18 @@
+
+let TargetTrackingScalingPolicyConfigurationOptional =
+  { disable_scale_in : Optional Bool
+  , scale_in_cooldown : Optional Natural
+  , scale_out_cooldown : Optional Natural
+  , customized_metric_specification : Optional (./AwsAppautoscalingPolicy.TargetTrackingScalingPolicyConfiguration.CustomizedMetricSpecification).CustomizedMetricSpecification
+  , predefined_metric_specification : Optional (./AwsAppautoscalingPolicy.TargetTrackingScalingPolicyConfiguration.PredefinedMetricSpecification).PredefinedMetricSpecification
+  }
+
+let TargetTrackingScalingPolicyConfigurationRequired =
+  { target_value : Natural }
+let TargetTrackingScalingPolicyConfiguration = TargetTrackingScalingPolicyConfigurationOptional //\\ TargetTrackingScalingPolicyConfigurationRequired
+
+in
+{ TargetTrackingScalingPolicyConfigurationOptional = TargetTrackingScalingPolicyConfigurationOptional
+, TargetTrackingScalingPolicyConfigurationRequired = TargetTrackingScalingPolicyConfigurationRequired
+, TargetTrackingScalingPolicyConfiguration = TargetTrackingScalingPolicyConfiguration
+}

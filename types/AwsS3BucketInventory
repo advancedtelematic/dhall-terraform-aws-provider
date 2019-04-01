@@ -1,0 +1,21 @@
+
+let AwsS3BucketInventoryOptional =
+  { enabled : Optional Bool
+  , optional_fields : Optional (List Text)
+  , filter : Optional (./AwsS3BucketInventory.Filter).Filter
+  }
+
+let AwsS3BucketInventoryRequired =
+  { bucket : Text
+  , included_object_versions : Text
+  , name : Text
+  , destination : (./AwsS3BucketInventory.Destination).Destination
+  , schedule : (./AwsS3BucketInventory.Schedule).Schedule
+  }
+let AwsS3BucketInventory = AwsS3BucketInventoryOptional //\\ AwsS3BucketInventoryRequired
+
+in
+{ AwsS3BucketInventoryOptional = AwsS3BucketInventoryOptional
+, AwsS3BucketInventoryRequired = AwsS3BucketInventoryRequired
+, AwsS3BucketInventory = AwsS3BucketInventory
+}

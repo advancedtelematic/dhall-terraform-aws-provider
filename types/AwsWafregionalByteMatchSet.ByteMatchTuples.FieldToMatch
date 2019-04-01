@@ -1,0 +1,13 @@
+
+let FieldToMatchOptional =
+  { data : Optional Text }
+
+let FieldToMatchRequired =
+  { type : Text }
+let FieldToMatch = FieldToMatchOptional //\\ FieldToMatchRequired
+
+in
+{ FieldToMatchOptional = FieldToMatchOptional
+, FieldToMatchRequired = FieldToMatchRequired
+, FieldToMatch = FieldToMatch
+}

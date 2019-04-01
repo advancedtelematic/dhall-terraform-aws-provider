@@ -1,0 +1,13 @@
+
+let ProcessorsOptional =
+  { parameters : Optional (List (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration.ProcessingConfiguration.Processors.Parameters).Parameters) }
+
+let ProcessorsRequired =
+  { type : Text }
+let Processors = ProcessorsOptional //\\ ProcessorsRequired
+
+in
+{ ProcessorsOptional = ProcessorsOptional
+, ProcessorsRequired = ProcessorsRequired
+, Processors = Processors
+}

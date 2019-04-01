@@ -1,0 +1,13 @@
+
+let PredicateOptional = {}
+
+let PredicateRequired =
+  { data_id : Text
+  , negated : Bool
+  , type : Text
+  }
+let Predicate = PredicateOptional //\\ PredicateRequired
+
+in
+{ Predicate = Predicate
+}

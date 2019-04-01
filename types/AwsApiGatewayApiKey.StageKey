@@ -1,0 +1,12 @@
+
+let StageKeyOptional = {}
+
+let StageKeyRequired =
+  { rest_api_id : Text
+  , stage_name : Text
+  }
+let StageKey = StageKeyOptional //\\ StageKeyRequired
+
+in
+{ StageKey = StageKey
+}

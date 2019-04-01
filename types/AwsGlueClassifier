@@ -1,0 +1,16 @@
+
+let AwsGlueClassifierOptional =
+  { grok_classifier : Optional (./AwsGlueClassifier.GrokClassifier).GrokClassifier
+  , json_classifier : Optional (./AwsGlueClassifier.JsonClassifier).JsonClassifier
+  , xml_classifier : Optional (./AwsGlueClassifier.XmlClassifier).XmlClassifier
+  }
+
+let AwsGlueClassifierRequired =
+  { name : Text }
+let AwsGlueClassifier = AwsGlueClassifierOptional //\\ AwsGlueClassifierRequired
+
+in
+{ AwsGlueClassifierOptional = AwsGlueClassifierOptional
+, AwsGlueClassifierRequired = AwsGlueClassifierRequired
+, AwsGlueClassifier = AwsGlueClassifier
+}

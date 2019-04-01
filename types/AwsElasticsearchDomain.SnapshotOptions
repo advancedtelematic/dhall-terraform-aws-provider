@@ -1,0 +1,10 @@
+
+let SnapshotOptionsOptional = {}
+
+let SnapshotOptionsRequired =
+  { automated_snapshot_start_hour : Natural }
+let SnapshotOptions = SnapshotOptionsOptional //\\ SnapshotOptionsRequired
+
+in
+{ SnapshotOptions = SnapshotOptions
+}

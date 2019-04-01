@@ -1,0 +1,16 @@
+
+let ScopeOptional =
+  { compliance_resource_id : Optional Text
+  , compliance_resource_types : Optional (List Text)
+  , tag_key : Optional Text
+  , tag_value : Optional Text
+  }
+
+let ScopeRequired = {}
+let Scope = ScopeOptional //\\ ScopeRequired
+
+in
+{ ScopeOptional = ScopeOptional
+, ScopeRequired = ScopeRequired
+, Scope = Scope
+}

@@ -1,0 +1,10 @@
+
+let UserPoolAddOnsOptional = {}
+
+let UserPoolAddOnsRequired =
+  { advanced_security_mode : Text }
+let UserPoolAddOns = UserPoolAddOnsOptional //\\ UserPoolAddOnsRequired
+
+in
+{ UserPoolAddOns = UserPoolAddOns
+}

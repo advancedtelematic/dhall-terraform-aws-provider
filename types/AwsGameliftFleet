@@ -1,0 +1,22 @@
+
+let AwsGameliftFleetOptional =
+  { description : Optional Text
+  , metric_groups : Optional (List Text)
+  , new_game_session_protection_policy : Optional Text
+  , ec2_inbound_permission : Optional (List (./AwsGameliftFleet.Ec2InboundPermission).Ec2InboundPermission)
+  , resource_creation_limit_policy : Optional (./AwsGameliftFleet.ResourceCreationLimitPolicy).ResourceCreationLimitPolicy
+  , runtime_configuration : Optional (./AwsGameliftFleet.RuntimeConfiguration).RuntimeConfiguration
+  }
+
+let AwsGameliftFleetRequired =
+  { build_id : Text
+  , ec2_instance_type : Text
+  , name : Text
+  }
+let AwsGameliftFleet = AwsGameliftFleetOptional //\\ AwsGameliftFleetRequired
+
+in
+{ AwsGameliftFleetOptional = AwsGameliftFleetOptional
+, AwsGameliftFleetRequired = AwsGameliftFleetRequired
+, AwsGameliftFleet = AwsGameliftFleet
+}

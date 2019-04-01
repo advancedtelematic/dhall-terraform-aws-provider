@@ -1,0 +1,19 @@
+
+let EnvironmentOptional =
+  { certificate : Optional Text
+  , privileged_mode : Optional Bool
+  , environment_variable : Optional (List (./AwsCodebuildProject.Environment.EnvironmentVariable).EnvironmentVariable)
+  }
+
+let EnvironmentRequired =
+  { compute_type : Text
+  , image : Text
+  , type : Text
+  }
+let Environment = EnvironmentOptional //\\ EnvironmentRequired
+
+in
+{ EnvironmentOptional = EnvironmentOptional
+, EnvironmentRequired = EnvironmentRequired
+, Environment = Environment
+}

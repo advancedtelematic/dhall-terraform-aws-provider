@@ -1,0 +1,9 @@
+
+let DomainValidationOptionsOptional = {}
+
+let DomainValidationOptionsRequired = {}
+let DomainValidationOptions = DomainValidationOptionsOptional //\\ DomainValidationOptionsRequired
+
+in
+{ DomainValidationOptions = DomainValidationOptions
+}

@@ -1,0 +1,15 @@
+
+let LambdaFunctionAssociationOptional =
+  { include_body : Optional Bool }
+
+let LambdaFunctionAssociationRequired =
+  { event_type : Text
+  , lambda_arn : Text
+  }
+let LambdaFunctionAssociation = LambdaFunctionAssociationOptional //\\ LambdaFunctionAssociationRequired
+
+in
+{ LambdaFunctionAssociationOptional = LambdaFunctionAssociationOptional
+, LambdaFunctionAssociationRequired = LambdaFunctionAssociationRequired
+, LambdaFunctionAssociation = LambdaFunctionAssociation
+}

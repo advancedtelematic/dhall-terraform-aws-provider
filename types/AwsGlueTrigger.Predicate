@@ -1,0 +1,13 @@
+
+let PredicateOptional =
+  { logical : Optional Text }
+
+let PredicateRequired =
+  { conditions : List (./AwsGlueTrigger.Predicate.Conditions).Conditions }
+let Predicate = PredicateOptional //\\ PredicateRequired
+
+in
+{ PredicateOptional = PredicateOptional
+, PredicateRequired = PredicateRequired
+, Predicate = Predicate
+}

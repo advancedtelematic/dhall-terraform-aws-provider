@@ -1,0 +1,9 @@
+
+let EbsBlockDeviceOptional = {}
+
+let EbsBlockDeviceRequired = {}
+let EbsBlockDevice = EbsBlockDeviceOptional //\\ EbsBlockDeviceRequired
+
+in
+{ EbsBlockDevice = EbsBlockDevice
+}

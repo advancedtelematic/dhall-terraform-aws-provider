@@ -1,0 +1,12 @@
+
+let PortMappingOptional = {}
+
+let PortMappingRequired =
+  { port : Natural
+  , protocol : Text
+  }
+let PortMapping = PortMappingOptional //\\ PortMappingRequired
+
+in
+{ PortMapping = PortMapping
+}

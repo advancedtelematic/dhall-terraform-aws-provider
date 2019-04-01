@@ -1,0 +1,12 @@
+
+let FilterOptional = {}
+
+let FilterRequired =
+  { json_path : Text
+  , match_equals : Text
+  }
+let Filter = FilterOptional //\\ FilterRequired
+
+in
+{ Filter = Filter
+}

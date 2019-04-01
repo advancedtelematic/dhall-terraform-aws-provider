@@ -1,0 +1,10 @@
+
+let InputFormatConfigurationOptional = {}
+
+let InputFormatConfigurationRequired =
+  { deserializer : (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration.DataFormatConversionConfiguration.InputFormatConfiguration.Deserializer).Deserializer }
+let InputFormatConfiguration = InputFormatConfigurationOptional //\\ InputFormatConfigurationRequired
+
+in
+{ InputFormatConfiguration = InputFormatConfiguration
+}

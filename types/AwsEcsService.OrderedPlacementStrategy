@@ -1,0 +1,13 @@
+
+let OrderedPlacementStrategyOptional =
+  { field : Optional Text }
+
+let OrderedPlacementStrategyRequired =
+  { type : Text }
+let OrderedPlacementStrategy = OrderedPlacementStrategyOptional //\\ OrderedPlacementStrategyRequired
+
+in
+{ OrderedPlacementStrategyOptional = OrderedPlacementStrategyOptional
+, OrderedPlacementStrategyRequired = OrderedPlacementStrategyRequired
+, OrderedPlacementStrategy = OrderedPlacementStrategy
+}

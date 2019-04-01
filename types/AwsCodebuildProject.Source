@@ -1,0 +1,19 @@
+
+let SourceOptional =
+  { buildspec : Optional Text
+  , git_clone_depth : Optional Natural
+  , insecure_ssl : Optional Bool
+  , location : Optional Text
+  , report_build_status : Optional Bool
+  , auth : Optional (List (./AwsCodebuildProject.Source.Auth).Auth)
+  }
+
+let SourceRequired =
+  { type : Text }
+let Source = SourceOptional //\\ SourceRequired
+
+in
+{ SourceOptional = SourceOptional
+, SourceRequired = SourceRequired
+, Source = Source
+}

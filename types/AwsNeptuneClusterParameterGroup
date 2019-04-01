@@ -1,0 +1,18 @@
+
+let AwsNeptuneClusterParameterGroupOptional =
+  { description : Optional Text
+  , name : Optional Text
+  , name_prefix : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , parameter : Optional (List (./AwsNeptuneClusterParameterGroup.Parameter).Parameter)
+  }
+
+let AwsNeptuneClusterParameterGroupRequired =
+  { family : Text }
+let AwsNeptuneClusterParameterGroup = AwsNeptuneClusterParameterGroupOptional //\\ AwsNeptuneClusterParameterGroupRequired
+
+in
+{ AwsNeptuneClusterParameterGroupOptional = AwsNeptuneClusterParameterGroupOptional
+, AwsNeptuneClusterParameterGroupRequired = AwsNeptuneClusterParameterGroupRequired
+, AwsNeptuneClusterParameterGroup = AwsNeptuneClusterParameterGroup
+}

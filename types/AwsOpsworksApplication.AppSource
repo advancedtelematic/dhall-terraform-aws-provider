@@ -1,0 +1,18 @@
+
+let AppSourceOptional =
+  { password : Optional Text
+  , revision : Optional Text
+  , ssh_key : Optional Text
+  , url : Optional Text
+  , username : Optional Text
+  }
+
+let AppSourceRequired =
+  { type : Text }
+let AppSource = AppSourceOptional //\\ AppSourceRequired
+
+in
+{ AppSourceOptional = AppSourceOptional
+, AppSourceRequired = AppSourceRequired
+, AppSource = AppSource
+}

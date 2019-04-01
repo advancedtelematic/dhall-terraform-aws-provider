@@ -1,0 +1,38 @@
+
+let AwsLaunchTemplateOptional =
+  { description : Optional Text
+  , disable_api_termination : Optional Bool
+  , ebs_optimized : Optional Text
+  , image_id : Optional Text
+  , instance_initiated_shutdown_behavior : Optional Text
+  , instance_type : Optional Text
+  , kernel_id : Optional Text
+  , key_name : Optional Text
+  , name : Optional Text
+  , name_prefix : Optional Text
+  , ram_disk_id : Optional Text
+  , security_group_names : Optional (List Text)
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , user_data : Optional Text
+  , vpc_security_group_ids : Optional (List Text)
+  , block_device_mappings : Optional (List (./AwsLaunchTemplate.BlockDeviceMappings).BlockDeviceMappings)
+  , capacity_reservation_specification : Optional (./AwsLaunchTemplate.CapacityReservationSpecification).CapacityReservationSpecification
+  , credit_specification : Optional (./AwsLaunchTemplate.CreditSpecification).CreditSpecification
+  , elastic_gpu_specifications : Optional (List (./AwsLaunchTemplate.ElasticGpuSpecifications).ElasticGpuSpecifications)
+  , iam_instance_profile : Optional (./AwsLaunchTemplate.IamInstanceProfile).IamInstanceProfile
+  , instance_market_options : Optional (./AwsLaunchTemplate.InstanceMarketOptions).InstanceMarketOptions
+  , license_specification : Optional (List (./AwsLaunchTemplate.LicenseSpecification).LicenseSpecification)
+  , monitoring : Optional (./AwsLaunchTemplate.Monitoring).Monitoring
+  , network_interfaces : Optional (List (./AwsLaunchTemplate.NetworkInterfaces).NetworkInterfaces)
+  , placement : Optional (./AwsLaunchTemplate.Placement).Placement
+  , tag_specifications : Optional (List (./AwsLaunchTemplate.TagSpecifications).TagSpecifications)
+  }
+
+let AwsLaunchTemplateRequired = {}
+let AwsLaunchTemplate = AwsLaunchTemplateOptional //\\ AwsLaunchTemplateRequired
+
+in
+{ AwsLaunchTemplateOptional = AwsLaunchTemplateOptional
+, AwsLaunchTemplateRequired = AwsLaunchTemplateRequired
+, AwsLaunchTemplate = AwsLaunchTemplate
+}

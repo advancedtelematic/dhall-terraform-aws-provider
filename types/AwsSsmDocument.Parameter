@@ -1,0 +1,16 @@
+
+let ParameterOptional =
+  { default_value : Optional Text
+  , description : Optional Text
+  , name : Optional Text
+  , type : Optional Text
+  }
+
+let ParameterRequired = {}
+let Parameter = ParameterOptional //\\ ParameterRequired
+
+in
+{ ParameterOptional = ParameterOptional
+, ParameterRequired = ParameterRequired
+, Parameter = Parameter
+}

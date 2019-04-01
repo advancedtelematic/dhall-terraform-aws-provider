@@ -1,0 +1,15 @@
+
+let TransitionOptional =
+  { date : Optional Text
+  , days : Optional Natural
+  }
+
+let TransitionRequired =
+  { storage_class : Text }
+let Transition = TransitionOptional //\\ TransitionRequired
+
+in
+{ TransitionOptional = TransitionOptional
+, TransitionRequired = TransitionRequired
+, Transition = Transition
+}

@@ -1,0 +1,18 @@
+
+let CorsRuleOptional =
+  { allowed_headers : Optional (List Text)
+  , expose_headers : Optional (List Text)
+  , max_age_seconds : Optional Natural
+  }
+
+let CorsRuleRequired =
+  { allowed_methods : (List Text)
+  , allowed_origins : (List Text)
+  }
+let CorsRule = CorsRuleOptional //\\ CorsRuleRequired
+
+in
+{ CorsRuleOptional = CorsRuleOptional
+, CorsRuleRequired = CorsRuleRequired
+, CorsRule = CorsRule
+}

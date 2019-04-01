@@ -1,0 +1,19 @@
+
+let CustomCookbooksSourceOptional =
+  { password : Optional Text
+  , revision : Optional Text
+  , ssh_key : Optional Text
+  , username : Optional Text
+  }
+
+let CustomCookbooksSourceRequired =
+  { type : Text
+  , url : Text
+  }
+let CustomCookbooksSource = CustomCookbooksSourceOptional //\\ CustomCookbooksSourceRequired
+
+in
+{ CustomCookbooksSourceOptional = CustomCookbooksSourceOptional
+, CustomCookbooksSourceRequired = CustomCookbooksSourceRequired
+, CustomCookbooksSource = CustomCookbooksSource
+}

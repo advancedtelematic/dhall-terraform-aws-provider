@@ -1,0 +1,17 @@
+
+let UserPoolConfigOptional =
+  { app_id_client_regex : Optional Text
+  , aws_region : Optional Text
+  }
+
+let UserPoolConfigRequired =
+  { default_action : Text
+  , user_pool_id : Text
+  }
+let UserPoolConfig = UserPoolConfigOptional //\\ UserPoolConfigRequired
+
+in
+{ UserPoolConfigOptional = UserPoolConfigOptional
+, UserPoolConfigRequired = UserPoolConfigRequired
+, UserPoolConfig = UserPoolConfig
+}

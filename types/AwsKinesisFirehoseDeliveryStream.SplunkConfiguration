@@ -1,0 +1,21 @@
+
+let SplunkConfigurationOptional =
+  { hec_acknowledgment_timeout : Optional Natural
+  , hec_endpoint_type : Optional Text
+  , retry_duration : Optional Natural
+  , s3_backup_mode : Optional Text
+  , cloudwatch_logging_options : Optional (./AwsKinesisFirehoseDeliveryStream.SplunkConfiguration.CloudwatchLoggingOptions).CloudwatchLoggingOptions
+  , processing_configuration : Optional (./AwsKinesisFirehoseDeliveryStream.SplunkConfiguration.ProcessingConfiguration).ProcessingConfiguration
+  }
+
+let SplunkConfigurationRequired =
+  { hec_endpoint : Text
+  , hec_token : Text
+  }
+let SplunkConfiguration = SplunkConfigurationOptional //\\ SplunkConfigurationRequired
+
+in
+{ SplunkConfigurationOptional = SplunkConfigurationOptional
+, SplunkConfigurationRequired = SplunkConfigurationRequired
+, SplunkConfiguration = SplunkConfiguration
+}

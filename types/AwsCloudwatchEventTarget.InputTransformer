@@ -1,0 +1,13 @@
+
+let InputTransformerOptional =
+  { input_paths : Optional (List { mapKey : Text, mapValue : Text }) }
+
+let InputTransformerRequired =
+  { input_template : Text }
+let InputTransformer = InputTransformerOptional //\\ InputTransformerRequired
+
+in
+{ InputTransformerOptional = InputTransformerOptional
+, InputTransformerRequired = InputTransformerRequired
+, InputTransformer = InputTransformer
+}

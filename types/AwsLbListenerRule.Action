@@ -1,0 +1,19 @@
+
+let ActionOptional =
+  { order : Optional Natural
+  , target_group_arn : Optional Text
+  , authenticate_cognito : Optional (./AwsLbListenerRule.Action.AuthenticateCognito).AuthenticateCognito
+  , authenticate_oidc : Optional (./AwsLbListenerRule.Action.AuthenticateOidc).AuthenticateOidc
+  , fixed_response : Optional (./AwsLbListenerRule.Action.FixedResponse).FixedResponse
+  , redirect : Optional (./AwsLbListenerRule.Action.Redirect).Redirect
+  }
+
+let ActionRequired =
+  { type : Text }
+let Action = ActionOptional //\\ ActionRequired
+
+in
+{ ActionOptional = ActionOptional
+, ActionRequired = ActionRequired
+, Action = Action
+}

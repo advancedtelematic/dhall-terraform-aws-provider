@@ -1,0 +1,22 @@
+
+let DynamodbOptional =
+  { hash_key_type : Optional Text
+  , payload_field : Optional Text
+  , range_key_field : Optional Text
+  , range_key_type : Optional Text
+  , range_key_value : Optional Text
+  }
+
+let DynamodbRequired =
+  { hash_key_field : Text
+  , hash_key_value : Text
+  , role_arn : Text
+  , table_name : Text
+  }
+let Dynamodb = DynamodbOptional //\\ DynamodbRequired
+
+in
+{ DynamodbOptional = DynamodbOptional
+, DynamodbRequired = DynamodbRequired
+, Dynamodb = Dynamodb
+}

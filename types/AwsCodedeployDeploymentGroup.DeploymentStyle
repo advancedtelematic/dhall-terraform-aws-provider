@@ -1,0 +1,14 @@
+
+let DeploymentStyleOptional =
+  { deployment_option : Optional Text
+  , deployment_type : Optional Text
+  }
+
+let DeploymentStyleRequired = {}
+let DeploymentStyle = DeploymentStyleOptional //\\ DeploymentStyleRequired
+
+in
+{ DeploymentStyleOptional = DeploymentStyleOptional
+, DeploymentStyleRequired = DeploymentStyleRequired
+, DeploymentStyle = DeploymentStyle
+}

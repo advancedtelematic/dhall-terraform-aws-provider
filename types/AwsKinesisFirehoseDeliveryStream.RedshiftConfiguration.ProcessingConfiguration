@@ -1,0 +1,14 @@
+
+let ProcessingConfigurationOptional =
+  { enabled : Optional Bool
+  , processors : Optional (List (./AwsKinesisFirehoseDeliveryStream.RedshiftConfiguration.ProcessingConfiguration.Processors).Processors)
+  }
+
+let ProcessingConfigurationRequired = {}
+let ProcessingConfiguration = ProcessingConfigurationOptional //\\ ProcessingConfigurationRequired
+
+in
+{ ProcessingConfigurationOptional = ProcessingConfigurationOptional
+, ProcessingConfigurationRequired = ProcessingConfigurationRequired
+, ProcessingConfiguration = ProcessingConfiguration
+}

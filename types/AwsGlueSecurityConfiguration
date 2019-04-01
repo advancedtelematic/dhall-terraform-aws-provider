@@ -1,0 +1,12 @@
+
+let AwsGlueSecurityConfigurationOptional = {}
+
+let AwsGlueSecurityConfigurationRequired =
+  { name : Text
+  , encryption_configuration : (./AwsGlueSecurityConfiguration.EncryptionConfiguration).EncryptionConfiguration
+  }
+let AwsGlueSecurityConfiguration = AwsGlueSecurityConfigurationOptional //\\ AwsGlueSecurityConfigurationRequired
+
+in
+{ AwsGlueSecurityConfiguration = AwsGlueSecurityConfiguration
+}

@@ -1,0 +1,16 @@
+
+let ServiceRegistriesOptional =
+  { container_name : Optional Text
+  , container_port : Optional Natural
+  , port : Optional Natural
+  }
+
+let ServiceRegistriesRequired =
+  { registry_arn : Text }
+let ServiceRegistries = ServiceRegistriesOptional //\\ ServiceRegistriesRequired
+
+in
+{ ServiceRegistriesOptional = ServiceRegistriesOptional
+, ServiceRegistriesRequired = ServiceRegistriesRequired
+, ServiceRegistries = ServiceRegistries
+}

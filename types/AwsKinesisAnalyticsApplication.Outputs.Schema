@@ -1,0 +1,12 @@
+
+let SchemaOptional =
+  { record_format_type : Optional Text }
+
+let SchemaRequired = {}
+let Schema = SchemaOptional //\\ SchemaRequired
+
+in
+{ SchemaOptional = SchemaOptional
+, SchemaRequired = SchemaRequired
+, Schema = Schema
+}

@@ -1,0 +1,21 @@
+
+let RouteOptional =
+  { cidr_block : Optional Text
+  , egress_only_gateway_id : Optional Text
+  , gateway_id : Optional Text
+  , instance_id : Optional Text
+  , ipv6_cidr_block : Optional Text
+  , nat_gateway_id : Optional Text
+  , network_interface_id : Optional Text
+  , transit_gateway_id : Optional Text
+  , vpc_peering_connection_id : Optional Text
+  }
+
+let RouteRequired = {}
+let Route = RouteOptional //\\ RouteRequired
+
+in
+{ RouteOptional = RouteOptional
+, RouteRequired = RouteRequired
+, Route = Route
+}

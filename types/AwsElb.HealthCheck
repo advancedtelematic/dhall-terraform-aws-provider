@@ -1,0 +1,15 @@
+
+let HealthCheckOptional = {}
+
+let HealthCheckRequired =
+  { healthy_threshold : Natural
+  , interval : Natural
+  , target : Text
+  , timeout : Natural
+  , unhealthy_threshold : Natural
+  }
+let HealthCheck = HealthCheckOptional //\\ HealthCheckRequired
+
+in
+{ HealthCheck = HealthCheck
+}

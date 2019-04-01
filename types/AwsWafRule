@@ -1,0 +1,15 @@
+
+let AwsWafRuleOptional =
+  { predicates : Optional (List (./AwsWafRule.Predicates).Predicates) }
+
+let AwsWafRuleRequired =
+  { metric_name : Text
+  , name : Text
+  }
+let AwsWafRule = AwsWafRuleOptional //\\ AwsWafRuleRequired
+
+in
+{ AwsWafRuleOptional = AwsWafRuleOptional
+, AwsWafRuleRequired = AwsWafRuleRequired
+, AwsWafRule = AwsWafRule
+}

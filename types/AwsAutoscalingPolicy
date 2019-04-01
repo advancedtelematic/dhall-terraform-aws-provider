@@ -1,0 +1,25 @@
+
+let AwsAutoscalingPolicyOptional =
+  { adjustment_type : Optional Text
+  , cooldown : Optional Natural
+  , estimated_instance_warmup : Optional Natural
+  , metric_aggregation_type : Optional Text
+  , min_adjustment_magnitude : Optional Natural
+  , min_adjustment_step : Optional Natural
+  , policy_type : Optional Text
+  , scaling_adjustment : Optional Natural
+  , step_adjustment : Optional (List (./AwsAutoscalingPolicy.StepAdjustment).StepAdjustment)
+  , target_tracking_configuration : Optional (./AwsAutoscalingPolicy.TargetTrackingConfiguration).TargetTrackingConfiguration
+  }
+
+let AwsAutoscalingPolicyRequired =
+  { autoscaling_group_name : Text
+  , name : Text
+  }
+let AwsAutoscalingPolicy = AwsAutoscalingPolicyOptional //\\ AwsAutoscalingPolicyRequired
+
+in
+{ AwsAutoscalingPolicyOptional = AwsAutoscalingPolicyOptional
+, AwsAutoscalingPolicyRequired = AwsAutoscalingPolicyRequired
+, AwsAutoscalingPolicy = AwsAutoscalingPolicy
+}

@@ -1,0 +1,12 @@
+
+let KinesisSourceConfigurationOptional = {}
+
+let KinesisSourceConfigurationRequired =
+  { kinesis_stream_arn : Text
+  , role_arn : Text
+  }
+let KinesisSourceConfiguration = KinesisSourceConfigurationOptional //\\ KinesisSourceConfigurationRequired
+
+in
+{ KinesisSourceConfiguration = KinesisSourceConfiguration
+}

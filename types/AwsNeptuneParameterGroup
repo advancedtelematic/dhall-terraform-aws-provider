@@ -1,0 +1,18 @@
+
+let AwsNeptuneParameterGroupOptional =
+  { description : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , parameter : Optional (List (./AwsNeptuneParameterGroup.Parameter).Parameter)
+  }
+
+let AwsNeptuneParameterGroupRequired =
+  { family : Text
+  , name : Text
+  }
+let AwsNeptuneParameterGroup = AwsNeptuneParameterGroupOptional //\\ AwsNeptuneParameterGroupRequired
+
+in
+{ AwsNeptuneParameterGroupOptional = AwsNeptuneParameterGroupOptional
+, AwsNeptuneParameterGroupRequired = AwsNeptuneParameterGroupRequired
+, AwsNeptuneParameterGroup = AwsNeptuneParameterGroup
+}

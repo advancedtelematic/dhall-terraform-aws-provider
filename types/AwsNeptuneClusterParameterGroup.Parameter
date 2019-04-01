@@ -1,0 +1,15 @@
+
+let ParameterOptional =
+  { apply_method : Optional Text }
+
+let ParameterRequired =
+  { name : Text
+  , value : Text
+  }
+let Parameter = ParameterOptional //\\ ParameterRequired
+
+in
+{ ParameterOptional = ParameterOptional
+, ParameterRequired = ParameterRequired
+, Parameter = Parameter
+}

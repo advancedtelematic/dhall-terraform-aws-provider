@@ -1,0 +1,15 @@
+
+let ArtifactStoreOptional =
+  { encryption_key : Optional (./AwsCodepipeline.ArtifactStore.EncryptionKey).EncryptionKey }
+
+let ArtifactStoreRequired =
+  { location : Text
+  , type : Text
+  }
+let ArtifactStore = ArtifactStoreOptional //\\ ArtifactStoreRequired
+
+in
+{ ArtifactStoreOptional = ArtifactStoreOptional
+, ArtifactStoreRequired = ArtifactStoreRequired
+, ArtifactStore = ArtifactStore
+}

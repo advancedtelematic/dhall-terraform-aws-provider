@@ -1,0 +1,13 @@
+
+let AliasOptional = {}
+
+let AliasRequired =
+  { evaluate_target_health : Bool
+  , name : Text
+  , zone_id : Text
+  }
+let Alias = AliasOptional //\\ AliasRequired
+
+in
+{ Alias = Alias
+}

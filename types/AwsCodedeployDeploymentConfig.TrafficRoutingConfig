@@ -1,0 +1,15 @@
+
+let TrafficRoutingConfigOptional =
+  { type : Optional Text
+  , time_based_canary : Optional (./AwsCodedeployDeploymentConfig.TrafficRoutingConfig.TimeBasedCanary).TimeBasedCanary
+  , time_based_linear : Optional (./AwsCodedeployDeploymentConfig.TrafficRoutingConfig.TimeBasedLinear).TimeBasedLinear
+  }
+
+let TrafficRoutingConfigRequired = {}
+let TrafficRoutingConfig = TrafficRoutingConfigOptional //\\ TrafficRoutingConfigRequired
+
+in
+{ TrafficRoutingConfigOptional = TrafficRoutingConfigOptional
+, TrafficRoutingConfigRequired = TrafficRoutingConfigRequired
+, TrafficRoutingConfig = TrafficRoutingConfig
+}

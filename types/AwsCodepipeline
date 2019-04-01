@@ -1,0 +1,14 @@
+
+let AwsCodepipelineOptional = {}
+
+let AwsCodepipelineRequired =
+  { name : Text
+  , role_arn : Text
+  , artifact_store : (./AwsCodepipeline.ArtifactStore).ArtifactStore
+  , stage : List (./AwsCodepipeline.Stage).Stage
+  }
+let AwsCodepipeline = AwsCodepipelineOptional //\\ AwsCodepipelineRequired
+
+in
+{ AwsCodepipeline = AwsCodepipeline
+}

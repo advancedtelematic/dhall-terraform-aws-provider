@@ -1,0 +1,13 @@
+
+let EncryptionConfigurationOptional =
+  { kms_key : Optional Text }
+
+let EncryptionConfigurationRequired =
+  { encryption_option : Text }
+let EncryptionConfiguration = EncryptionConfigurationOptional //\\ EncryptionConfigurationRequired
+
+in
+{ EncryptionConfigurationOptional = EncryptionConfigurationOptional
+, EncryptionConfigurationRequired = EncryptionConfigurationRequired
+, EncryptionConfiguration = EncryptionConfiguration
+}

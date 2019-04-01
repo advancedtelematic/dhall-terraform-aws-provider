@@ -1,0 +1,17 @@
+
+let S3ImportOptional =
+  { bucket_prefix : Optional Text }
+
+let S3ImportRequired =
+  { bucket_name : Text
+  , ingestion_role : Text
+  , source_engine : Text
+  , source_engine_version : Text
+  }
+let S3Import = S3ImportOptional //\\ S3ImportRequired
+
+in
+{ S3ImportOptional = S3ImportOptional
+, S3ImportRequired = S3ImportRequired
+, S3Import = S3Import
+}

@@ -1,0 +1,12 @@
+
+let WeightedTargetOptional = {}
+
+let WeightedTargetRequired =
+  { virtual_node : Text
+  , weight : Natural
+  }
+let WeightedTarget = WeightedTargetOptional //\\ WeightedTargetRequired
+
+in
+{ WeightedTarget = WeightedTarget
+}

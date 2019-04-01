@@ -1,0 +1,15 @@
+
+let KinesisOptional =
+  { partition_key : Optional Text }
+
+let KinesisRequired =
+  { role_arn : Text
+  , stream_name : Text
+  }
+let Kinesis = KinesisOptional //\\ KinesisRequired
+
+in
+{ KinesisOptional = KinesisOptional
+, KinesisRequired = KinesisRequired
+, Kinesis = Kinesis
+}

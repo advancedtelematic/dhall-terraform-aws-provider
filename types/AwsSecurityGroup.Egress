@@ -1,0 +1,22 @@
+
+let EgressOptional =
+  { cidr_blocks : Optional (List Text)
+  , description : Optional Text
+  , ipv6_cidr_blocks : Optional (List Text)
+  , prefix_list_ids : Optional (List Text)
+  , security_groups : Optional (List Text)
+  , self : Optional Bool
+  }
+
+let EgressRequired =
+  { from_port : Natural
+  , protocol : Text
+  , to_port : Natural
+  }
+let Egress = EgressOptional //\\ EgressRequired
+
+in
+{ EgressOptional = EgressOptional
+, EgressRequired = EgressRequired
+, Egress = Egress
+}

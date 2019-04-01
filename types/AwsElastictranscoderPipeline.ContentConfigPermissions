@@ -1,0 +1,15 @@
+
+let ContentConfigPermissionsOptional =
+  { access : Optional (List Text)
+  , grantee : Optional Text
+  , grantee_type : Optional Text
+  }
+
+let ContentConfigPermissionsRequired = {}
+let ContentConfigPermissions = ContentConfigPermissionsOptional //\\ ContentConfigPermissionsRequired
+
+in
+{ ContentConfigPermissionsOptional = ContentConfigPermissionsOptional
+, ContentConfigPermissionsRequired = ContentConfigPermissionsRequired
+, ContentConfigPermissions = ContentConfigPermissions
+}

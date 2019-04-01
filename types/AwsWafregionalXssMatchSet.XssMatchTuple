@@ -1,0 +1,12 @@
+
+let XssMatchTupleOptional = {}
+
+let XssMatchTupleRequired =
+  { text_transformation : Text
+  , field_to_match : (./AwsWafregionalXssMatchSet.XssMatchTuple.FieldToMatch).FieldToMatch
+  }
+let XssMatchTuple = XssMatchTupleOptional //\\ XssMatchTupleRequired
+
+in
+{ XssMatchTuple = XssMatchTuple
+}

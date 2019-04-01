@@ -1,0 +1,12 @@
+
+let CsvOptional = {}
+
+let CsvRequired =
+  { record_column_delimiter : Text
+  , record_row_delimiter : Text
+  }
+let Csv = CsvOptional //\\ CsvRequired
+
+in
+{ Csv = Csv
+}

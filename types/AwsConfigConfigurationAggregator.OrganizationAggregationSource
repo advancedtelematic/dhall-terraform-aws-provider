@@ -1,0 +1,15 @@
+
+let OrganizationAggregationSourceOptional =
+  { all_regions : Optional Bool
+  , regions : Optional (List Text)
+  }
+
+let OrganizationAggregationSourceRequired =
+  { role_arn : Text }
+let OrganizationAggregationSource = OrganizationAggregationSourceOptional //\\ OrganizationAggregationSourceRequired
+
+in
+{ OrganizationAggregationSourceOptional = OrganizationAggregationSourceOptional
+, OrganizationAggregationSourceRequired = OrganizationAggregationSourceRequired
+, OrganizationAggregationSource = OrganizationAggregationSource
+}

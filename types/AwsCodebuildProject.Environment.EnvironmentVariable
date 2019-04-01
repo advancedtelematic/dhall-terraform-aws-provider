@@ -1,0 +1,15 @@
+
+let EnvironmentVariableOptional =
+  { type : Optional Text }
+
+let EnvironmentVariableRequired =
+  { name : Text
+  , value : Text
+  }
+let EnvironmentVariable = EnvironmentVariableOptional //\\ EnvironmentVariableRequired
+
+in
+{ EnvironmentVariableOptional = EnvironmentVariableOptional
+, EnvironmentVariableRequired = EnvironmentVariableRequired
+, EnvironmentVariable = EnvironmentVariable
+}

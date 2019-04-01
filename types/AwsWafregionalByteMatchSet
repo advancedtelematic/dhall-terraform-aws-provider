@@ -1,0 +1,15 @@
+
+let AwsWafregionalByteMatchSetOptional =
+  { byte_match_tuple : Optional (List (./AwsWafregionalByteMatchSet.ByteMatchTuple).ByteMatchTuple)
+  , byte_match_tuples : Optional (List (./AwsWafregionalByteMatchSet.ByteMatchTuples).ByteMatchTuples)
+  }
+
+let AwsWafregionalByteMatchSetRequired =
+  { name : Text }
+let AwsWafregionalByteMatchSet = AwsWafregionalByteMatchSetOptional //\\ AwsWafregionalByteMatchSetRequired
+
+in
+{ AwsWafregionalByteMatchSetOptional = AwsWafregionalByteMatchSetOptional
+, AwsWafregionalByteMatchSetRequired = AwsWafregionalByteMatchSetRequired
+, AwsWafregionalByteMatchSet = AwsWafregionalByteMatchSet
+}

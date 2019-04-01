@@ -1,0 +1,15 @@
+
+let ThumbnailConfigPermissionsOptional =
+  { access : Optional (List Text)
+  , grantee : Optional Text
+  , grantee_type : Optional Text
+  }
+
+let ThumbnailConfigPermissionsRequired = {}
+let ThumbnailConfigPermissions = ThumbnailConfigPermissionsOptional //\\ ThumbnailConfigPermissionsRequired
+
+in
+{ ThumbnailConfigPermissionsOptional = ThumbnailConfigPermissionsOptional
+, ThumbnailConfigPermissionsRequired = ThumbnailConfigPermissionsRequired
+, ThumbnailConfigPermissions = ThumbnailConfigPermissions
+}

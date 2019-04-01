@@ -1,0 +1,17 @@
+
+let MetricQueryOptional =
+  { expression : Optional Text
+  , label : Optional Text
+  , return_data : Optional Bool
+  , metric : Optional (./AwsCloudwatchMetricAlarm.MetricQuery.Metric).Metric
+  }
+
+let MetricQueryRequired =
+  { id : Text }
+let MetricQuery = MetricQueryOptional //\\ MetricQueryRequired
+
+in
+{ MetricQueryOptional = MetricQueryOptional
+, MetricQueryRequired = MetricQueryRequired
+, MetricQuery = MetricQuery
+}

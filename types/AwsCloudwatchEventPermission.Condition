@@ -1,0 +1,13 @@
+
+let ConditionOptional = {}
+
+let ConditionRequired =
+  { key : Text
+  , type : Text
+  , value : Text
+  }
+let Condition = ConditionOptional //\\ ConditionRequired
+
+in
+{ Condition = Condition
+}

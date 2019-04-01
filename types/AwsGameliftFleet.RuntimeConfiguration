@@ -1,0 +1,15 @@
+
+let RuntimeConfigurationOptional =
+  { game_session_activation_timeout_seconds : Optional Natural
+  , max_concurrent_game_session_activations : Optional Natural
+  , server_process : Optional (List (./AwsGameliftFleet.RuntimeConfiguration.ServerProcess).ServerProcess)
+  }
+
+let RuntimeConfigurationRequired = {}
+let RuntimeConfiguration = RuntimeConfigurationOptional //\\ RuntimeConfigurationRequired
+
+in
+{ RuntimeConfigurationOptional = RuntimeConfigurationOptional
+, RuntimeConfigurationRequired = RuntimeConfigurationRequired
+, RuntimeConfiguration = RuntimeConfiguration
+}

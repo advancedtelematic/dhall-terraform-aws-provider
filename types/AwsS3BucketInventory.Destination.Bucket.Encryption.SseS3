@@ -1,0 +1,9 @@
+
+let SseS3Optional = {}
+
+let SseS3Required = {}
+let SseS3 = SseS3Optional //\\ SseS3Required
+
+in
+{ SseS3 = SseS3
+}

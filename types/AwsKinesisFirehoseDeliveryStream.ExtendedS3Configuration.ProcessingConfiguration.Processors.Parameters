@@ -1,0 +1,12 @@
+
+let ParametersOptional = {}
+
+let ParametersRequired =
+  { parameter_name : Text
+  , parameter_value : Text
+  }
+let Parameters = ParametersOptional //\\ ParametersRequired
+
+in
+{ Parameters = Parameters
+}

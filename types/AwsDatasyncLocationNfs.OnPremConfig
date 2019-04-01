@@ -1,0 +1,10 @@
+
+let OnPremConfigOptional = {}
+
+let OnPremConfigRequired =
+  { agent_arns : (List Text) }
+let OnPremConfig = OnPremConfigOptional //\\ OnPremConfigRequired
+
+in
+{ OnPremConfig = OnPremConfig
+}

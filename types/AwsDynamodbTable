@@ -1,0 +1,28 @@
+
+let AwsDynamodbTableOptional =
+  { billing_mode : Optional Text
+  , range_key : Optional Text
+  , read_capacity : Optional Natural
+  , stream_enabled : Optional Bool
+  , stream_view_type : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , write_capacity : Optional Natural
+  , global_secondary_index : Optional (List (./AwsDynamodbTable.GlobalSecondaryIndex).GlobalSecondaryIndex)
+  , local_secondary_index : Optional (List (./AwsDynamodbTable.LocalSecondaryIndex).LocalSecondaryIndex)
+  , point_in_time_recovery : Optional (./AwsDynamodbTable.PointInTimeRecovery).PointInTimeRecovery
+  , server_side_encryption : Optional (./AwsDynamodbTable.ServerSideEncryption).ServerSideEncryption
+  , ttl : Optional (./AwsDynamodbTable.Ttl).Ttl
+  }
+
+let AwsDynamodbTableRequired =
+  { hash_key : Text
+  , name : Text
+  , attribute : List (./AwsDynamodbTable.Attribute).Attribute
+  }
+let AwsDynamodbTable = AwsDynamodbTableOptional //\\ AwsDynamodbTableRequired
+
+in
+{ AwsDynamodbTableOptional = AwsDynamodbTableOptional
+, AwsDynamodbTableRequired = AwsDynamodbTableRequired
+, AwsDynamodbTable = AwsDynamodbTable
+}

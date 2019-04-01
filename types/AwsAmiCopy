@@ -1,0 +1,22 @@
+
+let AwsAmiCopyOptional =
+  { description : Optional Text
+  , encrypted : Optional Bool
+  , kms_key_id : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , ebs_block_device : Optional (List (./AwsAmiCopy.EbsBlockDevice).EbsBlockDevice)
+  , ephemeral_block_device : Optional (List (./AwsAmiCopy.EphemeralBlockDevice).EphemeralBlockDevice)
+  }
+
+let AwsAmiCopyRequired =
+  { name : Text
+  , source_ami_id : Text
+  , source_ami_region : Text
+  }
+let AwsAmiCopy = AwsAmiCopyOptional //\\ AwsAmiCopyRequired
+
+in
+{ AwsAmiCopyOptional = AwsAmiCopyOptional
+, AwsAmiCopyRequired = AwsAmiCopyRequired
+, AwsAmiCopy = AwsAmiCopy
+}

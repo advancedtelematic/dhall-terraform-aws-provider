@@ -1,0 +1,13 @@
+
+let PlacementStrategyOptional =
+  { field : Optional Text }
+
+let PlacementStrategyRequired =
+  { type : Text }
+let PlacementStrategy = PlacementStrategyOptional //\\ PlacementStrategyRequired
+
+in
+{ PlacementStrategyOptional = PlacementStrategyOptional
+, PlacementStrategyRequired = PlacementStrategyRequired
+, PlacementStrategy = PlacementStrategy
+}

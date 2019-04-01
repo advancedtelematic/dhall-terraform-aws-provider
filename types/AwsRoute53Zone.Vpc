@@ -1,0 +1,13 @@
+
+let VpcOptional =
+  { vpc_region : Optional Text }
+
+let VpcRequired =
+  { vpc_id : Text }
+let Vpc = VpcOptional //\\ VpcRequired
+
+in
+{ VpcOptional = VpcOptional
+, VpcRequired = VpcRequired
+, Vpc = Vpc
+}

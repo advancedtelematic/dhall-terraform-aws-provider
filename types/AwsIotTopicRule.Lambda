@@ -1,0 +1,10 @@
+
+let LambdaOptional = {}
+
+let LambdaRequired =
+  { function_arn : Text }
+let Lambda = LambdaOptional //\\ LambdaRequired
+
+in
+{ Lambda = Lambda
+}

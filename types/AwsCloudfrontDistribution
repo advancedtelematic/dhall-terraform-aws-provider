@@ -1,0 +1,31 @@
+
+let AwsCloudfrontDistributionOptional =
+  { aliases : Optional (List Text)
+  , comment : Optional Text
+  , default_root_object : Optional Text
+  , http_version : Optional Text
+  , is_ipv6_enabled : Optional Bool
+  , price_class : Optional Text
+  , retain_on_delete : Optional Bool
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , web_acl_id : Optional Text
+  , cache_behavior : Optional (List (./AwsCloudfrontDistribution.CacheBehavior).CacheBehavior)
+  , custom_error_response : Optional (List (./AwsCloudfrontDistribution.CustomErrorResponse).CustomErrorResponse)
+  , logging_config : Optional (./AwsCloudfrontDistribution.LoggingConfig).LoggingConfig
+  , ordered_cache_behavior : Optional (List (./AwsCloudfrontDistribution.OrderedCacheBehavior).OrderedCacheBehavior)
+  }
+
+let AwsCloudfrontDistributionRequired =
+  { enabled : Bool
+  , default_cache_behavior : (./AwsCloudfrontDistribution.DefaultCacheBehavior).DefaultCacheBehavior
+  , origin : List (./AwsCloudfrontDistribution.Origin).Origin
+  , restrictions : (./AwsCloudfrontDistribution.Restrictions).Restrictions
+  , viewer_certificate : (./AwsCloudfrontDistribution.ViewerCertificate).ViewerCertificate
+  }
+let AwsCloudfrontDistribution = AwsCloudfrontDistributionOptional //\\ AwsCloudfrontDistributionRequired
+
+in
+{ AwsCloudfrontDistributionOptional = AwsCloudfrontDistributionOptional
+, AwsCloudfrontDistributionRequired = AwsCloudfrontDistributionRequired
+, AwsCloudfrontDistribution = AwsCloudfrontDistribution
+}

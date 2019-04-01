@@ -1,0 +1,12 @@
+
+let PermissionsOptional = {}
+
+let PermissionsRequired =
+  { account_ids : Text
+  , type : Text
+  }
+let Permissions = PermissionsOptional //\\ PermissionsRequired
+
+in
+{ Permissions = Permissions
+}

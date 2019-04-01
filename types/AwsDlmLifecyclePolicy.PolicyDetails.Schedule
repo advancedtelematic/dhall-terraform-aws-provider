@@ -1,0 +1,18 @@
+
+let ScheduleOptional =
+  { copy_tags : Optional Bool
+  , tags_to_add : Optional (List { mapKey : Text, mapValue : Text })
+  }
+
+let ScheduleRequired =
+  { name : Text
+  , create_rule : (./AwsDlmLifecyclePolicy.PolicyDetails.Schedule.CreateRule).CreateRule
+  , retain_rule : (./AwsDlmLifecyclePolicy.PolicyDetails.Schedule.RetainRule).RetainRule
+  }
+let Schedule = ScheduleOptional //\\ ScheduleRequired
+
+in
+{ ScheduleOptional = ScheduleOptional
+, ScheduleRequired = ScheduleRequired
+, Schedule = Schedule
+}

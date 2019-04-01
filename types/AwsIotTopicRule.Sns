@@ -1,0 +1,15 @@
+
+let SnsOptional =
+  { message_format : Optional Text }
+
+let SnsRequired =
+  { role_arn : Text
+  , target_arn : Text
+  }
+let Sns = SnsOptional //\\ SnsRequired
+
+in
+{ SnsOptional = SnsOptional
+, SnsRequired = SnsRequired
+, Sns = Sns
+}

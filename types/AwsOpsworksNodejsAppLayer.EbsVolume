@@ -1,0 +1,19 @@
+
+let EbsVolumeOptional =
+  { iops : Optional Natural
+  , raid_level : Optional Text
+  , type : Optional Text
+  }
+
+let EbsVolumeRequired =
+  { mount_point : Text
+  , number_of_disks : Natural
+  , size : Natural
+  }
+let EbsVolume = EbsVolumeOptional //\\ EbsVolumeRequired
+
+in
+{ EbsVolumeOptional = EbsVolumeOptional
+, EbsVolumeRequired = EbsVolumeRequired
+, EbsVolume = EbsVolume
+}

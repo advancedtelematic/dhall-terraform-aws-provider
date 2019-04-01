@@ -1,0 +1,13 @@
+
+let AwsWafByteMatchSetOptional =
+  { byte_match_tuples : Optional (List (./AwsWafByteMatchSet.ByteMatchTuples).ByteMatchTuples) }
+
+let AwsWafByteMatchSetRequired =
+  { name : Text }
+let AwsWafByteMatchSet = AwsWafByteMatchSetOptional //\\ AwsWafByteMatchSetRequired
+
+in
+{ AwsWafByteMatchSetOptional = AwsWafByteMatchSetOptional
+, AwsWafByteMatchSetRequired = AwsWafByteMatchSetRequired
+, AwsWafByteMatchSet = AwsWafByteMatchSet
+}

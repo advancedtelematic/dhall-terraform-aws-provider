@@ -1,0 +1,12 @@
+
+let Ec2TagSetOptional =
+  { ec2_tag_filter : Optional (List (./AwsCodedeployDeploymentGroup.Ec2TagSet.Ec2TagFilter).Ec2TagFilter) }
+
+let Ec2TagSetRequired = {}
+let Ec2TagSet = Ec2TagSetOptional //\\ Ec2TagSetRequired
+
+in
+{ Ec2TagSetOptional = Ec2TagSetOptional
+, Ec2TagSetRequired = Ec2TagSetRequired
+, Ec2TagSet = Ec2TagSet
+}

@@ -1,0 +1,19 @@
+
+let OriginOptional =
+  { origin_path : Optional Text
+  , custom_header : Optional (List (./AwsCloudfrontDistribution.Origin.CustomHeader).CustomHeader)
+  , custom_origin_config : Optional (./AwsCloudfrontDistribution.Origin.CustomOriginConfig).CustomOriginConfig
+  , s3_origin_config : Optional (./AwsCloudfrontDistribution.Origin.S3OriginConfig).S3OriginConfig
+  }
+
+let OriginRequired =
+  { domain_name : Text
+  , origin_id : Text
+  }
+let Origin = OriginOptional //\\ OriginRequired
+
+in
+{ OriginOptional = OriginOptional
+, OriginRequired = OriginRequired
+, Origin = Origin
+}

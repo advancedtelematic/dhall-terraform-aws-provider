@@ -1,0 +1,13 @@
+
+let VpcConfigOptional =
+  { security_group_ids : Optional (List Text) }
+
+let VpcConfigRequired =
+  { subnet_ids : (List Text) }
+let VpcConfig = VpcConfigOptional //\\ VpcConfigRequired
+
+in
+{ VpcConfigOptional = VpcConfigOptional
+, VpcConfigRequired = VpcConfigRequired
+, VpcConfig = VpcConfig
+}

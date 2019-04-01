@@ -1,0 +1,27 @@
+
+let AwsRoute53RecordOptional =
+  { allow_overwrite : Optional Bool
+  , health_check_id : Optional Text
+  , multivalue_answer_routing_policy : Optional Bool
+  , records : Optional (List Text)
+  , set_identifier : Optional Text
+  , ttl : Optional Natural
+  , alias : Optional (List (./AwsRoute53Record.Alias).Alias)
+  , failover_routing_policy : Optional (List (./AwsRoute53Record.FailoverRoutingPolicy).FailoverRoutingPolicy)
+  , geolocation_routing_policy : Optional (List (./AwsRoute53Record.GeolocationRoutingPolicy).GeolocationRoutingPolicy)
+  , latency_routing_policy : Optional (List (./AwsRoute53Record.LatencyRoutingPolicy).LatencyRoutingPolicy)
+  , weighted_routing_policy : Optional (List (./AwsRoute53Record.WeightedRoutingPolicy).WeightedRoutingPolicy)
+  }
+
+let AwsRoute53RecordRequired =
+  { name : Text
+  , type : Text
+  , zone_id : Text
+  }
+let AwsRoute53Record = AwsRoute53RecordOptional //\\ AwsRoute53RecordRequired
+
+in
+{ AwsRoute53RecordOptional = AwsRoute53RecordOptional
+, AwsRoute53RecordRequired = AwsRoute53RecordRequired
+, AwsRoute53Record = AwsRoute53Record
+}

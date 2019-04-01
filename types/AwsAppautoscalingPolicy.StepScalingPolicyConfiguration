@@ -1,0 +1,17 @@
+
+let StepScalingPolicyConfigurationOptional =
+  { adjustment_type : Optional Text
+  , cooldown : Optional Natural
+  , metric_aggregation_type : Optional Text
+  , min_adjustment_magnitude : Optional Natural
+  , step_adjustment : Optional (List (./AwsAppautoscalingPolicy.StepScalingPolicyConfiguration.StepAdjustment).StepAdjustment)
+  }
+
+let StepScalingPolicyConfigurationRequired = {}
+let StepScalingPolicyConfiguration = StepScalingPolicyConfigurationOptional //\\ StepScalingPolicyConfigurationRequired
+
+in
+{ StepScalingPolicyConfigurationOptional = StepScalingPolicyConfigurationOptional
+, StepScalingPolicyConfigurationRequired = StepScalingPolicyConfigurationRequired
+, StepScalingPolicyConfiguration = StepScalingPolicyConfiguration
+}

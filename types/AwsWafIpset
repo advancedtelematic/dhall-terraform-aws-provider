@@ -1,0 +1,13 @@
+
+let AwsWafIpsetOptional =
+  { ip_set_descriptors : Optional (List (./AwsWafIpset.IpSetDescriptors).IpSetDescriptors) }
+
+let AwsWafIpsetRequired =
+  { name : Text }
+let AwsWafIpset = AwsWafIpsetOptional //\\ AwsWafIpsetRequired
+
+in
+{ AwsWafIpsetOptional = AwsWafIpsetOptional
+, AwsWafIpsetRequired = AwsWafIpsetRequired
+, AwsWafIpset = AwsWafIpset
+}

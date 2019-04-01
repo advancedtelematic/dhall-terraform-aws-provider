@@ -1,0 +1,13 @@
+
+let AwsWafregionalSqlInjectionMatchSetOptional =
+  { sql_injection_match_tuple : Optional (List (./AwsWafregionalSqlInjectionMatchSet.SqlInjectionMatchTuple).SqlInjectionMatchTuple) }
+
+let AwsWafregionalSqlInjectionMatchSetRequired =
+  { name : Text }
+let AwsWafregionalSqlInjectionMatchSet = AwsWafregionalSqlInjectionMatchSetOptional //\\ AwsWafregionalSqlInjectionMatchSetRequired
+
+in
+{ AwsWafregionalSqlInjectionMatchSetOptional = AwsWafregionalSqlInjectionMatchSetOptional
+, AwsWafregionalSqlInjectionMatchSetRequired = AwsWafregionalSqlInjectionMatchSetRequired
+, AwsWafregionalSqlInjectionMatchSet = AwsWafregionalSqlInjectionMatchSet
+}

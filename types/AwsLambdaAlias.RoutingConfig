@@ -1,0 +1,12 @@
+
+let RoutingConfigOptional =
+  { additional_version_weights : Optional (List { mapKey : Natural, mapValue : Double }) }
+
+let RoutingConfigRequired = {}
+let RoutingConfig = RoutingConfigOptional //\\ RoutingConfigRequired
+
+in
+{ RoutingConfigOptional = RoutingConfigOptional
+, RoutingConfigRequired = RoutingConfigRequired
+, RoutingConfig = RoutingConfig
+}

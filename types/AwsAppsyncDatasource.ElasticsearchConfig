@@ -1,0 +1,13 @@
+
+let ElasticsearchConfigOptional =
+  { region : Optional Text }
+
+let ElasticsearchConfigRequired =
+  { endpoint : Text }
+let ElasticsearchConfig = ElasticsearchConfigOptional //\\ ElasticsearchConfigRequired
+
+in
+{ ElasticsearchConfigOptional = ElasticsearchConfigOptional
+, ElasticsearchConfigRequired = ElasticsearchConfigRequired
+, ElasticsearchConfig = ElasticsearchConfig
+}

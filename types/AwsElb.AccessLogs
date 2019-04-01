@@ -1,0 +1,16 @@
+
+let AccessLogsOptional =
+  { bucket_prefix : Optional Text
+  , enabled : Optional Bool
+  , interval : Optional Natural
+  }
+
+let AccessLogsRequired =
+  { bucket : Text }
+let AccessLogs = AccessLogsOptional //\\ AccessLogsRequired
+
+in
+{ AccessLogsOptional = AccessLogsOptional
+, AccessLogsRequired = AccessLogsRequired
+, AccessLogs = AccessLogs
+}

@@ -1,0 +1,19 @@
+
+let AwsKinesisAnalyticsApplicationOptional =
+  { code : Optional Text
+  , description : Optional Text
+  , cloudwatch_logging_options : Optional (./AwsKinesisAnalyticsApplication.CloudwatchLoggingOptions).CloudwatchLoggingOptions
+  , inputs : Optional (./AwsKinesisAnalyticsApplication.Inputs).Inputs
+  , outputs : Optional (List (./AwsKinesisAnalyticsApplication.Outputs).Outputs)
+  , reference_data_sources : Optional (./AwsKinesisAnalyticsApplication.ReferenceDataSources).ReferenceDataSources
+  }
+
+let AwsKinesisAnalyticsApplicationRequired =
+  { name : Text }
+let AwsKinesisAnalyticsApplication = AwsKinesisAnalyticsApplicationOptional //\\ AwsKinesisAnalyticsApplicationRequired
+
+in
+{ AwsKinesisAnalyticsApplicationOptional = AwsKinesisAnalyticsApplicationOptional
+, AwsKinesisAnalyticsApplicationRequired = AwsKinesisAnalyticsApplicationRequired
+, AwsKinesisAnalyticsApplication = AwsKinesisAnalyticsApplication
+}

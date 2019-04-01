@@ -1,0 +1,12 @@
+
+let RevocationConfigurationOptional =
+  { crl_configuration : Optional (./AwsAcmpcaCertificateAuthority.RevocationConfiguration.CrlConfiguration).CrlConfiguration }
+
+let RevocationConfigurationRequired = {}
+let RevocationConfiguration = RevocationConfigurationOptional //\\ RevocationConfigurationRequired
+
+in
+{ RevocationConfigurationOptional = RevocationConfigurationOptional
+, RevocationConfigurationRequired = RevocationConfigurationRequired
+, RevocationConfiguration = RevocationConfiguration
+}

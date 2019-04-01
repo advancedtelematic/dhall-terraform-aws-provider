@@ -1,0 +1,16 @@
+
+let AwsRouteTableOptional =
+  { propagating_vgws : Optional (List Text)
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , route : Optional (List (./AwsRouteTable.Route).Route)
+  }
+
+let AwsRouteTableRequired =
+  { vpc_id : Text }
+let AwsRouteTable = AwsRouteTableOptional //\\ AwsRouteTableRequired
+
+in
+{ AwsRouteTableOptional = AwsRouteTableOptional
+, AwsRouteTableRequired = AwsRouteTableRequired
+, AwsRouteTable = AwsRouteTable
+}

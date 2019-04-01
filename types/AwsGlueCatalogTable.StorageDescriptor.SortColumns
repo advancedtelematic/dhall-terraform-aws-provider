@@ -1,0 +1,12 @@
+
+let SortColumnsOptional = {}
+
+let SortColumnsRequired =
+  { column : Text
+  , sort_order : Natural
+  }
+let SortColumns = SortColumnsOptional //\\ SortColumnsRequired
+
+in
+{ SortColumns = SortColumns
+}

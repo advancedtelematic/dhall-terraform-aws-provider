@@ -1,0 +1,13 @@
+
+let ApplyServerSideEncryptionByDefaultOptional =
+  { kms_master_key_id : Optional Text }
+
+let ApplyServerSideEncryptionByDefaultRequired =
+  { sse_algorithm : Text }
+let ApplyServerSideEncryptionByDefault = ApplyServerSideEncryptionByDefaultOptional //\\ ApplyServerSideEncryptionByDefaultRequired
+
+in
+{ ApplyServerSideEncryptionByDefaultOptional = ApplyServerSideEncryptionByDefaultOptional
+, ApplyServerSideEncryptionByDefaultRequired = ApplyServerSideEncryptionByDefaultRequired
+, ApplyServerSideEncryptionByDefault = ApplyServerSideEncryptionByDefault
+}

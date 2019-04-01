@@ -1,0 +1,12 @@
+
+let FilterOptional =
+  { prefix : Optional Text }
+
+let FilterRequired = {}
+let Filter = FilterOptional //\\ FilterRequired
+
+in
+{ FilterOptional = FilterOptional
+, FilterRequired = FilterRequired
+, Filter = Filter
+}

@@ -1,0 +1,12 @@
+
+let RetryStrategyOptional =
+  { attempts : Optional Natural }
+
+let RetryStrategyRequired = {}
+let RetryStrategy = RetryStrategyOptional //\\ RetryStrategyRequired
+
+in
+{ RetryStrategyOptional = RetryStrategyOptional
+, RetryStrategyRequired = RetryStrategyRequired
+, RetryStrategy = RetryStrategy
+}

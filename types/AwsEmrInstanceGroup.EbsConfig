@@ -1,0 +1,17 @@
+
+let EbsConfigOptional =
+  { iops : Optional Natural
+  , volumes_per_instance : Optional Natural
+  }
+
+let EbsConfigRequired =
+  { size : Natural
+  , type : Text
+  }
+let EbsConfig = EbsConfigOptional //\\ EbsConfigRequired
+
+in
+{ EbsConfigOptional = EbsConfigOptional
+, EbsConfigRequired = EbsConfigRequired
+, EbsConfig = EbsConfig
+}

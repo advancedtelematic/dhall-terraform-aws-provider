@@ -1,0 +1,10 @@
+
+let NodeToNodeEncryptionOptional = {}
+
+let NodeToNodeEncryptionRequired =
+  { enabled : Bool }
+let NodeToNodeEncryption = NodeToNodeEncryptionOptional //\\ NodeToNodeEncryptionRequired
+
+in
+{ NodeToNodeEncryption = NodeToNodeEncryption
+}

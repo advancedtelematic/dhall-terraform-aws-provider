@@ -1,0 +1,15 @@
+
+let ActionsOptional =
+  { arguments : Optional (List { mapKey : Text, mapValue : Text })
+  , timeout : Optional Natural
+  }
+
+let ActionsRequired =
+  { job_name : Text }
+let Actions = ActionsOptional //\\ ActionsRequired
+
+in
+{ ActionsOptional = ActionsOptional
+, ActionsRequired = ActionsRequired
+, Actions = Actions
+}

@@ -1,0 +1,12 @@
+
+let HiveJsonSerDeOptional =
+  { timestamp_formats : Optional (List Text) }
+
+let HiveJsonSerDeRequired = {}
+let HiveJsonSerDe = HiveJsonSerDeOptional //\\ HiveJsonSerDeRequired
+
+in
+{ HiveJsonSerDeOptional = HiveJsonSerDeOptional
+, HiveJsonSerDeRequired = HiveJsonSerDeRequired
+, HiveJsonSerDe = HiveJsonSerDe
+}

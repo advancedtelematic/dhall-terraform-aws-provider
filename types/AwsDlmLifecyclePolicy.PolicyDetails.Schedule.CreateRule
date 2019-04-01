@@ -1,0 +1,15 @@
+
+let CreateRuleOptional =
+  { interval_unit : Optional Text
+  , times : Optional (List Text)
+  }
+
+let CreateRuleRequired =
+  { interval : Natural }
+let CreateRule = CreateRuleOptional //\\ CreateRuleRequired
+
+in
+{ CreateRuleOptional = CreateRuleOptional
+, CreateRuleRequired = CreateRuleRequired
+, CreateRule = CreateRule
+}

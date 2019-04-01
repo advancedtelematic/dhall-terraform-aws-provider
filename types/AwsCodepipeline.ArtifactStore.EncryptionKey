@@ -1,0 +1,12 @@
+
+let EncryptionKeyOptional = {}
+
+let EncryptionKeyRequired =
+  { id : Text
+  , type : Text
+  }
+let EncryptionKey = EncryptionKeyOptional //\\ EncryptionKeyRequired
+
+in
+{ EncryptionKey = EncryptionKey
+}

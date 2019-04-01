@@ -1,0 +1,10 @@
+
+let JsonOptional = {}
+
+let JsonRequired =
+  { record_row_path : Text }
+let Json = JsonOptional //\\ JsonRequired
+
+in
+{ Json = Json
+}

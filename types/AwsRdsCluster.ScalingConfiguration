@@ -1,0 +1,16 @@
+
+let ScalingConfigurationOptional =
+  { auto_pause : Optional Bool
+  , max_capacity : Optional Natural
+  , min_capacity : Optional Natural
+  , seconds_until_auto_pause : Optional Natural
+  }
+
+let ScalingConfigurationRequired = {}
+let ScalingConfiguration = ScalingConfigurationOptional //\\ ScalingConfigurationRequired
+
+in
+{ ScalingConfigurationOptional = ScalingConfigurationOptional
+, ScalingConfigurationRequired = ScalingConfigurationRequired
+, ScalingConfiguration = ScalingConfiguration
+}

@@ -1,0 +1,12 @@
+
+let CreditSpecificationOptional =
+  { cpu_credits : Optional Text }
+
+let CreditSpecificationRequired = {}
+let CreditSpecification = CreditSpecificationOptional //\\ CreditSpecificationRequired
+
+in
+{ CreditSpecificationOptional = CreditSpecificationOptional
+, CreditSpecificationRequired = CreditSpecificationRequired
+, CreditSpecification = CreditSpecification
+}

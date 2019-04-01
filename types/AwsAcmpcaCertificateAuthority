@@ -1,0 +1,17 @@
+
+let AwsAcmpcaCertificateAuthorityOptional =
+  { enabled : Optional Bool
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , type : Optional Text
+  , revocation_configuration : Optional (./AwsAcmpcaCertificateAuthority.RevocationConfiguration).RevocationConfiguration
+  }
+
+let AwsAcmpcaCertificateAuthorityRequired =
+  { certificate_authority_configuration : (./AwsAcmpcaCertificateAuthority.CertificateAuthorityConfiguration).CertificateAuthorityConfiguration }
+let AwsAcmpcaCertificateAuthority = AwsAcmpcaCertificateAuthorityOptional //\\ AwsAcmpcaCertificateAuthorityRequired
+
+in
+{ AwsAcmpcaCertificateAuthorityOptional = AwsAcmpcaCertificateAuthorityOptional
+, AwsAcmpcaCertificateAuthorityRequired = AwsAcmpcaCertificateAuthorityRequired
+, AwsAcmpcaCertificateAuthority = AwsAcmpcaCertificateAuthority
+}

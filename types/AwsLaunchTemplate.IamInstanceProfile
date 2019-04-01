@@ -1,0 +1,14 @@
+
+let IamInstanceProfileOptional =
+  { arn : Optional Text
+  , name : Optional Text
+  }
+
+let IamInstanceProfileRequired = {}
+let IamInstanceProfile = IamInstanceProfileOptional //\\ IamInstanceProfileRequired
+
+in
+{ IamInstanceProfileOptional = IamInstanceProfileOptional
+, IamInstanceProfileRequired = IamInstanceProfileRequired
+, IamInstanceProfile = IamInstanceProfile
+}

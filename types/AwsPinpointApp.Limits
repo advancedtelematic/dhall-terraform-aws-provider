@@ -1,0 +1,16 @@
+
+let LimitsOptional =
+  { daily : Optional Natural
+  , maximum_duration : Optional Natural
+  , messages_per_second : Optional Natural
+  , total : Optional Natural
+  }
+
+let LimitsRequired = {}
+let Limits = LimitsOptional //\\ LimitsRequired
+
+in
+{ LimitsOptional = LimitsOptional
+, LimitsRequired = LimitsRequired
+, Limits = Limits
+}

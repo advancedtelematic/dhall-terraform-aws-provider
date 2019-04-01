@@ -1,0 +1,18 @@
+
+let CustomizedMetricSpecificationOptional =
+  { unit : Optional Text
+  , metric_dimension : Optional (List (./AwsAutoscalingPolicy.TargetTrackingConfiguration.CustomizedMetricSpecification.MetricDimension).MetricDimension)
+  }
+
+let CustomizedMetricSpecificationRequired =
+  { metric_name : Text
+  , namespace : Text
+  , statistic : Text
+  }
+let CustomizedMetricSpecification = CustomizedMetricSpecificationOptional //\\ CustomizedMetricSpecificationRequired
+
+in
+{ CustomizedMetricSpecificationOptional = CustomizedMetricSpecificationOptional
+, CustomizedMetricSpecificationRequired = CustomizedMetricSpecificationRequired
+, CustomizedMetricSpecification = CustomizedMetricSpecification
+}

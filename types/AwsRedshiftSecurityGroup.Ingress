@@ -1,0 +1,15 @@
+
+let IngressOptional =
+  { cidr : Optional Text
+  , security_group_name : Optional Text
+  , security_group_owner_id : Optional Text
+  }
+
+let IngressRequired = {}
+let Ingress = IngressOptional //\\ IngressRequired
+
+in
+{ IngressOptional = IngressOptional
+, IngressRequired = IngressRequired
+, Ingress = Ingress
+}

@@ -1,0 +1,15 @@
+
+let NetworkInterfaceOptional =
+  { delete_on_termination : Optional Bool }
+
+let NetworkInterfaceRequired =
+  { device_index : Natural
+  , network_interface_id : Text
+  }
+let NetworkInterface = NetworkInterfaceOptional //\\ NetworkInterfaceRequired
+
+in
+{ NetworkInterfaceOptional = NetworkInterfaceOptional
+, NetworkInterfaceRequired = NetworkInterfaceRequired
+, NetworkInterface = NetworkInterface
+}

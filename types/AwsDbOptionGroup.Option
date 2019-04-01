@@ -1,0 +1,18 @@
+
+let OptionOptional =
+  { db_security_group_memberships : Optional (List Text)
+  , port : Optional Natural
+  , version : Optional Text
+  , vpc_security_group_memberships : Optional (List Text)
+  , option_settings : Optional (List (./AwsDbOptionGroup.Option.OptionSettings).OptionSettings)
+  }
+
+let OptionRequired =
+  { option_name : Text }
+let Option = OptionOptional //\\ OptionRequired
+
+in
+{ OptionOptional = OptionOptional
+, OptionRequired = OptionRequired
+, Option = Option
+}

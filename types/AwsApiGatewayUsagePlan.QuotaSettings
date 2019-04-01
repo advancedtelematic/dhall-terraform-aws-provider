@@ -1,0 +1,15 @@
+
+let QuotaSettingsOptional =
+  { offset : Optional Natural }
+
+let QuotaSettingsRequired =
+  { limit : Natural
+  , period : Text
+  }
+let QuotaSettings = QuotaSettingsOptional //\\ QuotaSettingsRequired
+
+in
+{ QuotaSettingsOptional = QuotaSettingsOptional
+, QuotaSettingsRequired = QuotaSettingsRequired
+, QuotaSettings = QuotaSettings
+}

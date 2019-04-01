@@ -1,0 +1,13 @@
+
+let LoggingOptional =
+  { target_prefix : Optional Text }
+
+let LoggingRequired =
+  { target_bucket : Text }
+let Logging = LoggingOptional //\\ LoggingRequired
+
+in
+{ LoggingOptional = LoggingOptional
+, LoggingRequired = LoggingRequired
+, Logging = Logging
+}

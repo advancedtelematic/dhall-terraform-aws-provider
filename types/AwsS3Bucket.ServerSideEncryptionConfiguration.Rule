@@ -1,0 +1,10 @@
+
+let RuleOptional = {}
+
+let RuleRequired =
+  { apply_server_side_encryption_by_default : (./AwsS3Bucket.ServerSideEncryptionConfiguration.Rule.ApplyServerSideEncryptionByDefault).ApplyServerSideEncryptionByDefault }
+let Rule = RuleOptional //\\ RuleRequired
+
+in
+{ Rule = Rule
+}

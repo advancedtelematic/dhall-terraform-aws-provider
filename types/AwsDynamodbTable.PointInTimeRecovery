@@ -1,0 +1,10 @@
+
+let PointInTimeRecoveryOptional = {}
+
+let PointInTimeRecoveryRequired =
+  { enabled : Bool }
+let PointInTimeRecovery = PointInTimeRecoveryOptional //\\ PointInTimeRecoveryRequired
+
+in
+{ PointInTimeRecovery = PointInTimeRecovery
+}

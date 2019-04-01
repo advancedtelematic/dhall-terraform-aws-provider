@@ -1,0 +1,18 @@
+
+let DestinationOptional =
+  { account_id : Optional Text
+  , replica_kms_key_id : Optional Text
+  , storage_class : Optional Text
+  }
+
+let DestinationRequired =
+  { bucket : Text
+  , access_control_translation : (./AwsS3Bucket.ReplicationConfiguration.Rules.Destination.AccessControlTranslation).AccessControlTranslation
+  }
+let Destination = DestinationOptional //\\ DestinationRequired
+
+in
+{ DestinationOptional = DestinationOptional
+, DestinationRequired = DestinationRequired
+, Destination = Destination
+}

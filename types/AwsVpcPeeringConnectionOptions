@@ -1,0 +1,15 @@
+
+let AwsVpcPeeringConnectionOptionsOptional =
+  { accepter : Optional (./AwsVpcPeeringConnectionOptions.Accepter).Accepter
+  , requester : Optional (./AwsVpcPeeringConnectionOptions.Requester).Requester
+  }
+
+let AwsVpcPeeringConnectionOptionsRequired =
+  { vpc_peering_connection_id : Text }
+let AwsVpcPeeringConnectionOptions = AwsVpcPeeringConnectionOptionsOptional //\\ AwsVpcPeeringConnectionOptionsRequired
+
+in
+{ AwsVpcPeeringConnectionOptionsOptional = AwsVpcPeeringConnectionOptionsOptional
+, AwsVpcPeeringConnectionOptionsRequired = AwsVpcPeeringConnectionOptionsRequired
+, AwsVpcPeeringConnectionOptions = AwsVpcPeeringConnectionOptions
+}

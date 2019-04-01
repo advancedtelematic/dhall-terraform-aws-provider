@@ -1,0 +1,10 @@
+
+let TestTrafficRouteOptional = {}
+
+let TestTrafficRouteRequired =
+  { listener_arns : (List Text) }
+let TestTrafficRoute = TestTrafficRouteOptional //\\ TestTrafficRouteRequired
+
+in
+{ TestTrafficRoute = TestTrafficRoute
+}

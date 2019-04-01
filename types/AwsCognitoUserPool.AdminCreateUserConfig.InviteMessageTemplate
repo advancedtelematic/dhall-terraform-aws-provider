@@ -1,0 +1,15 @@
+
+let InviteMessageTemplateOptional =
+  { email_message : Optional Text
+  , email_subject : Optional Text
+  , sms_message : Optional Text
+  }
+
+let InviteMessageTemplateRequired = {}
+let InviteMessageTemplate = InviteMessageTemplateOptional //\\ InviteMessageTemplateRequired
+
+in
+{ InviteMessageTemplateOptional = InviteMessageTemplateOptional
+, InviteMessageTemplateRequired = InviteMessageTemplateRequired
+, InviteMessageTemplate = InviteMessageTemplate
+}

@@ -1,0 +1,14 @@
+
+let SerializerOptional =
+  { orc_ser_de : Optional (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration.DataFormatConversionConfiguration.OutputFormatConfiguration.Serializer.OrcSerDe).OrcSerDe
+  , parquet_ser_de : Optional (./AwsKinesisFirehoseDeliveryStream.ExtendedS3Configuration.DataFormatConversionConfiguration.OutputFormatConfiguration.Serializer.ParquetSerDe).ParquetSerDe
+  }
+
+let SerializerRequired = {}
+let Serializer = SerializerOptional //\\ SerializerRequired
+
+in
+{ SerializerOptional = SerializerOptional
+, SerializerRequired = SerializerRequired
+, Serializer = Serializer
+}

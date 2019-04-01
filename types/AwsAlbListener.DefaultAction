@@ -1,0 +1,19 @@
+
+let DefaultActionOptional =
+  { order : Optional Natural
+  , target_group_arn : Optional Text
+  , authenticate_cognito : Optional (./AwsAlbListener.DefaultAction.AuthenticateCognito).AuthenticateCognito
+  , authenticate_oidc : Optional (./AwsAlbListener.DefaultAction.AuthenticateOidc).AuthenticateOidc
+  , fixed_response : Optional (./AwsAlbListener.DefaultAction.FixedResponse).FixedResponse
+  , redirect : Optional (./AwsAlbListener.DefaultAction.Redirect).Redirect
+  }
+
+let DefaultActionRequired =
+  { type : Text }
+let DefaultAction = DefaultActionOptional //\\ DefaultActionRequired
+
+in
+{ DefaultActionOptional = DefaultActionOptional
+, DefaultActionRequired = DefaultActionRequired
+, DefaultAction = DefaultAction
+}

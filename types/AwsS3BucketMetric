@@ -1,0 +1,15 @@
+
+let AwsS3BucketMetricOptional =
+  { filter : Optional (./AwsS3BucketMetric.Filter).Filter }
+
+let AwsS3BucketMetricRequired =
+  { bucket : Text
+  , name : Text
+  }
+let AwsS3BucketMetric = AwsS3BucketMetricOptional //\\ AwsS3BucketMetricRequired
+
+in
+{ AwsS3BucketMetricOptional = AwsS3BucketMetricOptional
+, AwsS3BucketMetricRequired = AwsS3BucketMetricRequired
+, AwsS3BucketMetric = AwsS3BucketMetric
+}

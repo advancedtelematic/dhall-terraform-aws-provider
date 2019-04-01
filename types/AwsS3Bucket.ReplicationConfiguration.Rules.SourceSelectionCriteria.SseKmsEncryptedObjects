@@ -1,0 +1,10 @@
+
+let SseKmsEncryptedObjectsOptional = {}
+
+let SseKmsEncryptedObjectsRequired =
+  { enabled : Bool }
+let SseKmsEncryptedObjects = SseKmsEncryptedObjectsOptional //\\ SseKmsEncryptedObjectsRequired
+
+in
+{ SseKmsEncryptedObjects = SseKmsEncryptedObjects
+}

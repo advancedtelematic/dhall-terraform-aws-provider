@@ -1,0 +1,10 @@
+
+let SourceSelectionCriteriaOptional = {}
+
+let SourceSelectionCriteriaRequired =
+  { sse_kms_encrypted_objects : (./AwsS3Bucket.ReplicationConfiguration.Rules.SourceSelectionCriteria.SseKmsEncryptedObjects).SseKmsEncryptedObjects }
+let SourceSelectionCriteria = SourceSelectionCriteriaOptional //\\ SourceSelectionCriteriaRequired
+
+in
+{ SourceSelectionCriteria = SourceSelectionCriteria
+}

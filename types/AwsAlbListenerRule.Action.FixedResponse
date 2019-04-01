@@ -1,0 +1,15 @@
+
+let FixedResponseOptional =
+  { message_body : Optional Text
+  , status_code : Optional Text
+  }
+
+let FixedResponseRequired =
+  { content_type : Text }
+let FixedResponse = FixedResponseOptional //\\ FixedResponseRequired
+
+in
+{ FixedResponseOptional = FixedResponseOptional
+, FixedResponseRequired = FixedResponseRequired
+, FixedResponse = FixedResponse
+}

@@ -1,0 +1,12 @@
+
+let RunCommandTargetsOptional = {}
+
+let RunCommandTargetsRequired =
+  { key : Text
+  , values : (List Text)
+  }
+let RunCommandTargets = RunCommandTargetsOptional //\\ RunCommandTargetsRequired
+
+in
+{ RunCommandTargets = RunCommandTargets
+}

@@ -1,0 +1,24 @@
+
+let StorageDescriptorOptional =
+  { bucket_columns : Optional (List Text)
+  , compressed : Optional Bool
+  , input_format : Optional Text
+  , location : Optional Text
+  , number_of_buckets : Optional Natural
+  , output_format : Optional Text
+  , parameters : Optional (List { mapKey : Text, mapValue : Text })
+  , stored_as_sub_directories : Optional Bool
+  , columns : Optional (List (./AwsGlueCatalogTable.StorageDescriptor.Columns).Columns)
+  , ser_de_info : Optional (./AwsGlueCatalogTable.StorageDescriptor.SerDeInfo).SerDeInfo
+  , skewed_info : Optional (./AwsGlueCatalogTable.StorageDescriptor.SkewedInfo).SkewedInfo
+  , sort_columns : Optional (List (./AwsGlueCatalogTable.StorageDescriptor.SortColumns).SortColumns)
+  }
+
+let StorageDescriptorRequired = {}
+let StorageDescriptor = StorageDescriptorOptional //\\ StorageDescriptorRequired
+
+in
+{ StorageDescriptorOptional = StorageDescriptorOptional
+, StorageDescriptorRequired = StorageDescriptorRequired
+, StorageDescriptor = StorageDescriptor
+}

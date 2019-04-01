@@ -1,0 +1,19 @@
+
+let CustomOriginConfigOptional =
+  { origin_keepalive_timeout : Optional Natural
+  , origin_read_timeout : Optional Natural
+  }
+
+let CustomOriginConfigRequired =
+  { http_port : Natural
+  , https_port : Natural
+  , origin_protocol_policy : Text
+  , origin_ssl_protocols : (List Text)
+  }
+let CustomOriginConfig = CustomOriginConfigOptional //\\ CustomOriginConfigRequired
+
+in
+{ CustomOriginConfigOptional = CustomOriginConfigOptional
+, CustomOriginConfigRequired = CustomOriginConfigRequired
+, CustomOriginConfig = CustomOriginConfig
+}

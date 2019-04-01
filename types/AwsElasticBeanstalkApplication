@@ -1,0 +1,15 @@
+
+let AwsElasticBeanstalkApplicationOptional =
+  { description : Optional Text
+  , appversion_lifecycle : Optional (./AwsElasticBeanstalkApplication.AppversionLifecycle).AppversionLifecycle
+  }
+
+let AwsElasticBeanstalkApplicationRequired =
+  { name : Text }
+let AwsElasticBeanstalkApplication = AwsElasticBeanstalkApplicationOptional //\\ AwsElasticBeanstalkApplicationRequired
+
+in
+{ AwsElasticBeanstalkApplicationOptional = AwsElasticBeanstalkApplicationOptional
+, AwsElasticBeanstalkApplicationRequired = AwsElasticBeanstalkApplicationRequired
+, AwsElasticBeanstalkApplication = AwsElasticBeanstalkApplication
+}

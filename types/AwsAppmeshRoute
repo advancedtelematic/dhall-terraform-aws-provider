@@ -1,0 +1,14 @@
+
+let AwsAppmeshRouteOptional = {}
+
+let AwsAppmeshRouteRequired =
+  { mesh_name : Text
+  , name : Text
+  , virtual_router_name : Text
+  , spec : (./AwsAppmeshRoute.Spec).Spec
+  }
+let AwsAppmeshRoute = AwsAppmeshRouteOptional //\\ AwsAppmeshRouteRequired
+
+in
+{ AwsAppmeshRoute = AwsAppmeshRoute
+}

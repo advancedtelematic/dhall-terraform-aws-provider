@@ -1,0 +1,25 @@
+
+let AwsElasticsearchDomainOptional =
+  { access_policies : Optional Text
+  , advanced_options : Optional (List { mapKey : Text, mapValue : Text })
+  , elasticsearch_version : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , cluster_config : Optional (./AwsElasticsearchDomain.ClusterConfig).ClusterConfig
+  , cognito_options : Optional (./AwsElasticsearchDomain.CognitoOptions).CognitoOptions
+  , ebs_options : Optional (./AwsElasticsearchDomain.EbsOptions).EbsOptions
+  , encrypt_at_rest : Optional (./AwsElasticsearchDomain.EncryptAtRest).EncryptAtRest
+  , log_publishing_options : Optional (List (./AwsElasticsearchDomain.LogPublishingOptions).LogPublishingOptions)
+  , node_to_node_encryption : Optional (./AwsElasticsearchDomain.NodeToNodeEncryption).NodeToNodeEncryption
+  , snapshot_options : Optional (./AwsElasticsearchDomain.SnapshotOptions).SnapshotOptions
+  , vpc_options : Optional (./AwsElasticsearchDomain.VpcOptions).VpcOptions
+  }
+
+let AwsElasticsearchDomainRequired =
+  { domain_name : Text }
+let AwsElasticsearchDomain = AwsElasticsearchDomainOptional //\\ AwsElasticsearchDomainRequired
+
+in
+{ AwsElasticsearchDomainOptional = AwsElasticsearchDomainOptional
+, AwsElasticsearchDomainRequired = AwsElasticsearchDomainRequired
+, AwsElasticsearchDomain = AwsElasticsearchDomain
+}

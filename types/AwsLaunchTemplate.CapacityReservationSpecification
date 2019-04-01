@@ -1,0 +1,14 @@
+
+let CapacityReservationSpecificationOptional =
+  { capacity_reservation_preference : Optional Text
+  , capacity_reservation_target : Optional (./AwsLaunchTemplate.CapacityReservationSpecification.CapacityReservationTarget).CapacityReservationTarget
+  }
+
+let CapacityReservationSpecificationRequired = {}
+let CapacityReservationSpecification = CapacityReservationSpecificationOptional //\\ CapacityReservationSpecificationRequired
+
+in
+{ CapacityReservationSpecificationOptional = CapacityReservationSpecificationOptional
+, CapacityReservationSpecificationRequired = CapacityReservationSpecificationRequired
+, CapacityReservationSpecification = CapacityReservationSpecification
+}

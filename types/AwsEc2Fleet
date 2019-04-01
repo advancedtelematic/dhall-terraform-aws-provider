@@ -1,0 +1,23 @@
+
+let AwsEc2FleetOptional =
+  { excess_capacity_termination_policy : Optional Text
+  , replace_unhealthy_instances : Optional Bool
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , terminate_instances : Optional Bool
+  , terminate_instances_with_expiration : Optional Bool
+  , type : Optional Text
+  , on_demand_options : Optional (./AwsEc2Fleet.OnDemandOptions).OnDemandOptions
+  , spot_options : Optional (./AwsEc2Fleet.SpotOptions).SpotOptions
+  }
+
+let AwsEc2FleetRequired =
+  { launch_template_config : (./AwsEc2Fleet.LaunchTemplateConfig).LaunchTemplateConfig
+  , target_capacity_specification : (./AwsEc2Fleet.TargetCapacitySpecification).TargetCapacitySpecification
+  }
+let AwsEc2Fleet = AwsEc2FleetOptional //\\ AwsEc2FleetRequired
+
+in
+{ AwsEc2FleetOptional = AwsEc2FleetOptional
+, AwsEc2FleetRequired = AwsEc2FleetRequired
+, AwsEc2Fleet = AwsEc2Fleet
+}

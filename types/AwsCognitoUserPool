@@ -1,0 +1,32 @@
+
+let AwsCognitoUserPoolOptional =
+  { alias_attributes : Optional (List Text)
+  , auto_verified_attributes : Optional (List Text)
+  , email_verification_message : Optional Text
+  , email_verification_subject : Optional Text
+  , mfa_configuration : Optional Text
+  , sms_authentication_message : Optional Text
+  , sms_verification_message : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , username_attributes : Optional (List Text)
+  , admin_create_user_config : Optional (./AwsCognitoUserPool.AdminCreateUserConfig).AdminCreateUserConfig
+  , device_configuration : Optional (./AwsCognitoUserPool.DeviceConfiguration).DeviceConfiguration
+  , email_configuration : Optional (./AwsCognitoUserPool.EmailConfiguration).EmailConfiguration
+  , lambda_config : Optional (./AwsCognitoUserPool.LambdaConfig).LambdaConfig
+  , password_policy : Optional (./AwsCognitoUserPool.PasswordPolicy).PasswordPolicy
+  , sms_configuration : Optional (./AwsCognitoUserPool.SmsConfiguration).SmsConfiguration
+  , user_pool_add_ons : Optional (./AwsCognitoUserPool.UserPoolAddOns).UserPoolAddOns
+  , verification_message_template : Optional (./AwsCognitoUserPool.VerificationMessageTemplate).VerificationMessageTemplate
+  }
+
+let AwsCognitoUserPoolRequired =
+  { name : Text
+  , schema : List (./AwsCognitoUserPool.Schema).Schema
+  }
+let AwsCognitoUserPool = AwsCognitoUserPoolOptional //\\ AwsCognitoUserPoolRequired
+
+in
+{ AwsCognitoUserPoolOptional = AwsCognitoUserPoolOptional
+, AwsCognitoUserPoolRequired = AwsCognitoUserPoolRequired
+, AwsCognitoUserPool = AwsCognitoUserPool
+}

@@ -1,0 +1,14 @@
+
+let ThrottleSettingsOptional =
+  { burst_limit : Optional Natural
+  , rate_limit : Optional Natural
+  }
+
+let ThrottleSettingsRequired = {}
+let ThrottleSettings = ThrottleSettingsOptional //\\ ThrottleSettingsRequired
+
+in
+{ ThrottleSettingsOptional = ThrottleSettingsOptional
+, ThrottleSettingsRequired = ThrottleSettingsRequired
+, ThrottleSettings = ThrottleSettings
+}

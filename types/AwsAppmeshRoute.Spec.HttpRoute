@@ -1,0 +1,12 @@
+
+let HttpRouteOptional = {}
+
+let HttpRouteRequired =
+  { action : (./AwsAppmeshRoute.Spec.HttpRoute.Action).Action
+  , match : (./AwsAppmeshRoute.Spec.HttpRoute.Match).Match
+  }
+let HttpRoute = HttpRouteOptional //\\ HttpRouteRequired
+
+in
+{ HttpRoute = HttpRoute
+}

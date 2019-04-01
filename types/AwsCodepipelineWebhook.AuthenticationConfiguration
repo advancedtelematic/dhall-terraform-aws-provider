@@ -1,0 +1,14 @@
+
+let AuthenticationConfigurationOptional =
+  { allowed_ip_range : Optional Text
+  , secret_token : Optional Text
+  }
+
+let AuthenticationConfigurationRequired = {}
+let AuthenticationConfiguration = AuthenticationConfigurationOptional //\\ AuthenticationConfigurationRequired
+
+in
+{ AuthenticationConfigurationOptional = AuthenticationConfigurationOptional
+, AuthenticationConfigurationRequired = AuthenticationConfigurationRequired
+, AuthenticationConfiguration = AuthenticationConfiguration
+}

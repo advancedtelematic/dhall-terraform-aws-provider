@@ -1,0 +1,15 @@
+
+let SerDeInfoOptional =
+  { name : Optional Text
+  , parameters : Optional (List { mapKey : Text, mapValue : Text })
+  , serialization_library : Optional Text
+  }
+
+let SerDeInfoRequired = {}
+let SerDeInfo = SerDeInfoOptional //\\ SerDeInfoRequired
+
+in
+{ SerDeInfoOptional = SerDeInfoOptional
+, SerDeInfoRequired = SerDeInfoRequired
+, SerDeInfo = SerDeInfo
+}

@@ -1,0 +1,19 @@
+
+let AwsAlbListenerOptional =
+  { certificate_arn : Optional Text
+  , protocol : Optional Text
+  , ssl_policy : Optional Text
+  }
+
+let AwsAlbListenerRequired =
+  { load_balancer_arn : Text
+  , port : Natural
+  , default_action : List (./AwsAlbListener.DefaultAction).DefaultAction
+  }
+let AwsAlbListener = AwsAlbListenerOptional //\\ AwsAlbListenerRequired
+
+in
+{ AwsAlbListenerOptional = AwsAlbListenerOptional
+, AwsAlbListenerRequired = AwsAlbListenerRequired
+, AwsAlbListener = AwsAlbListener
+}

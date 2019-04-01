@@ -1,0 +1,12 @@
+
+let SnapshotDeliveryPropertiesOptional =
+  { delivery_frequency : Optional Text }
+
+let SnapshotDeliveryPropertiesRequired = {}
+let SnapshotDeliveryProperties = SnapshotDeliveryPropertiesOptional //\\ SnapshotDeliveryPropertiesRequired
+
+in
+{ SnapshotDeliveryPropertiesOptional = SnapshotDeliveryPropertiesOptional
+, SnapshotDeliveryPropertiesRequired = SnapshotDeliveryPropertiesRequired
+, SnapshotDeliveryProperties = SnapshotDeliveryProperties
+}

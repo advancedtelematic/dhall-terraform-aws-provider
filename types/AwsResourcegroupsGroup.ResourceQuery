@@ -1,0 +1,13 @@
+
+let ResourceQueryOptional =
+  { type : Optional Text }
+
+let ResourceQueryRequired =
+  { query : Text }
+let ResourceQuery = ResourceQueryOptional //\\ ResourceQueryRequired
+
+in
+{ ResourceQueryOptional = ResourceQueryOptional
+, ResourceQueryRequired = ResourceQueryRequired
+, ResourceQuery = ResourceQuery
+}

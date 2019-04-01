@@ -1,0 +1,21 @@
+
+let AwsAppautoscalingScheduledActionOptional =
+  { end_time : Optional Text
+  , scalable_dimension : Optional Text
+  , schedule : Optional Text
+  , start_time : Optional Text
+  , scalable_target_action : Optional (./AwsAppautoscalingScheduledAction.ScalableTargetAction).ScalableTargetAction
+  }
+
+let AwsAppautoscalingScheduledActionRequired =
+  { name : Text
+  , resource_id : Text
+  , service_namespace : Text
+  }
+let AwsAppautoscalingScheduledAction = AwsAppautoscalingScheduledActionOptional //\\ AwsAppautoscalingScheduledActionRequired
+
+in
+{ AwsAppautoscalingScheduledActionOptional = AwsAppautoscalingScheduledActionOptional
+, AwsAppautoscalingScheduledActionRequired = AwsAppautoscalingScheduledActionRequired
+, AwsAppautoscalingScheduledAction = AwsAppautoscalingScheduledAction
+}

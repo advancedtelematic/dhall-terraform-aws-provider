@@ -1,0 +1,13 @@
+
+let PlacementConstraintsOptional =
+  { expression : Optional Text }
+
+let PlacementConstraintsRequired =
+  { type : Text }
+let PlacementConstraints = PlacementConstraintsOptional //\\ PlacementConstraintsRequired
+
+in
+{ PlacementConstraintsOptional = PlacementConstraintsOptional
+, PlacementConstraintsRequired = PlacementConstraintsRequired
+, PlacementConstraints = PlacementConstraints
+}

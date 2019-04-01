@@ -1,0 +1,12 @@
+
+let KinesisTargetOptional =
+  { partition_key_path : Optional Text }
+
+let KinesisTargetRequired = {}
+let KinesisTarget = KinesisTargetOptional //\\ KinesisTargetRequired
+
+in
+{ KinesisTargetOptional = KinesisTargetOptional
+, KinesisTargetRequired = KinesisTargetRequired
+, KinesisTarget = KinesisTarget
+}

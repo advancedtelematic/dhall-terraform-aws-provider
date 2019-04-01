@@ -1,0 +1,17 @@
+
+let ApprovalRuleOptional =
+  { compliance_level : Optional Text
+  , enable_non_security : Optional Bool
+  }
+
+let ApprovalRuleRequired =
+  { approve_after_days : Natural
+  , patch_filter : List (./AwsSsmPatchBaseline.ApprovalRule.PatchFilter).PatchFilter
+  }
+let ApprovalRule = ApprovalRuleOptional //\\ ApprovalRuleRequired
+
+in
+{ ApprovalRuleOptional = ApprovalRuleOptional
+, ApprovalRuleRequired = ApprovalRuleRequired
+, ApprovalRule = ApprovalRule
+}

@@ -1,0 +1,18 @@
+
+let RulesOptional =
+  { type : Optional Text
+  , action : Optional (./AwsWafWebAcl.Rules.Action).Action
+  , override_action : Optional (./AwsWafWebAcl.Rules.OverrideAction).OverrideAction
+  }
+
+let RulesRequired =
+  { priority : Natural
+  , rule_id : Text
+  }
+let Rules = RulesOptional //\\ RulesRequired
+
+in
+{ RulesOptional = RulesOptional
+, RulesRequired = RulesRequired
+, Rules = Rules
+}

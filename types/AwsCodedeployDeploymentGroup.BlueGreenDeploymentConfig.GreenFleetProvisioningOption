@@ -1,0 +1,12 @@
+
+let GreenFleetProvisioningOptionOptional =
+  { action : Optional Text }
+
+let GreenFleetProvisioningOptionRequired = {}
+let GreenFleetProvisioningOption = GreenFleetProvisioningOptionOptional //\\ GreenFleetProvisioningOptionRequired
+
+in
+{ GreenFleetProvisioningOptionOptional = GreenFleetProvisioningOptionOptional
+, GreenFleetProvisioningOptionRequired = GreenFleetProvisioningOptionRequired
+, GreenFleetProvisioningOption = GreenFleetProvisioningOption
+}

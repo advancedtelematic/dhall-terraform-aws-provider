@@ -1,0 +1,14 @@
+
+let ConnectSettingsOptional = {}
+
+let ConnectSettingsRequired =
+  { customer_dns_ips : (List Text)
+  , customer_username : Text
+  , subnet_ids : (List Text)
+  , vpc_id : Text
+  }
+let ConnectSettings = ConnectSettingsOptional //\\ ConnectSettingsRequired
+
+in
+{ ConnectSettings = ConnectSettings
+}

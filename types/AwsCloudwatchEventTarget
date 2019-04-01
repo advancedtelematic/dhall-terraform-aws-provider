@@ -1,0 +1,25 @@
+
+let AwsCloudwatchEventTargetOptional =
+  { input : Optional Text
+  , input_path : Optional Text
+  , role_arn : Optional Text
+  , target_id : Optional Text
+  , batch_target : Optional (./AwsCloudwatchEventTarget.BatchTarget).BatchTarget
+  , ecs_target : Optional (./AwsCloudwatchEventTarget.EcsTarget).EcsTarget
+  , input_transformer : Optional (./AwsCloudwatchEventTarget.InputTransformer).InputTransformer
+  , kinesis_target : Optional (./AwsCloudwatchEventTarget.KinesisTarget).KinesisTarget
+  , run_command_targets : Optional (List (./AwsCloudwatchEventTarget.RunCommandTargets).RunCommandTargets)
+  , sqs_target : Optional (./AwsCloudwatchEventTarget.SqsTarget).SqsTarget
+  }
+
+let AwsCloudwatchEventTargetRequired =
+  { arn : Text
+  , rule : Text
+  }
+let AwsCloudwatchEventTarget = AwsCloudwatchEventTargetOptional //\\ AwsCloudwatchEventTargetRequired
+
+in
+{ AwsCloudwatchEventTargetOptional = AwsCloudwatchEventTargetOptional
+, AwsCloudwatchEventTargetRequired = AwsCloudwatchEventTargetRequired
+, AwsCloudwatchEventTarget = AwsCloudwatchEventTarget
+}

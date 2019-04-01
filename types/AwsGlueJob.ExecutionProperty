@@ -1,0 +1,12 @@
+
+let ExecutionPropertyOptional =
+  { max_concurrent_runs : Optional Natural }
+
+let ExecutionPropertyRequired = {}
+let ExecutionProperty = ExecutionPropertyOptional //\\ ExecutionPropertyRequired
+
+in
+{ ExecutionPropertyOptional = ExecutionPropertyOptional
+, ExecutionPropertyRequired = ExecutionPropertyRequired
+, ExecutionProperty = ExecutionProperty
+}

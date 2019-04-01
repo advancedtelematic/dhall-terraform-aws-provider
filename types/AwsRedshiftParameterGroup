@@ -1,0 +1,17 @@
+
+let AwsRedshiftParameterGroupOptional =
+  { description : Optional Text
+  , parameter : Optional (List (./AwsRedshiftParameterGroup.Parameter).Parameter)
+  }
+
+let AwsRedshiftParameterGroupRequired =
+  { family : Text
+  , name : Text
+  }
+let AwsRedshiftParameterGroup = AwsRedshiftParameterGroupOptional //\\ AwsRedshiftParameterGroupRequired
+
+in
+{ AwsRedshiftParameterGroupOptional = AwsRedshiftParameterGroupOptional
+, AwsRedshiftParameterGroupRequired = AwsRedshiftParameterGroupRequired
+, AwsRedshiftParameterGroup = AwsRedshiftParameterGroup
+}

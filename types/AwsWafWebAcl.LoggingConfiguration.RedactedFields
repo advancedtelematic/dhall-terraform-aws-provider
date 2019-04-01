@@ -1,0 +1,10 @@
+
+let RedactedFieldsOptional = {}
+
+let RedactedFieldsRequired =
+  { field_to_match : List (./AwsWafWebAcl.LoggingConfiguration.RedactedFields.FieldToMatch).FieldToMatch }
+let RedactedFields = RedactedFieldsOptional //\\ RedactedFieldsRequired
+
+in
+{ RedactedFields = RedactedFields
+}

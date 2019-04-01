@@ -1,0 +1,15 @@
+
+let StepAdjustmentOptional =
+  { metric_interval_lower_bound : Optional Text
+  , metric_interval_upper_bound : Optional Text
+  }
+
+let StepAdjustmentRequired =
+  { scaling_adjustment : Natural }
+let StepAdjustment = StepAdjustmentOptional //\\ StepAdjustmentRequired
+
+in
+{ StepAdjustmentOptional = StepAdjustmentOptional
+, StepAdjustmentRequired = StepAdjustmentRequired
+, StepAdjustment = StepAdjustment
+}

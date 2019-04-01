@@ -1,0 +1,18 @@
+
+let AwsWafregionalWebAclOptional =
+  { logging_configuration : Optional (./AwsWafregionalWebAcl.LoggingConfiguration).LoggingConfiguration
+  , rule : Optional (List (./AwsWafregionalWebAcl.Rule).Rule)
+  }
+
+let AwsWafregionalWebAclRequired =
+  { metric_name : Text
+  , name : Text
+  , default_action : (./AwsWafregionalWebAcl.DefaultAction).DefaultAction
+  }
+let AwsWafregionalWebAcl = AwsWafregionalWebAclOptional //\\ AwsWafregionalWebAclRequired
+
+in
+{ AwsWafregionalWebAclOptional = AwsWafregionalWebAclOptional
+, AwsWafregionalWebAclRequired = AwsWafregionalWebAclRequired
+, AwsWafregionalWebAcl = AwsWafregionalWebAcl
+}

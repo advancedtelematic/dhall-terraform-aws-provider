@@ -1,0 +1,12 @@
+
+let MetricDimensionOptional = {}
+
+let MetricDimensionRequired =
+  { name : Text
+  , value : Text
+  }
+let MetricDimension = MetricDimensionOptional //\\ MetricDimensionRequired
+
+in
+{ MetricDimension = MetricDimension
+}

@@ -1,0 +1,17 @@
+
+let LoadBalancerOptional =
+  { elb_name : Optional Text
+  , target_group_arn : Optional Text
+  }
+
+let LoadBalancerRequired =
+  { container_name : Text
+  , container_port : Natural
+  }
+let LoadBalancer = LoadBalancerOptional //\\ LoadBalancerRequired
+
+in
+{ LoadBalancerOptional = LoadBalancerOptional
+, LoadBalancerRequired = LoadBalancerRequired
+, LoadBalancer = LoadBalancer
+}

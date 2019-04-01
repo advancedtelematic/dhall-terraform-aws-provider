@@ -1,0 +1,15 @@
+
+let LaunchTemplateOptional =
+  { id : Optional Text
+  , name : Optional Text
+  , version : Optional Text
+  }
+
+let LaunchTemplateRequired = {}
+let LaunchTemplate = LaunchTemplateOptional //\\ LaunchTemplateRequired
+
+in
+{ LaunchTemplateOptional = LaunchTemplateOptional
+, LaunchTemplateRequired = LaunchTemplateRequired
+, LaunchTemplate = LaunchTemplate
+}

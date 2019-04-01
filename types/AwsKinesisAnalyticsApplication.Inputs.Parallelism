@@ -1,0 +1,10 @@
+
+let ParallelismOptional = {}
+
+let ParallelismRequired =
+  { count : Natural }
+let Parallelism = ParallelismOptional //\\ ParallelismRequired
+
+in
+{ Parallelism = Parallelism
+}

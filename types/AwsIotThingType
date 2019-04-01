@@ -1,0 +1,15 @@
+
+let AwsIotThingTypeOptional =
+  { deprecated : Optional Bool
+  , properties : Optional (./AwsIotThingType.Properties).Properties
+  }
+
+let AwsIotThingTypeRequired =
+  { name : Text }
+let AwsIotThingType = AwsIotThingTypeOptional //\\ AwsIotThingTypeRequired
+
+in
+{ AwsIotThingTypeOptional = AwsIotThingTypeOptional
+, AwsIotThingTypeRequired = AwsIotThingTypeRequired
+, AwsIotThingType = AwsIotThingType
+}

@@ -1,0 +1,12 @@
+
+let MonitoringOptional =
+  { enabled : Optional Bool }
+
+let MonitoringRequired = {}
+let Monitoring = MonitoringOptional //\\ MonitoringRequired
+
+in
+{ MonitoringOptional = MonitoringOptional
+, MonitoringRequired = MonitoringRequired
+, Monitoring = Monitoring
+}

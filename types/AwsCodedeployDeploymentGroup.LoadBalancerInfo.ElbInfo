@@ -1,0 +1,12 @@
+
+let ElbInfoOptional =
+  { name : Optional Text }
+
+let ElbInfoRequired = {}
+let ElbInfo = ElbInfoOptional //\\ ElbInfoRequired
+
+in
+{ ElbInfoOptional = ElbInfoOptional
+, ElbInfoRequired = ElbInfoRequired
+, ElbInfo = ElbInfo
+}

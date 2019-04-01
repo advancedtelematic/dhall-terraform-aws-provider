@@ -1,0 +1,13 @@
+
+let OutputLocationOptional =
+  { s3_key_prefix : Optional Text }
+
+let OutputLocationRequired =
+  { s3_bucket_name : Text }
+let OutputLocation = OutputLocationOptional //\\ OutputLocationRequired
+
+in
+{ OutputLocationOptional = OutputLocationOptional
+, OutputLocationRequired = OutputLocationRequired
+, OutputLocation = OutputLocation
+}

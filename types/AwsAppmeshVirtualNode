@@ -1,0 +1,13 @@
+
+let AwsAppmeshVirtualNodeOptional = {}
+
+let AwsAppmeshVirtualNodeRequired =
+  { mesh_name : Text
+  , name : Text
+  , spec : (./AwsAppmeshVirtualNode.Spec).Spec
+  }
+let AwsAppmeshVirtualNode = AwsAppmeshVirtualNodeOptional //\\ AwsAppmeshVirtualNodeRequired
+
+in
+{ AwsAppmeshVirtualNode = AwsAppmeshVirtualNode
+}

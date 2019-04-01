@@ -1,0 +1,17 @@
+
+let UserOptional =
+  { console_access : Optional Bool
+  , groups : Optional (List Text)
+  }
+
+let UserRequired =
+  { password : Text
+  , username : Text
+  }
+let User = UserOptional //\\ UserRequired
+
+in
+{ UserOptional = UserOptional
+, UserRequired = UserRequired
+, User = User
+}

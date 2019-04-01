@@ -1,0 +1,24 @@
+
+let ElasticsearchConfigurationOptional =
+  { buffering_interval : Optional Natural
+  , buffering_size : Optional Natural
+  , index_rotation_period : Optional Text
+  , retry_duration : Optional Natural
+  , s3_backup_mode : Optional Text
+  , type_name : Optional Text
+  , cloudwatch_logging_options : Optional (./AwsKinesisFirehoseDeliveryStream.ElasticsearchConfiguration.CloudwatchLoggingOptions).CloudwatchLoggingOptions
+  , processing_configuration : Optional (./AwsKinesisFirehoseDeliveryStream.ElasticsearchConfiguration.ProcessingConfiguration).ProcessingConfiguration
+  }
+
+let ElasticsearchConfigurationRequired =
+  { domain_arn : Text
+  , index_name : Text
+  , role_arn : Text
+  }
+let ElasticsearchConfiguration = ElasticsearchConfigurationOptional //\\ ElasticsearchConfigurationRequired
+
+in
+{ ElasticsearchConfigurationOptional = ElasticsearchConfigurationOptional
+, ElasticsearchConfigurationRequired = ElasticsearchConfigurationRequired
+, ElasticsearchConfiguration = ElasticsearchConfiguration
+}

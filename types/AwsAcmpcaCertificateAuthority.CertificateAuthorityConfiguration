@@ -1,0 +1,13 @@
+
+let CertificateAuthorityConfigurationOptional = {}
+
+let CertificateAuthorityConfigurationRequired =
+  { key_algorithm : Text
+  , signing_algorithm : Text
+  , subject : (./AwsAcmpcaCertificateAuthority.CertificateAuthorityConfiguration.Subject).Subject
+  }
+let CertificateAuthorityConfiguration = CertificateAuthorityConfigurationOptional //\\ CertificateAuthorityConfigurationRequired
+
+in
+{ CertificateAuthorityConfiguration = CertificateAuthorityConfiguration
+}

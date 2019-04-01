@@ -1,0 +1,12 @@
+
+let CustomHeaderOptional = {}
+
+let CustomHeaderRequired =
+  { name : Text
+  , value : Text
+  }
+let CustomHeader = CustomHeaderOptional //\\ CustomHeaderRequired
+
+in
+{ CustomHeader = CustomHeader
+}

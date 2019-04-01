@@ -1,0 +1,16 @@
+
+let OpenidConnectConfigOptional =
+  { auth_ttl : Optional Natural
+  , client_id : Optional Text
+  , iat_ttl : Optional Natural
+  }
+
+let OpenidConnectConfigRequired =
+  { issuer : Text }
+let OpenidConnectConfig = OpenidConnectConfigOptional //\\ OpenidConnectConfigRequired
+
+in
+{ OpenidConnectConfigOptional = OpenidConnectConfigOptional
+, OpenidConnectConfigRequired = OpenidConnectConfigRequired
+, OpenidConnectConfig = OpenidConnectConfig
+}

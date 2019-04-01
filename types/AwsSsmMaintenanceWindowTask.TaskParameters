@@ -1,0 +1,12 @@
+
+let TaskParametersOptional = {}
+
+let TaskParametersRequired =
+  { name : Text
+  , values : (List Text)
+  }
+let TaskParameters = TaskParametersOptional //\\ TaskParametersRequired
+
+in
+{ TaskParameters = TaskParameters
+}

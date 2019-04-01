@@ -1,0 +1,19 @@
+
+let AwsSagemakerModelOptional =
+  { enable_network_isolation : Optional Bool
+  , name : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , container : Optional (List (./AwsSagemakerModel.Container).Container)
+  , primary_container : Optional (./AwsSagemakerModel.PrimaryContainer).PrimaryContainer
+  , vpc_config : Optional (./AwsSagemakerModel.VpcConfig).VpcConfig
+  }
+
+let AwsSagemakerModelRequired =
+  { execution_role_arn : Text }
+let AwsSagemakerModel = AwsSagemakerModelOptional //\\ AwsSagemakerModelRequired
+
+in
+{ AwsSagemakerModelOptional = AwsSagemakerModelOptional
+, AwsSagemakerModelRequired = AwsSagemakerModelRequired
+, AwsSagemakerModel = AwsSagemakerModel
+}

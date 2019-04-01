@@ -1,0 +1,14 @@
+
+let PolicyAttributeOptional =
+  { name : Optional Text
+  , value : Optional Text
+  }
+
+let PolicyAttributeRequired = {}
+let PolicyAttribute = PolicyAttributeOptional //\\ PolicyAttributeRequired
+
+in
+{ PolicyAttributeOptional = PolicyAttributeOptional
+, PolicyAttributeRequired = PolicyAttributeRequired
+, PolicyAttribute = PolicyAttribute
+}

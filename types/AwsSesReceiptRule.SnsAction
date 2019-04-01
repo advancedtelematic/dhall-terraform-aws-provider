@@ -1,0 +1,12 @@
+
+let SnsActionOptional = {}
+
+let SnsActionRequired =
+  { position : Natural
+  , topic_arn : Text
+  }
+let SnsAction = SnsActionOptional //\\ SnsActionRequired
+
+in
+{ SnsAction = SnsAction
+}

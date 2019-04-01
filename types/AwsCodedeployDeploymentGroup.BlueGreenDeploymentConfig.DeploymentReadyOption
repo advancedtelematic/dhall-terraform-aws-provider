@@ -1,0 +1,14 @@
+
+let DeploymentReadyOptionOptional =
+  { action_on_timeout : Optional Text
+  , wait_time_in_minutes : Optional Natural
+  }
+
+let DeploymentReadyOptionRequired = {}
+let DeploymentReadyOption = DeploymentReadyOptionOptional //\\ DeploymentReadyOptionRequired
+
+in
+{ DeploymentReadyOptionOptional = DeploymentReadyOptionOptional
+, DeploymentReadyOptionRequired = DeploymentReadyOptionRequired
+, DeploymentReadyOption = DeploymentReadyOption
+}

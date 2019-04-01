@@ -1,0 +1,15 @@
+
+let OnPremisesInstanceTagFilterOptional =
+  { key : Optional Text
+  , type : Optional Text
+  , value : Optional Text
+  }
+
+let OnPremisesInstanceTagFilterRequired = {}
+let OnPremisesInstanceTagFilter = OnPremisesInstanceTagFilterOptional //\\ OnPremisesInstanceTagFilterRequired
+
+in
+{ OnPremisesInstanceTagFilterOptional = OnPremisesInstanceTagFilterOptional
+, OnPremisesInstanceTagFilterRequired = OnPremisesInstanceTagFilterRequired
+, OnPremisesInstanceTagFilter = OnPremisesInstanceTagFilter
+}

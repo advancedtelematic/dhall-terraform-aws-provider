@@ -1,0 +1,20 @@
+
+let Ec2AttributesOptional =
+  { additional_master_security_groups : Optional Text
+  , additional_slave_security_groups : Optional Text
+  , emr_managed_master_security_group : Optional Text
+  , emr_managed_slave_security_group : Optional Text
+  , key_name : Optional Text
+  , service_access_security_group : Optional Text
+  , subnet_id : Optional Text
+  }
+
+let Ec2AttributesRequired =
+  { instance_profile : Text }
+let Ec2Attributes = Ec2AttributesOptional //\\ Ec2AttributesRequired
+
+in
+{ Ec2AttributesOptional = Ec2AttributesOptional
+, Ec2AttributesRequired = Ec2AttributesRequired
+, Ec2Attributes = Ec2Attributes
+}

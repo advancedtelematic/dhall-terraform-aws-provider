@@ -1,0 +1,12 @@
+
+let TargetGroupInfoOptional =
+  { name : Optional Text }
+
+let TargetGroupInfoRequired = {}
+let TargetGroupInfo = TargetGroupInfoOptional //\\ TargetGroupInfoRequired
+
+in
+{ TargetGroupInfoOptional = TargetGroupInfoOptional
+, TargetGroupInfoRequired = TargetGroupInfoRequired
+, TargetGroupInfo = TargetGroupInfo
+}

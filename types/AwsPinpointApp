@@ -1,0 +1,17 @@
+
+let AwsPinpointAppOptional =
+  { name : Optional Text
+  , name_prefix : Optional Text
+  , campaign_hook : Optional (./AwsPinpointApp.CampaignHook).CampaignHook
+  , limits : Optional (./AwsPinpointApp.Limits).Limits
+  , quiet_time : Optional (./AwsPinpointApp.QuietTime).QuietTime
+  }
+
+let AwsPinpointAppRequired = {}
+let AwsPinpointApp = AwsPinpointAppOptional //\\ AwsPinpointAppRequired
+
+in
+{ AwsPinpointAppOptional = AwsPinpointAppOptional
+, AwsPinpointAppRequired = AwsPinpointAppRequired
+, AwsPinpointApp = AwsPinpointApp
+}

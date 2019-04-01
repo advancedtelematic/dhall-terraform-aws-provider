@@ -1,0 +1,14 @@
+
+let ConfigurationOptional =
+  { id : Optional Text
+  , revision : Optional Natural
+  }
+
+let ConfigurationRequired = {}
+let Configuration = ConfigurationOptional //\\ ConfigurationRequired
+
+in
+{ ConfigurationOptional = ConfigurationOptional
+, ConfigurationRequired = ConfigurationRequired
+, Configuration = Configuration
+}

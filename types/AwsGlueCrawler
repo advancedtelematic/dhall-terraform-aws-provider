@@ -1,0 +1,26 @@
+
+let AwsGlueCrawlerOptional =
+  { classifiers : Optional (List Text)
+  , configuration : Optional Text
+  , description : Optional Text
+  , schedule : Optional Text
+  , security_configuration : Optional Text
+  , table_prefix : Optional Text
+  , schema_change_policy : Optional (./AwsGlueCrawler.SchemaChangePolicy).SchemaChangePolicy
+  }
+
+let AwsGlueCrawlerRequired =
+  { database_name : Text
+  , name : Text
+  , role : Text
+  , dynamodb_target : List (./AwsGlueCrawler.DynamodbTarget).DynamodbTarget
+  , jdbc_target : List (./AwsGlueCrawler.JdbcTarget).JdbcTarget
+  , s3_target : List (./AwsGlueCrawler.S3Target).S3Target
+  }
+let AwsGlueCrawler = AwsGlueCrawlerOptional //\\ AwsGlueCrawlerRequired
+
+in
+{ AwsGlueCrawlerOptional = AwsGlueCrawlerOptional
+, AwsGlueCrawlerRequired = AwsGlueCrawlerRequired
+, AwsGlueCrawler = AwsGlueCrawler
+}

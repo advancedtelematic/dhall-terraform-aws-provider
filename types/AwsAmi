@@ -1,0 +1,25 @@
+
+let AwsAmiOptional =
+  { architecture : Optional Text
+  , description : Optional Text
+  , ena_support : Optional Bool
+  , image_location : Optional Text
+  , kernel_id : Optional Text
+  , ramdisk_id : Optional Text
+  , root_device_name : Optional Text
+  , sriov_net_support : Optional Text
+  , tags : Optional (List { mapKey : Text, mapValue : Text })
+  , virtualization_type : Optional Text
+  , ebs_block_device : Optional (List (./AwsAmi.EbsBlockDevice).EbsBlockDevice)
+  , ephemeral_block_device : Optional (List (./AwsAmi.EphemeralBlockDevice).EphemeralBlockDevice)
+  }
+
+let AwsAmiRequired =
+  { name : Text }
+let AwsAmi = AwsAmiOptional //\\ AwsAmiRequired
+
+in
+{ AwsAmiOptional = AwsAmiOptional
+, AwsAmiRequired = AwsAmiRequired
+, AwsAmi = AwsAmi
+}

@@ -1,0 +1,13 @@
+
+let GeoRestrictionOptional =
+  { locations : Optional (List Text) }
+
+let GeoRestrictionRequired =
+  { restriction_type : Text }
+let GeoRestriction = GeoRestrictionOptional //\\ GeoRestrictionRequired
+
+in
+{ GeoRestrictionOptional = GeoRestrictionOptional
+, GeoRestrictionRequired = GeoRestrictionRequired
+, GeoRestriction = GeoRestriction
+}

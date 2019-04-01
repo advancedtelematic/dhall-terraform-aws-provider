@@ -1,0 +1,13 @@
+
+let S3Optional = {}
+
+let S3Required =
+  { bucket_name : Text
+  , key : Text
+  , role_arn : Text
+  }
+let S3 = S3Optional //\\ S3Required
+
+in
+{ S3 = S3
+}

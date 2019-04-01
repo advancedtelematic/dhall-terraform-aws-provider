@@ -1,0 +1,16 @@
+
+let AwsLbListenerRuleOptional =
+  { priority : Optional Natural }
+
+let AwsLbListenerRuleRequired =
+  { listener_arn : Text
+  , action : List (./AwsLbListenerRule.Action).Action
+  , condition : List (./AwsLbListenerRule.Condition).Condition
+  }
+let AwsLbListenerRule = AwsLbListenerRuleOptional //\\ AwsLbListenerRuleRequired
+
+in
+{ AwsLbListenerRuleOptional = AwsLbListenerRuleOptional
+, AwsLbListenerRuleRequired = AwsLbListenerRuleRequired
+, AwsLbListenerRule = AwsLbListenerRule
+}

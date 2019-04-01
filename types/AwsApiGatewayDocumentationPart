@@ -1,0 +1,13 @@
+
+let AwsApiGatewayDocumentationPartOptional = {}
+
+let AwsApiGatewayDocumentationPartRequired =
+  { properties : Text
+  , rest_api_id : Text
+  , location : (./AwsApiGatewayDocumentationPart.Location).Location
+  }
+let AwsApiGatewayDocumentationPart = AwsApiGatewayDocumentationPartOptional //\\ AwsApiGatewayDocumentationPartRequired
+
+in
+{ AwsApiGatewayDocumentationPart = AwsApiGatewayDocumentationPart
+}

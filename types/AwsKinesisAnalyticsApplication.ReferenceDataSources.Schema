@@ -1,0 +1,15 @@
+
+let SchemaOptional =
+  { record_encoding : Optional Text }
+
+let SchemaRequired =
+  { record_columns : List (./AwsKinesisAnalyticsApplication.ReferenceDataSources.Schema.RecordColumns).RecordColumns
+  , record_format : (./AwsKinesisAnalyticsApplication.ReferenceDataSources.Schema.RecordFormat).RecordFormat
+  }
+let Schema = SchemaOptional //\\ SchemaRequired
+
+in
+{ SchemaOptional = SchemaOptional
+, SchemaRequired = SchemaRequired
+, Schema = Schema
+}

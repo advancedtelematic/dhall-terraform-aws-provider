@@ -1,0 +1,10 @@
+
+let RuleOptional = {}
+
+let RuleRequired =
+  { default_retention : (./AwsS3Bucket.ObjectLockConfiguration.Rule.DefaultRetention).DefaultRetention }
+let Rule = RuleOptional //\\ RuleRequired
+
+in
+{ Rule = Rule
+}

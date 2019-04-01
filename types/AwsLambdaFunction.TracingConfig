@@ -1,0 +1,10 @@
+
+let TracingConfigOptional = {}
+
+let TracingConfigRequired =
+  { mode : Text }
+let TracingConfig = TracingConfigOptional //\\ TracingConfigRequired
+
+in
+{ TracingConfig = TracingConfig
+}

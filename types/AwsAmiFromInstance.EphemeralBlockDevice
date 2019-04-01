@@ -1,0 +1,9 @@
+
+let EphemeralBlockDeviceOptional = {}
+
+let EphemeralBlockDeviceRequired = {}
+let EphemeralBlockDevice = EphemeralBlockDeviceOptional //\\ EphemeralBlockDeviceRequired
+
+in
+{ EphemeralBlockDevice = EphemeralBlockDevice
+}

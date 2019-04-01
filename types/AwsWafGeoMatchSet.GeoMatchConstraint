@@ -1,0 +1,12 @@
+
+let GeoMatchConstraintOptional = {}
+
+let GeoMatchConstraintRequired =
+  { type : Text
+  , value : Text
+  }
+let GeoMatchConstraint = GeoMatchConstraintOptional //\\ GeoMatchConstraintRequired
+
+in
+{ GeoMatchConstraint = GeoMatchConstraint
+}

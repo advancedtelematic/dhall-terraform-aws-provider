@@ -1,0 +1,10 @@
+
+let DestinationOptional = {}
+
+let DestinationRequired =
+  { bucket : (./AwsS3BucketInventory.Destination.Bucket).Bucket }
+let Destination = DestinationOptional //\\ DestinationRequired
+
+in
+{ Destination = Destination
+}

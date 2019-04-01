@@ -1,0 +1,16 @@
+
+let ByteMatchTuplesOptional =
+  { target_string : Optional Text }
+
+let ByteMatchTuplesRequired =
+  { positional_constraint : Text
+  , text_transformation : Text
+  , field_to_match : (./AwsWafregionalByteMatchSet.ByteMatchTuples.FieldToMatch).FieldToMatch
+  }
+let ByteMatchTuples = ByteMatchTuplesOptional //\\ ByteMatchTuplesRequired
+
+in
+{ ByteMatchTuplesOptional = ByteMatchTuplesOptional
+, ByteMatchTuplesRequired = ByteMatchTuplesRequired
+, ByteMatchTuples = ByteMatchTuples
+}

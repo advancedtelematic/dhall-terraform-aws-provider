@@ -1,0 +1,14 @@
+
+let ClassificationTypeOptional =
+  { continuous : Optional Text
+  , one_time : Optional Text
+  }
+
+let ClassificationTypeRequired = {}
+let ClassificationType = ClassificationTypeOptional //\\ ClassificationTypeRequired
+
+in
+{ ClassificationTypeOptional = ClassificationTypeOptional
+, ClassificationTypeRequired = ClassificationTypeRequired
+, ClassificationType = ClassificationType
+}

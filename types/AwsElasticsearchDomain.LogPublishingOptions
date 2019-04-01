@@ -1,0 +1,15 @@
+
+let LogPublishingOptionsOptional =
+  { enabled : Optional Bool }
+
+let LogPublishingOptionsRequired =
+  { cloudwatch_log_group_arn : Text
+  , log_type : Text
+  }
+let LogPublishingOptions = LogPublishingOptionsOptional //\\ LogPublishingOptionsRequired
+
+in
+{ LogPublishingOptionsOptional = LogPublishingOptionsOptional
+, LogPublishingOptionsRequired = LogPublishingOptionsRequired
+, LogPublishingOptions = LogPublishingOptions
+}

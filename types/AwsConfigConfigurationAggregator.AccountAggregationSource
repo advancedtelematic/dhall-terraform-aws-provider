@@ -1,0 +1,15 @@
+
+let AccountAggregationSourceOptional =
+  { all_regions : Optional Bool
+  , regions : Optional (List Text)
+  }
+
+let AccountAggregationSourceRequired =
+  { account_ids : (List Text) }
+let AccountAggregationSource = AccountAggregationSourceOptional //\\ AccountAggregationSourceRequired
+
+in
+{ AccountAggregationSourceOptional = AccountAggregationSourceOptional
+, AccountAggregationSourceRequired = AccountAggregationSourceRequired
+, AccountAggregationSource = AccountAggregationSource
+}

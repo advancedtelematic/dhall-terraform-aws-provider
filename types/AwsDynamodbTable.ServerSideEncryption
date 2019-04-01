@@ -1,0 +1,10 @@
+
+let ServerSideEncryptionOptional = {}
+
+let ServerSideEncryptionRequired =
+  { enabled : Bool }
+let ServerSideEncryption = ServerSideEncryptionOptional //\\ ServerSideEncryptionRequired
+
+in
+{ ServerSideEncryption = ServerSideEncryption
+}

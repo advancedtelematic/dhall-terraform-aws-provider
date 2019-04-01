@@ -1,0 +1,15 @@
+
+let ConditionsOptional =
+  { logical_operator : Optional Text }
+
+let ConditionsRequired =
+  { job_name : Text
+  , state : Text
+  }
+let Conditions = ConditionsOptional //\\ ConditionsRequired
+
+in
+{ ConditionsOptional = ConditionsOptional
+, ConditionsRequired = ConditionsRequired
+, Conditions = Conditions
+}

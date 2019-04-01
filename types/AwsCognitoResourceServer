@@ -1,0 +1,16 @@
+
+let AwsCognitoResourceServerOptional =
+  { scope : Optional (List (./AwsCognitoResourceServer.Scope).Scope) }
+
+let AwsCognitoResourceServerRequired =
+  { identifier : Text
+  , name : Text
+  , user_pool_id : Text
+  }
+let AwsCognitoResourceServer = AwsCognitoResourceServerOptional //\\ AwsCognitoResourceServerRequired
+
+in
+{ AwsCognitoResourceServerOptional = AwsCognitoResourceServerOptional
+, AwsCognitoResourceServerRequired = AwsCognitoResourceServerRequired
+, AwsCognitoResourceServer = AwsCognitoResourceServer
+}

@@ -1,0 +1,30 @@
+
+let AwsOpsworksApplicationOptional =
+  { auto_bundle_on_deploy : Optional Text
+  , aws_flow_ruby_settings : Optional Text
+  , data_source_arn : Optional Text
+  , data_source_database_name : Optional Text
+  , data_source_type : Optional Text
+  , description : Optional Text
+  , document_root : Optional Text
+  , domains : Optional (List Text)
+  , enable_ssl : Optional Bool
+  , rails_env : Optional Text
+  , short_name : Optional Text
+  , app_source : Optional (List (./AwsOpsworksApplication.AppSource).AppSource)
+  , environment : Optional (List (./AwsOpsworksApplication.Environment).Environment)
+  , ssl_configuration : Optional (List (./AwsOpsworksApplication.SslConfiguration).SslConfiguration)
+  }
+
+let AwsOpsworksApplicationRequired =
+  { name : Text
+  , stack_id : Text
+  , type : Text
+  }
+let AwsOpsworksApplication = AwsOpsworksApplicationOptional //\\ AwsOpsworksApplicationRequired
+
+in
+{ AwsOpsworksApplicationOptional = AwsOpsworksApplicationOptional
+, AwsOpsworksApplicationRequired = AwsOpsworksApplicationRequired
+, AwsOpsworksApplication = AwsOpsworksApplication
+}

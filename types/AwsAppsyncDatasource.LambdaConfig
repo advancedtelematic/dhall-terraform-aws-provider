@@ -1,0 +1,10 @@
+
+let LambdaConfigOptional = {}
+
+let LambdaConfigRequired =
+  { function_arn : Text }
+let LambdaConfig = LambdaConfigOptional //\\ LambdaConfigRequired
+
+in
+{ LambdaConfig = LambdaConfig
+}

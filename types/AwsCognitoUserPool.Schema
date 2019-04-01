@@ -1,0 +1,20 @@
+
+let SchemaOptional =
+  { developer_only_attribute : Optional Bool
+  , mutable : Optional Bool
+  , required : Optional Bool
+  , number_attribute_constraints : Optional (./AwsCognitoUserPool.Schema.NumberAttributeConstraints).NumberAttributeConstraints
+  , string_attribute_constraints : Optional (./AwsCognitoUserPool.Schema.StringAttributeConstraints).StringAttributeConstraints
+  }
+
+let SchemaRequired =
+  { attribute_data_type : Text
+  , name : Text
+  }
+let Schema = SchemaOptional //\\ SchemaRequired
+
+in
+{ SchemaOptional = SchemaOptional
+, SchemaRequired = SchemaRequired
+, Schema = Schema
+}

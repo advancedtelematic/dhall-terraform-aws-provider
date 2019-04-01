@@ -1,0 +1,10 @@
+
+let EndpointConfigurationOptional = {}
+
+let EndpointConfigurationRequired =
+  { types : (List Text) }
+let EndpointConfiguration = EndpointConfigurationOptional //\\ EndpointConfigurationRequired
+
+in
+{ EndpointConfiguration = EndpointConfiguration
+}

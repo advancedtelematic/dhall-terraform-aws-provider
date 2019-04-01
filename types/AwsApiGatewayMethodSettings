@@ -1,0 +1,14 @@
+
+let AwsApiGatewayMethodSettingsOptional = {}
+
+let AwsApiGatewayMethodSettingsRequired =
+  { method_path : Text
+  , rest_api_id : Text
+  , stage_name : Text
+  , settings : (./AwsApiGatewayMethodSettings.Settings).Settings
+  }
+let AwsApiGatewayMethodSettings = AwsApiGatewayMethodSettingsOptional //\\ AwsApiGatewayMethodSettingsRequired
+
+in
+{ AwsApiGatewayMethodSettings = AwsApiGatewayMethodSettings
+}

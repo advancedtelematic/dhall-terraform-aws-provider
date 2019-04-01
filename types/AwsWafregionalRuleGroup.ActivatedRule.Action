@@ -1,0 +1,10 @@
+
+let ActionOptional = {}
+
+let ActionRequired =
+  { type : Text }
+let Action = ActionOptional //\\ ActionRequired
+
+in
+{ Action = Action
+}

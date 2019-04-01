@@ -1,0 +1,15 @@
+
+let AwsConfigConfigurationAggregatorOptional =
+  { account_aggregation_source : Optional (./AwsConfigConfigurationAggregator.AccountAggregationSource).AccountAggregationSource
+  , organization_aggregation_source : Optional (./AwsConfigConfigurationAggregator.OrganizationAggregationSource).OrganizationAggregationSource
+  }
+
+let AwsConfigConfigurationAggregatorRequired =
+  { name : Text }
+let AwsConfigConfigurationAggregator = AwsConfigConfigurationAggregatorOptional //\\ AwsConfigConfigurationAggregatorRequired
+
+in
+{ AwsConfigConfigurationAggregatorOptional = AwsConfigConfigurationAggregatorOptional
+, AwsConfigConfigurationAggregatorRequired = AwsConfigConfigurationAggregatorRequired
+, AwsConfigConfigurationAggregator = AwsConfigConfigurationAggregator
+}

@@ -1,0 +1,10 @@
+
+let ActionOptional = {}
+
+let ActionRequired =
+  { weighted_target : List (./AwsAppmeshRoute.Spec.HttpRoute.Action.WeightedTarget).WeightedTarget }
+let Action = ActionOptional //\\ ActionRequired
+
+in
+{ Action = Action
+}

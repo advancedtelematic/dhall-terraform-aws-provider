@@ -1,0 +1,16 @@
+
+let SettingOptional =
+  { resource : Optional Text }
+
+let SettingRequired =
+  { name : Text
+  , namespace : Text
+  , value : Text
+  }
+let Setting = SettingOptional //\\ SettingRequired
+
+in
+{ SettingOptional = SettingOptional
+, SettingRequired = SettingRequired
+, Setting = Setting
+}

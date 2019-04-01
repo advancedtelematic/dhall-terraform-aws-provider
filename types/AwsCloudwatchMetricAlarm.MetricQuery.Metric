@@ -1,0 +1,19 @@
+
+let MetricOptional =
+  { dimensions : Optional (List { mapKey : Text, mapValue : Text })
+  , namespace : Optional Text
+  , unit : Optional Text
+  }
+
+let MetricRequired =
+  { metric_name : Text
+  , period : Natural
+  , stat : Text
+  }
+let Metric = MetricOptional //\\ MetricRequired
+
+in
+{ MetricOptional = MetricOptional
+, MetricRequired = MetricRequired
+, Metric = Metric
+}
